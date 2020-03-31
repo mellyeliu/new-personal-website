@@ -1,0 +1,132 @@
+{
+  "main": {
+    "name":"Melissa Liu",
+    "occupation":"developer",
+    "description":"Part engineer, part creative, not sure what to put yet",
+    "image":"profilepic.jpg",
+    "bio": "",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "mellye.liu@gmail.com",
+    "phone": "555-555-5555",
+    "address":{
+      "street":"(Your Street)",
+      "city":"San Francisco",
+      "state":"(Your State)",
+      "zip": "(Your Zip/Postal Code)"
+    },
+    "website": "http://www.timbakerdev.com",
+    "resumedownload":"http://timbakerdev.com",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"http://facebook.com/mellye.liu",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/liu-melissa/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"http://instagram.com/mellye.liu",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/Melissa-Liu",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"skype",
+        "url":"http://skype.com",
+        "className":"fa fa-pencil"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "work":[
+      {
+        "company":"Instagram",
+        "title":"Growth: Notifications",
+        "years":"Jan 2020 - Apr 2020",
+        "description":"Developed a number of notifications around Story Highlights and Direct Inbox using Django, conducting A/B testing to measure user impact and MAP gain."
+      },
+      {
+        "company":"Credit Karma",
+        "title":"Credit Experiences",
+        "years":"May 2019 - Aug 2019",
+        "description":"Created a new experience for users with Collections using Scala, React, and GraphQL. Developed a contextual backlinking framework by passing location states within page queries."
+      },
+      {
+        "company":"Infoscout",
+        "title":"Datasources Team",
+        "years":"Sept 2018 - Dec 2018",
+        "description":"Created various data processing algorithms using NumPy, Pandas and MySQL to improve receipt item attribution. Implemented a full stack site that aggregates and displays brand demographic insights using Django."
+      },
+      {
+        "company":"Wave",
+        "title":"Centralized Banking",
+        "years":"Jan 2018 - Apr 2018",
+        "description":"Created a full stack web admin tool using ReactJS and Django for risk analysis and debugging of financial accounts. Improved querying speeds using database profiling, indexes, and Django QuerySet API optimizations."
+      }
+    ],
+    "education":[
+      {
+        "school":"University of Waterloo",
+        "degree":"BASc in Biomedical Engineering",
+        "graduated":"Sept 2016 - present",
+        "description":"Met a bunch of awesome people and made a ton of great memories. Haze of co-op applications, labs and finals."
+      }
+    ],
+    "blog":[
+      {
+        "company":"Awesome Design Studio",
+        "title":"Senior UX God ",
+        "years":"March 2010 - Present",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      },
+      {
+        "company":"Super Cool Studio",
+        "title":"Junior bug fixer",
+        "years":"March 2007 - February 2010",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Canadian Wanderlust",
+        "category":"My Travel Blog for my post-university travels",
+        "image":"canadian-wanderlust.jpg",
+        "url":"https://www.canadianwanderlust.com"
+      },
+      {
+        "title":"Fury Fighting Gear",
+        "category":"(offline now) A fighting gear company I started",
+        "image":"fury-fighting-gear.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Original Thai Food",
+        "category":"Website I built for a restaurant I like in Thailand",
+        "image":"original-thai-food.jpg",
+        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "user":"Kareem Abdul Jabbar"
+      },
+      {
+        "text":"That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
+        "user":"Steve Wozniak... impersonator"
+      }
+    ]
+  }
+}
