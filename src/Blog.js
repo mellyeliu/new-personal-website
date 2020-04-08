@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import $ from 'jquery';
 import './App.css';
-import Header from './Components/Header';
+import BlogHeader from './Components/BlogHeader';
 import Footer from './Components/Footer';
-import About from './Components/About';
-import Resume from './Components/Resume';
+import Portfolio from './Components/Portfolio';
+import BlogList from './Components/BlogList';
 
 class Blog extends Component {
 
@@ -43,10 +43,10 @@ class Blog extends Component {
   render() {
     return (
       <div className="Blog">
-        <Header data={this.state.resumeData.main}/>
-        <About data={this.state.resumeData.main}/>
-        {/* <Resume data={this.state.resumeData.resume}/> */}
-        {/* <Portfolio data={this.state.resumeData.portfolio}/> */}
+        <BlogHeader data={this.state.resumeData.main} dest='blog'/>
+        {/* <About data={this.state.resumeData.main}/> */}
+        <BlogList data={this.state.resumeData.blog}/>
+        <Portfolio data={this.state.resumeData.portfolio}/>
         {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
         {/* <Contact data={this.state.resumeData.main}/> */}
         <Footer data={this.state.resumeData.main}/>

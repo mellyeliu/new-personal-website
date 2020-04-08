@@ -23,15 +23,15 @@ class About extends Component {
             <img className="profile-pic"  src={profilepic} alt="Tim Baker Profile Pic" />
          </div>
          <div className="nine columns main-col">
-            <h2>Hi! Thanks for stopping by.</h2>
+            <h2>Thanks for stopping by!</h2>
 
             <p>I’m currently a 4th year engineering student at the University of Waterloo. 
                I’ve previously interned at Instagram, Credit Karma, and InfoScout in backend and full-stack development.
                <br/><br/>I get so much enjoyment from the creative process, whether the medium is art, writing or code. 
-               I’ll always be feverishly honing these skills, trying to reduce the disparity between what I can make and what I aspire to. 
-               <br/><br/>It’s in this artistic expression that I begin to piece together my sense of self. You're guaranteed to hear me rambling about clothing to fandom to bedroom pop.
-               And my quiet moments of reflection, doodling, bouts of retail therapy—it’s all part of this bigger journey in figuring out the rest. 
-               Passions and hobbies, fears and neuroses, I invite you to come along for the ride.
+               I’ll always be working away at these skills, trying to reduce the disparity between what I can make and what I aspire to. 
+               <br/><br/>It’s through this artistic expression that I begin to figure out who I am. Someone a little reckless, easily excited, an overthinker. Someone with passions to nurture, from style to fandom to bedroom pop.
+               And it doesn't stop there—I'm on a lifelong journey to figure out the rest. 
+               Hobbies and dreams, fears and neuroses, I invite you to come along for the ride.
             </p>
             {/* <div className="row">
                <div className="columns contact-details">
