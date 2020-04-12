@@ -16,7 +16,7 @@
    header .banner-text h1 {
       font: 80px/1.1em 'opensans-light', sans-serif;
       letter-spacing: -1px;
-      margin: 0 auto 12px auto;
+      margin: 0 auto 0px auto;
    }
 
 }
@@ -33,12 +33,12 @@
       letter-spacing: -1px;      
    }
    header .banner-text h3 {
-      font: 17px/1.9em 'opensans-light', sans-serif;
+      font: 12px/1.9em 'montserrat', sans-serif;
       width: 80%;
    }
    header .banner-text hr {
       width: 65%;
-      margin: 12px auto;
+      margin: 0px auto;
    }
    /* nav-wrap */
    #nav-wrap {
@@ -50,9 +50,9 @@
    /* About Section
    ------------------------------------------------------------------- */
    #about .profile-pic {
-      width: 114px;
+      /* width: 114px;
       height: 114px;
-      margin-left: 12px;
+      margin-left: 12px; */
    }
    #about .contact-details { width: 50%; }
    #about .download { width: 50%; }
@@ -99,7 +99,7 @@
 
    /* mobile navigation
    -------------------------------------------------------------------- */
-   #nav-wrap {
+   /* #nav-wrap {
       font: 12px 'opensans-bold', sans-serif;
       background: transparent !important;
       letter-spacing: 1.5px;  
@@ -112,7 +112,7 @@
 	   width: 48px;
 		height: 48px;
 		text-align: left;
-		/* background-color:#4563a2; */
+		/* background-color:#4563a2; 
 		position: relative;
       float: left;
 
@@ -122,7 +122,6 @@
 
       position: relative;
       top: 0px;
-      /* right: 30px; */
    }
 
 	#nav-wrap > a:before,
@@ -137,13 +136,13 @@
    #nav-wrap > a:after { top: 60%; }
 
    /* toggle buttons */
-	#nav-wrap:not( :target ) > a:first-of-type,
+	/* #nav-wrap:not( :target ) > a:first-of-type,
 	#nav-wrap:target > a:last-of-type  {
 	   display: block;
-	}
+	} */
 
    /* hide menu panel */
-   #nav-wrap ul#nav {
+   /* #nav-wrap ul#nav {
       height: auto;
 		display: none;
       clear: both;
@@ -153,10 +152,10 @@
       position: relative;
       top: 0px;
       right: 0;
-   }
+   } */
 
    /* display menu panels */
-	#nav-wrap:target > ul#nav	{
+	/* #nav-wrap:target > ul#nav	{
 	   display: block;
       padding: 10px 20px 10px 20px;
       background: #1f2024;
@@ -173,15 +172,15 @@
       border-bottom: 1px solid #2D2E34;
       border-bottom-style: dotted; 
    }
-  
-   ul#nav li a {  
+   */
+   /* ul#nav li a {  
       display: block;    
       margin: 0;
       padding: 0;      
-      margin: 12px 0; 
-      line-height: 16px; /* reset line-height from 48px */
+      margin: 5px 0; 
+      line-height: 16px; /* reset line-height from 48px
       border: none;
-   }  
+   }   */
 
 
    /* Header Styles
@@ -192,7 +191,7 @@
    }
    header .banner-text h1 { font: 68px/1.1em 'opensans-light', sans-serif; }
    header .banner-text h3 {
-      font: 16px/1.9em 'opensans-light', sans-serif;
+      font: 12px/1.9em 'montserrat', sans-serif;
       width: 85%;
    }
    header .banner-text hr {
@@ -200,13 +199,19 @@
       margin: 18px auto;
    }
 
+   header#home {
+      margin: 0px
+   }
+
    /* header social links */
    header .social {
       margin: 18px 0 24px 0;
       font-size: 24px;
-      line-height: 36px;      
+      line-height: 36px; 
+      padding: 0 4px;      
    }
-   header .social li { margin: 0 10px; }
+   /* header .social a li { margin: 0 10px; } */
+   header .social a li { padding: 0 10px; }
 
     /* scrolldown link */
    header .scrolldown { display: none; }
@@ -214,7 +219,7 @@
 
    /* About Section
    -------------------------------------------------------------------- */
-   #about .profile-pic { display: none; }
+   /* #about .profile-pic { display: none; } */
    #about .download .button {
       width: 100%;
       text-align: center;
@@ -322,8 +327,8 @@
    footer .copyright li { margin-right: 12px; }
 
    /* social links */
-   footer .social-links { font-size: 22px; }
-   footer .social-links li { margin-left: 18px; }
+   footer .social-links { font-size: 12px; }
+   footer .social-links a li { padding: 0 10px; }
 
    /* Go To Top Button */
    #go-top { margin-left: -22px; }
@@ -350,24 +355,25 @@
    -------------------------------------------------------------------- */
    header .banner { padding-top: 24px; }
    header .banner-text h1 {
-      font: 36px/1.1em 'opensans-regular', sans-serif !important;      
-      margin: 0 auto 24px auto;
+      font: 46px/1.1em 'Montserrat', sans-serif !important;      
+      margin: 0 auto 14px auto;
+      letter-spacing: 1px
    }
    header .banner-text h3 {
-      font: 14px/1.9em 'opensans-light', sans-serif;
+      font: 10px/1.9em 'Montserrat', sans-serif;
       width: 90%;
    }
   
    /* header social links */
-   header .social { font-size: 20px;}
-   header .social li { margin: 0 6px; }
+   header .social { font-size: 14px;}
+   header .social a li { padding: 0 10px; }
 
    /* footer
    ------------------------------------------------------------------------ */
 
    /* social links */
-   footer .social-links { font-size: 20px; }
-   footer .social-links li { margin-left: 14px; }   
+   footer .social-links { font-size: 14px; }
+   footer .social-links a li { padding: 0 10px; }   
 
 }
 

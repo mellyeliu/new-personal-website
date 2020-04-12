@@ -22,11 +22,11 @@ class BlogHeader extends Component {
 	      <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" className="nav">
-            <li className={`${this.props.dest == 'home' ? "current" : ""}`}><a href="/">Home</a></li>
+            <li><a href="/">Home</a></li>
             {/* <li><a className="smoothscroll" href="#about">About</a></li>
 	         <li><a className="smoothscroll" href="#resume">Experience</a></li> */}
-            <li className={`${this.props.dest == 'blog' ? "current" : ""}`}><a href="blog">Blog</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Works</a></li>
+            <li className="current"><a href="blog">Blog</a></li>
+            <li><a href="#portfolio">Works</a></li>
             {/* <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
             <li><a className="smoothscroll" href="#contact">Contact</a></li> */}
          </ul>

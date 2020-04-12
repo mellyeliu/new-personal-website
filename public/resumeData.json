@@ -2,7 +2,7 @@
   "main": {
     "name":"Melissa Liu",
     "occupation":"developer",
-    "description":"Part engineer, part creative, not sure what to put yet",
+    "description":"Placeholder text for now while I figure out what to put",
     "image":"profilepic.jpg",
     "bio": "",
     "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
@@ -20,12 +20,12 @@
       {
         "name":"facebook",
         "url":"http://facebook.com/mellye.liu",
-        "className":"fab fa-facebook"
+        "className":"fab fa-facebook-f"
       },
       {
         "name":"linkedin",
         "url":"https://www.linkedin.com/liu-melissa/",
-        "className":"fab fa-linkedin"
+        "className":"fab fa-linkedin-in"
       },
       {
         "name":"github",

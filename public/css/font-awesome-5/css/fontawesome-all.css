@@ -1149,7 +1149,8 @@ readers do not read off random characters that represent icons */
 
 .fa-facebook-f:before {
   content: "\f39e"; 
-  font-size: 20px}
+  /* font-size: 16px */
+}
 
 .fa-facebook-messenger:before {
   content: "\f39f"; }

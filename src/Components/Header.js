@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
 
 class Header extends Component {
   render() {
@@ -9,7 +10,7 @@ class Header extends Component {
       var description= this.props.data.description;
       var city= this.props.data.address.city;
       var networks= this.props.data.social.map(function(network){
-        return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
+        return <a href={network.url}><li key={network.name} className="hvr-grow-big"><i className={network.className}></i></li></a>
       })
     }
 
@@ -22,20 +23,24 @@ class Header extends Component {
 	      <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" className="nav">
-            <li className={`${this.props.dest == 'home' ? "current" : ""}`}><a className="smoothscroll" href="#home">Home</a></li>
-            {/* <li><a className="smoothscroll" href="#about">About</a></li>
-	         <li><a className="smoothscroll" href="#resume">Experience</a></li> */}
-            <li className={`${this.props.dest == 'blog' ? "current" : ""}`}><a href="blog">Blog</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-            {/* <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
+            <li id="logo">MELLYE.LIU</li>
+            <div id="homenav">
+               <li className='current'><a href="/">Home</a></li>
+               <li className='hvr-grow'><a href="blog">Blog</a></li>
+               <li className='hvr-grow'><a href="#portfolio">Works</a></li>
+            </div>
+           {/* <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
             <li><a className="smoothscroll" href="#contact">Contact</a></li> */}
          </ul>
 
       </nav>
 
       <div className="row banner">
-         <div className="banner-text">
-            <h1 className="responsive-headline">Hi, I'm {name}.</h1>
+         <div className="banner-text"> 
+            <Fade top delay={300}>
+            <h1 className="responsive-headline">{name}</h1>
+
+            </Fade>
             <h3>{description}.</h3>
             <hr />
             <ul className="social">
@@ -44,9 +49,9 @@ class Header extends Component {
          </div>
       </div>
 
-      <p className="scrolldown">
+      {/* <p className="scrolldown">
          <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
-      </p>
+      </p> */}
 
    </header>
     );
