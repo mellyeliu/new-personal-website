@@ -4,7 +4,7 @@ import $ from 'jquery';
 import './App.css';
 import BlogHeader from './Components/BlogHeader';
 import Footer from './Components/Footer';
-import Portfolio from './Components/Portfolio';
+import Menu from './Components/Menu';
 import BlogList from './Components/BlogList';
 
 class Blog extends Component {
@@ -16,8 +16,8 @@ class Blog extends Component {
       resumeData: {}
     };
 
-    // ReactGA.initialize('UA-110570651-1');
-    // ReactGA.pageview(window.location.pathname);
+    ReactGA.initialize('UA-110570651-1');
+    ReactGA.pageview(window.location.pathname);
 
   }
 
@@ -46,10 +46,10 @@ class Blog extends Component {
         <BlogHeader data={this.state.resumeData.main} dest='blog'/>
         {/* <About data={this.state.resumeData.main}/> */}
         <BlogList data={this.state.resumeData.blog}/>
-        <Portfolio data={this.state.resumeData.portfolio}/>
-        {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
-        {/* <Contact data={this.state.resumeData.main}/> */}
-        <Footer data={this.state.resumeData.main}/>
+        {/* <Menu data={this.state.resumeData.main}/> */}
+
+        {/* <Portfolio data={this.state.resumeData.portfolio}/> */}
+        <Footer data={this.state.resumeData.main} bottom={true}/>
       </div>
     );
   }

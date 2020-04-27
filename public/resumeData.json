@@ -38,18 +38,8 @@
         "className":"fab fa-b fa-instagram"
       },
       {
-        "name":"vsco",
-        "url":"https://vsco.co/mellyeliu",
-        "className":"fas fa-film"
-      },
-      {
-        "name":"medium",
-        "url":"https://medium.com/@melissaliu",
-        "className":"fab fa-medium-m"
-      },
-      {
         "name":"resume",
-        "url":"https://medium.com/@melissaliu",
+        "url":"https://www.linkedin.com/liu-melissa/",
         "className":"far fa-file-alt"
       }
     ]
@@ -60,14 +50,11 @@
       {
         "company":"My Two Weeks in Quarantine",
         "title":"Growth: Notifications",
-        "years":"May 2019",
-        "description":"Developed a number of notifications around Story Highlights and Direct Inbox using Django, conducting A/B testing to measure user impact and MAP gain."
-      },
-      {
-        "company":"This is the Second Title",
-        "title":"Credit Experiences",
-        "years":"May 2019",
-        "description":"Created a new experience for users with Collections using Scala, React, and GraphQL. Developed a contextual backlinking framework by passing location states within page queries."
+        "years":"April 2020",
+        "type":"Reflection",
+        "image":"images/blog1.jpg",
+        "id": "1",
+        "description":"This is a journal recording my thoughts throughout the COVID-19 pandemic and the things I learn during my two week quarantine."
       }
     ]
   },
@@ -104,15 +91,15 @@
         "school":"University of Waterloo",
         "degree":"BASc in Biomedical Engineering",
         "graduated":"Sept 2016 - present",
-        "description":"Met a bunch of awesome people and made a ton of great memories. Haze of co-op applications, labs and finals."
+        "description":"Placeholder text for now."
       }
     ],
     "blog":[
       {
         "company":"Awesome Design Studio",
         "title":"Senior UX God ",
-        "years":"March 2010 - Present",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "years":"04.02.2020",
+        "description":"this is the journal recording my thoughts throughout the COVID-19 pandemic and the things I learn during my two week quarantine. to all of you, stay safe & much love."
       },
       {
         "company":"Super Cool Studio",
@@ -125,21 +112,21 @@
   "portfolio":{
     "projects": [
       {
-        "title":"Canadian Wanderlust",
+        "title":"Personal Website",
         "category":"My Travel Blog for my post-university travels",
-        "image":"canadian-wanderlust.jpg",
+        "image":"proj2.jpg",
         "url":"https://www.canadianwanderlust.com"
       },
       {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"fury-fighting-gear.jpg",
+        "title":"Solon",
+        "category":"Mobile app to detect urinary incontinence",
+        "image":"proj1.jpg",
         "url":"http://www.timbakerdev.com"
       },
       {
         "title":"Original Thai Food",
         "category":"Website I built for a restaurant I like in Thailand",
-        "image":"original-thai-food.jpg",
+        "image":"proj1.jpg",
         "url":"http://www.timbakerdev.com/originalthaifood.github.io"
       }
     ]

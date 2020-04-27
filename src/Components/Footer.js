@@ -12,7 +12,7 @@ class Footer extends Component {
     }
 
     return (
-      <footer>
+      <footer className={`${this.props.bottom ? "blog" : ""}`}>
 
      <div className="row">
         <div className="twelve columns">
