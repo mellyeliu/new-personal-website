@@ -47,7 +47,9 @@ class PortfolioPage extends Component {
     return (
       <div className="App">
         <Nav data={this.state.resumeData.main} title='Portfolio' subtitle='Code &amp; Art'/>
+        <div style={{paddingTop:50}}>
         <Portfolio data={this.state.resumeData.portfolio}/>
+        </div>
         <Footer data={this.state.resumeData.main}/>
       </div>
     );

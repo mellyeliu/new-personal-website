@@ -23,7 +23,7 @@ class Nav extends Component {
       }
 
     return (
-        <nav id="nav-wrap">
+        <nav id="nav-wrap" class="opaque" style={{zIndex: 100000}}>
             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
             <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
             <ul id="nav" className="nav">
@@ -35,9 +35,8 @@ class Nav extends Component {
                 <div class="bar3"></div>
                 </div>
                 <div className={'menu-list ' + (this.state.isActive ? 'menu-show' : 'menu-hide')}>
-                    <a className="current" href="/">Home</a>
-                    <a className="hvr-grow" href="blog">writing</a>
-                    <a className="hvr-grow" href="blog">exp</a>
+                    <a className="current" href="/">home</a>
+                    <a className="hvr-grow" href="/">writing</a>
                 </div>
                 </li>
                 <li id="logo" className={(this.state.isActive ? 'logo-hide' : '')}><span className='control'>{this.props.title}</span> <span className='control' style={{paddingLeft: 15, color: 'rgb(150,150,150)'}}>{this.props.subtitle}</span></li> 

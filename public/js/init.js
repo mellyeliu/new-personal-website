@@ -83,20 +83,14 @@
 
 		var h = $('header').height();
 		var y = $(window).scrollTop();
-      var nav = $('#nav-wrap');
+      if (y < h*.05) {
+         document.getElementById("nav-wrap").style.height = '90px'
+         document.getElementById("nav-wrap").style.padding = '35px 0px'
 
-	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
-	      nav.fadeOut('fast');
-	   }
+      }
       else {
-         if (y < h*.20) {
-            nav.removeClass('opaque').fadeIn('fast');
-         }
-         else {
-            nav.fadeOut('fast');
-            // nav.addClass('opaque').fadeIn('fast');
-            // nav.addClass('small').fadeIn('fast');
-         }
+         document.getElementById("nav-wrap").style.height = '60px'
+         document.getElementById("nav-wrap").style.padding = '20px 0px'
       }
 
 	});

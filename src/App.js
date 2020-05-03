@@ -5,7 +5,8 @@ import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import About from './Components/About';
-// import Portfolio from './Components/Portfolio';
+import Portfolio from './Components/Portfolio';
+import Resume from './Components/Resume';
 import Menu from './Components/Menu';
 
 
@@ -48,8 +49,10 @@ class App extends Component {
         <Header data={this.state.resumeData.main} dest={'home'}/>
         <About data={this.state.resumeData.main}/>
         {/* <Resume data={this.state.resumeData.resume}/> */}
-        <Menu data={this.state.resumeData.main}/>
         {/* <Portfolio data={this.state.resumeData.portfolio}/> */}
+        <Menu data={this.state.resumeData.main}/>
+        <Resume data={this.state.resumeData.resume}/>
+        <Portfolio data={this.state.resumeData.portfolio}/>
         {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
         {/* <Contact data={this.state.resumeData.main}/> */}
         <Footer data={this.state.resumeData.main}/>

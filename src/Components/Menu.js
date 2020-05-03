@@ -14,7 +14,7 @@ class Menu extends Component {
           <h2 className="menu" style={{marginBottom: 50, textAlign: 'left'}}><span>learn a bit about me.</span></h2>
           </Fade>          
           <div className="four mobile-shrink columns ">
-            <Link to='/exp'>
+            <a href='#resume' className='smoothscroll'>
               <div className="base hvr-grow">
               <div className="overlay">
                 <div className="test">
@@ -24,25 +24,25 @@ class Menu extends Component {
             
                 <img className="profile-pic"  src={'images/experiences2.jpg'} alt="Tim Baker Profile Pic" />
               </div>
-            </Link>
+            </a>
             </div>
             <div className="four mobile-shrink columns">
-            <Link to='/portfolio'>
+            <a href='#portfolio' className='smoothscroll'>
               <div className="base hvr-grow">
               <div className="overlay">
                   PORTFOLIO
                 </div>
-              <img className="profile-pic"  src={'images/pro4.jpg'} alt="Tim Baker Profile Pic" />
+              <img className="profile-pic"  src={'images/pro4-min.jpg'} alt="Tim Baker Profile Pic" />
               </div>
-              </Link>
+              </a>
             </div>
             <div className="four mobile-shrink columns">
-            <a href='/blog'>
+            <a href='/'>
               <div className="base hvr-grow">
               <div className="overlay">
                   WRITING
                 </div>
-              <img className="profile-pic"  src={'images/pro5.jpg'} alt="Tim Baker Profile Pic" />
+              <img className="profile-pic"  src={'images/pro5-min.jpg'} alt="Tim Baker Profile Pic" />
               </div>
               </a>
             </div>

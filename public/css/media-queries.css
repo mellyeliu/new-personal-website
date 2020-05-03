@@ -54,12 +54,13 @@
    }
 
    #logo {
-      padding: 16px 20px 28px 20px !important;
+      /* padding: 16px 20px 28px 20px !important; */
    }
 
    span.control {
       display: block;
-      height: 20px;
+      height: 28px;
+      margin-top: -8px;
    }
 
 
@@ -165,6 +166,13 @@
    }
 
    
+   span.control {
+      height: 38px !important;
+      margin-top: -22px;
+      font-size: 13px;
+   }
+
+   
    /* .ham-menu {
       margin-left: 23px;
    } */
@@ -194,6 +202,9 @@
    #resume h1 { letter-spacing: 3px; }
    #resume .main-col { padding-right: 30px; }
    #resume h3, #resume .info { text-align: center; }
+   #resume div.header-col {display: none}
+   #resume div.main-col {margin: 0; text-align: center; padding: 30px 30px 10px 30px}
+   #resume .row.skill {margin-top:0px !important}
       
    .bars { width: 100%; }
 
@@ -203,6 +214,7 @@
    /* ----------------------------------------------------------------- */
    #portfolio-wrapper .columns { margin-bottom: 40px; }
    .popup-modal {	max-width: 85%; }
+   #portfolio h2 {margin-bottom: 5px}
 
 
    /* footer
@@ -257,6 +269,8 @@
    .ham-menu {
       margin-left: 23px;
    }
+
+   #resume .profile-pic {display: 'none' !important;}
 
    /* footer
    ------------------------------------------------------------------------ */

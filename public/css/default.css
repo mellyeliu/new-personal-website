@@ -27,11 +27,14 @@ e. Others
  ------------------------------------------------------------------ */
 
 @import url("fonts.css");
+@import url('react-web-tabs/dist/react-web-tabs.css');
+
 @import url("fontello/css/fontello.css");
 /* @import url("font-awesome/css/font-awesome.min.css"); */
 @import url("font-awesome-5/css/fontawesome-all.css");
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+
 /* @import url("hover-min.css"); */
 /* @import url("font-awesome-5/css/font-brands.css"); */
 
@@ -367,7 +370,7 @@ p.lead {
 
 /* for 'em' and 'strong' tags, font-size and line-height should be same with
 the body tag due to rendering problems in some browsers */
-em { font: 15px/30px 'opensans-italic', sans-serif; }
+/* em { font: 15px/30px 'opensans-italic', sans-serif; } */
 strong, b { font: 15px/30px 'opensans-bold', sans-serif; }
 small { font-size: 11px; line-height: inherit; }
 

@@ -16,12 +16,13 @@ class Header extends Component {
       
       <Fade top duration={2000}>
       <div className="banner">
-          <Carousel autoplay={true} wrapAround={true} transitionMode='fade' speed={2000}
+      <img style={{cursor: 'default'}} src={'images/header1.jpeg'}></img>
+          {/* <Carousel autoplay={true} wrapAround={true} transitionMode='fade' speed={2000}
           withoutControls={true} pauseOnHover={false} autoplayInterval={3000}>
           <img style={{cursor: 'default'}} src={'images/header-background.jpg'}></img>
           <img style={{cursor: 'default'}} src={'images/header2.jpg'}></img>
            <img style={{cursor: 'default'}} src={'images/header3.jpg'}></img>
-          </Carousel>
+          </Carousel> */}
       </div>
       </Fade>
 
