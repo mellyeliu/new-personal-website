@@ -17,6 +17,7 @@ class Header extends Component {
       <Fade top duration={2000}>
       <div className="banner">
       <img style={{cursor: 'default'}} src={'images/header1.jpeg'}></img>
+      <h6></h6>
           {/* <Carousel autoplay={true} wrapAround={true} transitionMode='fade' speed={2000}
           withoutControls={true} pauseOnHover={false} autoplayInterval={3000}>
           <img style={{cursor: 'default'}} src={'images/header-background.jpg'}></img>

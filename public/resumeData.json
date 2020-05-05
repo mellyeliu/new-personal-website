@@ -105,42 +105,42 @@
         "title":"Personal Website",
         "category":"Space for self-expression and documentation. Work in progress!",
         "languages": "React",
-        "image":"proj1b.png",
+        "image":"proj1b-min.png",
         "url":"https://www.canadianwanderlust.com"
       },
       {
         "title":"Solon",
         "category":"Sensor pad and mobile app to assess general health and monitor urinary incontinence",
         "languages": "Android (Java), SQLite, Arduino",
-        "image":"proj1.jpg",
+        "image":"proj1-min.jpg",
         "url":"http://www.timbakerdev.com"
       },
       {
         "title":"Brand Insights Snapshots",
         "category":"Site that aggregates and displays brand demographic insights.",
         "languages": "Django",
-        "image":"proj4a.png",
+        "image":"proj4-min.png",
         "url":"https://snapshot.numerator.com/brand/tide"
       },
       {
         "title":"Sonar Detection System",
         "category":"Sonar system using ultrasound sensor data to predict object distance, angle, and shape.",
         "languages": "Arduino, Python (matplotlib)",
-        "image":"proj5.png",
+        "image":"proj5-min.png",
         "url":"http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
         "title":"Fake News Detector",
         "category":"Fake news predictor using an LSTM network with word embeddings",
         "languages": "Python (keras, sklearn)",
-        "image":"proj3.png",
+        "image":"proj3-min.png",
         "url":"http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
         "title":"Freezing of Gait Detector",
         "category":"Wearable device using acceleration data to detect FOG episodes real time",
         "languages":"Matlab, Arduino",
-        "image":"proj6.png",
+        "image":"proj6-min.png",
         "url":"http://www.timbakerdev.com/originalthaifood.github.io"
       }
     ],
@@ -148,7 +148,7 @@
       {
         "title":"Personal Website",
         "category":"Small space to indulge in self-expression. Work in progress.",
-        "image":"artb.jpg",
+        "image":"art1.jpg",
         "url":"https://www.canadianwanderlust.com"
       },
       {

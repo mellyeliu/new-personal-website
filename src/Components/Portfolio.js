@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './Nav'
 import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
-import 'react-web-tabs/dist/react-web-tabs.css';
+// import 'react-web-tabs/dist/react-web-tabs.css';
 import Fade from 'react-reveal/Fade';
 
 

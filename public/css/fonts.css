@@ -141,6 +141,33 @@
 }
 
 
+@font-face {
+    font-family: 'gotham-regular';
+    src: url('fonts/gotham/Gotham-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham-light';
+    src: url('fonts/gotham/Gotham-XLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham-bold';
+    src: url('fonts/gotham/GothamBook.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham-xbold';
+    src: url('fonts/gotham/GothamMedium.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
 /*
  * FIXED for Font-Face Chrome Rendering
 ================================================================================ */
@@ -157,3 +184,4 @@
    }
 
 }
+
