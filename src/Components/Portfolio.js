@@ -13,14 +13,12 @@ class Portfolio extends Component {
         var projectImage = 'images/portfolio/'+projects.image;
         return <div key={projects.title} className="two columns portfolio-item">
            <div className="item-wrap">
-            {/* <a href={projects.url}> */}
             <a> 
                <img alt={projects.title} src={projectImage} />
                <div className="overlay">
                   <div className="portfolio-item-meta">
                  <h5>{projects.title}</h5>
                      <p>{projects.category}</p>
-                     {/* <br/> */}
                      <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>
                   </div>
                 </div>
@@ -32,15 +30,7 @@ class Portfolio extends Component {
         var projectImage = 'images/portfolio/'+projects.image;
         return <div key={projects.title} className="two columns portfolio-item">
            <div className="item-wrap">
-            {/* <a href={projects.url}> */}
                <img alt={projects.title} src={projectImage} />
-               {/* <div className="overlay">
-                  <div className="portfolio-item-meta">
-                 <h5>{projects.title}</h5>
-                     <p>{projects.category}</p>
-                  </div>
-                </div> */}
-            {/* </a> */}
           </div>
         </div>
       })
@@ -55,9 +45,6 @@ class Portfolio extends Component {
         <div className="tagline"><h2>here are some of my works.</h2></div>
         </Fade>
          <div className="twelve columns collapsed">
-            {/* <div class='subline'>Here's a collection of things I've worked on over the years. I find it hard to finish things, but I'm working on it. Here's a collection of things I've worked on over the years. I find it hard to finish things, but I'm working on it.</div> */}
-
-            {/* <h1>All Posts.</h1> */}
             <Tabs
               defaultTab="one"
               onChange={(tabId) => { console.log(tabId) }}

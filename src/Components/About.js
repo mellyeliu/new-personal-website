@@ -24,7 +24,7 @@ class About extends Component {
 
          <div className="row skills" id="two">
          <div className="four columns">
-         <img className="profile-pic"  src={'images/mef.jpeg'} alt="Tim Baker Profile Pic" />
+         <img className="profile-pic"  src={'images/mef.jpeg'} />
          </div>
          <div className="eight columns main-col" style={{marginTop: 60}}>
             <Fade right fraction={0.95}>

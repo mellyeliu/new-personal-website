@@ -45,8 +45,7 @@ class Resume extends Component {
            <div className="jobs">
           {!(i % 2) ? (
             <div className="six columns header-col">
-              <img className="profile-pic"  src={`images/${work.image}`} alt="Tim Baker Profile Pic" />
-              {/* <h1><span>Work</span></h1> */}
+              <img className="profile-pic"  src={`images/${work.image}`}/>
             </div>
           ) : ''}
           <div style={{zIndex: 100}} className={`six columns main-col ${!(i % 2) ? 'job-desc': 'reverse'}`}>
@@ -59,8 +58,7 @@ class Resume extends Component {
           </div>
           {(i % 2) ? (
             <div className="six columns header-col reverse">
-              <img className="profile-pic reverse"  src={`images/${work.image}`} alt="Tim Baker Profile Pic" />
-              {/* <h1><span>Work</span></h1> */}
+              <img className="profile-pic reverse"  src={`images/${work.image}`}/>
             </div>
           ) : ''}
           
@@ -76,40 +74,6 @@ class Resume extends Component {
       <div className="row skill" style={{marginTop:65}}>
         {work}
       </div>
-      {/* <div className="row skill">
-         <div className="three columns header-col">
-            <h1><span>Education</span></h1>
-         </div>
-
-         <div className="nine columns main-col">
-            <div className="row item">
-               <div className="twelve columns">
-                 {education}
-               </div>
-            </div>
-         </div>
-      </div> */}
-
-
-
-      {/* <div className="row skill">
-
-         <div className="three columns header-col">
-            <h1><span>Skills</span></h1>
-         </div>
-
-         <div className="nine columns main-col">
-
-            <p>{skillmessage}
-            </p>
-
-				<div className="bars">
-				   <ul className="skills">
-					  {skills}
-					</ul>
-				</div>
-			</div>
-      </div>  */}
    </section>
     );
   }
