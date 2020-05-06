@@ -286,9 +286,9 @@ header .scrolldown a:hover { color: rgb(175,175,175); }
 #nav-wrap-2 > a.mobile-btn { display: none; }
 
 ul#nav {
-   width: 90%;
+   width: 95%;
    margin:auto;
-   max-width: 980px;
+   /* max-width: 1080px; */
 }
 
 #logo {
@@ -1365,7 +1365,6 @@ button.rwt__tab:first-child {
 }
 
 .rwt__tablist:not([aria-orientation="vertical"]) .rwt__tab[aria-selected="true"]:after {
-  /* bottom: -1px; */
   	top: 0px;
 	left: 0;
 	width: 100%;
