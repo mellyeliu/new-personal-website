@@ -12,7 +12,7 @@ class Header extends Component {
   render() {
     return (
       <header id="home">
-      <Nav data={this.props.data} title='MELISSA LIU' subtitle='[Code Writing Art]'/>
+      <Nav data={this.props.data} title='MELISSA LIU' subtitle='Code / Writing / Art'/>
       
       <Fade top duration={2000}>
       <div className="banner">

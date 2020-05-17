@@ -84,8 +84,8 @@
 		var h = $('header').height();
 		var y = $(window).scrollTop();
       if (y < h*.05) {
-         document.getElementById("nav-wrap").style.height = '90px'
-         document.getElementById("nav-wrap").style.padding = '35px 0px'
+         document.getElementById("nav-wrap").style.height = '80px'
+         document.getElementById("nav-wrap").style.padding = '30px 0px'
 
       }
       else {

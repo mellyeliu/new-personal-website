@@ -36,10 +36,10 @@ class Nav extends Component {
                 </div>
                 <div className={'menu-list ' + (this.state.isActive ? 'menu-show' : 'menu-hide')}>
                     <a className="current" href="/">home</a>
-                    <a className="hvr-grow" href="/">writing</a>
+                    <a className="hvr-grow" href="/writing">writing</a>
                 </div>
                 </li>
-                <li id="logo" className={(this.state.isActive ? 'logo-hide' : '')}><span className='control'>{this.props.title}</span> <span className='control' style={{paddingLeft: 15, color: 'rgb(150,150,150)'}}>{this.props.subtitle}</span></li> 
+                <li id="logo" className={(this.state.isActive ? 'logo-hide' : '')}><span style={{fontWeight: 700}} className='control'>{this.props.title}</span> <span className='control' style={{paddingLeft: 15, color: 'rgb(150,150,150)'}}>{this.props.subtitle}</span></li> 
                 <div className="social-right">
                 {networks}
                 </div>

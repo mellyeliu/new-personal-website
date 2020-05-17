@@ -3,7 +3,7 @@ import ReactGA from 'react-ga';
 import $ from 'jquery';
 import './App.css';
 import Footer from './Components/Footer';
-import Portfolio from './Components/Portfolio';
+import Writing from './Components/Writing';
 import Nav from './Components/Nav'
 
 
@@ -43,9 +43,9 @@ class PortfolioPage extends Component {
   render() {
     return (
       <div className="App">
-        <Nav data={this.state.resumeData.main} title='Portfolio' subtitle='Code &amp; Art'/>
+        <Nav data={this.state.resumeData.main} title='WRITING SKETCHBOOK' subtitle='MEMOIR / FICTION / THOUGHTS'/>
         <div style={{paddingTop:50}}>
-        <Portfolio data={this.state.resumeData.portfolio}/>
+        <Writing data={this.state.resumeData.portfolio}/>
         </div>
         <Footer data={this.state.resumeData.main}/>
       </div>

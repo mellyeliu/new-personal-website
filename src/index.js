@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
-import PortfolioPage from './PortfolioPage';
+import WritingPortfolio from './WritingPortfolio';
 import Blog from './Blog';
 import BlogPost from './Components/BlogPost';
 import Resume from './Components/Resume';
@@ -35,7 +35,7 @@ const routing = (
       <div>
         <Route exact path="/" component={App} />
         <Route path="/exp" component={Resume} />
-        <Route path="/portfolio" component={PortfolioPage} />
+        <Route path="/writing" component={WritingPortfolio} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog-posts/:blogId" component={BlogPost} />
         <Route path="/works" component={Blog} />

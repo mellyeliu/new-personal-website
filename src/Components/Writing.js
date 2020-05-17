@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import Nav from './Nav'
 import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
 // import 'react-web-tabs/dist/react-web-tabs.css';
 import Fade from 'react-reveal/Fade';
 
 
-class Portfolio extends Component {
+class Writing extends Component {
   render() {
 
     if(this.props.data){
@@ -42,7 +41,7 @@ class Portfolio extends Component {
 
       <div className="row">
         <Fade right>
-        <div className="tagline"><h2>here are some of my works.</h2></div>
+        {/* <div className="tagline"><h2>here are some of my works.</h2></div> */}
         </Fade>
          <div className="twelve columns collapsed">
             <Tabs
@@ -50,8 +49,10 @@ class Portfolio extends Component {
               onChange={(tabId) => { console.log(tabId) }}
             >
               <TabList style={{marginLeft: 20}}>
-                <Tab tabFor="one">PROJECTS</Tab>
-                <Tab tabFor="two">ART</Tab>
+                <Tab tabFor="one">CREATIVE NONFICTION</Tab>
+                <Tab tabFor="two">ESSAY</Tab>
+                <Tab tabFor="two">RAMBLES</Tab>
+                <Tab tabFor="two">FICTION</Tab>
               </TabList>
               <TabPanel tabId="one">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
@@ -75,4 +76,4 @@ class Portfolio extends Component {
   }
 }
 
-export default Portfolio;
+export default Writing;
