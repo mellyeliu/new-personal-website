@@ -40,6 +40,7 @@ class Writing extends Component {
 
 
       <div className="row">
+          
         <Fade right>
         {/* <div className="tagline"><h2>here are some of my works.</h2></div> */}
         </Fade>
