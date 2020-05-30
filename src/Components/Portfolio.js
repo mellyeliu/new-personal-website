@@ -54,7 +54,7 @@ class Portfolio extends Component {
                 <Tab tabFor="two">ART</Tab>
               </TabList>
               <TabPanel tabId="one">
-                <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
+                <div id="portfolio-wrapper" className="bgrid-halves s-bgrid-halves cf">
                   <Fade>
                   {projects}
                   </Fade>

@@ -37,6 +37,31 @@ header#home {
    overflow: hidden;
 }
 
+.container {
+   position: relative;
+   color: white;
+}
+
+.black {
+   bottom: 15px !important;
+   top: none !important;
+   /* color: rgb(50,50,50) !important; */
+}
+
+.bottom-left {
+   position: absolute;
+    top: 15px;
+    right: 10px;
+    font-family: montserrat;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-size: 9px;
+    text-align: left;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-weight: 700;
+ }
+
 .menu-icon {
    float: left;
    margin-top: 33px;
@@ -124,7 +149,7 @@ header:before {
 }
 header .banner {
    display: inline-block;
-   margin: 70px auto 0px auto;
+   margin: 80px auto 0px auto;
    width: 90%;
    max-width: 1000px;
    padding-bottom: 30px;
@@ -799,7 +824,7 @@ div.social-right a:last-child { padding-right: 0 !important; }
 /* ------------------------------------------------------------------ */
 
 #portfolio {
-   padding-top: 60px;
+   padding-top: 45px;
    padding-bottom: 10px;
 }
 #portfolio h1 {

@@ -24,7 +24,7 @@ class About extends Component {
 
          <div className="row skills" id="two">
          <div className="four columns">
-         <img className="profile-pic"  src={'images/mef.jpeg'} />
+         <img className="profile-pic"  src={'images/me2.jpg'} />
          </div>
          <div className="eight columns main-col" style={{marginTop: 60}}>
             <Fade right fraction={0.95}>
@@ -32,9 +32,9 @@ class About extends Component {
             </Fade>
             <p className="blurb">I’m a 4th year engineering student at the <a className='sunderline' href={'https://uwaterloo.ca/'}>University of Waterloo</a>. 
                I’ve previously interned at <a className='sunderline' href={'https://instagram.com/'}>Instagram</a>, <a className='sunderline' href={'https://www.creditkarma.ca/'}>Credit Karma</a>, and <a className='sunderline' href={'https://www.numerator.com/'}>InfoScout</a> in backend and full-stack development.
-               <br/><br/>I get so much enjoyment from the creative process, whether the medium is art, writing or code. 
-               I’ll always be working away at these skills, trying to reduce the disparity between what I can make and what I aspire to. 
-               <br/><br/>It's in this self expression that I discover who I am. Someone a little reckless, opinionated, an overthinker. Someone with passions to nurture, from fashion to music to literary fandom. And it doesn't stop there—I'm on a lifelong journey to unmask out the rest. Hobbies and dreams, fears and neuroses, I invite you to come along for the ride.
+               <br/><br/>I get so much enjoyment from creating, whether the medium is art, writing or code. 
+               I’m always working away at these skills, trying to close the gap between what I can make and what I aspire to. 
+               <br/><br/>It's in this self expression that I piece together who I am. Someone a little neurotic, opinionated, an overthinker. Someone with passions to nurture, from fashion to music to literary fandom. And it doesn't stop there—I'm on a lifelong journey to unmask out the rest. Hobbies and dreams, fears and neuroses, I invite you to come along for the ride.
             </p>
          </div>
       </div>
