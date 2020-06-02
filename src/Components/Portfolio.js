@@ -11,7 +11,7 @@ class Portfolio extends Component {
     if(this.props.data){
       var projects = this.props.data.projects.map(function(projects){
         var projectImage = 'images/portfolio/'+projects.image;
-        return <div key={projects.title} className="two columns portfolio-item">
+        return <div key={projects.title} style={{padding: "0 15px"}}className="two columns portfolio-item">
            <div className="item-wrap">
             <a> 
                <img alt={projects.title} src={projectImage} />
@@ -41,20 +41,20 @@ class Portfolio extends Component {
 
 
       <div className="row">
-        <Fade right>
-        <div className="tagline"><h2>here are some of my works.</h2></div>
+        <Fade top>
+        <div style={{marginBottom: -15}}className="tagline"><h2>here are some of my works.</h2></div>
         </Fade>
          <div className="twelve columns collapsed">
             <Tabs
               defaultTab="one"
               onChange={(tabId) => { console.log(tabId) }}
             >
-              <TabList style={{marginLeft: 20}}>
+              <TabList>
                 <Tab tabFor="one">PROJECTS</Tab>
                 <Tab tabFor="two">ART</Tab>
               </TabList>
               <TabPanel tabId="one">
-                <div id="portfolio-wrapper" className="bgrid-halves s-bgrid-halves cf">
+                <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
                   <Fade>
                   {projects}
                   </Fade>

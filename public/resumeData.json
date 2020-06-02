@@ -42,6 +42,33 @@
         "url":"https://www.linkedin.com/liu-melissa/",
         "className":"far fa-file-alt"
       }
+    ],
+    "photos":[
+      {
+        "place":"los angeles",
+        "date":"02·17·2020",
+        "image":"headeraa.jpg"
+      },
+      {
+        "place":"miami",
+        "date":"04·23·2019",
+        "image":"headerdd.jpg"
+      },
+      {
+        "place":"niagara falls",
+        "date":"01·04·2019",
+        "image":"headerbbb.jpg"
+      },
+      {
+        "place":"san francisco",
+        "date":"12·10·2018",
+        "image":"headercc.jpg"
+      },
+      {
+        "place":"blue mountain",
+        "date":"12·23·2019",
+        "image":"headeree.jpg"
+      }
     ]
   },
   "blog":{
@@ -155,7 +182,7 @@
       },
       {
         "title":"Solon",
-        "image":"art4.jpg"
+        "image":"art2.jpg"
       }
     ]
   }

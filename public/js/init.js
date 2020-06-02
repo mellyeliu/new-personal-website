@@ -65,14 +65,17 @@
 /* equal to the browser height.
 ------------------------------------------------------ */
 
-   // $('header').css({ 'height': $(window).height() });
-   // $(window).on('resize', function() {
-   //    var w = $(window).width();
-   //    if w <
+   $('header').css({ 'height': $(window).height() });
+   $(window).on('resize', function() {
+      var w = $(window).width();
+      var h = $(window).height() - 180;
+      $('header').css({ 'height': $(window).height() });
+      // $('.banner').css({ 'height': $(window).height() });
+      $('body').css({ 'width': $(window).width() })
+      // $('img#headerpic').css({ 'height': $(window).height() });
+      // document.getElementById("headerpic").style.height = '900px';
 
-   //      $('header').css({ 'height': $(window).height() });
-   //      $('body').css({ 'width': $(window).width() })
-   // });
+   });
 
 
 /*----------------------------------------------------*/
@@ -130,6 +133,30 @@
       animationSpeed: 600,
       randomize: false,
    });
+
+
+   $(".rwt__tab[aria-selected='false']").hover(function () {
+      $(".rwt__tab[aria-selected='true']").addClass("no-width");
+  }, function () {
+      $(".rwt__tab[aria-selected='true']").removeClass("no-width");
+  });
+
+  
+  $(".rwt__tab[aria-selected='true']").hover(function () {
+   $(".rwt__tab[aria-selected='true']").removeClass("no-width");
+}, function () {
+   $(".rwt__tab[aria-selected='true']").removeClass("no-width");
+});
+
+//   $(".rwt__tab[aria-selected='false']").click(function () {
+//    $(".rwt__tab[aria-selected='true']").removeClass("no-width");
+// })
+//   $(".rwt__tab[aria-selected='false']").hover(function () {
+//    $(".rwt__tab[aria-selected='true']").append('<style>:before{width:0px !important;}</style>');
+// }, function () {
+//    $(".rwt__tab[aria-selected='true']").children('style').remove();
+// });
+   
 
 /*----------------------------------------------------*/
 /*	contact form

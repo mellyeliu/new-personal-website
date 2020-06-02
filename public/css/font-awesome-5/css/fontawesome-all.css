@@ -1625,6 +1625,7 @@ readers do not read off random characters that represent icons */
 
 .fa-instagram:before {
   content: "\f16d";
+  margin-top:10px;
   font-weight: bold; }
 
 /* .fa-instagram-square:before {

@@ -6,6 +6,30 @@
 
 /* ================================================================== */
 
+@media only screen and (min-height: 890px) and (min-width: 1200px) {
+
+   /* header styles
+  ------------------------------------------------------------------ */
+  header .banner {
+     max-width: 1150px;
+  }
+
+  ul#nav {
+      max-width: 1150px;
+   }
+   .row {
+      max-width: 1180px;
+   }
+
+   /* .fulltest {
+      display: none;
+   }
+   .fulltest2 {
+      margin-top: 100px !important;
+   } */
+
+}
+
 
 /* screenwidth less than 1024px
 --------------------------------------------------------------------- */
@@ -233,6 +257,9 @@
    #portfolio-wrapper .columns { margin-bottom: 40px; }
    .popup-modal {	max-width: 85%; }
    #portfolio h2 {margin-bottom: 5px}
+
+   .rwt__tablist { margin-left: 27px; }
+   .portfolio-item.columns { padding: 0px 30px !important;}
 
 
    /* footer

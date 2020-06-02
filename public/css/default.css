@@ -64,6 +64,10 @@ time, mark, audio, video {
    vertical-align: baseline;
    background: transparent;
 }
+/* 
+body {
+   cursor: crosshair;
+} */
 
 /* Grow Big */
 .hvr-grow {
@@ -87,6 +91,22 @@ time, mark, audio, video {
    transform: scale(1.035);
    cursor: pointer;
 }
+
+.hvr-shrink {
+   display: inline-block;
+   vertical-align: middle;
+   -webkit-transform: perspective(1px) translateZ(0);
+   transform: perspective(1px) translateZ(0);
+   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+   -webkit-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+   -webkit-transition-property: transform;
+   transition-property: transform;
+ }
+ .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+   -webkit-transform: scale(0.98);
+   transform: scale(0.98);
+ }
 
 /* Grow */
 .hvr-grow-big {
@@ -639,14 +659,37 @@ dd { margin: 0 0 0 20px; }
 
 img {
    max-width: 100%;
-   height: auto;
+   /* height: auto; */
 }
 img.pull-right { margin: 12px 0px 0px 18px; }
 img.pull-left { margin: 12px 18px 0px 0px; }
 
 /*  6. Buttons  --------------------------------------------------------- */
 
-.button,
+button {
+   background: none !important;
+   border: none;
+   /* color: white; */
+}
+
+button:hover {
+   cursor: pointer;
+   color: rgb(200,200,200);
+}
+
+button:active, button::selection, button:visited {
+   background: none;
+   color: white;
+}
+button:active {
+   background: none;
+   color: white;
+}
+
+button:focus {outline:0; background: none}
+
+
+/* .button,
 .button:visited,
 button,
 input[type="submit"],
@@ -711,7 +754,7 @@ input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
-
+ */
 
 /*  7. Forms  --------------------------------------------------------- */
 
