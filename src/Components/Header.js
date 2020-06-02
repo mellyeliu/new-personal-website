@@ -41,7 +41,7 @@ class Header extends Component {
           {/* <div className="top-left">PLAY &nbsp;<button onClick={{p}}> <i class="fas fa-backward"></i></button> <button onClick={this.toggleButton}> {this.state.isActive ? (<i style={{fontSize: 9, paddingRight: 4}} class="fas fa-pause"></i>) : (<i style={{fontSize: 8, paddingRight: 2}} class="fas fa-play"></i> )} </button>&nbsp;<i class="fas fa-forward"></i></div> */}
         </div>
           <Carousel autoplay={this.state.isActive} wrapAround={true} transitionMode='fade'
-          withoutControls={true} pauseOnHover={true} autoplayInterval={4000} enableKeyboardControls={true}>
+          withoutControls={true} pauseOnHover={false} autoplayInterval={4000} enableKeyboardControls={true}>
             {art}
           </Carousel>
       </div>

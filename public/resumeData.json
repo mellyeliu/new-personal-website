@@ -24,12 +24,12 @@
       },
       {
         "name":"linkedin",
-        "url":"https://www.linkedin.com/liu-melissa/",
+        "url":"https://www.linkedin.com/mellyeliu",
         "className":"fab fa-linkedin-in"
       },
       {
         "name":"github",
-        "url":"http://github.com/Melissa-Liu",
+        "url":"http://github.com/mellyeliu",
         "className":"fab fa-github"
       },
       {
@@ -39,7 +39,7 @@
       },
       {
         "name":"resume",
-        "url":"https://www.linkedin.com/liu-melissa/",
+        "url":"https://www.linkedin.com/mellyeliu",
         "className":"far fa-file-alt"
       }
     ],
@@ -47,27 +47,27 @@
       {
         "place":"los angeles",
         "date":"02·17·2020",
-        "image":"headeraa.jpg"
+        "image":"headeraa-min.jpg"
       },
       {
         "place":"miami",
         "date":"04·23·2019",
-        "image":"headerdd.jpg"
+        "image":"headerdd-min.jpg"
       },
       {
         "place":"niagara falls",
         "date":"01·04·2019",
-        "image":"headerbbb.jpg"
+        "image":"headerbb-min.jpg"
       },
       {
         "place":"san francisco",
         "date":"12·10·2018",
-        "image":"headercc.jpg"
+        "image":"headercc-min.jpg"
       },
       {
         "place":"blue mountain",
         "date":"12·23·2019",
-        "image":"headeree.jpg"
+        "image":"headeree-min.jpg"
       }
     ]
   },
@@ -131,7 +131,7 @@
       {
         "title":"Personal Website",
         "category":"Space for self-expression and documentation. Work in progress!",
-        "languages": "React",
+        "languages": "React (and some questionable CSS practices)",
         "image":"proj1b-min.png",
         "url":"https://www.canadianwanderlust.com"
       },
@@ -174,7 +174,7 @@
     "art": [
       {
         "title":"Personal Website",
-        "image":"art1.jpg"
+        "image":"artbb.jpg"
       },
       {
         "title":"Solon",

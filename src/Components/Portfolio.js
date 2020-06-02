@@ -3,6 +3,7 @@ import Nav from './Nav'
 import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
 // import 'react-web-tabs/dist/react-web-tabs.css';
 import Fade from 'react-reveal/Fade';
+import Carousel from 'nuka-carousel';
 
 
 class Portfolio extends Component {
@@ -26,11 +27,19 @@ class Portfolio extends Component {
           </div>
         </div>
       })
-      var art = this.props.data.art.map(function(projects){
+      var art = this.props.data.art.map(function(projects, i){
         var projectImage = 'images/portfolio/'+projects.image;
         return <div key={projects.title} className="two columns portfolio-item">
            <div className="item-wrap">
-               <img alt={projects.title} src={projectImage} />
+                {!(i == 0) ? 
+                (<img alt={projects.title} src={projectImage} />) :
+                (<Carousel
+                  renderCenterLeftControls={({ previousSlide }) => (``)}
+                  renderCenterRightControls={({ nextSlide }) => ('')}>
+                  <img alt={projects.title} src={projectImage} />
+                  <img src={'images/portfolio/artaa.jpg'} />
+                </Carousel>)
+                }
           </div>
         </div>
       })

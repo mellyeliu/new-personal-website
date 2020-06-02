@@ -12,7 +12,7 @@ class Nav extends Component {
 
     toggleButton = () => {
       this.setState({
-          isActive: !this.state.isActive
+        isMenu: !this.state.isMenu
       })
     }
   render() {
@@ -37,7 +37,7 @@ class Nav extends Component {
                 </div>
                 <div className={'menu-list ' + (this.state.isMenu ? 'menu-show' : 'menu-hide')}>
                     <a className="current" href="/">home</a>
-                    <a className="hvr-grow" href="/writing">writing</a>
+                    <a style={{cursor: 'not-allowed'}} className="hvr-grow">writing</a>
                 </div>
                 </li>
                 <li id="logo" className={(this.state.isMenu ? 'logo-hide' : '')}><span style={{fontWeight: 700}} className='control'>{this.props.title}</span> <span className='control' style={{paddingLeft: 15, color: 'rgb(150,150,150)'}}>{this.props.subtitle}</span></li> 
