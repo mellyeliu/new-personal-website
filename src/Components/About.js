@@ -27,7 +27,7 @@ class About extends Component {
          <div className="row skills" id="two">
         <Fade spy={this.state.reveal} left>
           <div className="four columns" style={{marginTop:0}}>
-            <img className="profile-pic"  src={'images/me2.jpg'} />
+            <img className="profile-pic"  src={'images/me2.JPG'} />
             <div style={{color: 'white', marginTop: -40}}>.</div>
             <div style={{color: 'white'}}>.</div>
           </div>
