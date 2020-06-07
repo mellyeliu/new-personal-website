@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "mellyeliu.me",
+  "homepage": "http://mellyeliu.github.io/personal-website",
   "private": true,
   "dependencies": {
     "@animated-burgers/burger-squeeze": "^1.1.2",
