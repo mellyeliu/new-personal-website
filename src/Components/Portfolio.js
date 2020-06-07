@@ -31,14 +31,14 @@ class Portfolio extends Component {
         var projectImage = 'images/portfolio/'+projects.image;
         return <div key={projects.title} className="two columns portfolio-item">
            <div className="item-wrap">
-                {!(i == 0) ? 
-                (<img alt={projects.title} src={projectImage} />) :
+                {(i == 0) ? 
                 (<Carousel
-                  renderCenterLeftControls={({ previousSlide }) => (``)}
-                  renderCenterRightControls={({ nextSlide }) => ('')}>
+                  renderCenterLeftControls={() => (``)}
+                  renderCenterRightControls={() => ('')}>
                   <img alt={projects.title} src={projectImage} />
-                  <img src={'images/portfolio/artaa.jpg'} />
-                </Carousel>)
+                  <img src={'images/portfolio/artaa-min.jpg'} />
+                </Carousel>) :
+                (<img alt={projects.title} src={projectImage} />) 
                 }
           </div>
         </div>
@@ -64,14 +64,14 @@ class Portfolio extends Component {
               </TabList>
               <TabPanel tabId="one">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                  <Fade>
+                  <Fade duration={1500}  delay={500}>
                   {projects}
                   </Fade>
                 </div>
               </TabPanel>
               <TabPanel tabId="two">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                  <Fade>
+                  <Fade duration={1500 }  delay={500}>
                   {art}
                   </Fade>
                 </div>

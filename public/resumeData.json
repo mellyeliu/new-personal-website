@@ -133,14 +133,14 @@
         "category":"Space for self-expression and documentation. Work in progress!",
         "languages": "React (and some questionable CSS practices)",
         "image":"proj1b-min.png",
-        "url":"https://www.canadianwanderlust.com"
+        "url":""
       },
       {
         "title":"Solon",
         "category":"Sensor pad and mobile app to assess general health and monitor urinary incontinence",
         "languages": "Android (Java), SQLite, Arduino",
         "image":"proj1-min.jpg",
-        "url":"http://www.timbakerdev.com"
+        "url":"https://github.com/mellyeliu/Solon"
       },
       {
         "title":"Brand Insights Snapshots",
@@ -161,20 +161,20 @@
         "category":"Fake news predictor using an LSTM network with word embeddings",
         "languages": "Python (keras, sklearn)",
         "image":"proj3-min.png",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+        "url":"https://github.com/NgAngus/FakeNewsDetector"
       },
       {
         "title":"Freezing of Gait Detector",
         "category":"Wearable device using acceleration data to detect FOG episodes real time",
         "languages":"Matlab, Arduino",
         "image":"proj6-min.png",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+        "url":""
       }
     ],
     "art": [
       {
         "title":"Personal Website",
-        "image":"artbb.jpg"
+        "image":"artaa-edit-min.jpg"
       },
       {
         "title":"Solon",

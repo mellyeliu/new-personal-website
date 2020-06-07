@@ -20,6 +20,10 @@
    .row {
       max-width: 1180px;
    }
+   #about {
+      padding-top: 70px;
+      padding-bottom: 20px;
+   }
 
    /* .fulltest {
       display: none;
