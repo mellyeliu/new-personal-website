@@ -21,8 +21,17 @@
       max-width: 1180px;
    }
    #about {
-      padding-top: 70px;
+      padding-top: 50px;
       padding-bottom: 20px;
+   }
+
+   #nav-wrap {
+      height: 100px;
+      padding-top: 40px;
+   }
+
+   header .banner {
+      padding: 100px 0px 70px 0px;
    }
 
    /* .fulltest {
@@ -61,7 +70,7 @@
    header .banner { padding-bottom: 12px; }
    header .banner-text h1 {
       font: 78px/1.1em 'opensans-light', sans-serif;
-      letter-spacing: -1px;      
+      letter-spacing: -1px;
    }
    header .banner-text h3 {
       font: 12px/1.9em 'montserrat', sans-serif;
@@ -108,7 +117,7 @@
    /* Resume Section
    ------------------------------------------------------------------- */
    #resume h1 { font: 16px/24px 'opensans-bold', sans-serif; }
-   #resume .main-col { padding-right: 5%; }   
+   #resume .main-col { padding-right: 5%; }
 
    /* Testimonials Section
    ------------------------------------------------------------------- */
@@ -118,7 +127,7 @@
    }
    #testimonials blockquote p {
       font-size: 22px;
-      line-height: 46px;      
+      line-height: 46px;
    }
 
     /* Call to Action Section
@@ -182,7 +191,7 @@
       margin: 0px;
       min-height: 0px;
    }
-   
+
    .bottom-left {
       top: 8px;
       right: 8px;
@@ -196,8 +205,8 @@
    header .social {
       margin: 18px 0 24px 0;
       font-size: 24px;
-      line-height: 36px; 
-      padding: 0 4px;      
+      line-height: 36px;
+      padding: 0 4px;
    }
    /* header .social a li { margin: 0 10px; } */
    header .social a li { padding: 0 10px; }
@@ -210,7 +219,7 @@
       display:none !important;
    }
 
-   
+
    span.control {
       height: 38px !important;
       margin-top: -22px;
@@ -218,7 +227,7 @@
       letter-spacing: 2.5px;
    }
 
-   
+
    /* .ham-menu {
       margin-left: 23px;
    } */
@@ -251,7 +260,7 @@
    #resume div.header-col {display: none}
    #resume div.main-col {margin: 0; text-align: center; padding: 30px 30px 10px 30px}
    #resume .row.skill {margin-top:0px !important}
-      
+
    .bars { width: 100%; }
 
 
@@ -268,7 +277,7 @@
 
    /* footer
    ------------------------------------------------------------------------ */
-  
+
    /* copyright */
    footer .copyright li:before { content: none; }
    footer .copyright li { margin-right: 12px; }
@@ -301,7 +310,7 @@
    /* header styles
    -------------------------------------------------------------------- */
    header .banner-text h1 {
-      font: 46px/1.1em 'Montserrat', sans-serif !important;      
+      font: 46px/1.1em 'Montserrat', sans-serif !important;
       margin: 0 auto 14px auto;
       letter-spacing: 1px
    }
@@ -309,7 +318,7 @@
       font: 10px/1.9em 'Montserrat', sans-serif;
       width: 90%;
    }
-  
+
    /* header social links */
    header .social { font-size: 14px;}
    header .social a li { padding: 0 10px; }
@@ -325,7 +334,7 @@
 
    /* social links */
    footer .social-links { font-size: 14px; }
-   footer .social-links a li { padding: 0 10px; }   
+   footer .social-links a li { padding: 0 10px; }
 
 }
 

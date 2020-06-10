@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
 
 class Nav extends Component {
-    
+
     state = {
         isMenu: false,
         isSocial: false
@@ -36,11 +36,12 @@ class Nav extends Component {
                 <div class="bar3"></div>
                 </div>
                 <div className={'menu-list ' + (this.state.isMenu ? 'menu-show' : 'menu-hide')}>
-                    <a className="current" href="/"><i class="fas fa-home"></i></a>
-                    <a style={{cursor: 'not-allowed'}} className="hvr-grow"><i class="fas fa-edit"></i></a>
+                  <a className="current" href="/"><i class="fas fa-home"></i></a>
+                  <a style={{cursor: 'not-allowed', color: 'grey !important'}} className="test"><i class="far fa-user-circle"></i></a>
+                  <a style={{cursor: 'not-allowed', color: 'grey !important'}} className="test"><i class="far fa-edit"></i></a>
                 </div>
                 </li>
-                <li id="logo" className={(this.state.isMenu ? 'logo-hide' : '')}><span style={{fontWeight: 700}} className='control'>{this.props.title}</span> <span className='control' style={{paddingLeft: 15, color: 'rgb(150,150,150)'}}>{this.props.subtitle}</span></li> 
+                <li id="logo" className={(this.state.isMenu ? 'logo-hide' : '')}><span style={{fontWeight: 700}} className='control'>{this.props.title}</span> <span className='control' style={{paddingLeft: 15, color: 'rgb(150,150,150)'}}>{this.props.subtitle}</span></li>
                 <div className="social-right">
                 {networks}
                 </div>

@@ -4,7 +4,7 @@ import Carousel from 'nuka-carousel';
 import Nav from './Nav'
 
 
-import '@animated-burgers/burger-squeeze/dist/styles.css' 
+import '@animated-burgers/burger-squeeze/dist/styles.css'
 
 
 
@@ -33,7 +33,7 @@ class Header extends Component {
     return (
       <header id="home">
       <Nav data={this.props.data} title='MELISSA LIU' subtitle='Code / Writing / Art'/>
-      
+
       <Fade top duration={2000}>
       <div onClick={this.toggleButton}  className="banner">
           <div className="container" style={{zIndex: 1000000}}>
