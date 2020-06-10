@@ -33,7 +33,7 @@ class About extends Component {
           </div>
          </Fade>
 
-          <Fade fraction={0.6} delay={100} right onReveal={ () => { if (!this.state.reveal) {this.setState({reveal: true})} } }>
+          <Fade fraction={0.65} delay={50} right onReveal={ () => { if (!this.state.reveal) {this.setState({reveal: true})} } }>
          <div className="fulltest" style={{marginTop: 5, color: 'white'}}>|</div>
             <div className="eight columns main-col fulltest2" style={{ marginTop: 30 }}>
               <div style={{ marginTop: 0 }}>
