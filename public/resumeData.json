@@ -154,7 +154,7 @@
         "category":"Sonar system using ultrasound sensor data to predict object distance, angle, and shape.",
         "languages": "Arduino, Python (matplotlib)",
         "image":"proj5-min.png",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+        "url":""
       },
       {
         "title":"Fake News Detector",
