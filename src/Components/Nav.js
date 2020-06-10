@@ -19,7 +19,7 @@ class Nav extends Component {
     if(this.props.data){
         var social = this.props.data.social.slice(1,4)
         var networks= social.map(function(network){
-          return <a href={network.url} style={{zIndex: 2000}} className={'social-link hvr-grow-big'}><li key={network.name}><i className={network.className}></i></li></a>
+          return <a target="_blank" href={network.url} style={{zIndex: 2000}} className={'social-link hvr-grow-big'}><li key={network.name}><i className={network.className}></i></li></a>
         })
       }
 
@@ -36,8 +36,8 @@ class Nav extends Component {
                 <div class="bar3"></div>
                 </div>
                 <div className={'menu-list ' + (this.state.isMenu ? 'menu-show' : 'menu-hide')}>
-                    <a className="current" href="/">home</a>
-                    <a style={{cursor: 'not-allowed'}} className="hvr-grow">writing</a>
+                    <a className="current" href="/"><i class="fas fa-home"></i></a>
+                    <a style={{cursor: 'not-allowed'}} className="hvr-grow"><i class="fas fa-edit"></i></a>
                 </div>
                 </li>
                 <li id="logo" className={(this.state.isMenu ? 'logo-hide' : '')}><span style={{fontWeight: 700}} className='control'>{this.props.title}</span> <span className='control' style={{paddingLeft: 15, color: 'rgb(150,150,150)'}}>{this.props.subtitle}</span></li> 

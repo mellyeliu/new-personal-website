@@ -24,7 +24,7 @@
       },
       {
         "name":"linkedin",
-        "url":"https://www.linkedin.com/mellyeliu",
+        "url":"https://www.linkedin.com/in/mellyeliu",
         "className":"fab fa-linkedin-in"
       },
       {
@@ -39,7 +39,7 @@
       },
       {
         "name":"resume",
-        "url":"https://www.linkedin.com/mellyeliu",
+        "url":"https://www.linkedin.com/in/mellyeliu",
         "className":"far fa-file-alt"
       }
     ],
