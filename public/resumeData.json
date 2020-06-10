@@ -100,7 +100,7 @@
         "title":"Credit Experiences",
         "years":"May 2019 - Aug 2019",
         "image":"pro3-min.jpg",
-        "description":"Collections are common, high-impact debts that severely drops a user’s credit score. To address this, I created a new experience in Scala, React, and GraphQL to notify users of their collections and how to resolve them. I also built a contextual backlinking framework by passing location states within page queries. "      
+        "description":"Collections are common, high-impact debts that severely drops a user’s credit score. To address this, I created a new experience in Scala, React, and GraphQL to notify users of their collections and how to resolve them. I also built a contextual backlinking framework by passing location states within page queries. "
       }
     ],
     "education":[
@@ -182,7 +182,7 @@
       },
       {
         "title":"Solon",
-        "image":"art2.jpg"
+        "image":"artaa-min.jpg"
       }
     ]
   }

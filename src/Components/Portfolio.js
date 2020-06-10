@@ -14,7 +14,7 @@ class Portfolio extends Component {
         var projectImage = 'images/portfolio/'+projects.image;
         return <div key={projects.title} style={{padding: "0 15px"}}className="two columns portfolio-item">
            <div className="item-wrap">
-            <a target="_blank" href={projects.url}> 
+            <a target="_blank" href={projects.url}>
                <img alt={projects.title} src={projectImage} />
                <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -31,7 +31,7 @@ class Portfolio extends Component {
         var projectImage = 'images/portfolio/'+projects.image;
         return <div key={projects.title} className="two columns portfolio-item">
            <div className="item-wrap">
-                {(i == 0) ? 
+                {(false) ?
                 (<Carousel
                   renderCenterLeftControls={() => (``)}
                   renderCenterRightControls={() => ('')}
@@ -39,7 +39,7 @@ class Portfolio extends Component {
                   <img src={projectImage} />
                   <img src={'images/portfolio/artaa-min.jpg'} />
                 </Carousel>) :
-                (<img alt={projects.title} src={projectImage} />) 
+                (<img alt={projects.title} src={projectImage} />)
                 }
           </div>
         </div>
