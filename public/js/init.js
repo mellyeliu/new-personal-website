@@ -63,8 +63,9 @@
 /*	Make sure that #header-background-image height is
 /* equal to the browser height.
 ------------------------------------------------------ */
-   $(window).load(function () {
-      $('img#headerpic').css({ 'min-height': $(window).height() - 180 });
+    $(window).load(function () {
+      var h = $(window).height()
+      $('img#headerpic').css({ 'min-height': h * 0.95 - 80});
    })
 
 
@@ -73,7 +74,7 @@
    //  $('body').css({ 'width': $(window).width() })
    $(window).on('resize', function() {
       var w = $(window).width();
-      var h = $(window).height() - 180;
+      var h = $(window).height() * 0.95 - 80;
       $('header').css({ 'height': $(window).height() });
       // // $('.banner').css({ 'height': $(window).height() });
       // $('body').css({ 'width': $(window).width() })
