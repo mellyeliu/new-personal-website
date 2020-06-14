@@ -95,12 +95,12 @@
 		var y = $(window).scrollTop();
 
       if (w > 1250 && h > 890 && y < h * .05) {
-         document.getElementById("nav-wrap").style.height = '100px'
-         document.getElementById("nav-wrap").style.padding = '40px 0px'
-      }
-      else if (y < h * .05) {
          document.getElementById("nav-wrap").style.height = '90px'
          document.getElementById("nav-wrap").style.padding = '35px 0px'
+      }
+      else if (y < h * .05) {
+         document.getElementById("nav-wrap").style.height = '80px'
+         document.getElementById("nav-wrap").style.padding = '30px 0px'
       }
       else {
          document.getElementById("nav-wrap").style.height = '60px'

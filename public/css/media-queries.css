@@ -33,6 +33,10 @@
    header .banner {
       padding: 100px 0px 70px 0px;
    }
+   #logo {
+      font-size: 14px !important;
+   }
+
 
    /* .fulltest {
       display: none;
