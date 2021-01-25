@@ -39,7 +39,7 @@ class Nav extends Component {
                   <a className="current" href="/"><i class="fas fa-home"></i></a>
                   {/* <a style={{cursor: 'not-allowed', color: 'grey !important'}} className="test"><i class="far fa-user-circle"></i></a>
                   */}
-                  <a style={{cursor: 'not-allowed', color: 'grey !important'}} className="test"><i class="fas fa-edit"></i></a> 
+                  <a style={{color: 'grey !important'}} className="test"><i class="fab fa-medium-m"></i></a> 
                 </div>
                 </li>
                 <li id="logo" className={(this.state.isMenu ? 'logo-hide' : '')}><span style={{fontWeight: 700}} className='control'>{this.props.title}</span> <span className='control' style={{paddingLeft: 15, color: 'rgb(150,150,150)'}}>{this.props.subtitle}</span></li>

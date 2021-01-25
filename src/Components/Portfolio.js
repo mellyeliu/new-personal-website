@@ -17,7 +17,7 @@ class Portfolio extends Component {
             <a target="_blank" href={projects.url}>
                <img alt={projects.title} src={projectImage} />
                <div className="overlay">
-                  <div className="portfolio-item-meta">
+                  <div className="portfolio-item-meta" style={{padding: 18}}>
                  <h5>{projects.title}</h5>
                      <p>{projects.category}</p>
                      <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>
@@ -44,6 +44,22 @@ class Portfolio extends Component {
           </div>
         </div>
       })
+      var writing = this.props.data.writing.map(function(writing, i){
+        var projectImage = 'images/portfolio/'+writing.image;
+        return <div key={writing.title} className="two columns portfolio-item">
+           <div className="item-wrap">
+            <a target="_blank" href={writing.url}>
+               <img alt={writing.title} src={projectImage} />
+               <div>
+                  <div className="portfolio-item-meta">
+                 <h5 style={{marginTop: 15}}>{writing.title}</h5>
+                     <p style={{marginTop: 3}}>{writing.category}</p>
+                  </div>
+                </div>
+            </a>
+          </div>
+        </div>
+      })
     }
 
     return (
@@ -62,6 +78,7 @@ class Portfolio extends Component {
               <TabList>
                 <Tab tabFor="one">PROJECTS</Tab>
                 <Tab tabFor="two">ART</Tab>
+                <Tab tabFor="three">WRITING</Tab>
               </TabList>
               <TabPanel tabId="one">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
@@ -74,6 +91,13 @@ class Portfolio extends Component {
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
                   <Fade duration={1500 }  delay={500}>
                   {art}
+                  </Fade>
+                </div>
+              </TabPanel>
+              <TabPanel tabId="three">
+                <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
+                  <Fade duration={1500 }  delay={500}>
+                  {writing}
                   </Fade>
                 </div>
               </TabPanel>

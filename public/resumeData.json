@@ -29,18 +29,18 @@
       },
       {
         "name":"github",
-        "url":"http://github.com/mellyeliu",
+        "url":"https://github.com/mellyeliu",
         "className":"fab fa-github"
       },
       {
         "name":"instagram",
-        "url":"http://instagram.com/mellye.liu",
+        "url":"https://instagram.com/mellye.liu",
         "className":"fab fa-b fa-instagram"
       },
       {
-        "name":"resume",
-        "url":"https://www.linkedin.com/in/mellyeliu",
-        "className":"far fa-file-alt"
+        "name":"linktree",
+        "url":"https://linktr.ee/mellye.liu",
+        "className":"fas fa-link"
       }
     ],
     "photos":[
@@ -183,6 +183,26 @@
       {
         "title":"Solon",
         "image":"artaa-min.jpg"
+      }
+    ],
+    "writing": [
+      {
+        "title":"What Doesn’t Kill You Makes You Weaker",
+        "image":"writing_3.JPEG",
+        "category":"Unconventional lessons learned in the aftermath of trauma",
+        "url":"https://mellyeliu.medium.com/what-doesnt-kill-you-makes-you-weaker-81c09b029c83"
+      },
+      {
+        "title":"Creating for Yourself",
+        "image":"writing_2.JPG",
+        "category":"The story behind my first tattoo",
+        "url":"https://mellyeliu.medium.com/creating-is-universal-56dd44d6f33"
+      },
+      {
+        "title":"I Write for Emotional Release",
+        "image":"writing_1.JPEG",
+        "category":"On sensitivity, isolation, and the power of human connection",
+        "url":"https://mellyeliu.medium.com/i-write-to-escape-isolation-29d4e422757"
       }
     ]
   }

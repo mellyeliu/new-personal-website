@@ -1034,7 +1034,7 @@ div.social-right a:last-child { padding-right: 0 !important; }
 .portfolio-item .item-wrap img {
    vertical-align: bottom;
 }
-.portfolio-item .portfolio-item-meta { padding: 18px }
+/* .portfolio-item .portfolio-item-meta { padding: 18px } */
 .portfolio-item .portfolio-item-meta h5 {
    font: 14px/21px 'opensans-bold', sans-serif;
    color: rgb(76, 76, 76);
@@ -1274,7 +1274,7 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 footer {
-   padding-top: 38px;
+   padding-top: 0px;
    padding-bottom: 38px;
    color: rgb(40,40,40);
    background-color:#fff;
@@ -1409,7 +1409,8 @@ div .banner-text h3 {
 	font-size: 13px;
 	font-family: 'montserrat';
 	letter-spacing: 1.5px;
-	margin-left: 10px;
+   margin-left: 10px;
+   margin-bottom:10px;
 }
 
 button.rwt__tab {
