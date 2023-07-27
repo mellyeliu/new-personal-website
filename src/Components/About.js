@@ -35,17 +35,6 @@ class About extends Component {
 
           <Fade fraction={0.65} delay={50} right onReveal={ () => { if (!this.state.reveal) {this.setState({reveal: true})} } }>
          <div className="fulltest" style={{marginTop: 5, color: 'white'}}>|</div>
-            <div className="eight columns main-col fulltest2" style={{ marginTop: 30 }}>
-              <div style={{ marginTop: 0 }}>
-              <h2 className="menu" style={{marginTop: 10, marginBottom: 5, marginLeft: -10, border: 'none'}}> <span style={{background: 'none'}}>thanks for stopping by!</span></h2>
-              <p className="blurb">I’m a 4th year engineering student at the <a target="_blank"  className='sunderline' href={'https://uwaterloo.ca/'}>University of Waterloo</a>.
-                I'm currently interning at <a target="_blank" className='sunderline' href={'https://instagram.com/'}>Uber</a>. I’ve previously worked at <a target="_blank" className='sunderline' href={'https://instagram.com/'}>Instagram</a>, <a target="_blank" className='sunderline' href={'https://www.creditkarma.ca/'}>Credit Karma</a>, and <a target="_blank" className='sunderline' href={'https://www.numerator.com/'}>InfoScout</a> in backend and full-stack development.
-                <br/><br/>I get so much enjoyment from creating, whether the medium is art, writing or code.
-                I’m always working away at these skills, trying to bridge the gap between what I can make and what I aspire to.
-                <br/><br/>It's in this self expression that I piece together who I am. Someone a little opinionated, an overthinker. Someone with passions to nurture, from fashion to music to literary fandom. And it doesn't stop there—I'm on a journey to discover the rest. Hobbies and dreams, fears and neuroses, I invite you to come along for the ride.
-              </p>
-              </div>
-         </div>
          </Fade>
       </div>
       <br/>

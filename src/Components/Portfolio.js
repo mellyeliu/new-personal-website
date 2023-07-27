@@ -44,22 +44,6 @@ class Portfolio extends Component {
           </div>
         </div>
       })
-      var writing = this.props.data.writing.map(function(writing, i){
-        var projectImage = 'images/portfolio/'+writing.image;
-        return <div key={writing.title} className="two columns portfolio-item">
-           <div className="item-wrap">
-            <a target="_blank" href={writing.url}>
-               <img alt={writing.title} src={projectImage} />
-               <div>
-                  <div className="portfolio-item-meta">
-                 <h5 style={{marginTop: 15}}>{writing.title}</h5>
-                     <p style={{marginTop: 3}}>{writing.category}</p>
-                  </div>
-                </div>
-            </a>
-          </div>
-        </div>
-      })
     }
 
     return (
@@ -68,7 +52,7 @@ class Portfolio extends Component {
 
       <div className="row">
         <Fade top>
-        <div style={{marginBottom: -15}}className="tagline"><h2>here are some of my works.</h2></div>
+        <div style={{marginBottom: -15}}className="tagline"></div>
         </Fade>
          <div className="twelve columns collapsed">
             <Tabs
@@ -78,7 +62,6 @@ class Portfolio extends Component {
               <TabList>
                 <Tab tabFor="one">PROJECTS</Tab>
                 <Tab tabFor="two">ART</Tab>
-                <Tab tabFor="three">WRITING</Tab>
               </TabList>
               <TabPanel tabId="one">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
@@ -91,13 +74,6 @@ class Portfolio extends Component {
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
                   <Fade duration={1500 }  delay={500}>
                   {art}
-                  </Fade>
-                </div>
-              </TabPanel>
-              <TabPanel tabId="three">
-                <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                  <Fade duration={1500 }  delay={500}>
-                  {writing}
                   </Fade>
                 </div>
               </TabPanel>
