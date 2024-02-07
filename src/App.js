@@ -6,8 +6,6 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import About from './Components/About';
 import Portfolio from './Components/Portfolio';
-import Resume from './Components/Resume';
-import Menu from './Components/Menu';
 
 
 class App extends Component {
@@ -47,9 +45,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header data={this.state.resumeData.main} dest={'home'}/>
-        {/* <About data={this.state.resumeData.main}/> */}
-        {/* <Menu data={this.state.resumeData.main}/> */}
-        {/* <Resume data={this.state.resumeData.resume}/> */}
         <Portfolio data={this.state.resumeData.portfolio}/>
         <Footer data={this.state.resumeData.main}/>
       </div>

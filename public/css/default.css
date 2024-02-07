@@ -33,6 +33,7 @@ e. Others
 @import url("font-awesome-5/css/fontawesome-all.css");
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Sometype+Mono&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap');
 
 /* @import url("hover-min.css"); */
 /* @import url("font-awesome-5/css/font-brands.css"); */
@@ -64,7 +65,7 @@ time, mark, audio, video {
    vertical-align: baseline;
    background: transparent;
 }
-/* 
+/*
 body {
    cursor: crosshair;
 } */
@@ -151,7 +152,7 @@ body {
    -webkit-transform: scale(1.3) translateZ(0);
    transform: scale(1.3) translateZ(0);
  }
- 
+
 
  /* Icon Pulse Grow */
 @-webkit-keyframes hvr-icon-pulse-grow {
@@ -196,7 +197,7 @@ body {
    height: 3em;
    width: 3em;
    position: relative;
-   font-size: 12px;
+   font-size: 10px;
    cursor: pointer;
    -webkit-transition: .2s all;
    -o-transition: .2s all;
@@ -241,27 +242,27 @@ body {
       -webkit-transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
       -o-transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
       transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s; }
-   
+
    .burger.burger-squeeze .burger-lines:after, .burger.burger-squeeze .burger-lines:before {
       width: 2em; }
-   
+
    .burger.burger-squeeze.open .burger-lines, .burger.burger-squeeze.open .burger-lines:after, .burger.burger-squeeze.open .burger-lines:before {
       -webkit-transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
       -o-transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
       transition: .2s background-color, .2s top, .2s left, .2s transform .15s; }
-   
+
    .burger.burger-squeeze.open .burger-lines {
       background-color: transparent; }
-   
+
    .burger.burger-squeeze.open .burger-lines:before, .burger.burger-squeeze.open .burger-lines:after {
       left: 0.5em;
       top: 0px; }
-   
+
    .burger.burger-squeeze.open .burger-lines:before {
       -webkit-transform: rotate(-45deg);
          -ms-transform: rotate(-45deg);
             transform: rotate(-45deg); }
-   
+
    .burger.burger-squeeze.open .burger-lines:after {
       -webkit-transform: rotate(45deg);
          -ms-transform: rotate(45deg);
@@ -1039,4 +1040,3 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
-

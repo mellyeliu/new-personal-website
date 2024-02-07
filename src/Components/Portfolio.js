@@ -48,7 +48,7 @@ class Portfolio extends Component {
 
     return (
       <section id="portfolio">
-
+        {/* <marquee scrollamount="1">THIS IS A SPACE FOR CREATIVITY </marquee> */}
 
       <div className="row">
         <Fade top>
@@ -62,6 +62,7 @@ class Portfolio extends Component {
               <TabList>
                 <Tab tabFor="one">PROJECTS</Tab>
                 <Tab tabFor="two">ART</Tab>
+                <Tab tabFor="two">WRITING</Tab>
               </TabList>
               <TabPanel tabId="one">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">

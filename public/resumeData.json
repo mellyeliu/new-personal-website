@@ -45,29 +45,18 @@
     ],
     "photos":[
       {
-        "place":"los angeles",
+        "place":"( Internet gardening )",
         "date":"02·17·2020",
-        "image":"headeraa-min.jpg"
+        "image":"bg50.png"
+      }, {
+        "place":"( Collects obsessions )",
+        "date":"02·17·2020",
+        "image":"bg50.png"
       },
       {
-        "place":"yosemite",
-        "date":"10·17·2018",
-        "image":"headergg-min.jpg"
-      },
-      {
-        "place":"niagara falls",
-        "date":"01·04·2019",
-        "image":"headerbb-min.jpg"
-      },
-      {
-        "place":"miami",
-        "date":"04·23·2019",
-        "image":"headerdd-min.jpg"
-      },
-      {
-        "place":"blue mountain",
-        "date":"12·23·2019",
-        "image":"headeree-min.jpg"
+        "place":"( Likes to document )",
+        "date":"02·17·2020",
+        "image":"bg50.png"
       }
     ]
   },

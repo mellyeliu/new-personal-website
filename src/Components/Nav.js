@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Carousel from 'nuka-carousel';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
+import ToggleTextList from './ToggleTextList';
+import TypingToggleTextList from './TypingToggleTextList';
 
 class Nav extends Component {
 
@@ -9,6 +11,17 @@ class Nav extends Component {
         isMenu: false,
         isSocial: false
     }
+
+    textOptions = [
+      'is always late to hangouts',
+      'can only watch movies on 2x speed',
+      'unironically enjoys hyperpop',
+      'is a tetris enthuisiast',
+      'has a vulnerability kink',
+      'consumes a lot of fanfic',
+      'has an internet addiction',
+      'is a retail therapy addict',
+    ]
 
     toggleButton = () => {
       this.setState({
@@ -42,10 +55,18 @@ class Nav extends Component {
                   <a style={{color: 'grey !important'}} className="test"><i class="fab fa-medium-m"></i></a>
                 </div>
                 </li>
-                <li id="logo" className={(this.state.isMenu ? 'logo-hide' : '')}><span style={{fontWeight: 700}} className='control'>{this.props.title}</span> <span className='control' style={{paddingLeft: 15, color: 'rgb(150,150,150)'}}>{this.props.subtitle}</span></li>
-                <div className="social-right">
+                <li id="logo" className={(this.state.isMenu ? 'logo-hide' : '')}>
+                  {/* <marquee> */}
+                    <div style={{fontWeight: 700, letterSpacing: 0.5, fontFamily: "Cormorant Garamond",  fontSize: 20}} className='control'>{" mellyeliu  ૮꒰ ˶• ༝ •˶꒱ა  ♡ "}</div>
+                    <TypingToggleTextList className='control'
+                     textOptions={this.textOptions}
+                     style={{letterSpacing: 2, fontFamily: "Cormorant Garamond", fontWeight: 300, fontStyle: 'italic', fontSize: 14, paddingTop: 2, color: 'rgb(150,150,150)'}}></TypingToggleTextList>
+                    {/* <div className='control' style={{fontSize: 18, paddingTop: 4, color: 'rgb(150,150,150)'}}>{"( " + 'Code / Writing / Art' + " )"}</div> */}
+                  {/* </marquee> */}
+                </li>
+                {/* <div className="social-right">
                 {networks}
-                </div>
+                </div> */}
                 </Fade>
             </ul>
         </nav>
