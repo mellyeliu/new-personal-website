@@ -61,7 +61,7 @@ class Resume extends Component {
               <img className="profile-pic reverse"  src={`images/${work.image}`}/>
             </div>
           ) : ''}
-          
+
         </div>
 
         </Fade>

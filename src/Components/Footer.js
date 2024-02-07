@@ -21,7 +21,7 @@ class Footer extends Component {
            </ul>
 
            <ul className="copyright">
-              <li>&copy; Copyright 2020 Melissa Liu</li>
+              <li>I WANT TO CREATE THE WORLD I DREAM OF</li>
            </ul>
 
         </div>
