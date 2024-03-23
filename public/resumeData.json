@@ -47,16 +47,16 @@
       {
         "place":"( Internet gardening )",
         "date":"02·17·2020",
-        "image":"bg50.png"
+        "image":"bg53.png"
       }, {
         "place":"( Collects obsessions )",
         "date":"02·17·2020",
-        "image":"bg50.png"
+        "image":"bg53.png"
       },
       {
         "place":"( Likes to document )",
         "date":"02·17·2020",
-        "image":"bg50.png"
+        "image":"bg53.png"
       }
     ]
   },
@@ -118,10 +118,45 @@
   "portfolio":{
     "projects": [
       {
-        "title":"Personal Website",
-        "category":"Space for self-expression and documentation. Work in progress!",
+        "title":"Digital Nostalgia",
+        "category":"Zine documenting my online childhood and the websites that made me.",
+        "languages": "Figma <3",
+        "image":"proj1.png",
+        "url":""
+      },
+      {
+        "title":"My Fanfic Became Sentient and Cannabalized Itself",
+        "category":"Zine documenting my online childhood and the websites that made me.",
+        "languages": "Figma <3",
+        "image":"zine2.png",
+        "url":""
+      },
+      {
+        "title":"CYBERHUG COLLABORATIONS",
+        "category":"Musings on digital intimacy with my friend Madeleine and more.",
+        "languages": "Figma",
+        "image":"cyberhug.png",
+        "url":"https://instagram.com/cyber.hug"
+      },
+      {
+        "title":"M0MENTS",
+        "category":"You play as an engineer trying not to get laid off. Created in the height of the tech layoffs",
         "languages": "React",
-        "image":"proj1b-min.png",
+        "image":"moments.png",
+        "url":"https://m0ments.w3spaces.com/"
+      },
+      {
+        "title":"Dreamland",
+        "category":"Interactive fiction documenting dream journal escapism. Work in progress!",
+        "languages": "React",
+        "image":"inform.png",
+        "url":""
+      },
+      {
+        "title":"Digital Love Languages",
+        "category":"What does it mean to love online?",
+        "languages": "Figma <3",
+        "image":"lovelanguages.png",
         "url":""
       },
       {

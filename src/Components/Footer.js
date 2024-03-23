@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import TypingToggleTextList from './TypingToggleTextList';
+
 // import { faHome } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const quotes = [
+  'We are all still waiting to be transformed',
+  'Intimacy in all its forms',
+]
 
 class Footer extends Component {
   render() {
@@ -21,7 +28,12 @@ class Footer extends Component {
            </ul>
 
            <ul className="copyright">
-              <li>I WANT TO CREATE THE WORLD I DREAM OF</li>
+              <li>
+              <TypingToggleTextList className='control'
+                     textOptions={quotes}
+                     style={{letterSpacing: 2, fontFamily: "Cormorant Garamond", fontWeight: 300, fontStyle: 'italic', fontSize: 14, paddingTop: 2, color: 'rgb(150,150,150)'}}></TypingToggleTextList>
+                {/* I WANT TO CREATE THE WORLD I DREAM OF */}
+                </li>
            </ul>
 
         </div>

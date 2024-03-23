@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const TypingToggleTextList = ({ style, textOptions = ["First Text", "Second Text", "Third Text"], speed = 75 }) => {
+const TypingToggleTextList = ({ style, wrapper, textOptions = ["First Text", "Second Text", "Third Text"], speed = 50 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
 
@@ -25,9 +25,9 @@ const TypingToggleTextList = ({ style, textOptions = ["First Text", "Second Text
   };
 
   return (
-    <div style={{...style, cursor: 'pointer'}} onClick={toggleText}>
-      {"( " + displayedText + " [...]" + " )"}
-    </div>
+    <span style={{...style, cursor: 'pointer'}} onClick={toggleText}>
+      {wrapper ? "( " + displayedText + " [...]" + " )" : displayedText}
+    </span>
   );
 };
 
