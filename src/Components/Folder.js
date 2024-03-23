@@ -1,19 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-const DraggableImage = ({ src, scale, initialX, initialY, width, height, onHoverChange, hoverString }) => {
-  const mathx = Math.round(initialX * width);
-  const mathy = Math.round(initialY * height);
-  const [position, setPosition] = useState({ x: mathx, y: mathy });
-  useEffect(() => {
-    setTimeout(() => {
-      if (initialX && initialY && width && height) {
-       setPosition({ x: mathx, y: mathy });
-      }
-    }, 10)
-  });
+const DraggableImage = ({ src, scale, x, y, hoverString, caption }) => {
+  const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  const hoverText = document.getElementById('hoverText');
+
+//   src ? src : 'images/folder.png';
 
   // Function to start the drag
   const startDrag = (e) => {
@@ -32,8 +23,6 @@ const DraggableImage = ({ src, scale, initialX, initialY, width, height, onHover
 
   // Function to stop the drag
   const stopDrag = (e) => {
-    setIsHovered(false);
-    onHoverChange('')
     setDragging(false);
     e.target.style.cursor = 'grab';
     // hoverText.style.display = 'block';
@@ -41,9 +30,7 @@ const DraggableImage = ({ src, scale, initialX, initialY, width, height, onHover
 
   // Function to stop the drag
   const onHover = () => {
-    setIsHovered(true);
     console.log(hoverString);
-    onHoverChange(hoverString);
     // hoverText.style.display = 'none';
   };
 
@@ -54,22 +41,17 @@ const DraggableImage = ({ src, scale, initialX, initialY, width, height, onHover
 
 
   return (
-    <img
-      src={src}
-      style={{
+    <div style={{
         cursor: 'grab',
         position: 'absolute',
-        left: `${position.x}px`,
-        top: `${position.y}px`,
+        left: position.x,
+        top: position.y,
         userSelect: 'none',
-        borderRadius: '20px',
-        border: 'solid 1px #bbbbbb',
-        transform: isHovered ? `scale(${scale + 0.02})` : `scale(${scale})`,
-        transition: 'transform 0.3s ease-in-out',
-        transformOrigin: 'top left', // Adjust as needed
         display: 'block',
-      }}
-      className='draggableImage'
+        transform: `scale(${scale})`
+      }}>
+    <img
+      src={src}
       onMouseDown={startDrag}
       onMouseMove={onDrag}
       onMouseUp={stopDrag}
@@ -77,6 +59,8 @@ const DraggableImage = ({ src, scale, initialX, initialY, width, height, onHover
       onMouseEnter={onHover}
       draggable={false} // Prevent default browser drag behavior
     />
+    {caption && <div style={{fontSize: 28, color: 'black', fontFamily: "Cormorant Garamond", fontStyle: 'italic'}}>{caption}</div>} {/* Render caption if it is provided */}
+    </div>
   );
 };
 
