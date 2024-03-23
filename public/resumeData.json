@@ -19,8 +19,8 @@
     "social":[
       {
         "name":"facebook",
-        "url":"http://facebook.com/mellye.liu",
-        "className":"fab fa-facebook-f"
+        "url":"https://vsco.co/mellyeliu",
+        "className":"fas fa-camera"
       },
       {
         "name":"linkedin",
@@ -29,8 +29,8 @@
       },
       {
         "name":"github",
-        "url":"https://github.com/mellyeliu",
-        "className":"fab fa-github"
+        "url":"https://reading.supply/@mellyeliu",
+        "className":"fas fa-edit"
       },
       {
         "name":"instagram",
@@ -118,6 +118,13 @@
   "portfolio":{
     "projects": [
       {
+        "title":"Personal Website (2.0)",
+        "category":"A continual work in progress.",
+        "languages": "React <3",
+        "image":"personalweb.png",
+        "url":""
+      },
+      {
         "title":"Digital Nostalgia",
         "category":"Zine documenting my online childhood and the websites that made me.",
         "languages": "Figma <3",
@@ -132,25 +139,25 @@
         "url":""
       },
       {
-        "title":"CYBERHUG COLLABORATIONS",
+        "title":"Dreamland",
+        "category":"Interactive fiction documenting dream journal escapism. Work in progress!",
+        "languages": "Inform",
+        "image":"inform.png",
+        "url":""
+      },
+      {
+        "title":"SF ZINE FEST APPLICATION",
         "category":"Musings on digital intimacy with my friend Madeleine and more.",
-        "languages": "Figma",
+        "languages": "Figma <3",
         "image":"cyberhug.png",
         "url":"https://instagram.com/cyber.hug"
       },
       {
         "title":"M0MENTS",
         "category":"You play as an engineer trying not to get laid off. Created in the height of the tech layoffs",
-        "languages": "React",
+        "languages": "Twine",
         "image":"moments.png",
         "url":"https://m0ments.w3spaces.com/"
-      },
-      {
-        "title":"Dreamland",
-        "category":"Interactive fiction documenting dream journal escapism. Work in progress!",
-        "languages": "React",
-        "image":"inform.png",
-        "url":""
       },
       {
         "title":"Digital Love Languages",
@@ -160,10 +167,38 @@
         "url":""
       },
       {
-        "title":"Solon",
-        "category":"Sensor pad and mobile app to assess general health and monitor urinary incontinence",
+        "title":"CYBERHUG COLLABORATIONS",
+        "category":"Musings on digital intimacy with my friend Madeleine and more.",
+        "languages": "Figma <3",
+        "image":"cyberhug.png",
+        "url":"https://instagram.com/cyber.hug"
+      },
+      {
+        "title":"Internet (2 Sides)",
+        "category":"Word cloud with Carolyn on 2000s internet.",
+        "languages": "Figma <3",
+        "image":"internetc.png",
+        "url":""
+      },
+      {
+        "title":"I've Been Thinking About Obsession",
+        "category":"Visual conversation on the neuroses of obsession.",
+        "languages": "Figma <3",
+        "image":"obsession.png",
+        "url":""
+      },
+      {
+        "title":"( DISSOCIATION )",
+        "category":"Visual conversation on dissociation.",
+        "languages": "Figma <3",
+        "image":"dissociation.png",
+        "url":""
+      },
+      {
+        "title":"Personal Website (1.0)",
+        "category":"Covid passion project. DO NOT OPEN.",
         "languages": "Android (Java), SQLite, Arduino",
-        "image":"proj1-min.JPG",
+        "image":"pweb.png",
         "url":"https://github.com/mellyeliu/Solon"
       },
       {
@@ -174,15 +209,8 @@
         "url":"https://snapshot.numerator.com/brand/tide"
       },
       {
-        "title":"Sonar Detection System",
-        "category":"Sonar system using ultrasound sensor data to predict object distance, angle, and shape.",
-        "languages": "Arduino, Python (matplotlib)",
-        "image":"proj5-min.png",
-        "url":""
-      },
-      {
         "title":"Fake News Detector",
-        "category":"Fake news predictor using an LSTM network with word embeddings",
+        "category":"Fake news predictor using an LSTM network with word embeddings. DO NOT OPEN.",
         "languages": "Python (keras, sklearn)",
         "image":"proj3-min.png",
         "url":"https://github.com/NgAngus/FakeNewsDetector"
@@ -193,6 +221,13 @@
         "languages":"Matlab, Arduino",
         "image":"proj6-min.png",
         "url":""
+      },
+      {
+        "title":"Tamagotchi Fansite",
+        "category":"I made this with my sister when we were 12 and 7.",
+        "languages":"Matlab, Arduino",
+        "image":"tama.png",
+        "url":"https://web.archive.org/web/20070209174817/https://tamaplace.zoomshare.com/"
       }
     ],
     "art": [
