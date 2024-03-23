@@ -1,16 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-const DraggableImage = ({ src, scale, initialX, initialY, width, height, onHoverChange, hoverString }) => {
-  const mathx = Math.round(initialX * width);
-  const mathy = Math.round(initialY * height);
-  const [position, setPosition] = useState({ x: mathx, y: mathy });
-  useEffect(() => {
-    setTimeout(() => {
-      if (initialX && initialY && width && height) {
-       setPosition({ x: mathx, y: mathy });
-      }
-    }, 10)
-  });
+const DraggableImage = ({ src, scale, x, y, onHoverChange, hoverString }) => {
+  const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const hoverText = document.getElementById('hoverText');
@@ -59,8 +50,8 @@ const DraggableImage = ({ src, scale, initialX, initialY, width, height, onHover
       style={{
         cursor: 'grab',
         position: 'absolute',
-        left: `${position.x}px`,
-        top: `${position.y}px`,
+        left: position.x,
+        top: position.y,
         userSelect: 'none',
         borderRadius: '20px',
         border: 'solid 1px #bbbbbb',

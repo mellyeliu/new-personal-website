@@ -11,42 +11,10 @@ import '@animated-burgers/burger-squeeze/dist/styles.css'
 
 class Header extends Component {
   // const [isChildHovered, setIsChildHovered] = useState(false);
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      isActive: false,
-      isChildHovered: "",
-      width: 0, height: 0
-
-    }
-    this.containerRef = React.createRef(); // Create a ref for the container div
-    this.updateDimensions = this.updateDimensions.bind(this); // Bind the method to the class instance
+  state = {
+    isActive: false,
+    isChildHovered: ""
   }
-
-  componentDidMount() {
-    console.log("HELLOOOO");
-    setTimeout(() => {
-      this.updateDimensions();
-    }, 1000);
-    // window.addEventListener('resize', this.updateDimensions); // Add resize listener
-  }
-
-  componentWillUnmount() {
-    // window.removeEventListener('resize', this.updateDimensions); // Clean up listener
-  }
-
-  updateDimensions() {
-    if (this.containerRef.current) {
-      this.setState({
-        width: this.containerRef.current.offsetWidth,
-        height: this.containerRef.current.offsetHeight
-      });
-    }
-    console.log(this.state.width);
-    console.log(this.state.height)
-  }
-
 
   toggleButton = () => {
     console.log('hehe')
@@ -60,51 +28,51 @@ class Header extends Component {
       isChildHovered: hoverState
     })
   };
+
   websiteProps = [
     {hoverString: "૮꒰ ˶• ༝ •˶꒱ა ♡",
     src: 'images/kaomoji.png',
-    scale: 0.45,
-    x: 0.8,
-    y: 0.8},
+    scale: 0.53,
+    x: 800,
+    y: 450},
     {hoverString: "archiveofourown.org",
     src: 'images/ao3.png',
-    scale: 0.45,
-    x: 0.15,
-    y: 0.14},
+    scale: 0.53,
+    x: 150,
+    y: 120},
     {hoverString: "www.neopets.com",
     src: 'images/neopets.png',
-    scale: 0.4,
-    x: 0.02,
-    y: 0.46},
+    scale: 0.48,
+    x: 20,
+    y: 270},
     {hoverString: "www.tvtropes.org",
     src: 'images/tvtropes.png',
-    scale: 0.27,
-    x: 0.37,
-    y: 0.22},
+    scale: 0.35,
+    x: 400,
+    y: 160},
     {hoverString: "( Kingdom of Loathing )",
     src: 'images/kol.png',
-    scale: 0.3,
-    x: 0.24,
-    y: 0.08},
+    scale: 0.38,
+    x: 280,
+    y: 100},
     {hoverString: "( Girlhood )",
     src: 'images/emojis.png',
-    scale: 0.4,
-    x: 0.24,
-    y: 0.08},
+    scale: 0.48,
+    x: 790,
+    y: 110},
     {hoverString: "( Edit Wars )",
     src: 'images/wiki.png',
-    scale: 0.2,
-    x: 0.24,
-    y: 0.08},
+    scale: 0.28,
+    x: 530,
+    y: 200},
     {hoverString: "( 🌐🤍🎀🫧 )",
     src: 'images/internet.png',
-    scale: 0.2,
-    x: 0.27,
-    y: 0.62},
+    scale: 0.4,
+    x: 270,
+    y: 360},
   ]
 
   render() {
-    setTimeout(100);
     if(this.props.data){
       var art = this.props.data.photos.map(function(photo, i){
         var imageSrc = 'images/'+photo.image;
@@ -113,8 +81,11 @@ class Header extends Component {
           {(i === 0) ? (
             <>
           {this.websiteProps.map((image) => (
-            <DraggableImage hoverString={image.hoverString} onHoverChange={this.handleHoverChange} src={image.src} scale={image.scale} initialX={image.x} width={this.state.width}  height={this.state.height} initialY={image.y} ></DraggableImage>
-          ))}
+            <DraggableImage hoverString={image.hoverString} onHoverChange={this.handleHoverChange} src={image.src} scale={image.scale} x={image.x} y={image.y} ></DraggableImage>
+
+          )
+
+          )}
           {/* <DraggableImage hoverString={"૮꒰ ˶• ༝ •˶꒱ა ♡"} onHoverChange={this.handleHoverChange} src={'images/kaomoji.png'} scale={0.45} x={800} y={400} ></DraggableImage>
            <DraggableImage  hoverString={"archiveofourown.org"} onHoverChange={this.handleHoverChange} src={'images/ao3.png'} scale={0.45} x={150} y={70} ></DraggableImage>
           <DraggableImage  hoverString={"www.neopets.com"} onHoverChange={this.handleHoverChange} src={'images/neopets.png'} scale={0.4} x={20} y={230} ></DraggableImage>
@@ -123,9 +94,9 @@ class Header extends Component {
           <DraggableImage  hoverString={"( Girlhood )"} onHoverChange={this.handleHoverChange} src={'images/emojis.png'} scale={0.4} x={620} y={60} ></DraggableImage>
           <DraggableImage  hoverString={"( Edit Wars )"} onHoverChange={this.handleHoverChange} src={'images/wiki.png'} scale={0.2} x={470} y={150} ></DraggableImage>
           <DraggableImage  hoverString={"( 🌐🤍🎀🫧 )"} onHoverChange={this.handleHoverChange} src={'images/internet.png'} scale={0.4} x={270} y={310} ></DraggableImage> */}
-          <Folder src={'images/folder.png'} caption="Games" hoverString={"www.tvtropes.org"} x={850} y={30} scale={0.5} />
-          <Folder src={'images/folder.png'} caption="Fandoms" hoverString={"www.tvtropes.org"} x={850} y={120} scale={0.5} />
-          <Folder src={'images/folder.png'} caption="Tools" hoverString={"www.tvtropes.org"} x={850} y={210} scale={0.5} />
+          <Folder src={'images/folder.png'} caption="Games" hoverString={"www.tvtropes.org"} x={0} y={30} scale={0.5} />
+          <Folder src={'images/folder.png'} caption="Fandoms" hoverString={"www.tvtropes.org"} x={0} y={120} scale={0.5} />
+          <Folder src={'images/folder.png'} caption="Tools" hoverString={"www.tvtropes.org"} x={0} y={210} scale={0.5} />
           </>
           ) : (
             <>
@@ -145,7 +116,7 @@ class Header extends Component {
     }
     return (
       <><Nav data={this.props.data} title='Mellye.liu' subtitle='Code / Writing / Art' /><header id="home">
-        <div className="banner" ref={this.containerRef}>
+        <div className="banner" >
           <div className="container" style={{ zIndex: 1000000 }}>
           {/* <div onClick={this.toggleButton}  className="top-left">{!this.state.isActive ? (<span id="play-button">&#40; Paused &#41;</span>) : (<span id="play-button">	&#40; Play &#41;</span>)} </div> */}
 

@@ -44,7 +44,7 @@ const DraggableImage = ({ src, scale, x, y, hoverString, caption }) => {
     <div style={{
         cursor: 'grab',
         position: 'absolute',
-        left: position.x,
+        right: position.x,
         top: position.y,
         userSelect: 'none',
         display: 'block',
