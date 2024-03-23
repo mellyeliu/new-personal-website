@@ -12,15 +12,20 @@ class Nav extends Component {
         isSocial: false
     }
 
-    textOptions = [
-      'is always late to hangouts',
-      'can only watch movies on 2x speed',
+    funFacts = [
+      'believes in digital intimacy',
       'unironically enjoys hyperpop',
-      'is a tetris enthuisiast',
-      'has a vulnerability kink',
-      'consumes a lot of fanfic',
-      'has an internet addiction',
-      'is a retail therapy addict',
+      'is using tetris as therapy',
+      'is organizing her goodreads bookshelves',
+      'psychoanalyzes to feel safe',
+      'is reading about creation myths',
+      'is watching a movie on 2x speed',
+      'only eats one food (hotpot)',
+      'aims to create safe spaces',
+      'is a shill for dimensional',
+      'is attached to her notes app',
+      'is reading fanfic about inanimate objects',
+      'is always misplacing their keys',
     ]
 
     toggleButton = () => {
@@ -43,11 +48,6 @@ class Nav extends Component {
             <ul id="nav" className="nav">
             <Fade duration={2000}>
                 <li className="menu-icon">
-                {/* <div className={"ham-menu " + (this.state.isMenu ? 'change' : '')} onClick={this.toggleButton}>
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-                </div> */}
                 <div className={'menu-list ' + (this.state.isMenu ? 'menu-show' : 'menu-hide')}>
                   <a className="current" href="/"><i class="fas fa-home"></i></a>
                   {/* <a style={{cursor: 'not-allowed', color: 'grey !important'}} className="test"><i class="far fa-user-circle"></i></a>
@@ -57,11 +57,10 @@ class Nav extends Component {
                 </li>
                 <li id="logo" className={(this.state.isMenu ? 'logo-hide' : '')}>
                   {/* <marquee> */}
-                    <div style={{fontWeight: 700, letterSpacing: 0.5, fontFamily: "Cormorant Garamond",  fontSize: 20}} className='control'>{" mellyeliu  ૮꒰ ˶• ༝ •˶꒱ა  ♡ "}</div>
-                    <TypingToggleTextList className='control'
-                     textOptions={this.textOptions}
+                    <div style={{fontWeight: 700, letterSpacing: 0.5, fontFamily: "Cormorant Garamond",  fontSize: 20}} className='control'>{"mellyeliu  ૮꒰ ˶• ༝ •˶꒱ა  ♡ "}</div>
+                    <TypingToggleTextList wrapper={true} className='control'
+                     textOptions={this.funFacts}
                      style={{letterSpacing: 2, fontFamily: "Cormorant Garamond", fontWeight: 300, fontStyle: 'italic', fontSize: 14, paddingTop: 2, color: 'rgb(150,150,150)'}}></TypingToggleTextList>
-                    {/* <div className='control' style={{fontSize: 18, paddingTop: 4, color: 'rgb(150,150,150)'}}>{"( " + 'Code / Writing / Art' + " )"}</div> */}
                   {/* </marquee> */}
                 </li>
                 {/* <div className="social-right">
