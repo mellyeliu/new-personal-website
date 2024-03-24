@@ -121,7 +121,7 @@
         "title":"Personal Website (2.0)",
         "category":"A continual work in progress.",
         "languages": "React <3",
-        "image":"personalweb.png",
+        "image":"pweb2.png",
         "url":""
       },
       {
@@ -135,7 +135,7 @@
         "title":"My Fanfic Became Sentient and Cannabalized Itself",
         "category":"Zine documenting my online childhood and the websites that made me.",
         "languages": "Figma <3",
-        "image":"zine2.png",
+        "image":"fanfic.png",
         "url":""
       },
       {
@@ -163,12 +163,12 @@
         "title":"Digital Love Languages",
         "category":"What does it mean to love online?",
         "languages": "Figma <3",
-        "image":"lovelanguages.png",
+        "image":"digitallove.png",
         "url":""
       },
       {
         "title":"CYBERHUG COLLABORATIONS",
-        "category":"Musings on digital intimacy with my friend Madeleine and more.",
+        "category":"Musings on digital intimacy with my friend Madeleine.",
         "languages": "Figma <3",
         "image":"cyberhug.png",
         "url":"https://instagram.com/cyber.hug"
@@ -214,13 +214,6 @@
         "languages": "Python (keras, sklearn)",
         "image":"proj3-min.png",
         "url":"https://github.com/NgAngus/FakeNewsDetector"
-      },
-      {
-        "title":"Freezing of Gait Detector",
-        "category":"Wearable device using acceleration data to detect FOG episodes real time",
-        "languages":"Matlab, Arduino",
-        "image":"proj6-min.png",
-        "url":""
       },
       {
         "title":"Tamagotchi Fansite",
