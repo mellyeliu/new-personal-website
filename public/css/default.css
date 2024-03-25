@@ -65,10 +65,10 @@ time, mark, audio, video {
    vertical-align: baseline;
    background: transparent;
 }
-/*
+
 body {
-   cursor: crosshair;
-} */
+   cursor: url('../images/cursor.png'), auto;
+}
 
 /* Grow Big */
 .hvr-grow {

@@ -47,7 +47,7 @@
       {
         "place":"( Internet gardening )",
         "date":"02·17·2020",
-        "image":"bg53.png"
+        "image":"bg54.png"
       }, {
         "place":"( Collects obsessions )",
         "date":"02·17·2020",
@@ -128,7 +128,7 @@
         "title":"Digital Nostalgia",
         "category":"Zine documenting my online childhood and the websites that made me.",
         "languages": "Figma <3",
-        "image":"proj1.png",
+        "image":"zine1.png",
         "url":""
       },
       {
@@ -198,8 +198,8 @@
         "title":"Personal Website (1.0)",
         "category":"Covid passion project. DO NOT OPEN.",
         "languages": "Android (Java), SQLite, Arduino",
-        "image":"pweb.png",
-        "url":"https://github.com/mellyeliu/Solon"
+        "image":"oldpweb.png",
+        "url":"https://600e5461ebec290008991444--fjeioweijfieowief.netlify.app/"
       },
       {
         "title":"Brand Insights Snapshots",

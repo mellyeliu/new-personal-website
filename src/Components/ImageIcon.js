@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const Folder = ({ src, scale, x, y, hoverString, caption }) => {
+const ImageIcon = ({ src, scale, x, y, onHoverChange, hoverString, caption }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
-
-//   src ? src : 'images/folder.png';
+  const [isHovered, setIsHovered] = useState(false);
+  const hoverText = document.getElementById('hoverText');
 
   // Function to start the drag
   const startDrag = (e) => {
@@ -23,6 +23,8 @@ const Folder = ({ src, scale, x, y, hoverString, caption }) => {
 
   // Function to stop the drag
   const stopDrag = (e) => {
+    setIsHovered(false);
+    onHoverChange('')
     setDragging(false);
     e.target.style.cursor = 'grab';
     // hoverText.style.display = 'block';
@@ -30,21 +32,18 @@ const Folder = ({ src, scale, x, y, hoverString, caption }) => {
 
   // Function to stop the drag
   const onHover = () => {
+    setIsHovered(true);
     console.log(hoverString);
+    onHoverChange(hoverString);
     // hoverText.style.display = 'none';
   };
-
-  // const onLeave = (e) => {
-  //   setIsHovered(false);
-  // };
-
 
 
   return (
     <div style={{
         cursor: 'grab',
         position: 'absolute',
-        right: position.x,
+        left: position.x,
         top: position.y,
         userSelect: 'none',
         display: 'block',
@@ -59,9 +58,9 @@ const Folder = ({ src, scale, x, y, hoverString, caption }) => {
       onMouseEnter={onHover}
       draggable={false} // Prevent default browser drag behavior
     />
-    {caption && <div style={{fontSize: 28, color: 'black', fontFamily: "Cormorant Garamond", fontStyle: 'italic', fontWeight: 500}}>{caption}</div>} {/* Render caption if it is provided */}
+    {caption && <div style={{fontSize: 28, color: 'black', fontFamily: "Cormorant Garamond", fontStyle: 'italic'}}>{caption}</div>} {/* Render caption if it is provided */}
     </div>
   );
 };
 
-export default Folder;
+export default ImageIcon;
