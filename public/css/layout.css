@@ -233,6 +233,9 @@ header .banner {
 .slider {
    height: 100% !important;
 }
+.slider-frame {
+   border: 0.5px solid #535353;
+}
 
 header .banner:-webkit-full-screen  {
    max-width: 1150px;

@@ -52,6 +52,25 @@ const Portfolio = ({data}) => {
    </div>
     })
 
+//   var projects = data.projects.map(function(projects, i){
+//     var projectImage = 'images/portfolio/'+projects.image;
+//     return <div key={projects.title} style={{padding: "0 15px"}}className="two columns portfolio-item">
+//     <div className="item-wrap">
+//      <a target="_blank" href={projects.url}>
+//         <h5>&#40;{i}&#41; {projects.title}</h5>
+//         <img alt={projects.title} src={projectImage} style={{height: 200, width: '100%'}} />
+//         <div className="overlay" style={{height: 200, width: '100%'}}>
+//            <div className="portfolio-item-meta" style={{padding: 18}}>
+//           {/* <h5>&#40;{i}&#41; {projects.title}</h5> */}
+//               <p>{projects.category}</p>
+//               <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>
+//            </div>
+//          </div>
+//      </a>
+//    </div>
+//  </div>
+//   })
+
     var art = data.art.map(function(projects, i){
       var projectImage = 'images/portfolio/'+projects.image;
       return <div key={projects.title} className="two columns portfolio-item">

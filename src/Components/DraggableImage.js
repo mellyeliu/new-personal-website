@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const DraggableImage = ({ src, scale, x, y, onHoverChange, hoverString }) => {
+const DraggableImage = ({ src, scale, x, y, onHoverChange, hoverString, border }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -52,9 +52,11 @@ const DraggableImage = ({ src, scale, x, y, onHoverChange, hoverString }) => {
         position: 'absolute',
         left: position.x,
         top: position.y,
+        filter: 'drop-shadow(8px 8px 6px rgba(0,0,0,0.4))',
+        boxShadow: border ? '0 0 0 1px rgba(0,0,0,0.5)' : 'none', // Red outline
         userSelect: 'none',
         borderRadius: '20px',
-        border: 'solid 1px #bbbbbb',
+        // border: 'solid 1px #bbbbbb',
         transform: isHovered ? `scale(${scale + 0.02})` : `scale(${scale})`,
         transition: 'transform 0.3s ease-in-out',
         transformOrigin: 'top left', // Adjust as needed
