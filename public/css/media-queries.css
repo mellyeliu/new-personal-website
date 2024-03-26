@@ -6,6 +6,13 @@
 
 /* ================================================================== */
 
+/* @media only screen and (min-width: 1550px) {
+   .draggableImage {
+      transform: scale(1.1);
+   }
+
+} */
+
 @media only screen and (min-height: 890px) and (min-width: 1350px) {
 
    /* header styles
@@ -36,6 +43,19 @@
    #logo {
       font-size: 14px !important;
    }
+   .draggableImage {
+      transform: scale(0.65) !important;
+      margin-left: 5%;
+      margin-top: 5%;
+   }
+
+   .folder {
+      transform: scale(1.05) !important;
+   }
+
+   .top-left, .bottom-left {
+      font-size: 16px;
+   }
 
 
    /* .fulltest {
@@ -62,6 +82,9 @@
    header#home {
       min-height: 500px;
    }
+   /* .draggableImage {
+      transform: scale(2.8) !important;
+   } */
 
 }
 

@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 
-const Folder = ({ src, scale, x, y, hoverString, caption }) => {
+const Folder = ({ src, scale, x, y, hoverString, caption, isOpen, onOpen }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
+  console.log(isOpen);
 
-//   src ? src : 'images/folder.png';
+  const handleClick = () => {
+    // Toggle the state based on the prop and notify the parent
+    onOpen(!isOpen);
+  };
 
   // Function to start the drag
   const startDrag = (e) => {
@@ -28,12 +32,6 @@ const Folder = ({ src, scale, x, y, hoverString, caption }) => {
     // hoverText.style.display = 'block';
   };
 
-  // Function to stop the drag
-  const onHover = () => {
-    console.log(hoverString);
-    // hoverText.style.display = 'none';
-  };
-
   // const onLeave = (e) => {
   //   setIsHovered(false);
   // };
@@ -41,25 +39,28 @@ const Folder = ({ src, scale, x, y, hoverString, caption }) => {
 
 
   return (
-    <div style={{
-        cursor: 'grab',
+    <div
+      onClick={handleClick}
+      className="folderIcon"
+      style={{
         position: 'absolute',
-        right: position.x,
+        right: 10,
+        filter: 'drop-shadow(0px 6px 6px rgba(0,0,0,0.4))',
         top: position.y,
         userSelect: 'none',
         display: 'block',
         transform: `scale(${scale})`
       }}>
     <img
-      src={src}
-      onMouseDown={startDrag}
-      onMouseMove={onDrag}
-      onMouseUp={stopDrag}
-      onMouseLeave={stopDrag}
-      onMouseEnter={onHover}
+      src={isOpen ? '/images/folderNewOpen.png' : '/images/folder.png'}
+      // onMouseDown={startDrag}
+      // onMouseMove={onDrag}
+      // onMouseUp={stopDrag}
+      // onMouseLeave={stopDrag}
+      className="folder"
       draggable={false} // Prevent default browser drag behavior
     />
-    {caption && <div style={{fontSize: 28, color: 'black', fontFamily: "Cormorant Garamond", fontStyle: 'italic', fontWeight: 500}}>{caption}</div>} {/* Render caption if it is provided */}
+    {caption && <div className="folderText" style={{fontSize: 28, color: 'black', fontFamily: "Cormorant Garamond", fontStyle: 'italic', fontWeight: isOpen ? '500' : '400', fontColor: '#111111'}}>{caption}</div>} {/* Render caption if it is provided */}
     </div>
   );
 };

@@ -52,7 +52,7 @@ const DraggableImage = ({ src, scale, x, y, onHoverChange, hoverString, border }
         position: 'absolute',
         left: position.x,
         top: position.y,
-        filter: 'drop-shadow(8px 8px 6px rgba(0,0,0,0.4))',
+        filter: border ? 'drop-shadow(8px 8px 10px rgba(0,0,0,0.3))' : 'drop-shadow(0px 6px 5px rgba(0,0,0,0.8))',
         boxShadow: border ? '0 0 0 1px rgba(0,0,0,0.5)' : 'none', // Red outline
         userSelect: 'none',
         borderRadius: '20px',
