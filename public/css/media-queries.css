@@ -185,6 +185,19 @@
    -------------------------------------------------------------------- */
    #logo {
       padding: 16px 20px 28px 20px !important;
+      top: 0px !important;
+   }
+
+   #nav-wrap {
+      height: 80px !important;
+   }
+
+
+   .slider-list {
+      /* overflow: scroll; */
+    /* background-image: url(images/bg56.png);
+    background-attachment: fixed;
+    background-size: cover; */
    }
 
    span.control {
@@ -199,10 +212,15 @@
       font-weight: 500;
    }
 
+   .draggableImage {
+      margin-right: 100% !important;
+   }
+
    /* Header Styles
    -------------------------------------------------------------------- */
    header .banner {
-      padding-bottom: 12px;
+      padding-bottom: 20px;
+      padding-top: 80px;
    }
    header .banner-text h1 { font: 68px/1.1em 'opensans-light', sans-serif; }
    header .banner-text h3 {
@@ -220,12 +238,21 @@
    }
 
    .bottom-left {
-      top: 8px;
+      top: 14px;
       right: 8px;
-      font-size: 7px;
+      font-size: 14px;
       letter-spacing: 2px;
       line-height: 12px;
+      font-weight: 600;
    }
+
+   #portfolio {
+      margin: 0 12px;
+   }
+
+   /* .rwt__tabs {
+      margin: 0 25px !important;
+   } */
 
 
    /* header social links */
@@ -298,8 +325,20 @@
    .popup-modal {	max-width: 85%; }
    #portfolio h2 {margin-bottom: 5px}
 
-   .rwt__tablist { margin-left: 27px; }
+   /* .rwt__tablist { margin-left: 27px; } */
    .portfolio-item.columns { padding: 0px 30px !important;}
+
+   .browsero {
+      display: none;
+   }
+
+   #portfolio-wrapper {
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-top: 20px;
+      background: #f5f5f5
+  }
 
 
    /* footer
