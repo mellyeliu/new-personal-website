@@ -176,17 +176,9 @@ class Header extends Component {
           {this.display_folders.map((folder, ind) => {
             return this.state.openStates && this.state.openStates[ind] || false ? (
             FileData[folder].map((image) => (
-              <DraggableImage border={image.border ? true: false} hoverString={image.hoverString} onHoverChange={this.handleHoverChange} src={image.src} scale={image.scale} x={image.x} y={image.y} ></DraggableImage>
+              <DraggableImage url={image.url} border={image.border ? true: false} hoverString={image.hoverString} onHoverChange={this.handleHoverChange} src={image.src} scale={image.scale} x={image.x} y={image.y} ></DraggableImage>
             ))
           ) : null})}
-
-          {/* {FileData.games.map((image) => (
-            <DraggableImage border={image.border ? true: false} hoverString={image.hoverString} onHoverChange={this.handleHoverChange} src={image.src} scale={image.scale} x={image.x} y={image.y} ></DraggableImage>
-          ))}
-
-        {FileData.games.map((image) => (
-            <DraggableImage border={image.border ? true: false} hoverString={image.hoverString} onHoverChange={this.handleHoverChange} src={image.src} scale={image.scale} x={image.x} y={image.y} ></DraggableImage>
-          ))} */}
           {this.folders.map((folder, index) => (
             <Folder src={'images/folder.png'}
               isOpen={this.state.openStates[index]}
@@ -196,9 +188,6 @@ class Header extends Component {
               y={30 + 100 * index}
               scale={0.5} />
           ))}
-          {/* <Folder src={'images/folder.png'} caption="Games" hoverString={"www.tvtropes.org"} x={0} y={30} scale={0.5} />
-          <Folder src={'images/folder.png'} caption="Fandoms" hoverString={"www.tvtropes.org"} x={0} y={130} scale={0.5} />
-          <Folder src={'images/folder.png'} caption="Tools" hoverString={"www.tvtropes.org"} x={0} y={230} scale={0.5} /> */}
           </>
           ) : (
             <></>
@@ -219,6 +208,7 @@ class Header extends Component {
     }
     return (
       <><Nav data={this.props.data} title='Mellye.liu' subtitle='Code / Writing / Art' /><header id="home">
+        <Fade duration={1000 }  delay={500}>
         <div className="banner" >
           <div className="container" style={{ zIndex: 1 }}>
           {/* <div onClick={this.toggleButton}  className="top-left">{!this.state.isActive ? (<span id="play-button">&#40; Paused &#41;</span>) : (<span id="play-button">	&#40; Play &#41;</span>)} </div> */}
@@ -226,10 +216,11 @@ class Header extends Component {
             <div onClick={this.toggleButton}  className="top-left">{this.state.isActive ? (<span id="play-button">&#40; Pause &nbsp;<i style={{ fontSize: 8 }} class="fas fa-pause"></i> &#41;</span>) : (<span id="play-button">	&#40; Play &nbsp;<i style={{ fontSize: 8 }} class="fas fa-play"></i> &#41;</span>)} </div>
           </div>
           <Carousel autoplay={this.state.isActive} wrapAround={true} transitionMode='fade' dragging={false} swiping={false}
-            withoutControls={true} pauseOnHover={true} autoplayInterval={3000} enableKeyboardControls={true}>
+            defaultControlsConfig={{pagingDotsStyle: {color: 'black'}, prevButtonStyle: {display: 'none'}, nextButtonStyle: {display: 'none'}}} pauseOnHover={true} autoplayInterval={3000} enableKeyboardControls={true}>
             {art}
           </Carousel>
         </div>
+        </Fade>
       </header></>
     );
   }

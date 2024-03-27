@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
 
-const DraggableImage = ({ src, scale, x, y, onHoverChange, hoverString, border }) => {
+const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, border }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const hoverText = document.getElementById('hoverText');
+
+  const openPopup = () => {
+    // Specify the URL you want to open in the popup
+
+    // Specify the dimensions and any other features for the popup window
+    const features = `width=400,height=250,resizable=no,scrollbars=no,left=${x+20},top=${y + 200}`;
+
+    // Open the popup
+    if (url) {
+      window.open(url, 'popupWindow', features)
+    }
+    // url ? window.open(url, 'popupWindow', features) : null;
+  };
 
   // Function to start the drag
   const startDrag = (e) => {
@@ -64,6 +77,7 @@ const DraggableImage = ({ src, scale, x, y, onHoverChange, hoverString, border }
       }}
       className='draggableImage'
       onMouseDown={startDrag}
+      onClick={openPopup}
       onMouseMove={onDrag}
       onMouseUp={stopDrag}
       onMouseLeave={stopDrag}

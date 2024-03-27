@@ -94,7 +94,7 @@ const Portfolio = ({data}) => {
     return (
       <section id="portfolio">
         {/* <marquee scrollamount="1">THIS IS A SPACE FOR CREATIVITY </marquee> */}
-
+        <Fade duration={1000 }  delay={500}>
       <div className="row">
         <Fade top>
         <div style={{marginBottom: -15}}className="tagline"></div>
@@ -105,39 +105,40 @@ const Portfolio = ({data}) => {
               onChange={(tabId) => { console.log(tabId) }}
             >
               <TabList>
-              <Tab tabFor="one">All</Tab>
-                <Tab tabFor="two">Projects</Tab>
-                <Tab tabFor="three">Art</Tab>
-                <Tab tabFor="four">Writing</Tab>
+              <Tab tabFor="one">₊✩‧₊˚&#40; All &#41; ˚₊✩‧₊  <span className="browserx">×</span></Tab>
+                <Tab tabFor="two"> ‧₊˚&#40; Code &#41;✩ ₊˚ <span className="browserx">×</span></Tab>
+                <Tab tabFor="three">˚₊‧꒰ა &#40; Art &#41; ໒꒱ ‧₊˚<span className="browserx">×</span></Tab>
+                <Tab tabFor="four">.•*𓆩 &#40; Writing &#41; 𓆪*•.<span className="browserx">×</span></Tab>
               {/* <Tab tabFor="one">&#40; All	&#41;</Tab>
                 <Tab tabFor="two">&#40; Projects	&#41;</Tab>
                 <Tab tabFor="three">&#40; Art	&#41;</Tab>
                 <Tab tabFor="four">&#40; Writing	&#41;</Tab> */}
+                <span className="browsero">○ ○ ○</span>
               </TabList>
               <TabPanel tabId="one">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                  <Fade duration={1500}  delay={500}>
+                  <Fade duration={500}  delay={100}>
                   {projects}
                   </Fade>
                 </div>
               </TabPanel>
               <TabPanel tabId="two">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                  <Fade duration={1500}  delay={500}>
+                  <Fade duration={500}  delay={100}>
                   {projects}
                   </Fade>
                 </div>
               </TabPanel>
               <TabPanel tabId="three">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                  <Fade duration={1500 }  delay={500}>
+                  <Fade duration={500 }  delay={100}>
                   {art}
                   </Fade>
                 </div>
               </TabPanel>
               <TabPanel tabId="four">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                  <Fade duration={1500 }  delay={500}>
+                  <Fade duration={500 }  delay={100}>
                   {art}
                   </Fade>
                 </div>
@@ -145,6 +146,7 @@ const Portfolio = ({data}) => {
             </Tabs>
           </div>
       </div>
+      </Fade>
    </section>
     );
   }

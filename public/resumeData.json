@@ -51,12 +51,12 @@
       }, {
         "place":"( Collects obsessions )",
         "date":"02·17·2020",
-        "image":"bg53.png"
+        "image":"bg56.png"
       },
       {
         "place":"( Likes to document )",
         "date":"02·17·2020",
-        "image":"bg53.png"
+        "image":"bg56.png"
       }
     ]
   },
@@ -118,14 +118,14 @@
   "portfolio":{
     "projects": [
       {
-        "title":"Personal Website (2.0)",
+        "title":"🎀🎧 Personal Website (2.0)",
         "category":"A continual work in progress.",
         "languages": "React <3",
         "image":"pweb2.png",
         "url":""
       },
       {
-        "title":"Digital Nostalgia",
+        "title":"Digital Nostalgia .•*𓆩🎧𓆪*•.",
         "category":"Zine documenting my online childhood and the websites that made me.",
         "languages": "Figma <3",
         "image":"zine1.png",
