@@ -309,7 +309,7 @@ header .banner-text hr {
    width: 60%;
    margin: 18px auto 24px auto;
    border-color: #2F2D2E;
-   border-color: rgba(150, 150, 150, 0);
+   border-color: rgba(110, 110, 110, 0);
 }
 
 /* header social links */
@@ -380,7 +380,7 @@ header .scrolldown a:hover { color: rgb(175,175,175); }
    margin: 0 auto;
    z-index: 100;
    position: fixed;
-   height: 80px;
+   height: 100px;
    padding: 20px 0px;
    left: 0;
    top: 0;

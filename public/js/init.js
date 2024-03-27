@@ -100,8 +100,8 @@
          document.getElementById("nav-wrap").style.padding = '25px 0px'
       }
       else if (y < h * .05) {
-         document.getElementById("nav-wrap").style.height = '80px'
-         document.getElementById("nav-wrap").style.padding = '30px 0px'
+         document.getElementById("nav-wrap").style.height = '100px'
+         document.getElementById("nav-wrap").style.padding = '23px 0px'
       }
       else {
          document.getElementById("nav-wrap").style.height = '70px'
