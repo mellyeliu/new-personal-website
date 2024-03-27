@@ -144,6 +144,8 @@ const Portfolio = ({data}) => {
                 </div>
               </TabPanel>
             </Tabs>
+            <div style={{width: '100%', height: 50, borderTop: '0.5px solid black',
+    backgroundImage: 'url(images/tabs.png)'}}></div>
           </div>
       </div>
       </Fade>
