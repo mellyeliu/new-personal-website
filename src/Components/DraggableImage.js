@@ -6,18 +6,40 @@ const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, bor
   const [isHovered, setIsHovered] = useState(false);
   const hoverText = document.getElementById('hoverText');
 
-  const openPopup = () => {
-    // Specify the URL you want to open in the popup
 
-    // Specify the dimensions and any other features for the popup window
-    const features = `width=400,height=250,resizable=no,scrollbars=no,left=${x+20},top=${y + 200}`;
+  let timer = 0;
+  const delay = 300; // milliseconds
+  const [clickCount, setClickCount] = useState(0);
 
-    // Open the popup
-    if (url) {
-      window.open(url, 'popupWindow', features)
-    }
-    // url ? window.open(url, 'popupWindow', features) : null;
+  const openPopupOnDoubleClick = () => {
+    clearTimeout(timer);
+    setClickCount(clickCount + 1);
+
+    timer = setTimeout(() => {
+      if (clickCount === 1) {
+        const features = `width=400,height=250,resizable=no,scrollbars=no,left=${x+20},top=${y + 200}`;
+
+        // Open the popup
+        if (url) {
+          window.open(url, 'popupWindow', features)
+        }
+      }
+      setClickCount(0);
+    }, delay);
   };
+
+  // const openPopup = () => {
+  //   // Specify the URL you want to open in the popup
+
+  //   // Specify the dimensions and any other features for the popup window
+  //   const features = `width=400,height=250,resizable=no,scrollbars=no,left=${x+20},top=${y + 200}`;
+
+  //   // Open the popup
+  //   if (url) {
+  //     window.open(url, 'popupWindow', features)
+  //   }
+  //   // url ? window.open(url, 'popupWindow', features) : null;
+  // };
 
   // Function to start the drag
   const startDrag = (e) => {
@@ -77,7 +99,7 @@ const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, bor
       }}
       className='draggableImage'
       onMouseDown={startDrag}
-      onClick={openPopup}
+      onClick={openPopupOnDoubleClick}
       onMouseMove={onDrag}
       onMouseUp={stopDrag}
       onMouseLeave={stopDrag}
