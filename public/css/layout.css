@@ -1312,7 +1312,7 @@ call-to-action .button {
     margin: 0 6px;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    display: inline;
 }
 .flex-control-paging li a {
     width: 12px;
@@ -1553,7 +1553,7 @@ button.rwt__tab:first-child {
    /* height: 51px; */
 
 	padding: 0.6rem 0rem;
-	color: rgb(42, 42, 42);
+	/* color: rgb(42, 42, 42); */
   /* transition: background 0.3s cubic-bezier(0.22, 0.61, 0.36, 1); */
 }
 
