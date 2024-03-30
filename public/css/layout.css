@@ -1560,6 +1560,8 @@ button.rwt__tab:first-child {
 
 .rwt__tab[aria-selected="false"] {
    /* color: #969696 !important; */
+   position: relative;
+   bottom: -1px;
 }
 
 .rwt__tab[aria-selected="true"] {
@@ -1580,7 +1582,14 @@ button.rwt__tab:first-child {
 .rwt__tab:hover {
    /* transform: scale(1.05);
    transition: 0.2s ease-in-out; */
+   transform: scale(1.03);
+   color: black;
 }
+
+.rwt__tab[aria-controls="four"]{
+   bottom: -3px !important;
+}
+
 
 .rwt__tablist:not([aria-orientation="vertical"]) .rwt__tab[aria-selected="false"]:hover + .rwt__tab[aria-selected="true"]:before {
 	width: 0;

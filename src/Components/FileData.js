@@ -144,6 +144,27 @@ const FileData = {
         "border": true,
         "x": 110,
         "y": 310}
+    ],
+    "About Me": [
+        {"hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
+        "src": "images/me/me.png",
+        "scale": 0.5,
+        "x": 180,
+        "y": 150},
+        {"hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
+        "src": "images/me/meme.png",
+        "scale": 0.5,
+        "x": 210,
+        "y": 350},
+        {"hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
+        "src": "images/me/mememe.png",
+        "scale": 0.5,
+        "x": 300,
+        "y": 50},
+    ],
+    "Obsessions": [
+    ],
+    "Fandoms": [
     ]
 }
 
