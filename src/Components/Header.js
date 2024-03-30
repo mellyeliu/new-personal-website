@@ -15,14 +15,25 @@ class Header extends Component {
   state = {
     isActive: false,
     isChildHovered: "",
-    openStates: [true, true, true, true],
+    openStates: {0: [true, true, true, true], 1: [true, true, true]},
   }
 
-  handleFolderOpen = (index, isOpen) => {
+
+  handleFolderOpen = (index, isOpen, key) => {
     // Update the state of the specific folder at index
-    this.setState(prevState => ({
-      openStates: prevState.openStates.map((state, i) => i === index ? isOpen : state),
-    }));
+    console.log(isOpen);
+    this.setState(prevState => {
+      const newOpenStates = { ... prevState.openStates };
+
+      // Update the desired element in the cloned array
+      newOpenStates[key][index] = isOpen;
+
+      return newOpenStates;
+    });
+
+    // this.setState(prevState => ({
+    //   openStates: prevState.openStates.map((state, i) => i === index ? isOpen : state),
+    // }));
   };
 
 
@@ -164,6 +175,7 @@ class Header extends Component {
 
  folders = ['Games', 'Text', 'Misc'];
  display_folders = ['games', 'text', 'misc', "windows"];
+ d2_folders = ['About Me', 'Obsessions', 'Fandoms'];
 
   render() {
     if(this.props.data){
@@ -174,33 +186,44 @@ class Header extends Component {
           {(i === 0) ? (
             <>
           {this.display_folders.map((folder, ind) => {
-            return this.state.openStates && this.state.openStates[ind] || false ? (
+            return this.state.openStates && this.state.openStates[0][ind] || false ? (
             FileData[folder].map((image) => (
               <DraggableImage url={image.url} border={image.border ? true: false} hoverString={image.hoverString} onHoverChange={this.handleHoverChange} src={image.src} scale={image.scale} x={image.x} y={image.y} ></DraggableImage>
             ))
           ) : null})}
           {this.folders.map((folder, index) => (
             <Folder src={'images/folder.png'}
-              isOpen={this.state.openStates[index]}
-              onOpen={(isOpen) => this.handleFolderOpen(index, isOpen)}
+              isOpen={this.state.openStates[0][index]}
+              onOpen={(isOpen) => this.handleFolderOpen(index, isOpen, 0)}
               caption={folder}
               x={0}
               y={30 + 100 * index}
               scale={0.5} />
           ))}
+
           </>
           ) : (
-            <></>
-          //   <>
-          //   <DraggableImage  hoverString={"( 🌐🤍🎀🫧 )"} onHoverChange={this.handleHoverChange} src={'images/internet.png'} scale={0.4} x={270} y={310} ></DraggableImage>
-          //   <Folder src={'images/folder.png'} caption="Games" hoverString={"www.tvtropes.org"} x={850} y={30} scale={0.5} />
-          // <Folder src={'images/folder.png'} caption="Fandoms" hoverString={"www.tvtropes.org"} x={850} y={120} scale={0.5} />
-          // <Folder src={'images/folder.png'} caption="Tools" hoverString={"www.tvtropes.org"} x={850} y={210} scale={0.5} /></>
+            <>
+            {this.d2_folders.map((folder, ind) => {
+              return this.state.openStates && this.state.openStates[1][ind] || false ? (
+              FileData[folder].map((image) => (
+                <DraggableImage url={image.url} border={image.border ? true: false} hoverString={image.hoverString} onHoverChange={this.handleHoverChange} src={image.src} scale={image.scale} x={image.x} y={image.y} ></DraggableImage>
+              ))
+            ) : null})}
+            {this.d2_folders.map((folder, index) => (
+            <Folder src={'images/folder.png'}
+              isOpen={this.state.openStates[1][index]}
+              onOpen={(isOpen) => this.handleFolderOpen(index, isOpen, 1)}
+              caption={folder}
+              x={0}
+              y={30 + 100 * index}
+              scale={0.5} />
+          ))}
+
+            </>
           )
 
          }
-          {/* <div className="bottom-left">{this.state.isChildHovered}</div> */}
-          {/* <div id="header-hover" className="hover-text">&#40; 🌐🤍🎀🫧 &#41;</div> */}
           {this.state.isChildHovered === '' ? <div className="bottom-left">{photo.place} </div> : <div id="header-hover" className="bottom-left">{this.state.isChildHovered} </div>}
         {/* <div className="hover-text">This is the text displayed on hover</div> */}
         </div>
@@ -213,10 +236,10 @@ class Header extends Component {
           <div className="container" style={{ zIndex: 1 }}>
           {/* <div onClick={this.toggleButton}  className="top-left">{!this.state.isActive ? (<span id="play-button">&#40; Paused &#41;</span>) : (<span id="play-button">	&#40; Play &#41;</span>)} </div> */}
 
-            <div onClick={this.toggleButton}  className="top-left">{this.state.isActive ? (<span id="play-button">&#40; Pause &nbsp;<i style={{ fontSize: 8 }} class="fas fa-pause"></i> &#41;</span>) : (<span id="play-button">	&#40; Play &nbsp;<i style={{ fontSize: 8 }} class="fas fa-play"></i> &#41;</span>)} </div>
+            <div onClick={this.toggleButton}  className="top-left">{this.state.isActive ? (<span id="play-button">&#40; Pause &nbsp;<i style={{ fontSize: 8 }} className="fas fa-pause"></i> &#41;</span>) : (<span id="play-button">	&#40; Play &nbsp;<i style={{ fontSize: 8 }} className="fas fa-play"></i> &#41;</span>)} </div>
           </div>
           <Carousel autoplay={this.state.isActive} wrapAround={true} transitionMode='fade' dragging={false} swiping={false}
-            defaultControlsConfig={{pagingDotsStyle: {color: 'black'}, prevButtonStyle: {display: 'none'}, nextButtonStyle: {display: 'none'}}} pauseOnHover={true} autoplayInterval={3000} enableKeyboardControls={true}>
+            defaultControlsConfig={{pagingDotsStyle: {color: 'black'}, prevButtonStyle: {display: 'none'}, nextButtonStyle: {display: 'none'}}} pauseOnHover={true} autoplayInterval={3000} enableKeyboardControls={false}>
             {art}
           </Carousel>
         </div>

@@ -28,19 +28,6 @@ const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, bor
     }, delay);
   };
 
-  // const openPopup = () => {
-  //   // Specify the URL you want to open in the popup
-
-  //   // Specify the dimensions and any other features for the popup window
-  //   const features = `width=400,height=250,resizable=no,scrollbars=no,left=${x+20},top=${y + 200}`;
-
-  //   // Open the popup
-  //   if (url) {
-  //     window.open(url, 'popupWindow', features)
-  //   }
-  //   // url ? window.open(url, 'popupWindow', features) : null;
-  // };
-
   // Function to start the drag
   const startDrag = (e) => {
     setDragging(true);
@@ -77,9 +64,41 @@ const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, bor
   //   setIsHovered(false);
   // };
 
+  const imageContainerStyle = {
+    // position: 'relative',
+    // position: 'absolute',
+    width: 'auto',
+    height: 'auto',
+    textAlign: 'center',
+    // width: '300px', // Adjust based on your image size or layout requirements
+    // height: '200px', // Adjust based on your image size or layout requirements
+  };
+
+  // const imgStyle = {
+  //   width: '100%',
+  //   height: 'auto',
+  //   display: 'block',
+  // };
+
+  const centeredInputStyle = {
+    position: 'absolute',
+    // top: '50%',
+    // left: '50%',
+    // transform: 'translate(-50%, -50%)',
+        left: position.x,
+        top: position.y,
+    width: '90%',
+    border: 'none',
+    backgroundColor: 'transparent',
+    textAlign: 'center',
+    outline: 'none', // You might want to handle focus outline differently for accessibility
+  };
+
 
 
   return (
+    <div style={imageContainerStyle}>
+    {/* { border ? <input type="text" style={centeredInputStyle} placeholder="Your text here" /> : null} */}
     <img
       src={src}
       style={{
@@ -106,6 +125,7 @@ const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, bor
       onMouseEnter={onHover}
       draggable={false} // Prevent default browser drag behavior
     />
+    </div>
   );
 };
 
