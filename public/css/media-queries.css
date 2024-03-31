@@ -24,9 +24,6 @@
   ul#nav {
       max-width: 1150px;
    }
-   .row {
-      max-width: 1180px;
-   }
    #about {
       padding-top: 50px;
       padding-bottom: 20px;
@@ -57,6 +54,13 @@
       font-size: 16px;
    }
 
+   #portfolio .row {
+      width: 96%;
+      max-width: 1150px;
+      margin: 0 auto;
+      border: 0.5px solid #111111;
+   }
+
 
    /* .fulltest {
       display: none;
@@ -67,6 +71,21 @@
 
 }
 
+@media only screen and (min-height: 850px) {
+   .draggableImage {
+      transform: scale(0.60) !important;
+      margin-top: 5%;
+   }
+
+}
+
+@media only screen and (min-height: 800px) {
+   .draggableImage {
+      transform: scale(0.57) !important;
+      margin-top: 2.5%;
+   }
+
+}
 
 /* screenwidth less than 1024px
 --------------------------------------------------------------------- */
@@ -246,9 +265,9 @@
       font-weight: 600;
    }
 
-   #portfolio {
+   /* #portfolio {
       margin: 0 12px;
-   }
+   } */
 
    /* .rwt__tabs {
       margin: 0 25px !important;
@@ -337,7 +356,6 @@
       margin-left: 0px;
       margin-right: 0px;
       padding-top: 20px;
-      background: #f5f5f5
   }
 
 
