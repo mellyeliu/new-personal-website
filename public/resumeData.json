@@ -48,15 +48,6 @@
         "place":"( Internet gardening )",
         "date":"02·17·2020",
         "image":"bg57.png"
-      }, {
-        "place":"( Collects obsessions )",
-        "date":"02·17·2020",
-        "image":"bg56.png"
-      },
-      {
-        "place":"( Likes to document )",
-        "date":"02·17·2020",
-        "image":"bg56.png"
       }
     ]
   },
@@ -180,6 +171,29 @@
         "image":"internetc.png",
         "url":""
       },
+      {
+        "title":"Girl and her Notes App",
+        "category":"ChatGPT generated smut about a girl falling in love with her notes app.",
+        "languages": "Figma <3",
+        "image":"zine1.png",
+        "url":"https://archiveofourown.org/works/53351767"
+      },
+      {
+        "title":"Dimensional Fanfic",
+        "category":"Fictional Dimensional personality archetypes.",
+        "languages": "Figma <3",
+        "image":"dimensional.png",
+        "url":"https://archiveofourown.org/works/51323875"
+      },
+      {
+        "title":"Short Circuit",
+        "category":"Circumventing the ChatGPT censors again",
+        "languages": "Figma <3",
+        "image":"zine1.png",
+        "url":"https://archiveofourown.org/works/51323875"
+      },
+
+
       {
         "title":"I've Been Thinking About Obsession",
         "category":"Visual conversation on the neuroses of obsession.",
