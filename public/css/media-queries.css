@@ -42,8 +42,8 @@
    }
    .draggableImage {
       transform: scale(0.65) !important;
-      margin-left: 5%;
-      margin-top: 5%;
+      margin-left: 5% !important;
+      margin-top: 6% !important;
    }
 
    .folder {
@@ -73,7 +73,7 @@
 
 @media only screen and (min-height: 850px) {
    .draggableImage {
-      transform: scale(0.60) !important;
+      transform: scale(0.62) !important;
       margin-top: 5%;
    }
 
@@ -81,7 +81,7 @@
 
 @media only screen and (min-height: 800px) {
    .draggableImage {
-      transform: scale(0.57) !important;
+      transform: scale(0.60) !important;
       margin-top: 2.5%;
    }
 

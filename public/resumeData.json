@@ -175,7 +175,7 @@
         "title":"Girl and her Notes App",
         "category":"ChatGPT generated smut about a girl falling in love with her notes app.",
         "languages": "Figma <3",
-        "image":"zine1.png",
+        "image":"fanfic2.png",
         "url":"https://archiveofourown.org/works/53351767"
       },
       {
@@ -187,9 +187,9 @@
       },
       {
         "title":"Short Circuit",
-        "category":"Circumventing the ChatGPT censors again",
+        "category":"Clippy the Office Assistant finds love. Circumventing the ChatGPT censors again.",
         "languages": "Figma <3",
-        "image":"zine1.png",
+        "image":"fanfic1.png",
         "url":"https://archiveofourown.org/works/51323875"
       },
 
@@ -223,13 +223,6 @@
         "url":"https://snapshot.numerator.com/brand/tide"
       },
       {
-        "title":"Fake News Detector",
-        "category":"Fake news predictor using an LSTM network with word embeddings. DO NOT OPEN.",
-        "languages": "Python (keras, sklearn)",
-        "image":"proj3-min.png",
-        "url":"https://github.com/NgAngus/FakeNewsDetector"
-      },
-      {
         "title":"Tamagotchi Fansite",
         "category":"I made this with my sister when we were 12 and 7.",
         "languages":"Matlab, Arduino",
@@ -257,18 +250,6 @@
         "image":"writing_3.JPEG",
         "category":"Unconventional lessons learned in the aftermath of trauma",
         "url":"https://mellyeliu.medium.com/what-doesnt-kill-you-makes-you-weaker-81c09b029c83"
-      },
-      {
-        "title":"Creating for Yourself",
-        "image":"writing_2.JPG",
-        "category":"The story behind my first tattoo",
-        "url":"https://mellyeliu.medium.com/creating-is-universal-56dd44d6f33"
-      },
-      {
-        "title":"I Write for Emotional Release",
-        "image":"writing_1.JPEG",
-        "category":"On sensitivity, isolation, and the power of human connection",
-        "url":"https://mellyeliu.medium.com/i-write-to-escape-isolation-29d4e422757"
       }
     ]
   }
