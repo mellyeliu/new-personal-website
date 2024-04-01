@@ -132,14 +132,14 @@ const Portfolio = ({data}) => {
               <TabPanel tabId="three">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
                   <Fade duration={500 }  delay={100}>
-                  {art}
+                  {projects}
                   </Fade>
                 </div>
               </TabPanel>
               <TabPanel tabId="four">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
                   <Fade duration={500 }  delay={100}>
-                  {art}
+                  {projects}
                   </Fade>
                 </div>
               </TabPanel>
