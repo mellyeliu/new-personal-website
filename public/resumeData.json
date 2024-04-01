@@ -90,20 +90,6 @@
         "graduated":"Sept 2016 - present",
         "description":"Placeholder text for now."
       }
-    ],
-    "blog":[
-      {
-        "company":"Awesome Design Studio",
-        "title":"Senior UX God ",
-        "years":"04.02.2020",
-        "description":"this is the journal recording my thoughts throughout the COVID-19 pandemic and the things I learn during my two week quarantine. to all of you, stay safe & much love."
-      },
-      {
-        "company":"Super Cool Studio",
-        "title":"Junior bug fixer",
-        "years":"March 2007 - February 2010",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
-      }
     ]
   },
   "portfolio":{
@@ -120,14 +106,14 @@
         "category":"Zine documenting my online childhood and the websites that made me.",
         "languages": "Figma <3",
         "image":"zine1.png",
-        "url":""
+        "url":"https://www.figma.com/file/1qagskAUweTYTwJoFeKcfz/digital-nostalgia?type=design&node-id=0%3A1&mode=design&t=fvxbxOiKfiui2muN-1"
       },
       {
         "title":"My Fanfic Became Sentient and Cannabalized Itself",
         "category":"Zine documenting my online childhood and the websites that made me.",
         "languages": "Figma <3",
         "image":"fanfic.png",
-        "url":""
+        "url":"https://www.figma.com/file/1qagskAUweTYTwJoFeKcfz/digital-nostalgia?type=design&node-id=0%3A1&mode=design&t=fvxbxOiKfiui2muN-1"
       },
       {
         "title":"Dreamland",
@@ -137,18 +123,18 @@
         "url":""
       },
       {
-        "title":"SF ZINE FEST APPLICATION",
-        "category":"Musings on digital intimacy with my friend Madeleine and more.",
-        "languages": "Figma <3",
-        "image":"cyberhug.png",
-        "url":"https://instagram.com/cyber.hug"
-      },
-      {
         "title":"M0MENTS",
         "category":"You play as an engineer trying not to get laid off. Created in the height of the tech layoffs",
         "languages": "Twine",
         "image":"moments.png",
         "url":"https://m0ments.w3spaces.com/"
+      },
+      {
+        "title":"Serif",
+        "category":"Tiktok meets Goodreads. Work in progress.",
+        "languages": "Django",
+        "image":"serif.png",
+        "url":"https://serif.app"
       },
       {
         "title":"Digital Love Languages",
@@ -183,7 +169,7 @@
         "category":"Fictional Dimensional personality archetypes.",
         "languages": "Figma <3",
         "image":"dimensional.png",
-        "url":"https://archiveofourown.org/works/51323875"
+        "url":"https://www.figma.com/file/3iixmn0kM36OZ3ZSyQtyyX/Dimensional-Fanfic?type=design&node-id=0%3A1&mode=design&t=S5uZcbhh0HrO2QbB-1"
       },
       {
         "title":"Short Circuit",
@@ -192,21 +178,19 @@
         "image":"fanfic1.png",
         "url":"https://archiveofourown.org/works/51323875"
       },
-
-
       {
         "title":"I've Been Thinking About Obsession",
         "category":"Visual conversation on the neuroses of obsession.",
         "languages": "Figma <3",
         "image":"obsession.png",
-        "url":""
+        "url":"https://www.instagram.com/p/CpESuQsploR/?img_index=1"
       },
       {
         "title":"( DISSOCIATION )",
         "category":"Visual conversation on dissociation.",
         "languages": "Figma <3",
         "image":"dissociation.png",
-        "url":""
+        "url":"https://www.figma.com/file/wtlzG9LI65YerdnUCTavG5/dissociation-(Copy)?type=design&node-id=0%3A1&mode=design&t=qItstvoCYMAuhfYa-1"
       },
       {
         "title":"Personal Website (1.0)",
@@ -216,11 +200,11 @@
         "url":"https://600e5461ebec290008991444--fjeioweijfieowief.netlify.app/"
       },
       {
-        "title":"Brand Insights Snapshots",
-        "category":"Site that aggregates and displays brand demographic insights.",
+        "title":"Calme",
+        "category":"Mental health professional diagnostic tool pulling heart rate and sentiment data from client wearable devices.",
         "languages": "Django",
-        "image":"proj4-min.png",
-        "url":"https://snapshot.numerator.com/brand/tide"
+        "image":"calme.png",
+        "url":"https://github.com/mellyeliu/calme"
       },
       {
         "title":"Tamagotchi Fansite",
