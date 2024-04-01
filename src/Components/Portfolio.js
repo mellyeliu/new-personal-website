@@ -52,6 +52,28 @@ const Portfolio = ({data}) => {
    </div>
     })
 
+    var writing = data.writing.map(function(projects, i){
+      // var projectImage = 'images/portfolio/'+projects.image;
+      return <div key={projects.title} style={{padding: "0 15px"}}className="two columns portfolio-item">
+      <div className="item-wrap">
+       <a target="_blank" href={projects.url}>
+          {/* <img className="overlay" alt={projects.title} src={projectImage} style={{height: 200, width: '100%'}} /> */}
+          <div style={{height: 200, width: '100%'}}>
+             <div className="portfolio-item-meta" style={{padding: 18}}>
+            <h5>&#40;{i}&#41; {projects.title}</h5>
+                <p>{projects.category}</p>
+                <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>
+             </div>
+           </div>
+       </a>
+     </div>
+   </div>
+    })
+
+    console.log(writing);
+    console.log(data.writing);
+    console.log("hellooo");
+
 //   var projects = data.projects.map(function(projects, i){
 //     var projectImage = 'images/portfolio/'+projects.image;
 //     return <div key={projects.title} style={{padding: "0 15px"}}className="two columns portfolio-item">
@@ -105,10 +127,8 @@ const Portfolio = ({data}) => {
               onChange={(tabId) => { console.log(tabId) }}
             >
               <TabList>
-              <Tab tabFor="one">₊✩‧₊˚&#40; All &#41; ˚₊✩‧₊  <span className="browserx">×</span></Tab>
-                <Tab tabFor="two"> ‧₊˚&#40; Code &#41;✩ ₊˚ <span className="browserx">×</span></Tab>
-                <Tab tabFor="three">˚₊‧꒰ა &#40; Art &#41; ໒꒱ ‧₊˚<span className="browserx">×</span></Tab>
-                <Tab tabFor="four">.•*𓆩 &#40; Writing &#41; 𓆪*•.<span className="browserx">×</span></Tab>
+              <Tab tabFor="one">₊✩‧₊˚&#40; Visuals &#41; ˚₊✩‧₊  <span className="browserx"></span></Tab>
+                <Tab tabFor="four">.•*𓆩 &#40; Text &#41; 𓆪*•.<span className="browserx"></span></Tab>
               {/* <Tab tabFor="one">&#40; All	&#41;</Tab>
                 <Tab tabFor="two">&#40; Projects	&#41;</Tab>
                 <Tab tabFor="three">&#40; Art	&#41;</Tab>
@@ -122,14 +142,14 @@ const Portfolio = ({data}) => {
                   </Fade>
                 </div>
               </TabPanel>
-              <TabPanel tabId="two">
+              <TabPanel tabId="four">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
                   <Fade duration={500}  delay={100}>
-                  {projects}
+                  {writing}
                   </Fade>
                 </div>
               </TabPanel>
-              <TabPanel tabId="three">
+              {/* <TabPanel tabId="three">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
                   <Fade duration={500 }  delay={100}>
                   {projects}
@@ -142,7 +162,7 @@ const Portfolio = ({data}) => {
                   {projects}
                   </Fade>
                 </div>
-              </TabPanel>
+              </TabPanel> */}
             </Tabs>
             <div style={{width: '100%', height: 50, borderTop: '0.5px solid black',
     backgroundImage: 'url(images/tabs.png)'}}></div>
