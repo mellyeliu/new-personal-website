@@ -1510,10 +1510,11 @@ button.rwt__tab:first-child {
 }
 
 .rwt__tab[aria-selected="true"] .browserx {
-   right: 10px;
+   /* right: 10px;
    position: absolute;
    top: 0px;
-   font-size: 25px;
+   font-size: 25px; */
+   font-style: italic;
 
 }
 .rwt__tab[aria-selected="false"] .browserx {
@@ -1532,8 +1533,9 @@ button.rwt__tab:first-child {
 	background: transparent;
 	border: 0;
 	/* font-family: inherit; */
-	font-size: 16px;
+	font-size: 17px;
    font-family: 'Cormorant Garamond';
+   font-style:italic;
    font-weight: 400;
    /* font-style:italic; */
    letter-spacing: 0.5px;
@@ -1578,7 +1580,7 @@ button.rwt__tab:first-child {
    border-bottom: 1px solid white;
    z-index: 10;
    background: white !important;
-   font-weight: 600;
+   font-weight: 500;
    bottom: -1px;
    /* bottom: -1px; */
 }
@@ -1594,9 +1596,9 @@ button.rwt__tab:first-child {
    padding-bottom: 20px;
 }
 
-.rwt__tab[aria-controls="four"]{
+/* .rwt__tab[aria-controls="four"]{
    bottom: -3px !important;
-}
+} */
 
 
 .rwt__tablist:not([aria-orientation="vertical"]) .rwt__tab[aria-selected="false"]:hover + .rwt__tab[aria-selected="true"]:before {
