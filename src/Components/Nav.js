@@ -43,8 +43,7 @@ class Nav extends Component {
 
     return (
         <nav id="nav-wrap" class="opaque" style={{zIndex: 100000}}>
-            <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-            <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
+          <div>
             <ul id="nav" className="nav">
             <Fade duration={2000}>
                 <li className="menu-icon">
@@ -68,6 +67,7 @@ class Nav extends Component {
                 </div> */}
                 </Fade>
             </ul>
+            </div>
         </nav>
     );
   }

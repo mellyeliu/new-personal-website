@@ -72,7 +72,7 @@ body {
 
 img:hover, li:hover, span:hover, a:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover {
    /* Replace 'url_to_pointer_cursor' with the actual URL of your custom cursor image */
-   cursor: url('../images/cd.png'), auto !important;
+   cursor: url('../images/star.png'), auto !important;
 }
 
 /* Grow Big */
