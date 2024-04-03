@@ -66,14 +66,13 @@ time, mark, audio, video {
    background: transparent;
 }
 
-body {
+/* body {
    cursor: url('../images/cursor.png'), auto;
 }
 
 img:hover, li:hover, span:hover, a:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover {
-   /* Replace 'url_to_pointer_cursor' with the actual URL of your custom cursor image */
    cursor: url('../images/star.png'), auto !important;
-}
+} */
 
 /* Grow Big */
 .hvr-grow {

@@ -116,7 +116,7 @@
       },
       {
         "title":"Brainquations",
-        "category":"How do we quantify emotional depth?",
+        "category":"Can we visualize the emotional spectrum?",
         "languages": "Figma <3",
         "image":"emotion profiles.png",
         "url":"https://www.figma.com/file/3iixmn0kM36OZ3ZSyQtyyX/Dimensional-Fanfic?type=design&node-id=0%3A1&mode=design&t=S5uZcbhh0HrO2QbB-1"
@@ -137,21 +137,35 @@
       },
       {
         "title":"Calme",
-        "category":"Mental health professional diagnostic tool pulling heart rate and sentiment data from client wearable devices.",
+        "category":"Therapy diagnostic tool pulling heart rate and sentiment data from client wearable devices.",
         "languages": "React, Flask, Matlab, num.py",
         "image":"calme.png",
         "url":"https://github.com/mellyeliu/calme"
       },
       {
         "title":"Personal Website (1.0)",
-        "category":"Covid passion project. DO NOT OPEN.",
+        "category":"First stab at a personal website. 2000s era covid coping.",
         "languages": "React <3",
         "image":"oldpweb.png",
         "url":"https://600e5461ebec290008991444--fjeioweijfieowief.netlify.app/"
       },
       {
+        "title":"Tattoo Art",
+        "category":"Then I wanted to make tattoo art but then I gave up.",
+        "languages": "Procreate",
+        "image":"tattoo.png",
+        "url":""
+      },
+      {
+        "title":"Portraits",
+        "category":"I used to want to be good at visual art but then I gave up.",
+        "languages": "Not technology for once",
+        "image":"portrait.png",
+        "url":""
+      },
+      {
         "title":"HTML Instruction",
-        "category":"With two tamasites under our belt we graduated to making a Tamasite Guide (using HTML).",
+        "category":"My sister and I graduated to making an HTML Tamasite Guide.",
         "languages":"HTML",
         "image":"html.png",
         "url":"https://web.archive.org/web/20070912023029/http://pages.matmice.com/home/tamahtml/"
