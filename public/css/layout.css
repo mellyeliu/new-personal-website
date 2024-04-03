@@ -1564,6 +1564,10 @@ button.rwt__tab:first-child {
    bottom: -1px;
 }
 
+.hvr-grow:hover {
+   transform: scale(1.05) !important;
+}
+
 .rwt__tab[aria-selected="true"] {
    position: relative;
    /* padding: 10px 0px; */
@@ -1584,6 +1588,10 @@ button.rwt__tab:first-child {
    transition: 0.2s ease-in-out; */
    transform: scale(1.03);
    color: black;
+}
+
+.rwt__tabpanel {
+   padding-bottom: 20px;
 }
 
 .rwt__tab[aria-controls="four"]{

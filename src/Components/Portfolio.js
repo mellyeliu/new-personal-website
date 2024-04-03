@@ -37,11 +37,11 @@ const Portfolio = ({data}) => {
     var projects = data.projects.map(function(projects, i){
       var projectImage = 'images/portfolio/'+projects.image;
       return <div key={projects.title} style={{padding: "0 15px"}}className="two columns portfolio-item">
-      <div className="item-wrap">
+      <div className="item-wrap hvr-grow">
        <a target="_blank" href={projects.url}>
-          <img className="overlay" alt={projects.title} src={projectImage} style={{height: 200, width: '100%'}} />
-          <div style={{height: 200, width: '100%'}}>
-             <div className="portfolio-item-meta" style={{padding: 18}}>
+          <img alt={projects.title} src={projectImage} style={{height: 200, width: '100%', transform: 'scale(0.9)'}} />
+          <div style={{height: 100, width: '100%'}}>
+             <div className="portfolio-item-meta" style={{paddingBottom: 18, paddingLeft: 18, paddingRight: 18}}>
             <h5>&#40;{i}&#41; {projects.title}</h5>
                 <p>{projects.category}</p>
                 <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>

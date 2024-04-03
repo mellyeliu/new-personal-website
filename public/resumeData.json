@@ -1,21 +1,5 @@
 {
   "main": {
-    "name":"Melissa Liu",
-    "occupation":"developer",
-    "description":"Placeholder text for now while I figure out what to put",
-    "image":"profilepic.jpg",
-    "bio": "",
-    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
-    "email": "mellye.liu@gmail.com",
-    "phone": "555-555-5555",
-    "address":{
-      "street":"(Your Street)",
-      "city":"San Francisco",
-      "state":"(Your State)",
-      "zip": "(Your Zip/Postal Code)"
-    },
-    "website": "http://www.timbakerdev.com",
-    "resumedownload":"http://timbakerdev.com",
     "social":[
       {
         "name":"facebook",
@@ -51,51 +35,10 @@
       }
     ]
   },
-  "blog":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
-    "work":[
-      {
-        "company":"My Two Weeks in Quarantine",
-        "title":"Growth: Notifications",
-        "years":"April 2020",
-        "type":"Reflection",
-        "image":"images/blog1.jpg",
-        "id": "1",
-        "description":"This is a journal recording my thoughts throughout the COVID-19 pandemic and the things I learn during my two week quarantine."
-      }
-    ]
-  },
-  "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
-    "work":[
-      {
-        "company":"Instagram",
-        "title":"Growth: Notifications",
-        "years":"Jan 2020 - Apr 2020",
-        "image":"worktest.jpg",
-        "description":"Under the IG Growth org, I worked on developing notifications around Story Highlights and Direct Inbox to drive user growth. Using Django, I created a data pipeline to pull eligible users and notify them of certain events. I conducted A/B testing to measure MAP gain and minimize reachability loss."
-      },
-      {
-        "company":"Credit Karma",
-        "title":"Credit Experiences",
-        "years":"May 2019 - Aug 2019",
-        "image":"pro3-min.jpg",
-        "description":"Collections are common, high-impact debts that severely drops a user’s credit score. To address this, I created a new experience in Scala, React, and GraphQL to notify users of their collections and how to resolve them. I also built a contextual backlinking framework by passing location states within page queries. "
-      }
-    ],
-    "education":[
-      {
-        "school":"University of Waterloo",
-        "degree":"BASc in Biomedical Engineering",
-        "graduated":"Sept 2016 - present",
-        "description":"Placeholder text for now."
-      }
-    ]
-  },
   "portfolio":{
     "projects": [
       {
-        "title":"🎀🎧 Personal Website (2.0)",
+        "title":"Personal Website (2.0) 🎀🎧",
         "category":"A continual work in progress.",
         "languages": "React <3",
         "image":"pweb2.png",
@@ -125,14 +68,14 @@
       {
         "title":"M0MENTS",
         "category":"You play as an engineer trying not to get laid off. Created in the height of the tech layoffs",
-        "languages": "Twine",
+        "languages": "Twine, HTML/CSS",
         "image":"moments.png",
         "url":"https://m0ments.w3spaces.com/"
       },
       {
         "title":"Serif",
         "category":"Tiktok meets Goodreads. Work in progress.",
-        "languages": "Django",
+        "languages": "Framer, Figma",
         "image":"serif.png",
         "url":"https://serif.app"
       },
@@ -193,23 +136,30 @@
         "url":""
       },
       {
-        "title":"Personal Website (1.0)",
-        "category":"Covid passion project. DO NOT OPEN.",
-        "languages": "Android (Java), SQLite, Arduino",
-        "image":"oldpweb.png",
-        "url":"https://600e5461ebec290008991444--fjeioweijfieowief.netlify.app/"
-      },
-      {
         "title":"Calme",
         "category":"Mental health professional diagnostic tool pulling heart rate and sentiment data from client wearable devices.",
-        "languages": "Django",
+        "languages": "React, Flask, Matlab, num.py",
         "image":"calme.png",
         "url":"https://github.com/mellyeliu/calme"
       },
       {
-        "title":"Tamagotchi Fansite",
-        "category":"I made this with my sister when we were 12 and 7.",
-        "languages":"Matlab, Arduino",
+        "title":"Personal Website (1.0)",
+        "category":"Covid passion project. DO NOT OPEN.",
+        "languages": "React <3",
+        "image":"oldpweb.png",
+        "url":"https://600e5461ebec290008991444--fjeioweijfieowief.netlify.app/"
+      },
+      {
+        "title":"HTML Instruction",
+        "category":"With two tamasites under our belt we graduated to making a Tamasite Guide (using HTML).",
+        "languages":"HTML",
+        "image":"html.png",
+        "url":"https://web.archive.org/web/20070912023029/http://pages.matmice.com/home/tamahtml/"
+      },
+      {
+        "title":"Tamagotchi Fansites",
+        "category":"A neurodivergent 7 year old gets a tamagotchi and internet access.",
+        "languages":"HTML",
         "image":"tama.png",
         "url":"https://web.archive.org/web/20070209174817/https://tamaplace.zoomshare.com/"
       }
