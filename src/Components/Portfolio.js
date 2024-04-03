@@ -18,6 +18,30 @@ const Portfolio = ({data}) => {
     setHovered(false);
   };
 
+  const openPopupWindow = (url) => {
+    // event.preventDefault(); // Prevent the default anchor behavior
+
+    // // Dimensions of the popup window
+    // const popupWidth = 600;
+    // const popupHeight = 400;
+
+    // // Calculate the position to place the popup window in the middle of where the click occurred
+    // const posX = event.clientX - (popupWidth / 2);
+    // const posY = event.clientY - (popupHeight / 2);
+
+    // // Ensuring the popup stays within the bounds of the screen
+    // const left = Math.max(posX, 0);
+    // const top = Math.max(posY, 0);
+
+    // const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top}`;
+    const features = `width=400,height=250,resizable=no,scrollbars=no,left=200,top=300`;
+
+    // Open the popup
+    if (url) {
+      window.open(url, 'popupWindow', features)
+    }
+  };
+
   // document.addEventListener('scroll', function() {
   //   if (timeout !== null) {
   //     clearTimeout(timeout);
@@ -38,7 +62,7 @@ const Portfolio = ({data}) => {
       var projectImage = 'images/portfolio/'+projects.image;
       return <div key={projects.title} style={{padding: "0 15px"}}className="two columns portfolio-item">
       <div className="item-wrap hvr-grow">
-       <a target="_blank" href={projects.url}>
+      {projects.url !== ''? (<a target="_blank" href={projects.url}>
           <img alt={projects.title} src={projectImage} style={{height: 200, width: '100%', transform: 'scale(0.9)'}} />
           <div style={{height: 100, width: '100%'}}>
              <div className="portfolio-item-meta" style={{paddingBottom: 18, paddingLeft: 18, paddingRight: 18}}>
@@ -47,7 +71,14 @@ const Portfolio = ({data}) => {
                 <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>
              </div>
            </div>
-       </a>
+       </a>) : (<><img alt={projects.title} src={projectImage} style={{height: 200, width: '100%', transform: 'scale(0.9)'}} />
+          <div style={{height: 100, width: '100%'}}>
+             <div className="portfolio-item-meta" style={{paddingBottom: 18, paddingLeft: 18, paddingRight: 18}}>
+            <h5>&#40;{i}&#41; {projects.title}</h5>
+                <p>{projects.category}</p>
+                <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>
+             </div>
+           </div></>)}
      </div>
    </div>
     })
@@ -55,9 +86,8 @@ const Portfolio = ({data}) => {
     var writing = data.writing.map(function(projects, i){
       // var projectImage = 'images/portfolio/'+projects.image;
       return <div key={projects.title} style={{padding: "0 15px"}}className="two columns portfolio-item">
-      <div className="item-wrap">
-       <a target="_blank" href={projects.url}>
-          {/* <img className="overlay" alt={projects.title} src={projectImage} style={{height: 200, width: '100%'}} /> */}
+      <div className="item-wrap hvr-grow">
+       {projects.url !== ''? (<a target="_blank" href={projects.url}>
           <div style={{height: 200, width: '100%'}}>
              <div className="portfolio-item-meta" style={{padding: 18}}>
             <h5>&#40;{i}&#41; {projects.title}</h5>
@@ -65,7 +95,15 @@ const Portfolio = ({data}) => {
                 <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>
              </div>
            </div>
-       </a>
+       </a>): (
+         <div style={{height: 200, width: '100%'}}>
+            <div className="portfolio-item-meta" style={{padding: 18}}>
+           <h5>&#40;{i}&#41; {projects.title}</h5>
+               <p>{projects.category}</p>
+               <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>
+            </div>
+          </div>
+       )}
      </div>
    </div>
     })
