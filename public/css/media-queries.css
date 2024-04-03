@@ -46,6 +46,10 @@
       margin-top: 6% !important;
    }
 
+   .draggableImage:hover {
+      transform: scale(0.68) !important;
+   }
+
    .folder {
       transform: scale(1.05) !important;
    }
@@ -77,12 +81,19 @@
       margin-top: 5%;
    }
 
+   .draggableImage:hover {
+      transform: scale(0.65) !important;
+   }
+
 }
 
 @media only screen and (min-height: 800px) {
    .draggableImage {
       transform: scale(0.60) !important;
       margin-top: 2.5%;
+   }
+   .draggableImage:hover {
+      transform: scale(0.63) !important;
    }
 
 }
