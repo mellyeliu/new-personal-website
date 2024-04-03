@@ -5,8 +5,15 @@ import TypingToggleTextList from './TypingToggleTextList';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const quotes = [
-  'We are all still waiting to be transformed ',
-  'Intimacy in all its forms',
+  'We took away your art because we thought it would reveal your souls. ',
+  'So we spent what was left of our serotonin / To chew on our cheeks and stare at the moon ',
+  'We are survivors of each other. We have been shark to one another, but also lifeboat. ',
+  'To look at someone and remember that your time with them is limited. ',
+  "You treat me like I'm more than a pair of skin and bones / And that really made a difference in my story ",
+  "She's the monster in the fridge / She's chewing cotton wool",
+  'Why does God have a virginity fetish? ',
+  'How do people decide who is an unreliable narrator? ',
+  'Time and space, creatures of infinite girth and tenderness, are keeping you safe as they were once unable to. '
 ]
 
 class Footer extends Component {

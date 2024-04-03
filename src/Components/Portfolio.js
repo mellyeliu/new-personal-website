@@ -127,8 +127,8 @@ const Portfolio = ({data}) => {
               onChange={(tabId) => { console.log(tabId) }}
             >
               <TabList>
-              <Tab tabFor="one">₊✩‧₊˚&#40; Visuals &#41; ˚₊✩‧₊  <span className="browserx"></span></Tab>
-                <Tab tabFor="four">.•*𓆩 &#40; Text &#41; 𓆪*•.<span className="browserx"></span></Tab>
+              <Tab tabFor="one"> Visuals ⋆𐙚₊˚⊹♡ <span className="browserx"></span></Tab>
+                <Tab tabFor="four"> Text ‧₊˚🖇️✩ ₊<span className="browserx"></span></Tab>
               {/* <Tab tabFor="one">&#40; All	&#41;</Tab>
                 <Tab tabFor="two">&#40; Projects	&#41;</Tab>
                 <Tab tabFor="three">&#40; Art	&#41;</Tab>
