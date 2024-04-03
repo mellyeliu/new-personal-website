@@ -133,7 +133,11 @@
    }
 
    #portfolio .row {
-      border: 1px solid #111111;
+      border: none;
+   }
+
+   .slider-frame {
+      border: none;
    }
 
    header#home {
