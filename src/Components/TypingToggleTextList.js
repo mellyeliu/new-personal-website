@@ -25,7 +25,7 @@ const TypingToggleTextList = ({ style, wrapper, textOptions = ["First Text", "Se
   };
 
   return (
-    <span style={{...style, cursor: 'pointer'}} onClick={toggleText}>
+    <span style={{ ...style, cursor: 'pointer' }} onClick={toggleText}>
       {wrapper ? "( " + displayedText + " [...]" + " )" : displayedText}
     </span>
   );

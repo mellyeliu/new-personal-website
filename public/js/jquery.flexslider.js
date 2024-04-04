@@ -3,7 +3,7 @@
  * Copyright 2012 WooThemes
  * Contributing Author: Tyler Smith
  */
-;
+
 (function ($) {
 
   //FlexSlider: Object Instance

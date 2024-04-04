@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, border }) => {
+const DraggableImage = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hoverString, border }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -17,7 +17,7 @@ const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, bor
 
     timer = setTimeout(() => {
       if (clickCount === 1) {
-        const features = `width=400,height=250,resizable=no,scrollbars=no,left=${x+20},top=${y + 200}`;
+        const features = `width=400,height=250,resizable=no,scrollbars=no,left=${x + 20},top=${y + 200}`;
 
         // Open the popup
         if (url) {
@@ -27,6 +27,11 @@ const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, bor
       setClickCount(0);
     }, delay);
   };
+
+  useEffect(() => {
+    setPosition({ x, y });
+
+  }, [x, y, isGridLayout]);
 
   // Function to start the drag
   const startDrag = (e) => {
@@ -85,8 +90,8 @@ const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, bor
     // top: '50%',
     // left: '50%',
     // transform: 'translate(-50%, -50%)',
-        left: position.x,
-        top: position.y,
+    left: position.x,
+    top: position.y,
     width: '90%',
     border: 'none',
     backgroundColor: 'transparent',
@@ -98,33 +103,33 @@ const DraggableImage = ({ src, scale, url, x, y, onHoverChange, hoverString, bor
 
   return (
     <div style={imageContainerStyle}>
-    {/* { border ? <input type="text" style={centeredInputStyle} placeholder="Your text here" /> : null} */}
-    <img
-      src={src}
-      style={{
-        cursor: 'grab',
-        position: 'absolute',
-        left: position.x,
-        top: position.y,
-        filter: border ? 'drop-shadow(8px 8px 10px rgba(0,0,0,0.3))' : 'drop-shadow(0px 6px 5px rgba(0,0,0,0.8))',
-        boxShadow: border ? '0 0 0 1px rgba(0,0,0,0.5)' : 'none', // Red outline
-        userSelect: 'none',
-        borderRadius: '20px',
-        // border: 'solid 1px #bbbbbb',
-        transform: isHovered ? `scale(${scale + 0.02})` : `scale(${scale})`,
-        transition: 'transform 0.3s ease-in-out',
-        transformOrigin: 'top left', // Adjust as needed
-        display: 'block',
-      }}
-      className='draggableImage'
-      onMouseDown={startDrag}
-      onClick={openPopupOnDoubleClick}
-      onMouseMove={onDrag}
-      onMouseUp={stopDrag}
-      onMouseLeave={stopDrag}
-      onMouseEnter={onHover}
-      draggable={false} // Prevent default browser drag behavior
-    />
+      {/* { border ? <input type="text" style={centeredInputStyle} placeholder="Your text here" /> : null} */}
+      <img
+        src={src}
+        style={{
+          cursor: 'grab',
+          position: 'absolute',
+          left: position.x,
+          top: position.y,
+          filter: border ? 'drop-shadow(8px 8px 10px rgba(0,0,0,0.3))' : 'drop-shadow(0px 6px 5px rgba(0,0,0,0.8))',
+          boxShadow: border ? '0 0 0 1px rgba(0,0,0,0.5)' : 'none', // Red outline
+          userSelect: 'none',
+          borderRadius: '20px',
+          // border: 'solid 1px #bbbbbb',
+          transform: isHovered ? `scale(${scale + 0.02})` : `scale(${scale})`,
+          transition: 'transform 0.3s ease-in-out',
+          transformOrigin: 'top left', // Adjust as needed
+          display: 'block',
+        }}
+        className='draggableImage'
+        onMouseDown={startDrag}
+        onClick={openPopupOnDoubleClick}
+        onMouseMove={onDrag}
+        onMouseUp={stopDrag}
+        onMouseLeave={stopDrag}
+        onMouseEnter={onHover}
+        draggable={false} // Prevent default browser drag behavior
+      />
     </div>
   );
 };

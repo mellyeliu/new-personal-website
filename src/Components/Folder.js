@@ -68,18 +68,18 @@ const Folder = ({ src, scale, x, y, hoverString, onHoverChange, caption, isOpen,
         display: 'block',
         transform: `scale(${scale})`
       }}>
-    <img
-      src={isOpen ? '/images/folderNewOpen.png' : '/images/folder.png'}
+      <img
+        src={isOpen ? '/images/folderNewOpen.png' : '/images/folder.png'}
         onMouseLeave={stopHover}
         onMouseEnter={onHover}
-      // onMouseDown={startDrag}
-      // onMouseMove={onDrag}
-      // onMouseUp={stopDrag}
-      // onMouseLeave={stopDrag}
-      className="folder"
-      draggable={false} // Prevent default browser drag behavior
-    />
-    {caption && <div className="folderText" style={{fontSize: 28, color: 'black', fontFamily: "Cormorant Garamond", fontStyle: 'italic', fontWeight: isOpen ? '500' : '400', fontColor: '#111111'}}>{caption}</div>} {/* Render caption if it is provided */}
+        // onMouseDown={startDrag}
+        // onMouseMove={onDrag}
+        // onMouseUp={stopDrag}
+        // onMouseLeave={stopDrag}
+        className="folder"
+        draggable={false} // Prevent default browser drag behavior
+      />
+      {caption && <div className="folderText" style={{ fontSize: 28, color: 'black', fontFamily: "Cormorant Garamond", fontStyle: 'italic', fontWeight: isOpen ? '500' : '400', fontColor: '#111111' }}>{caption}</div>} {/* Render caption if it is provided */}
     </div>
   );
 };

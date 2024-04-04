@@ -65,14 +65,14 @@ time, mark, audio, video {
    vertical-align: baseline;
    background: transparent;
 }
-/*
+
 body {
    cursor: url('../images/glitchcursorb.png'), auto;
 }
 
 img:hover, li:hover, span:hover, a:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover {
    cursor: url('../images/glitchpointer.png'), auto !important;
-} */
+}
 
 ::selection {
    /* background-color: #ecdbff; */

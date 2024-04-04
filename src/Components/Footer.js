@@ -23,8 +23,8 @@ const quotes = [
 class Footer extends Component {
   render() {
 
-    if(this.props.data){
-      var networks= this.props.data.social.map(function(network){
+    if (this.props.data) {
+      var networks = this.props.data.social.map(function (network) {
         return <a href={network.url}><li key={network.name} className="hvr-grow-big"><i className={network.className}></i></li></a>
       })
     }
@@ -32,25 +32,25 @@ class Footer extends Component {
     return (
       <footer className={`${this.props.bottom ? "blog" : ""}`}>
 
-     <div className="row">
-        <div className="twelve columns">
-           <ul className="social-links">
+        <div className="row">
+          <div className="twelve columns">
+            <ul className="social-links">
               {networks}
-           </ul>
+            </ul>
 
-           <ul className="copyright">
+            <ul className="copyright">
               <li>
-              <TypingToggleTextList className='control'
-                     textOptions={quotes} wrapper={true}
-                     style={{letterSpacing: 2, fontFamily: "Cormorant Garamond", fontWeight: 300, fontStyle: 'italic', fontSize: 14, paddingTop: 2, color: 'rgb(150,150,150)'}}></TypingToggleTextList>
+                <TypingToggleTextList className='control'
+                  textOptions={quotes} wrapper={true}
+                  style={{ letterSpacing: 2, fontFamily: "Cormorant Garamond", fontWeight: 300, fontStyle: 'italic', fontSize: 14, paddingTop: 2, color: 'rgb(150,150,150)' }}></TypingToggleTextList>
                 {/* I WANT TO CREATE THE WORLD I DREAM OF */}
-                </li>
-           </ul>
+              </li>
+            </ul>
 
+          </div>
+          {/* <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open"></i></a></div> */}
         </div>
-        {/* <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open"></i></a></div> */}
-     </div>
-  </footer>
+      </footer>
     );
   }
 }
