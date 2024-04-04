@@ -38,7 +38,7 @@ const FileData = {
             "url": "https://eblong.com/zarf/zweb/tangle/",
             "scale": 0.52,
             "x": 180,
-            "y": 50
+            "y": 10
         },
         {
             "hoverString": "Club Penguin",
@@ -61,8 +61,8 @@ const FileData = {
             "src": "images/fantage.png",
             "url": "https://en.wikipedia.org/wiki/Fantage",
             "scale": 0.52,
-            "x": 820,
-            "y": 390
+            "x": 602,
+            "y": 428
         },
         {
             "hoverString": "Loved",
@@ -77,8 +77,8 @@ const FileData = {
             "src": "images/cod.png",
             "url": "https://tvtropes.org/pmwiki/pmwiki.php/VisualNovel/CauseOfDeath",
             "scale": 0.52,
-            "x": 220,
-            "y": 400
+            "x": 395,
+            "y": 393
         },
         {
             "hoverString": "( Dreaming Mary )",
@@ -128,7 +128,7 @@ const FileData = {
             "url": "https://archiveofourown.org/works/4577451",
             "scale": 0.5,
             "x": 720,
-            "y": 60
+            "y": 40
         },
         {
             "hoverString": "www.tvtropes.org",
@@ -144,14 +144,14 @@ const FileData = {
             "url": "https://en.wikipedia.org/wiki/Pandeism",
             "scale": 0.52,
             "x": 760,
-            "y": 90
+            "y": 70
         },
         {
             "hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
             "src": "images/fj.png",
             "url": "https://www.freejinger.org/",
             "scale": 0.5,
-            "x": 460,
+            "x": 345,
             "y": 330
         },
         {
@@ -159,8 +159,8 @@ const FileData = {
             "src": "images/everlark.png",
             "url": "https://archiveofourown.org/works/4249794/chapters/9617619",
             "scale": 0.5,
-            "x": 390,
-            "y": 320
+            "x": 230,
+            "y": 443
         },
         {
             "hoverString": "azula x mai (atla) ♡",

@@ -1361,6 +1361,10 @@ button.rwt__tab:first-child {
    opacity: 1;
 }
 
+.draggableImage {
+   margin-top: 1%;
+}
+
 /* .draggableImage {
    transition: box-shadow 0.3s ease-in-out;
  }
