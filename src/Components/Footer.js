@@ -7,17 +7,17 @@ import TypingToggleTextList from './TypingToggleTextList';
 const quotes = [
   'We took away your art because we thought it would reveal your souls. ',
   'So we spent what was left of our serotonin / To chew on our cheeks and stare at the moon ',
-  'We are survivors of each other. We have been shark to one another, but also lifeboat. ',
   "You treat me like I'm more than a pair of skin and bones / And that really made a difference in my story ",
   "But these things don't matter, because once you are Real you can't be ugly, except to people who don't understand.",
   "She's the monster in the fridge / She's chewing cotton wool",
-  'Why does God have a virginity fetish? ',
+  "Our brains are sick but that's okay",
+  "A thousand dreams I'm holding heavy ",
   "The last refuge of the insomniac is a sense of superiority to the sleeping world",
-  "There's nothing like the nights where you unfold me",
-  "And always when the flash came to her Emily felt that life was a wonderful, mysterious thing of persistent beauty.",
-  "I hope your melatonin levels are doing okay",
+  'We are survivors of each other. We have been shark to one another, but also lifeboat. ',
+  "And always when the flash came Emily felt that life was a mysterious thing of persistent beauty.",
   'How do people decide who is an unreliable narrator? ',
-  'Time and space, creatures of infinite girth and tenderness, are keeping you safe as they were once unable to. '
+  'Time and space, creatures of infinite girth and tenderness, are keeping you safe as they were once unable to. ',
+  "I can make something good"
 ]
 
 class Footer extends Component {

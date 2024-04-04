@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 
-const Folder = ({ src, scale, x, y, hoverString, caption, isOpen, onOpen }) => {
+const Folder = ({ src, scale, x, y, hoverString, onHoverChange, caption, isOpen, onOpen }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
   console.log(isOpen);
 
   const handleClick = () => {
@@ -23,6 +25,21 @@ const Folder = ({ src, scale, x, y, hoverString, caption, isOpen, onOpen }) => {
       const newY = position.y + e.movementY;
       setPosition({ x: newX, y: newY });
     }
+  };
+
+  const onHover = () => {
+    setIsHovered(true);
+    console.log(hoverString);
+    onHoverChange(hoverString);
+    // hoverText.style.display = 'none';
+  };
+
+  // Function to stop the drag
+  const stopHover = (e) => {
+    setIsHovered(false);
+    onHoverChange('')
+    setDragging(false);
+    // hoverText.style.display = 'block';
   };
 
   // Function to stop the drag
@@ -53,6 +70,8 @@ const Folder = ({ src, scale, x, y, hoverString, caption, isOpen, onOpen }) => {
       }}>
     <img
       src={isOpen ? '/images/folderNewOpen.png' : '/images/folder.png'}
+        onMouseLeave={stopHover}
+        onMouseEnter={onHover}
       // onMouseDown={startDrag}
       // onMouseMove={onDrag}
       // onMouseUp={stopDrag}

@@ -9,7 +9,6 @@ import FileData from './FileData'
 import '@animated-burgers/burger-squeeze/dist/styles.css'
 
 
-
 class Header extends Component {
   // const [isChildHovered, setIsChildHovered] = useState(false);
   state = {
@@ -17,7 +16,6 @@ class Header extends Component {
     isChildHovered: "",
     openStates: {0: [true, true, true, true], 1: [true, true, true]},
   }
-
 
   handleFolderOpen = (index, isOpen, key) => {
     // Update the state of the specific folder at index
@@ -50,18 +48,18 @@ class Header extends Component {
     })
   };
 
- folders = ['Games', 'Text', 'Misc', 'About Me'];
- display_folders = ['games', 'text', 'misc', 'About Me'];
- d2_folders = ['About Me', 'Obsessions', 'Fandoms'];
+ folders = ['Games', 'Fandoms', 'Community', 'About Me'];
+ display_folders = ['games', 'fandoms', 'community', 'About Me'];
+display_strings = ['( Gamemaking as worldbuilding )', '( Collecting obsessions )', '( Can we build a collective truth ? )', '( Autofiction, as always )'];
+
 
   render() {
     if(this.props.data){
       var art = this.props.data.photos.map(function(photo, i){
         var imageSrc = 'images/'+photo.image;
         return  <div key={photo.date} className="hover-container" >
-          <img id="headerpic" src={imageSrc}></img>
-          {(i === 0) ? (
-            <>
+          <img id="headerpic" draggable="false" src={imageSrc}></img>
+
           {this.display_folders.map((folder, ind) => {
             return this.state.openStates && this.state.openStates[0][ind] || false ? (
             FileData[folder].map((image) => (
@@ -72,35 +70,13 @@ class Header extends Component {
             <Folder src={'images/folder.png'}
               isOpen={this.state.openStates[0][index]}
               onOpen={(isOpen) => this.handleFolderOpen(index, isOpen, 0)}
+              hoverString={this.display_strings[index]}
+              onHoverChange={this.handleHoverChange}
               caption={folder}
               x={0}
               y={30 + 100 * index}
               scale={0.5} />
           ))}
-
-          </>
-          ) : (
-            <>
-            {this.d2_folders.map((folder, ind) => {
-              return this.state.openStates && this.state.openStates[1][ind] || false ? (
-              FileData[folder].map((image) => (
-                <DraggableImage url={image.url} border={image.border ? true: false} hoverString={image.hoverString} onHoverChange={this.handleHoverChange} src={image.src} scale={image.scale} x={image.x} y={image.y} ></DraggableImage>
-              ))
-            ) : null})}
-            {this.d2_folders.map((folder, index) => (
-            <Folder src={'images/folder.png'}
-              isOpen={this.state.openStates[1][index]}
-              onOpen={(isOpen) => this.handleFolderOpen(index, isOpen, 1)}
-              caption={folder}
-              x={0}
-              y={30 + 100 * index}
-              scale={0.5} />
-          ))}
-
-            </>
-          )
-
-         }
           {this.state.isChildHovered === '' ? <div className="bottom-left">{photo.place} </div> : <div id="header-hover" className="bottom-left">{this.state.isChildHovered} </div>}
         {/* <div className="hover-text">This is the text displayed on hover</div> */}
         </div>

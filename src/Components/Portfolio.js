@@ -63,18 +63,18 @@ const Portfolio = ({data}) => {
       return <div key={projects.title} style={{padding: "0 15px"}}className="two columns portfolio-item">
       <div className="item-wrap hvr-grow">
       {projects.url !== ''? (<a target="_blank" href={projects.url}>
-          <img alt={projects.title} src={projectImage} style={{height: 200, width: '100%', transform: 'scale(0.9)'}} />
+          <img draggable="false" alt={projects.title} src={projectImage} style={{height: 200, width: '100%', transform: 'scale(0.9)'}} />
           <div style={{height: 100, width: '100%'}}>
              <div className="portfolio-item-meta" style={{paddingBottom: 18, paddingLeft: 18, paddingRight: 18}}>
-            <h5>&#40;{i}&#41; {projects.title}</h5>
+            <h5>&#40;{i+1}&#41; {projects.title}</h5>
                 <p>{projects.category}</p>
                 <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>
              </div>
            </div>
-       </a>) : (<><img alt={projects.title} src={projectImage} style={{height: 200, width: '100%', transform: 'scale(0.9)'}} />
+       </a>) : (<><img alt={projects.title} draggable="false" src={projectImage} style={{height: 200, width: '100%', transform: 'scale(0.9)'}} />
           <div style={{height: 100, width: '100%'}}>
              <div className="portfolio-item-meta" style={{paddingBottom: 18, paddingLeft: 18, paddingRight: 18}}>
-            <h5>&#40;{i}&#41; {projects.title}</h5>
+            <h5>&#40;{i+1}&#41; {projects.title}</h5>
                 <p>{projects.category}</p>
                 <p style={{paddingTop: 8}}>Made using {projects.languages}.</p>
              </div>

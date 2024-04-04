@@ -43,7 +43,7 @@
    .draggableImage {
       transform: scale(0.65) !important;
       margin-left: 5% !important;
-      margin-top: 6% !important;
+      margin-top: 4% !important;
    }
 
    .draggableImage:hover {
@@ -64,14 +64,6 @@
       margin: 0 auto;
       border: 0.5px solid #111111;
    }
-
-
-   /* .fulltest {
-      display: none;
-   }
-   .fulltest2 {
-      margin-top: 100px !important;
-   } */
 
 }
 
