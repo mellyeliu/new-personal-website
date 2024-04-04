@@ -64,12 +64,6 @@ img#headerpic {
    position: relative;
 }
 
-
-.banner {
-   cursor: pointer;
-
-}
-
 .top-left {
    transition: 0.2s ease-in-out;
 }
@@ -120,79 +114,11 @@ img#headerpic {
    line-height: 9px;
 }
 
-/* .bottom-left {
-   position: absolute;
-    top: 15px;
-    right: 10px;
-    font-family: montserrat;
-    text-transform: uppercase;
-    letter-spacing: 3.5px;
-    font-size: 9px;
-    text-align: left;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    font-weight: 700;
-    cursor: default;
- } */
-
-.menu-icon {
-   float: left;
-   margin-top: 33px;
-   z-index: 1000;
-}
-
-.ham-menu {
-   float: left;
-   /* margin-top: 33px; */
-   cursor: pointer;
-   margin-top: 2px;
-}
-
 .menu-hide {
-   transition: 0.3s;
    opacity: 0;
    visibility: hidden;
 }
 
-.menu-show {
-   opacity: 1;
-   visibility: visible;
-   transition: 0.75s;
-}
-
-.menu-list {
-   display: flex;
-   padding-left: 13px;
-   font: 14.5px !important;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-   width: 19px;
-   height: 2px;
-   background-color: #333;
-   margin: 3px 0;
-   transition: 0.4s;
-   border-radius: 10px;
-}
-
-.change .bar1 {
-   -webkit-transform: rotate(-45deg) translate(-2px, 4px);
-   transform: rotate(-45deg) translate(-2px, 4px);
-   width: 15px;
-
-}
-
-.change .bar2 {
-   opacity: 0;
-}
-
-.change .bar3 {
-   -webkit-transform: rotate(45deg) translate(-3px, -5px);
-   width: 15px;
-   transform: rotate(45deg) translate(-3px, -5px);
-}
 
 
 /* Styling of overlay */
@@ -234,7 +160,6 @@ header .banner {
    max-width: 1000px;
    text-align: center;
    position: relative;
-   cursor: pointer;
    height: inherit;
 }
 
