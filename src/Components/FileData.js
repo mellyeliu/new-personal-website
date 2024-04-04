@@ -119,8 +119,8 @@ const FileData = {
             "src": "images/trshady.png",
             "url": "http://forum.trshady.com/",
             "scale": 0.52,
-            "x": 567,
-            "y": 401
+            "x": 482,
+            "y": 420
         },
         {
             "hoverString": "Life is Strange",
@@ -193,8 +193,8 @@ const FileData = {
             "src": "images/arena.png",
             "url": "https://www.are.na/",
             "scale": 0.52,
-            "x": 537,
-            "y": 345
+            "x": 452,
+            "y": 330
         },
         {
             "hoverString": "( daily deviation dream )",
