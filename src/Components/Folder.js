@@ -61,6 +61,7 @@ const Folder = ({ src, scale, x, y, hoverString, onHoverChange, caption, isOpen,
       className="folderIcon"
       style={{
         position: 'absolute',
+        cursor: 'pointer',
         right: 10,
         filter: 'drop-shadow(0px 6px 6px rgba(0,0,0,0.4))',
         top: position.y,

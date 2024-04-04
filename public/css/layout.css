@@ -88,6 +88,7 @@ img#headerpic {
 
 #play-button {
    color: rgb(43, 43, 43) !important;
+   cursor: pointer;
 }
 
 
