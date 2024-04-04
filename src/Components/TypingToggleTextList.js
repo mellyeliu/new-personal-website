@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const TypingToggleTextList = ({ style, wrapper, textOptions = ["First Text", "Second Text", "Third Text"], speed = 50 }) => {
+const TypingToggleTextList = ({ style, wrapper, textOptions = ["First Text", "Second Text", "Third Text"], speed = 30 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
 

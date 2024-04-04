@@ -36,6 +36,7 @@ const DraggableImage = ({ src, scale, url, x, y, isGridLayout, onHoverChange, ho
   // Function to start the drag
   const startDrag = (e) => {
     setDragging(true);
+    e.target.style.zIndex = 1000;
     e.target.style.cursor = 'grabbing';
   };
 
@@ -51,6 +52,7 @@ const DraggableImage = ({ src, scale, url, x, y, isGridLayout, onHoverChange, ho
   // Function to stop the drag
   const stopDrag = (e) => {
     setIsHovered(false);
+    e.target.style.zIndex = 'auto';
     onHoverChange('')
     setDragging(false);
     e.target.style.cursor = 'grab';
@@ -65,38 +67,10 @@ const DraggableImage = ({ src, scale, url, x, y, isGridLayout, onHoverChange, ho
     // hoverText.style.display = 'none';
   };
 
-  // const onLeave = (e) => {
-  //   setIsHovered(false);
-  // };
-
   const imageContainerStyle = {
-    // position: 'relative',
-    // position: 'absolute',
     width: 'auto',
     height: 'auto',
     textAlign: 'center',
-    // width: '300px', // Adjust based on your image size or layout requirements
-    // height: '200px', // Adjust based on your image size or layout requirements
-  };
-
-  // const imgStyle = {
-  //   width: '100%',
-  //   height: 'auto',
-  //   display: 'block',
-  // };
-
-  const centeredInputStyle = {
-    position: 'absolute',
-    // top: '50%',
-    // left: '50%',
-    // transform: 'translate(-50%, -50%)',
-    left: position.x,
-    top: position.y,
-    width: '90%',
-    border: 'none',
-    backgroundColor: 'transparent',
-    textAlign: 'center',
-    outline: 'none', // You might want to handle focus outline differently for accessibility
   };
 
 

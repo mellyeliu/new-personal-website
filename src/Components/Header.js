@@ -14,7 +14,7 @@ class Header extends Component {
   state = {
     isGridLayout: false,
     isChildHovered: "",
-    openStates: { 0: [true, true, true, true] },
+    openStates: { 0: [true, false, true, true] },
   }
 
   handleFolderOpen = (index, isOpen, key) => {
