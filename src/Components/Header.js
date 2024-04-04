@@ -111,7 +111,7 @@ class Header extends Component {
             <div className="container" style={{ zIndex: 1 }}>
               <div onClick={this.toggleButton} className="top-left">{
                 this.state.isGridLayout ? (
-                  <span id="play-button">&#40; Shuffle <i style={{ paddingTop: 5, fontSize: 11 }} class="fa fa-random" aria-hidden="true"></i>&#41;</span>)
+                  <span id="play-button">&#40; Shuffle <i style={{ fontSize: 11 }} class="fa fa-random" aria-hidden="true"></i>&#41;</span>)
                   : (<span id="play-button">	&#40; Sort &nbsp;<i style={{ fontSize: 8 }} className="fas fa-play"></i> &#41;</span>)} </div>
             </div>
             <Carousel wrapAround={true} transitionMode='fade' dragging={false} swiping={false}

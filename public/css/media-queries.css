@@ -44,13 +44,13 @@
    }
 
    .draggableImage {
-      transform: scale(0.65) !important;
-      margin-left: 5% !important;
-      margin-top: 4% !important;
+      transform: scale(0.63) !important;
+      margin-left: 6% !important;
+      margin-top: 5% !important;
    }
 
    .draggableImage:hover {
-      transform: scale(0.68) !important;
+      transform: scale(0.65) !important;
    }
 
    .folder {
@@ -73,24 +73,24 @@
 
 @media only screen and (min-height: 850px) {
    .draggableImage {
-      transform: scale(0.61) !important;
+      transform: scale(0.58) !important;
       margin-top: 5%;
    }
 
    .draggableImage:hover {
-      transform: scale(0.63) !important;
+      transform: scale(0.60) !important;
    }
 
 }
 
 @media only screen and (min-height: 800px) {
    .draggableImage {
-      transform: scale(0.58) !important;
+      transform: scale(0.55) !important;
       margin-top: 2.5%;
    }
 
    .draggableImage:hover {
-      transform: scale(0.61) !important;
+      transform: scale(0.57) !important;
    }
 
 }

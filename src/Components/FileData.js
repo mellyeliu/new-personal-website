@@ -4,7 +4,7 @@ const FileData = {
             "hoverString": "www.neopets.com",
             "src": "images/neopetsicon.png",
             "url": "https://www.neopets.com/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 20,
             "y": 270
         },
@@ -12,7 +12,7 @@ const FileData = {
             "hoverString": "https://jstris.jezevec10.com/",
             "url": "https://jstris.jezevec10.com/u/magicunicorn",
             "src": "images/tetris.png",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 300,
             "y": 140
         },
@@ -20,7 +20,7 @@ const FileData = {
             "hoverString": "The Company of Myself",
             "src": "images/com.png",
             "url": "https://www.newgrounds.com/portal/view/518729",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 400,
             "y": 160
         },
@@ -28,7 +28,7 @@ const FileData = {
             "hoverString": "( Kingdom of Loathing )",
             "src": "images/kolicon.png",
             "url": "https://www.kingdomofloathing.com/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 310,
             "y": 80
         },
@@ -36,7 +36,7 @@ const FileData = {
             "hoverString": "( Spider and Web )",
             "src": "images/spiderweb.png",
             "url": "https://eblong.com/zarf/zweb/tangle/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 180,
             "y": 50
         },
@@ -44,7 +44,7 @@ const FileData = {
             "hoverString": "Club Penguin",
             "src": "images/cp.png",
             "url": "https://www.cplegacy.com/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 510,
             "y": 238
         },
@@ -52,7 +52,7 @@ const FileData = {
             "hoverString": "Shift",
             "src": "images/shift.png",
             "url": "https://armorgames.com/play/751/shift",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 220,
             "y": 190
         },
@@ -60,7 +60,7 @@ const FileData = {
             "hoverString": "Fantage",
             "src": "images/fantage.png",
             "url": "https://en.wikipedia.org/wiki/Fantage",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 820,
             "y": 390
         },
@@ -68,7 +68,7 @@ const FileData = {
             "hoverString": "Loved",
             "src": "images/loved.png",
             "url": "https://ocias.com/works/loved/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 420,
             "y": 30
         },
@@ -76,7 +76,7 @@ const FileData = {
             "hoverString": "Cause of Death",
             "src": "images/cod.png",
             "url": "https://tvtropes.org/pmwiki/pmwiki.php/VisualNovel/CauseOfDeath",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 220,
             "y": 400
         },
@@ -84,7 +84,7 @@ const FileData = {
             "hoverString": "( Dreaming Mary )",
             "src": "images/dreamingmary.png",
             "url": "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/DreamingMary",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 100,
             "y": 80
         },
@@ -92,7 +92,7 @@ const FileData = {
             "hoverString": "( Okami )",
             "src": "images/okami.png",
             "url": "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/DreamingMary",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 170,
             "y": 219
         },
@@ -100,7 +100,7 @@ const FileData = {
             "hoverString": "( a dark room )",
             "src": "images/darkroom.png",
             "url": "https://adarkroom.doublespeakgames.com/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": -50,
             "y": 170
         },
@@ -108,7 +108,7 @@ const FileData = {
             "hoverString": "windows93",
             "src": "images/windows93.png",
             "url": "https://www.windows93.com/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 30,
             "y": 420
         },
@@ -118,7 +118,7 @@ const FileData = {
             "hoverString": "TRShady",
             "src": "images/trshady.png",
             "url": "http://forum.trshady.com/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 567,
             "y": 401
         },
@@ -134,7 +134,7 @@ const FileData = {
             "hoverString": "www.tvtropes.org",
             "src": "images/tvtropes.png",
             "url": "https://www.tvtropes.org/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 250,
             "y": 120
         },
@@ -142,7 +142,7 @@ const FileData = {
             "hoverString": "Deism, Reincarnation, and Creation Myths",
             "src": "images/deism.png",
             "url": "https://en.wikipedia.org/wiki/Pandeism",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 760,
             "y": 90
         },
@@ -192,7 +192,7 @@ const FileData = {
             "hoverString": "are.na",
             "src": "images/arena.png",
             "url": "https://www.are.na/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 537,
             "y": 345
         },
@@ -200,7 +200,7 @@ const FileData = {
             "hoverString": "( daily deviation dream )",
             "src": "images/deviantart.png",
             "url": "https://www.deviantart.com/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 710,
             "y": 410
         },
@@ -208,7 +208,7 @@ const FileData = {
             "hoverString": "( MSCHF )",
             "src": "images/mschf.png",
             "url": "https://www.mschf.com/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 368,
             "y": 192
         },
@@ -216,7 +216,7 @@ const FileData = {
             "hoverString": "Rational Wiki",
             "src": "images/rational.png",
             "url": "https://rationalwiki.org/wiki/Special:Random",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 760,
             "y": 470
         },
@@ -224,7 +224,7 @@ const FileData = {
             "hoverString": "( scp foundation )",
             "src": "images/scp.png",
             "url": "https://scp-wiki.wikidot.com/",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 440,
             "y": 455
         },
@@ -232,7 +232,7 @@ const FileData = {
             "hoverString": "( Edit Wars )",
             "src": "images/wiki.png",
             "url": "https://en.wikipedia.org/wiki/Wikipedia:Edit_wars",
-            "scale": 0.55,
+            "scale": 0.52,
             "x": 530,
             "y": 120
         },
@@ -278,7 +278,7 @@ const FileData = {
         {
             "hoverString": "( Girlhood )",
             "src": "images/emojis.png",
-            "scale": 0.55,
+            "scale": 0.52,
             "border": true,
             "x": 520,
             "y": 40
