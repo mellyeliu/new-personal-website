@@ -1240,6 +1240,9 @@ button.rwt__tab:first-child {
 .hover-container {
    position: relative;
    display: inline-block;
+   background-image: url("../images/bg57.png");
+   background-size: cover;
+   overflow: scroll;
 }
 
 .hover-text {

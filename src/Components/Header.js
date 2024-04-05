@@ -60,7 +60,7 @@ class Header extends Component {
       var art = this.props.data.photos.map(function (photo, i) {
         var imageSrc = 'images/' + photo.image;
         return <div key={photo.date} className="hover-container" >
-          <img id="headerpic" draggable="false" src={imageSrc}></img>
+          <img style={{ opacity: 0 }} id="headerpic" draggable="false" src={imageSrc}></img>
 
           {this.display_folders.map((folder, ind) => {
             return this.state.openStates && this.state.openStates[0][ind] || false ? (
