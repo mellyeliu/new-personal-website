@@ -13,8 +13,8 @@ const FileData = {
             "url": "https://jstris.jezevec10.com/u/magicunicorn",
             "src": "images/tetris.png",
             "scale": 0.52,
-            "x": 300,
-            "y": 140
+            "x": 270,
+            "y": 90
         },
         {
             "hoverString": "The Company of Myself",
@@ -30,7 +30,7 @@ const FileData = {
             "url": "https://www.kingdomofloathing.com/",
             "scale": 0.52,
             "x": 310,
-            "y": 80
+            "y": 120
         },
         {
             "hoverString": "( Spider and Web )",
