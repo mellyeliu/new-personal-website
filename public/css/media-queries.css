@@ -274,6 +274,14 @@
       height: 80px !important;
    }
 
+   .rwt__tab[aria-controls="two"] {
+      display: none;
+   }
+
+   .rwt__tab[aria-controls="three"] {
+      display: none;
+   }
+
    span.control {
       display: block;
       height: 20px;
