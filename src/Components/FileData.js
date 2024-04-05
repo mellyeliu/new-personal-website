@@ -187,7 +187,7 @@ const FileData = {
             "y": 120
         },
     ],
-    "community": [
+    "wikis": [
         {
             "hoverString": "are.na",
             "src": "images/arena.png",
