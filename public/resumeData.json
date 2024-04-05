@@ -2,29 +2,14 @@
   "main": {
     "social": [
       {
-        "name": "facebook",
-        "url": "https://vsco.co/mellyeliu",
-        "className": "fas fa-camera"
-      },
-      {
         "name": "linkedin",
         "url": "https://www.linkedin.com/in/mellyeliu",
         "className": "fab fa-linkedin-in"
       },
       {
-        "name": "github",
-        "url": "https://reading.supply/@mellyeliu",
-        "className": "fas fa-edit"
-      },
-      {
         "name": "instagram",
         "url": "https://instagram.com/mellye.liu",
         "className": "fab fa-b fa-instagram"
-      },
-      {
-        "name": "linktree",
-        "url": "https://linktr.ee/mellye.liu",
-        "className": "fas fa-link"
       }
     ],
     "photos": [
