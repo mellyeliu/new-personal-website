@@ -1232,7 +1232,6 @@ button.rwt__tab:first-child {
    bottom: -3px !important;
 } */
 
-
 .rwt__tablist:not([aria-orientation="vertical"]) .rwt__tab[aria-selected="false"]:hover+.rwt__tab[aria-selected="true"]:before {
    width: 0;
 }

@@ -83,6 +83,56 @@ const Portfolio = ({ data }) => {
       </div>
     })
 
+    var code = data.code.map(function (projects, i) {
+      var projectImage = 'images/portfolio/' + projects.image;
+      return <div key={projects.title} style={{ padding: "0 15px" }} className="two columns portfolio-item">
+        <div className="item-wrap hvr-grow">
+          {projects.url !== '' ? (<a target="_blank" href={projects.url} rel="noreferrer">
+            <img draggable="false" alt={projects.title} src={projectImage} style={{ height: 200, width: '100%', transform: 'scale(0.9)' }} />
+            <div style={{ height: 100, width: '100%' }}>
+              <div className="portfolio-item-meta" style={{ paddingBottom: 18, paddingLeft: 18, paddingRight: 18 }}>
+                <h5>&#40;{i + 1}&#41; {projects.title}; {projects.year}</h5>
+                <p>{projects.category}</p>
+                <p style={{ paddingTop: 8 }}>Made using {projects.languages}</p>
+              </div>
+            </div>
+          </a>) : (<><img alt={projects.title} draggable="false" src={projectImage} style={{ height: 200, width: '100%', transform: 'scale(0.9)' }} />
+            <div style={{ height: 100, width: '100%' }}>
+              <div className="portfolio-item-meta" style={{ paddingBottom: 18, paddingLeft: 18, paddingRight: 18 }}>
+                <h5>&#40;{i + 1}&#41; {projects.title}; {projects.year}</h5>
+                <p>{projects.category}</p>
+                <p style={{ paddingTop: 8 }}>Made using {projects.languages}</p>
+              </div>
+            </div></>)}
+        </div>
+      </div>
+    })
+
+    var design = data.design.map(function (projects, i) {
+      var projectImage = 'images/portfolio/' + projects.image;
+      return <div key={projects.title} style={{ padding: "0 15px" }} className="two columns portfolio-item">
+        <div className="item-wrap hvr-grow">
+          {projects.url !== '' ? (<a target="_blank" href={projects.url} rel="noreferrer">
+            <img draggable="false" alt={projects.title} src={projectImage} style={{ height: 200, width: '100%', transform: 'scale(0.9)' }} />
+            <div style={{ height: 100, width: '100%' }}>
+              <div className="portfolio-item-meta" style={{ paddingBottom: 18, paddingLeft: 18, paddingRight: 18 }}>
+                <h5>&#40;{i + 1}&#41; {projects.title}; {projects.year}</h5>
+                <p>{projects.category}</p>
+                <p style={{ paddingTop: 8 }}>Made using {projects.languages}</p>
+              </div>
+            </div>
+          </a>) : (<><img alt={projects.title} draggable="false" src={projectImage} style={{ height: 200, width: '100%', transform: 'scale(0.9)' }} />
+            <div style={{ height: 100, width: '100%' }}>
+              <div className="portfolio-item-meta" style={{ paddingBottom: 18, paddingLeft: 18, paddingRight: 18 }}>
+                <h5>&#40;{i + 1}&#41; {projects.title}; {projects.year}</h5>
+                <p>{projects.category}</p>
+                <p style={{ paddingTop: 8 }}>Made using {projects.languages}</p>
+              </div>
+            </div></>)}
+        </div>
+      </div>
+    })
+
     var writing = data.writing.map(function (projects, i) {
       // var projectImage = 'images/portfolio/'+projects.image;
       return <div key={projects.title} style={{ padding: "0 15px" }} className="two columns portfolio-item">
@@ -108,10 +158,6 @@ const Portfolio = ({ data }) => {
       </div>
     })
 
-    console.log(writing);
-    console.log(data.writing);
-    console.log("hellooo");
-
     //   var projects = data.projects.map(function(projects, i){
     //     var projectImage = 'images/portfolio/'+projects.image;
     //     return <div key={projects.title} style={{padding: "0 15px"}}className="two columns portfolio-item">
@@ -131,24 +177,6 @@ const Portfolio = ({ data }) => {
     //  </div>
     //   })
 
-    var art = data.art.map(function (projects, i) {
-      var projectImage = 'images/portfolio/' + projects.image;
-      return <div key={projects.title} className="two columns portfolio-item">
-        <div className="item-wrap">
-          {(false) ?
-            (<Carousel
-              renderCenterLeftControls={() => (``)}
-              renderCenterRightControls={() => ('')}
-            >
-              <img src={projectImage} />
-              <img src={'images/portfolio/artaa-min.jpg'} />
-            </Carousel>) :
-            (<img alt={projects.title} src={projectImage} />)
-          }
-        </div>
-      </div>
-    })
-
   }
 
   return (
@@ -166,6 +194,8 @@ const Portfolio = ({ data }) => {
             >
               <TabList>
                 <Tab tabFor="one"> Visuals ⋆𐙚₊˚⊹♡ </Tab>
+                <Tab tabFor="two"> Code ‧&lt;₊˚🖇️✩ /&gt;₊</Tab>
+                <Tab tabFor="three"> Design ‧&lt;₊˚🤍✩ /&gt;₊</Tab>
                 <Tab tabFor="four"> Text ‧₊˚🖇️✩ ₊</Tab>
                 {/* <Tab tabFor="one">&#40; All	&#41;</Tab>
                 <Tab tabFor="two">&#40; Projects	&#41;</Tab>
@@ -180,6 +210,20 @@ const Portfolio = ({ data }) => {
                   </Fade>
                 </div>
               </TabPanel>
+              <TabPanel tabId="two">
+                <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
+                  <Fade duration={500} delay={100}>
+                    {code}
+                  </Fade>
+                </div>
+              </TabPanel>
+              <TabPanel tabId="three">
+                <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
+                  <Fade duration={500} delay={100}>
+                    {design}
+                  </Fade>
+                </div>
+              </TabPanel>
               <TabPanel tabId="four">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
                   <Fade duration={500} delay={100}>
@@ -187,20 +231,6 @@ const Portfolio = ({ data }) => {
                   </Fade>
                 </div>
               </TabPanel>
-              {/* <TabPanel tabId="three">
-                <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                  <Fade duration={500 }  delay={100}>
-                  {projects}
-                  </Fade>
-                </div>
-              </TabPanel>
-              <TabPanel tabId="four">
-                <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                  <Fade duration={500 }  delay={100}>
-                  {projects}
-                  </Fade>
-                </div>
-              </TabPanel> */}
             </Tabs>
             <div style={{
               width: '100%', height: 50, borderTop: '0.5px solid black',

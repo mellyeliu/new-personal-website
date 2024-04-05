@@ -290,6 +290,14 @@
       margin-right: 100% !important;
    }
 
+   .rwt__tab[aria-controls="two"] {
+      display: none;
+   }
+
+   .rwt__tab[aria-controls="three"] {
+      display: none;
+   }
+
    /* Header Styles
    -------------------------------------------------------------------- */
    header .banner {
