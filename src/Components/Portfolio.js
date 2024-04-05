@@ -150,8 +150,8 @@ const Portfolio = ({ data }) => {
             >
               <TabList>
                 <Tab tabFor="one"> All ⋆𐙚₊˚⊹♡ </Tab>
-                <Tab tabFor="two"> Code ‧₊˚🖇️✩ ₊</Tab>
-                <Tab tabFor="four"> Design ‧₊˚🖇️✩ ₊</Tab>
+                <Tab tabFor="two"> Code &lt;˚🖇️✩/&gt; ₊</Tab>
+                <Tab tabFor="four"> Design ‧₊˚🤍✩ ₊</Tab>
                 <span className="browsero">○ ○ ○</span>
               </TabList>
               <TabPanel tabId="one">
