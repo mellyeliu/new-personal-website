@@ -193,8 +193,8 @@ const Portfolio = ({ data }) => {
               onChange={(tabId) => { console.log(tabId) }}
             >
               <TabList>
-                <Tab tabFor="one"> Visuals ⋆𐙚₊˚⊹♡ </Tab>
-                <Tab tabFor="two"> Code ‧&lt;₊˚🖇️✩ /&gt;₊</Tab>
+                <Tab tabFor="one"> All ⋆𐙚₊˚⊹♡ </Tab>
+                <Tab tabFor="two"> Code ‧&lt;₊˚#✩ /&gt;₊</Tab>
                 <Tab tabFor="three"> Design ‧&lt;₊˚🤍✩ /&gt;₊</Tab>
                 <Tab tabFor="four"> Text ‧₊˚🖇️✩ ₊</Tab>
                 {/* <Tab tabFor="one">&#40; All	&#41;</Tab>
