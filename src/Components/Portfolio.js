@@ -66,17 +66,17 @@ const Portfolio = ({ data }) => {
             <img draggable="false" alt={projects.title} src={projectImage} style={{ height: 200, width: '100%', transform: 'scale(0.9)' }} />
             <div style={{ height: 100, width: '100%' }}>
               <div className="portfolio-item-meta" style={{ paddingBottom: 18, paddingLeft: 18, paddingRight: 18 }}>
-                <h5>&#40;{i + 1}&#41; {projects.title}</h5>
+                <h5>&#40;{i + 1}&#41; {projects.title}; {projects.year}</h5>
                 <p>{projects.category}</p>
-                <p style={{ paddingTop: 8 }}>Made using {projects.languages}.</p>
+                <p style={{ paddingTop: 8 }}>Made using {projects.languages}</p>
               </div>
             </div>
           </a>) : (<><img alt={projects.title} draggable="false" src={projectImage} style={{ height: 200, width: '100%', transform: 'scale(0.9)' }} />
             <div style={{ height: 100, width: '100%' }}>
               <div className="portfolio-item-meta" style={{ paddingBottom: 18, paddingLeft: 18, paddingRight: 18 }}>
-                <h5>&#40;{i + 1}&#41; {projects.title}</h5>
+                <h5>&#40;{i + 1}&#41; {projects.title}; {projects.year}</h5>
                 <p>{projects.category}</p>
-                <p style={{ paddingTop: 8 }}>Made using {projects.languages}.</p>
+                <p style={{ paddingTop: 8 }}>Made using {projects.languages}</p>
               </div>
             </div></>)}
         </div>
