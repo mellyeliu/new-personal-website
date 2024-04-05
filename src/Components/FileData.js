@@ -2,7 +2,7 @@ const FileData = {
     "games": [
         {
             "hoverString": "www.neopets.com",
-            "src": "images/neopetsicon.png",
+            "src": "images/neopets.png",
             "url": "https://www.neopets.com/",
             "scale": 0.52,
             "x": 20,
@@ -26,7 +26,7 @@ const FileData = {
         },
         {
             "hoverString": "( Kingdom of Loathing )",
-            "src": "images/kolicon.png",
+            "src": "images/kol.png",
             "url": "https://www.kingdomofloathing.com/",
             "scale": 0.52,
             "x": 310,

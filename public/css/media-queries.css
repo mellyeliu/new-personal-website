@@ -120,7 +120,7 @@
 
 @media only screen and (max-width: 900px) and (min-height: 850px) {
    .draggableImage {
-      margin-top: 12% !important;
+      margin-top: 9% !important;
    }
 }
 
@@ -145,7 +145,7 @@
    }
 
    .draggableImage {
-      margin-top: 15% !important;
+      margin-top: 9% !important;
    }
 
    header .banner-text h1 {
