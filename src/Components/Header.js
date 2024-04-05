@@ -45,8 +45,8 @@ class Header extends Component {
     })
   };
 
-  folders = ['Games', 'Fandoms', 'Community', 'About Me'];
-  display_folders = ['games', 'fandoms', 'community', 'About Me'];
+  folders = ['Games', 'Fandoms', 'Wikis', 'About Me'];
+  display_folders = ['games', 'fandoms', 'wikis', 'About Me'];
   display_strings = ['( Gamemaking as playing god )', '( Collecting obsessions )', '( Can we build a collective truth ? )', '( Autofiction as always )'];
   alignX = 0;
   alignY = 30;
