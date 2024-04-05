@@ -2,7 +2,7 @@ const FileData = {
     "games": [
         {
             "hoverString": "www.neopets.com",
-            "src": "images/neopets.png",
+            "src": "images/neopetsicon.png",
             "url": "https://www.neopets.com/",
             "scale": 0.52,
             "x": 20,
@@ -11,7 +11,7 @@ const FileData = {
         {
             "hoverString": "https://jstris.jezevec10.com/",
             "url": "https://jstris.jezevec10.com/u/magicunicorn",
-            "src": "images/tetris.png",
+            "src": "images/tetris2.png",
             "scale": 0.52,
             "x": 270,
             "y": 90
