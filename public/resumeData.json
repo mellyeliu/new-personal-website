@@ -198,91 +198,178 @@
         "url": "https://web.archive.org/web/20070209174817/https://tamaplace.zoomshare.com/"
       }
     ],
-    "art": [
+    "code": [
       {
-        "title": "Personal Website",
-        "image": "artaa-edit-min.jpg"
+        "title": "Personal Website (2.0)",
+        "category": "A continual work in progress.",
+        "languages": "React <3",
+        "image": "pweb2.png",
+        "year": "2024",
+        "url": ""
       },
       {
-        "title": "Solon",
-        "image": "art3.jpg"
+        "title": "Dreamland",
+        "category": "Interactive fiction documenting dream journal escapism. Work in progress!",
+        "languages": "Inform7",
+        "image": "inform.png",
+        "year": "2023",
+        "url": ""
       },
       {
-        "title": "Solon",
-        "image": "artaa-min.jpg"
+        "title": "M0MENTS",
+        "category": "You play as an engineer trying not to get laid off. Created in the height of the tech layoffs",
+        "languages": "Twine, HTML/CSS",
+        "image": "moments.png",
+        "year": "2023",
+        "url": "https://m0ments.w3spaces.com/"
+      },
+      {
+        "title": "Serif",
+        "category": "Tiktok meets Goodreads. Work in progress.",
+        "languages": "Framer, Figma",
+        "image": "serif.png",
+        "year": "2024",
+        "url": "https://serif.app"
+      },
+      {
+        "title": "Messenger (selected projects)",
+        "category": "Nicknames, AI stickers, commands, themes, edit message, and encryption <3.",
+        "languages": "ObjC, Hack, React",
+        "image": "messenger.png",
+        "year": "2021-",
+        "url": "https://messenger.com"
+      },
+      {
+        "title": "Brainquations",
+        "category": "Can we visualize the emotional spectrum? (WIP)",
+        "languages": "Desmos, Python, Matplotlib, Figma <3",
+        "image": "emotion profiles.png",
+        "year": "2023",
+        "url": ""
+      },
+      {
+        "title": "Calme",
+        "category": "Therapy diagnostic tool pulling heart rate and sentiment data from client wearable devices.",
+        "languages": "React, Flask, Matlab, num.py",
+        "image": "calme.png",
+        "year": "2021",
+        "url": "https://github.com/mellyeliu/calme"
+      },
+      {
+        "title": "Personal Website (1.0)",
+        "category": "First stab at a personal website. 2000s era covid coping.",
+        "languages": "React <3",
+        "image": "oldpweb.png",
+        "year": "2020",
+        "url": "https://600e5461ebec290008991444--fjeioweijfieowief.netlify.app/"
+      },
+      {
+        "title": "HTML Instruction",
+        "category": "My sister and I make an HTML fansite.",
+        "languages": "HTML/CSS",
+        "image": "html.png",
+        "year": "2007",
+        "url": "https://web.archive.org/web/20070912023029/http://pages.matmice.com/home/tamahtml/"
+      },
+      {
+        "title": "Tamagotchi Fansites",
+        "category": "A neurodivergent 7 year old gets a tamagotchi and internet access.",
+        "languages": "HTML/CSS",
+        "image": "tama.png",
+        "year": "2006",
+        "url": "https://web.archive.org/web/20070209174817/https://tamaplace.zoomshare.com/"
       }
     ],
-    "writing": [
+    "design": [
       {
-        "title": "there is a safe space on the internet i want to create with you",
-        "category": "Everything I love about the internet, in one list",
-        "languages": "Reading Supply",
-        "image": "readingsupply.png",
-        "url": "https://reading.supply/post/84e5f9b9-ecdb-413e-ac66-04bc1ba69fa7"
-      },
-      {
-        "title": "Souvenirs",
-        "category": "Your resume of romantic failures.",
-        "languages": "Reading Supply",
-        "image": "readingsupply.png",
-        "url": "https://reading.supply/post/73947d0b-423b-431d-ab63-efbd1f1740ce"
-      },
-      {
-        "title": "sex ideology",
-        "category": "Reflections on consent as a spectrum, kink, and the nuances of sex positivity",
-        "languages": "Reading Supply",
-        "image": "readingsupply.png",
-        "url": "https://reading.supply/@mellyeliu/s-ex-ideology-ySNb53"
-      },
-      {
-        "title": "Girl and her Notes App",
-        "category": "ChatGPT generated smut about a girl falling in love with her notes app.",
+        "title": "Digital Nostalgia",
+        "category": "Zine documenting my online childhood and the websites that made me.",
         "languages": "Figma <3",
-        "image": "fanfic2.png",
-        "url": "https://archiveofourown.org/works/53351767"
+        "image": "zine1.png",
+        "year": "2023",
+        "url": "https://www.figma.com/file/1qagskAUweTYTwJoFeKcfz/digital-nostalgia?type=design&node-id=0%3A1&mode=design&t=fvxbxOiKfiui2muN-1"
       },
       {
-        "title": "the romance delusion",
-        "category": "2cb is one hell of a drug.",
-        "languages": "Reading Supply",
-        "image": "readingsupply.png",
-        "url": "https://reading.supply/post/73947d0b-423b-431d-ab63-efbd1f1740ce"
-      },
-      {
-        "title": "Short Circuit",
-        "category": "Clippy the Office Assistant finds love. Circumventing the ChatGPT censors again.",
+        "title": "My Fanfic Became Sentient and Cannabalized Itself",
+        "category": "Zine documenting my online childhood and the websites that made me.",
         "languages": "Figma <3",
-        "image": "fanfic1.png",
-        "url": "https://archiveofourown.org/works/51323875"
+        "image": "fanfic.png",
+        "year": "2023",
+        "url": "https://www.figma.com/file/1qagskAUweTYTwJoFeKcfz/digital-nostalgia?type=design&node-id=0%3A1&mode=design&t=fvxbxOiKfiui2muN-1"
       },
       {
-        "title": "on fiction and empathy",
-        "category": "A love letter to libraries, fictional worlds, and goodreads bookshelves.",
-        "languages": "Medium",
-        "image": "medium.png",
-        "url": "https://mellyeliu.medium.com/on-fiction-and-empathy-900afdb1fa50"
+        "title": "CYBERHUG COLLABORATIONS",
+        "category": "Musings on digital intimacy with my friend Madeleine.",
+        "languages": "Figma <3",
+        "image": "cyberhug.png",
+        "year": "2022-",
+        "url": "https://instagram.com/cyber.hug"
       },
       {
-        "title": "mythos of intimacy",
-        "category": "Trauma bonding is one hell of a drug.",
-        "languages": "Medium",
-        "image": "medium.png",
-        "url": "https://mellyeliu.medium.com/mythos-of-intimacy-ab15f608361b"
+        "title": "( DISSOCIATION )",
+        "category": "Visual conversation on dissociation.",
+        "languages": "Figma <3",
+        "image": "dissociation.png",
+        "year": "2024",
+        "url": "https://www.figma.com/file/wtlzG9LI65YerdnUCTavG5/dissociation-(Copy)?type=design&node-id=0%3A1&mode=design&t=qItstvoCYMAuhfYa-1"
       },
       {
-        "title": "creative vessels",
-        "category": "Everything I have lived through was worth it for the art.",
-        "languages": "Medium",
-        "image": "medium.png",
-        "url": "https://mellyeliu.medium.com/creative-vessels-77407d44cdf4"
+        "title": "Digital Love Languages",
+        "category": "What does it mean to love online?",
+        "languages": "Figma <3",
+        "image": "digitallove.png",
+        "year": "2023",
+        "url": "images/portfolio/poster.png"
       },
       {
-        "title": "in my mind, i pick flowers for my parents and gift them the bouquets —",
-        "category": "My love language is getting tattoos for you because I know you'll never approve.",
-        "languages": "Medium",
-        "image": "medium.png",
-        "url": "https://mellyeliu.medium.com/in-my-mind-i-pick-flowers-for-my-parents-and-gift-them-the-bouquets-c44e42135bf1"
+        "title": "I've Been Thinking About Obsession",
+        "category": "Visual conversation on obsessive personalities.",
+        "languages": "Figma <3",
+        "image": "obsession.png",
+        "year": "2023",
+        "url": "https://www.instagram.com/p/CpESuQsploR/?img_index=1"
+      },
+      {
+        "title": "Brainquations",
+        "category": "Can we visualize the emotional spectrum?",
+        "languages": "Desmos, Figma <3",
+        "image": "emotion profiles.png",
+        "year": "2023",
+        "url": ""
+      },
+      {
+        "title": "Dimensional Fanfic",
+        "category": "Fictional Dimensional personality archetypes.",
+        "languages": "Figma <3",
+        "image": "dimensional.png",
+        "year": "2023",
+        "url": "https://www.figma.com/file/3iixmn0kM36OZ3ZSyQtyyX/Dimensional-Fanfic?type=design&node-id=0%3A1&mode=design&t=S5uZcbhh0HrO2QbB-1"
+      },
+      {
+        "title": "Internet (2 Sides)",
+        "category": "Word cloud with Carolyn on 2000s internet.",
+        "languages": "Figma <3",
+        "image": "internetc.png",
+        "year": "2022",
+        "url": ""
+      },
+      {
+        "title": "Tattoo Art",
+        "category": "Then I wanted to make tattoo art but then I gave up.",
+        "languages": "Procreate",
+        "image": "tattoo.png",
+        "year": "2021",
+        "url": ""
+      },
+      {
+        "title": "Portraits",
+        "category": "I used to want to be good at visual art but then I gave up.",
+        "languages": "Not Tech :o",
+        "image": "portrait.png",
+        "year": "2018",
+        "url": ""
       }
-    ]
+    ],
+    "writing": []
   }
 }

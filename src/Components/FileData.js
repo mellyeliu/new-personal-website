@@ -123,14 +123,6 @@ const FileData = {
             "y": 420
         },
         {
-            "hoverString": "Life is Strange",
-            "src": "images/lis.png",
-            "url": "https://archiveofourown.org/works/4577451",
-            "scale": 0.5,
-            "x": 720,
-            "y": 40
-        },
-        {
             "hoverString": "www.tvtropes.org",
             "src": "images/tvtropes.png",
             "url": "https://www.tvtropes.org/",
@@ -145,30 +137,6 @@ const FileData = {
             "scale": 0.52,
             "x": 760,
             "y": 70
-        },
-        {
-            "hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
-            "src": "images/fj.png",
-            "url": "https://www.freejinger.org/",
-            "scale": 0.5,
-            "x": 345,
-            "y": 330
-        },
-        {
-            "hoverString": "everlark ♡",
-            "src": "images/everlark.png",
-            "url": "https://archiveofourown.org/works/4249794/chapters/9617619",
-            "scale": 0.5,
-            "x": 230,
-            "y": 443
-        },
-        {
-            "hoverString": "azula x mai (atla) ♡",
-            "src": "images/maizula.png",
-            "url": "https://archiveofourown.org/works/4249794/chapters/9617619",
-            "scale": 0.5,
-            "x": 420,
-            "y": 290
         },
         {
             "hoverString": "joseon-era kdramas",
@@ -248,7 +216,7 @@ const FileData = {
     "About Me": [
         {
             "hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
-            "src": "images/bio.png",
+            "src": "images/bio1.png",
             "scale": 0.5,
             "border": true,
             "x": 670,
@@ -263,7 +231,7 @@ const FileData = {
         },
         {
             "hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
-            "src": "images/me/meme.png",
+            "src": "images/me/suanny.png",
             "scale": 0.5,
             "x": 830,
             "y": 210
