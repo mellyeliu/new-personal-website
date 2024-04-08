@@ -106,7 +106,7 @@ class Header extends Component {
     }
     return (
       <><Nav data={this.props.data} title='Mellye.liu' subtitle='Code / Writing / Art' /><header id="home">
-        <Fade duration={1000} delay={500}>
+        <Fade duration={2000} delay={500}>
           <div className="banner" >
             <div className="container" style={{ zIndex: 1 }}>
               <div onClick={this.toggleButton} className="top-left">{
