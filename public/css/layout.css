@@ -89,6 +89,7 @@ img#headerpic {
 #play-button {
    color: rgb(43, 43, 43) !important;
    cursor: pointer;
+   padding-top: 5px !important;
 }
 
 
@@ -102,11 +103,12 @@ img#headerpic {
    position: absolute;
    top: 15px;
    left: 20px;
+   padding-top: 4px;
    font-family: 'Cormorant Garamond';
    font-weight: 400;
    /* text-transform: uppercase; */
    letter-spacing: 1.5px;
-   font-size: 14px;
+   font-size: 15px !important;
    text-align: left;
    /* writing-mode: vertical-lr;
     text-orientation: upright; */
@@ -1272,7 +1274,7 @@ button.rwt__tab:first-child {
    position: absolute;
    top: 15px;
    right: 15px;
-   font: 14px 'Cormorant Garamond';
+   font: 15px 'Cormorant Garamond';
    /* font-family: montserrat; */
    /* text-transform: uppercase; */
    letter-spacing: 1.5px;

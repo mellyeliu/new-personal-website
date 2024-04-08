@@ -55,7 +55,7 @@ class Nav extends Component {
               </li>
               <li id="logo" className={(this.state.isMenu ? 'logo-hide' : '')}>
                 {/* <marquee> */}
-                <div style={{ fontWeight: 700, letterSpacing: 0.5, fontFamily: "Cormorant Garamond", fontSize: 20 }} className='control'>{"mellyeliu  ૮꒰ ˶• ༝ •˶꒱ა  ♡ "}</div>
+                <div style={{ fontWeight: 700, letterSpacing: 0.5, fontFamily: "Cormorant Garamond", fontSize: 21 }} className='control'>{"mellyeliu  ૮꒰ ˶• ༝ •˶꒱ა  ♡ "}</div>
                 <TypingToggleTextList wrapper={true} className='control'
                   textOptions={this.funFacts}
                   style={{ letterSpacing: 2, fontFamily: "Cormorant Garamond", fontWeight: 300, fontStyle: 'italic', fontSize: 14, paddingTop: 2, color: 'rgb(150,150,150)' }}></TypingToggleTextList>
