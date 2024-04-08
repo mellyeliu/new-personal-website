@@ -25,6 +25,10 @@
       max-width: 1150px;
    }
 
+   div.control {
+      font-size: 23px !important;
+   }
+
    #about {
       padding-top: 50px;
       padding-bottom: 20px;
@@ -32,7 +36,6 @@
 
    #nav-wrap {
       height: 100px;
-      padding-top: 30px;
    }
 
    header .banner {
