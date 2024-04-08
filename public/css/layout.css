@@ -91,6 +91,18 @@ img#headerpic {
    cursor: pointer;
 }
 
+#play-button::selection {
+   color: white !important;
+}
+
+#play-button i::selection {
+   color: white !important;
+}
+
+.fa-play::selection {
+   background-color: white !important;
+}
+
 
 .black {
    bottom: 15px !important;
