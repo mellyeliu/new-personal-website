@@ -52,7 +52,12 @@ class Header extends Component {
   alignY = 30;
   counter = 0
 
+  windowWidth = window.innerWidth;
+  windowHeight = window.innerHeight;
+
   render() {
+    console.log(this.windowWidth);
+    console.log(this.windowHeight);
     if (this.props.data) {
       this.counter = 0;
       this.alignX = 0;

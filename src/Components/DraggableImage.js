@@ -77,19 +77,19 @@ const DraggableImage = ({ src, scale, url, x, y, isGridLayout, onHoverChange, ho
 
   return (
     <div style={imageContainerStyle}>
-      {/* { border ? <input type="text" style={centeredInputStyle} placeholder="Your text here" /> : null} */}
       <img
         src={src}
         style={{
           cursor: 'grab',
           position: 'absolute',
+          marginLeft: '5%',
+          marginTop: '4%',
           left: position.x,
           top: position.y,
           filter: border ? 'drop-shadow(8px 8px 10px rgba(0,0,0,0.3))' : 'drop-shadow(0px 6px 5px rgba(0,0,0,0.8))',
           boxShadow: border ? '0 0 0 1px rgba(0,0,0,0.5)' : 'none', // Red outline
           userSelect: 'none',
           borderRadius: '20px',
-          // border: 'solid 1px #bbbbbb',
           transform: isHovered ? `scale(${scale + 0.02})` : `scale(${scale})`,
           transition: 'transform 0.3s ease-in-out',
           transformOrigin: 'top left', // Adjust as needed
