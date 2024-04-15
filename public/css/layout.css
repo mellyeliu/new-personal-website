@@ -34,6 +34,18 @@ div {
    font-family: 'Cormorant Garamond' !important;
 }
 
+.themedark {
+   background-color: #212121 !important;
+   color: white !important;
+   transition: 0.8s;
+}
+
+.themelight {
+   background-color: #ffffff !important;
+   color: rgb(27, 27, 27);
+   transition: 0.8s;
+}
+
 header#home {
    position: relative;
    /* height: 800px; */
@@ -120,6 +132,7 @@ img#headerpic {
    letter-spacing: 1.5px;
    font-size: 16px;
    text-align: left;
+   padding-top: 10px;
    /* writing-mode: vertical-lr;
     text-orientation: upright; */
    font-weight: 700;
@@ -334,7 +347,7 @@ header .scrolldown a:hover {
    font: 14px 'PT Mono';
    width: 100%;
    /* text-transform: uppercase; */
-   transition: 0.8s;
+   /* transition: 0.8s; */
    letter-spacing: 2.5px;
    margin: 0 auto;
    z-index: 100;
@@ -391,7 +404,7 @@ ul#nav {
 #logo {
    text-decoration: none;
    text-align: center;
-   color: rgb(53, 53, 53) !important;
+   /* color: rgb(53, 53, 53) !important; */
    font: 18px 'VT323' !important;
    /* text-transform: uppercase; */
    font-weight: 600;
@@ -973,7 +986,7 @@ footer {
    padding-top: 0px;
    padding-bottom: 38px;
    color: rgb(40, 40, 40);
-   background-color: #fff;
+   /* background-color: #fff; */
    font-size: 14px;
    text-align: center;
    position: relative;

@@ -5,8 +5,6 @@ const Folder = ({ src, scale, x, y, hoverString, onHoverChange, caption, isOpen,
   const [dragging, setDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
-  console.log(isOpen);
-
   const handleClick = () => {
     // Toggle the state based on the prop and notify the parent
     onOpen(!isOpen);

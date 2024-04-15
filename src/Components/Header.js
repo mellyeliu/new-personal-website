@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Carousel from 'nuka-carousel';
 import Nav from './Nav'
-import DraggableImage from './DraggableImage';
+import DesktopIcon from './DesktopIcon';
 import Folder from './Folder'
 import FileData from './FileData'
 import '@animated-burgers/burger-squeeze/dist/styles.css'
@@ -52,12 +52,12 @@ class Header extends Component {
   alignY = 30;
   counter = 0
 
-  windowWidth = window.innerWidth;
-  windowHeight = window.innerHeight;
+  // windowWidth = window.innerWidth;
+  // windowHeight = window.innerHeight;
 
   render() {
-    console.log(this.windowWidth);
-    console.log(this.windowHeight);
+    // console.log(this.windowWidth);
+    // console.log(this.windowHeight);
     if (this.props.data) {
       this.counter = 0;
       this.alignX = 0;
@@ -78,7 +78,7 @@ class Header extends Component {
                   }
                   this.counter++;
                 }
-                return (image.border && this.state.isGridLayout) ? <></> : (<DraggableImage
+                return (image.border && this.state.isGridLayout) ? <></> : (<DesktopIcon
                   url={image.url}
                   border={image.border ? true : false}
                   hoverString={image.hoverString}
@@ -87,7 +87,7 @@ class Header extends Component {
                   x={this.state.isGridLayout ? this.alignX : image.x}
                   y={this.state.isGridLayout ? this.alignY : image.y}
                   isGridLayout={this.state.isGridLayout}
-                ></DraggableImage>)
+                ></DesktopIcon>)
 
               })
             ) : null
@@ -110,22 +110,23 @@ class Header extends Component {
       }, this)
     }
     return (
-      <><Nav data={this.props.data} title='Mellye.liu' subtitle='Code / Writing / Art' /><header id="home">
-        <Fade duration={1000} delay={500}>
-          <div className="banner" >
-            <div className="container" style={{ zIndex: 1 }}>
-              <div onClick={this.toggleButton} className="top-left">{
-                this.state.isGridLayout ? (
-                  <span id="play-button">&#40; Shuffle <i style={{ fontSize: 11 }} class="fa fa-random" aria-hidden="true"></i>&#41;</span>)
-                  : (<span id="play-button">	&#40; Sort &nbsp;<i style={{ fontSize: 8 }} className="fas fa-play"></i> &#41;</span>)} </div>
+      <>
+        <header id="home">
+          <Fade duration={1000} delay={500}>
+            <div className="banner" >
+              <div className="container" style={{ zIndex: 1 }}>
+                <div onClick={this.toggleButton} className="top-left">{
+                  this.state.isGridLayout ? (
+                    <span id="play-button">&#40; Shuffle <i style={{ fontSize: 11 }} class="fa fa-random" aria-hidden="true"></i>&#41;</span>)
+                    : (<span id="play-button">	&#40; Sort &nbsp;<i style={{ fontSize: 8 }} className="fas fa-play"></i> &#41;</span>)} </div>
+              </div>
+              <Carousel wrapAround={true} transitionMode='fade' dragging={false} swiping={false}
+                defaultControlsConfig={{ pagingDotsStyle: { display: 'none' }, prevButtonStyle: { display: 'none' }, nextButtonStyle: { display: 'none' } }} pauseOnHover={true} autoplayInterval={3000} enableKeyboardControls={false}>
+                {art}
+              </Carousel>
             </div>
-            <Carousel wrapAround={true} transitionMode='fade' dragging={false} swiping={false}
-              defaultControlsConfig={{ pagingDotsStyle: { display: 'none' }, prevButtonStyle: { display: 'none' }, nextButtonStyle: { display: 'none' } }} pauseOnHover={true} autoplayInterval={3000} enableKeyboardControls={false}>
-              {art}
-            </Carousel>
-          </div>
-        </Fade>
-      </header></>
+          </Fade>
+        </header></>
     );
   }
 }

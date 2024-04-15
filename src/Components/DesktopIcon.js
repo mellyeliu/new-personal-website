@@ -4,7 +4,7 @@ const DraggableImage = ({ src, scale, url, x, y, isGridLayout, onHoverChange, ho
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const hoverText = document.getElementById('hoverText');
+  // const hoverText = document.getElementById('hoverText');
 
 
   let timer = 0;
