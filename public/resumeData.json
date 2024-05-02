@@ -46,6 +46,14 @@
         "url": ""
       },
       {
+        "title": "Ascii Storybook",
+        "category": "A storybooking tool to turn writing into ascii visuals",
+        "languages": "React, Python, NLTK, DALL-E",
+        "image": "ascii.png",
+        "year": "2024",
+        "url": "https://text2ascii.netlify.app/"
+      },
+      {
         "title": "Digital Nostalgia",
         "category": "Zine documenting my online childhood and the websites that made me.",
         "languages": "Figma <3",
@@ -394,8 +402,8 @@
       },
       {
         "title": "Girl and her Notes App",
-        "category": "ChatGPT generated smut about a girl falling in love with her notes app.",
-        "languages": "Figma <3",
+        "category": "ChatGPT generated smut about a girl falling in love with her notes app. (Collab with Amanda)",
+        "languages": "Ao3 <3",
         "image": "fanfic2.png",
         "url": "https://archiveofourown.org/works/53351767"
       },
@@ -408,8 +416,8 @@
       },
       {
         "title": "Short Circuit",
-        "category": "Clippy the Office Assistant finds love. Circumventing the ChatGPT censors again.",
-        "languages": "Figma <3",
+        "category": "Clippy the Office Assistant finds love. Circumventing the ChatGPT censors again. (Collab with Amanda)",
+        "languages": "Ao3 <3",
         "image": "fanfic1.png",
         "url": "https://archiveofourown.org/works/51323875"
       },

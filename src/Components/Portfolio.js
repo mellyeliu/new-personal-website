@@ -142,7 +142,7 @@ const Portfolio = ({ data }) => {
               <div className="portfolio-item-meta" style={{ padding: 18 }}>
                 <h5>&#40;{i}&#41; {projects.title}</h5>
                 <p>{projects.category}</p>
-                <p style={{ paddingTop: 8 }}>Made using {projects.languages}.</p>
+                <p style={{ paddingTop: 8 }}>Shared on {projects.languages}.</p>
               </div>
             </div>
           </a>) : (
@@ -150,7 +150,7 @@ const Portfolio = ({ data }) => {
               <div className="portfolio-item-meta" style={{ padding: 18 }}>
                 <h5>&#40;{i}&#41; {projects.title}</h5>
                 <p>{projects.category}</p>
-                <p style={{ paddingTop: 8 }}>Made using {projects.languages}.</p>
+                <p style={{ paddingTop: 8 }}>Shared on {projects.languages}.</p>
               </div>
             </div>
           )}
