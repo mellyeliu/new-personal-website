@@ -4,7 +4,7 @@ import Carousel from 'nuka-carousel';
 import Nav from './Nav'
 import DesktopIcon from './DesktopIcon';
 import Folder from './Folder'
-import FileData from './FileData'
+import FileData from '../Data/FileData'
 import '@animated-burgers/burger-squeeze/dist/styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

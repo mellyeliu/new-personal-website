@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const DraggableImage = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hoverString, border }) => {
+const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hoverString, border }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -108,4 +108,4 @@ const DraggableImage = ({ src, scale, url, x, y, isGridLayout, onHoverChange, ho
   );
 };
 
-export default DraggableImage;
+export default DesktopIcon;
