@@ -42,10 +42,17 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
 
   // Function to drag the image
   const onDrag = (e) => {
-    if (dragging) {
-      const newX = position.x + e.movementX;
-      const newY = position.y + e.movementY;
-      setPosition({ x: newX, y: newY });
+      if (dragging) {
+        const container = e.target.closest('.slider-frame');
+        const deltaX = e.movementX / container.offsetWidth * 100;
+        const deltaY = e.movementY / container.offsetHeight * 100;
+        setPosition(prev => ({
+            x: prev.x + deltaX,
+            y: prev.y + deltaY
+        }));
+      // const newX = position.x + e.movementX;
+      // const newY = position.y + e.movementY;
+      // setPosition({ x: newX, y: newY });
     }
   };
 
@@ -82,10 +89,10 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
         style={{
           cursor: 'grab',
           position: 'absolute',
-          marginLeft: '5%',
-          marginTop: '4%',
-          left: position.x,
-          top: position.y,
+          // marginLeft: '5%',
+          // marginTop: '4%',
+          left: `${position.x}%`,
+          top: `${position.y}%`,
           filter: border ? 'drop-shadow(8px 8px 10px rgba(0,0,0,0.3))' : 'drop-shadow(0px 6px 5px rgba(0,0,0,0.8))',
           boxShadow: border ? '0 0 0 1px rgba(0,0,0,0.5)' : 'none', // Red outline
           userSelect: 'none',

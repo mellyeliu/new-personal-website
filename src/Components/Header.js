@@ -71,10 +71,10 @@ class Header extends Component {
             return this.state.openStates && this.state.openStates[0][ind] || false ? (
               FileData[folder].map((image, index) => {
                 if (!image.border) {
-                  this.alignY = (this.counter % 5 === 0) ? 25 : this.alignY + 120;
-                  this.alignX = (this.counter % 5 === 0) ? this.alignX + 110 : this.alignX;
+                  this.alignY = (this.counter % 5 === 0) ? 5 : this.alignY + 16;
+                  this.alignX = (this.counter % 5 === 0) ? this.alignX + 10 : this.alignX;
                   if (this.counter === 0) {
-                    this.alignX = 50;
+                    this.alignX = 5;
                   }
                   this.counter++;
                 }

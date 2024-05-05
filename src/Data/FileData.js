@@ -5,104 +5,104 @@ const FileData = {
             "src": "images/neopetsicon.png",
             "url": "https://www.neopets.com/",
             "scale": 0.52,
-            "x": 20,
-            "y": 270
+            "x": 1,
+            "y": 34
         },
         {
             "hoverString": "https://jstris.jezevec10.com/",
             "url": "https://jstris.jezevec10.com/u/magicunicorn",
             "src": "images/tetris2.png",
             "scale": 0.52,
-            "x": 270,
-            "y": 90
+            "x": 20,
+            "y": 20
         },
         {
             "hoverString": "The Company of Myself",
             "src": "images/com.png",
             "url": "https://www.newgrounds.com/portal/view/518729",
             "scale": 0.52,
-            "x": 400,
-            "y": 160
+            "x": 40,
+            "y": 30
         },
         {
             "hoverString": "( Kingdom of Loathing )",
             "src": "images/kol.png",
             "url": "https://www.kingdomofloathing.com/",
             "scale": 0.52,
-            "x": 310,
-            "y": 120
+            "x": 31,
+            "y": 25
         },
         {
             "hoverString": "( Spider and Web )",
             "src": "images/spiderweb.png",
             "url": "https://eblong.com/zarf/zweb/tangle/",
             "scale": 0.52,
-            "x": 180,
-            "y": 10
+            "x": 18,
+            "y": 9
         },
         {
             "hoverString": "Club Penguin",
             "src": "images/cp.png",
             "url": "https://www.cplegacy.com/",
             "scale": 0.52,
-            "x": 510,
-            "y": 238
+            "x": 50,
+            "y": 40
         },
         {
             "hoverString": "Shift",
             "src": "images/shift.png",
             "url": "https://armorgames.com/play/751/shift",
             "scale": 0.52,
-            "x": 220,
-            "y": 190
+            "x": 7,
+            "y": 13
         },
         {
             "hoverString": "Fantage",
             "src": "images/fantage.png",
             "url": "https://en.wikipedia.org/wiki/Fantage",
             "scale": 0.52,
-            "x": 602,
-            "y": 428
+            "x": 60,
+            "y": 60
         },
         {
             "hoverString": "Loved",
             "src": "images/loved.png",
             "url": "https://ocias.com/works/loved/",
             "scale": 0.52,
-            "x": 420,
-            "y": 30
+            "x": 42,
+            "y": 12
         },
         {
             "hoverString": "Cause of Death",
             "src": "images/cod.png",
             "url": "https://tvtropes.org/pmwiki/pmwiki.php/VisualNovel/CauseOfDeath",
             "scale": 0.52,
-            "x": 395,
-            "y": 393
+            "x": 39,
+            "y": 65
         },
         {
             "hoverString": "( Dreaming Mary )",
             "src": "images/dreamingmary.png",
             "url": "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/DreamingMary",
             "scale": 0.52,
-            "x": 100,
-            "y": 80
+            "x": 10,
+            "y": 19
         },
         {
             "hoverString": "( Okami )",
             "src": "images/okami.png",
             "url": "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/DreamingMary",
             "scale": 0.52,
-            "x": 170,
-            "y": 219
+            "x": 17,
+            "y": 35
         },
         {
             "hoverString": "( a dark room )",
             "src": "images/darkroom.png",
             "url": "https://adarkroom.doublespeakgames.com/",
             "scale": 0.52,
-            "x": -50,
-            "y": 170
+            "x": -10,
+            "y": 34
         },
         {
             "hoverString": "windows93",
@@ -110,7 +110,7 @@ const FileData = {
             "url": "https://www.windows93.com/",
             "scale": 0.52,
             "x": 30,
-            "y": 420
+            "y": 60
         },
     ],
     "fandoms": [
@@ -119,72 +119,72 @@ const FileData = {
             "src": "images/trshady.png",
             "url": "http://forum.trshady.com/",
             "scale": 0.52,
-            "x": 482,
-            "y": 420
+            "x": 50,
+            "y": 72
         },
         {
             "hoverString": "Life is Strange",
             "src": "images/lis.png",
             "url": "https://archiveofourown.org/works/4577451",
             "scale": 0.5,
-            "x": 720,
-            "y": 40
+            "x": 75,
+            "y": 25
         },
         {
             "hoverString": "www.tvtropes.org",
             "src": "images/tvtropes.png",
             "url": "https://www.tvtropes.org/",
             "scale": 0.52,
-            "x": 250,
-            "y": 120
+            "x": 25,
+            "y": 27
         },
         {
             "hoverString": "Deism, Reincarnation, and Creation Myths",
             "src": "images/deism.png",
             "url": "https://en.wikipedia.org/wiki/Pandeism",
             "scale": 0.52,
-            "x": 760,
-            "y": 70
+            "x": 76,
+            "y": 17
         },
         {
             "hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
             "src": "images/fj.png",
             "url": "https://www.freejinger.org/",
             "scale": 0.5,
-            "x": 345,
-            "y": 330
+            "x": 35,
+            "y": 48
         },
         {
             "hoverString": "everlark ♡",
             "src": "images/everlark.png",
             "url": "https://archiveofourown.org/works/4249794/chapters/9617619",
             "scale": 0.5,
-            "x": 230,
-            "y": 443
+            "x": 23,
+            "y": 65
         },
         {
             "hoverString": "azula x mai (atla) ♡",
             "src": "images/maizula.png",
             "url": "https://archiveofourown.org/works/4249794/chapters/9617619",
             "scale": 0.5,
-            "x": 420,
-            "y": 290
+            "x": 42,
+            "y": 48
         },
         {
             "hoverString": "joseon-era kdramas",
             "src": "images/kdrama.png",
             "url": "https://archiveofourown.org/works/4249794/chapters/9617619",
             "scale": 0.5,
-            "x": 50,
-            "y": 190
+            "x": 5,
+            "y": 35
         },
         {
             "hoverString": "archiveofourown.org",
             "src": "images/ao3icon.png",
             "url": "https://archiveofourown.org/",
             "scale": 0.53,
-            "x": 150,
-            "y": 120
+            "x": 15,
+            "y": 20
         },
     ],
     "wikis": [
@@ -193,56 +193,56 @@ const FileData = {
             "src": "images/arena.png",
             "url": "https://www.are.na/",
             "scale": 0.52,
-            "x": 452,
-            "y": 330
+            "x": 45,
+            "y": 53
         },
         {
             "hoverString": "( daily deviation dream )",
             "src": "images/deviantart.png",
             "url": "https://www.deviantart.com/",
             "scale": 0.52,
-            "x": 710,
-            "y": 410
+            "x": 71,
+            "y": 72
         },
         {
             "hoverString": "( MSCHF )",
             "src": "images/mschf.png",
             "url": "https://www.mschf.com/",
             "scale": 0.52,
-            "x": 368,
-            "y": 192
+            "x": 37,
+            "y": 32
         },
         {
             "hoverString": "Rational Wiki",
             "src": "images/rational.png",
             "url": "https://rationalwiki.org/wiki/Special:Random",
             "scale": 0.52,
-            "x": 760,
-            "y": 470
+            "x": 76,
+            "y": 68
         },
         {
             "hoverString": "( scp foundation )",
             "src": "images/scp.png",
             "url": "https://scp-wiki.wikidot.com/",
             "scale": 0.52,
-            "x": 440,
-            "y": 455
+            "x": 30,
+            "y": 60
         },
         {
             "hoverString": "( Edit Wars )",
             "src": "images/wiki.png",
             "url": "https://en.wikipedia.org/wiki/Wikipedia:Edit_wars",
             "scale": 0.52,
-            "x": 530,
-            "y": 120
+            "x": 58,
+            "y": 65
         },
         {
             "hoverString": "( 🌐🤍🎀🫧 )",
             "src": "images/internet.png",
             "scale": 0.50,
             "border": true,
-            "x": 110,
-            "y": 310
+            "x": 12,
+            "y": 45
         }
     ],
     "About Me": [
@@ -251,37 +251,37 @@ const FileData = {
             "src": "images/bio.png",
             "scale": 0.5,
             "border": true,
-            "x": 670,
-            "y": 150
+            "x": 67,
+            "y": 20
         },
         {
             "hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
             "src": "images/me/me.png",
             "scale": 0.5,
-            "x": 800,
-            "y": 350
+            "x": 80,
+            "y": 42
         },
         {
             "hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
             "src": "images/me/meme.png",
             "scale": 0.5,
-            "x": 830,
-            "y": 210
+            "x": 83,
+            "y": 26
         },
         {
             "hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
             "src": "images/me/mememe.png",
             "scale": 0.5,
-            "x": 570,
-            "y": 290
+            "x": 57,
+            "y": 35
         },
         {
             "hoverString": "( Girlhood )",
             "src": "images/emojis.png",
             "scale": 0.52,
             "border": true,
-            "x": 520,
-            "y": 40
+            "x": 52,
+            "y": 7
         },
     ],
     "Obsessions": [

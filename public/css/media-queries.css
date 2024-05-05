@@ -45,8 +45,8 @@
 
    .draggableImage {
       transform: scale(0.67) !important;
-      margin-left: 6% !important;
-      margin-top: 5% !important;
+      /* margin-left: 6% !important;
+      margin-top: 5% !important; */
    }
 
    .draggableImage:hover {
@@ -74,7 +74,7 @@
 @media only screen and (min-height: 850px) {
    .draggableImage {
       transform: scale(0.62) !important;
-      margin-top: 5%;
+      /* margin-top: 5%; */
    }
 
    .draggableImage:hover {
@@ -86,7 +86,7 @@
 @media only screen and (min-height: 800px) {
    .draggableImage {
       transform: scale(0.58) !important;
-      margin-top: 2.5%;
+      /* margin-top: 2.5%; */
    }
 
    .draggableImage:hover {
@@ -114,19 +114,19 @@
 
 @media only screen and (max-width: 1324px) and (min-height: 850px) {
    .draggableImage {
-      margin-top: 7.5% !important;
+      /* margin-top: 7.5% !important; */
    }
 }
 
 @media only screen and (max-width: 900px) and (min-height: 850px) {
    .draggableImage {
-      margin-top: 15% !important;
+      /* margin-top: 15% !important; */
    }
 }
 
 @media only screen and (max-width: 600px) and (min-height: 850px) {
    .draggableImage {
-      margin-top: 25% !important;
+      /* margin-top: 25% !important; */
    }
 }
 
@@ -145,7 +145,7 @@
    }
 
    .draggableImage {
-      margin-top: 9% !important;
+      /* margin-top: 9% !important; */
    }
 
    header .banner-text h1 {
@@ -224,7 +224,7 @@
 
    .draggableImage {
       margin-right: 100% !important;
-      margin-top: 25% !important;
+      /* margin-top: 25% !important; */
       transform: scale(0.6);
    }
 
@@ -263,12 +263,14 @@
    }
 
    .bottom-left {
-      top: 14px;
+      top: 20px;
+      font-weight: 600;
+      /* top: 14px;
       right: 8px;
       font-size: 14px;
       letter-spacing: 2px;
       line-height: 12px;
-      font-weight: 600;
+      font-weight: 600; */
    }
 
    /* #portfolio {
