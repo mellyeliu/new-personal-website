@@ -171,7 +171,7 @@
         "languages": "React <3",
         "image": "oldpweb.png",
         "year": "2020",
-        "url": "https://600e5461ebec290008991444--fjeioweijfieowief.netlify.app/"
+        "url": "https://mellyeliu2020.netlify.app/"
       },
       {
         "title": "Tattoo Art",
@@ -214,6 +214,14 @@
         "image": "pweb2.png",
         "year": "2024",
         "url": ""
+      },
+      {
+        "title": "Ascii Storybook",
+        "category": "A storybooking tool to turn writing into ascii visuals",
+        "languages": "React, Python, NLTK, DALL-E",
+        "image": "ascii.png",
+        "year": "2024",
+        "url": "https://text2ascii.netlify.app/"
       },
       {
         "title": "Dreamland",
@@ -269,7 +277,7 @@
         "languages": "React <3",
         "image": "oldpweb.png",
         "year": "2020",
-        "url": "https://600e5461ebec290008991444--fjeioweijfieowief.netlify.app/"
+        "url": "https://mellyeliu2020.netlify.app/"
       },
       {
         "title": "HTML Instruction",

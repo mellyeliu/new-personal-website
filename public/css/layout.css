@@ -1269,6 +1269,10 @@ button.rwt__tab:first-child {
    overflow: scroll;
 }
 
+.slider-frame {
+   /* position: relative; */
+}
+
 .hover-text {
    visibility: hidden;
    color: rgb(40, 40, 40);
