@@ -265,6 +265,7 @@
    .bottom-left {
       top: 20px;
       font-weight: 600;
+      display: none;
       /* top: 14px;
       right: 8px;
       font-size: 14px;

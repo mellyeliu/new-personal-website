@@ -4,7 +4,29 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const minWidth = 900;
+  const [width, setWidth] = useState(minWidth);
+  // const container = e.target.closest('.slider-frame');
+  // console.log(container);
+  // container.offsetWidth = container.offsetWidth > 800 ? container.offsetWidth : 800;
   // const hoverText = document.getElementById('hoverText');
+
+  useEffect(() => {
+    function handleResize() {
+    const divs = document.getElementsByClassName('slider-frame');
+    if (divs.length > 0) {
+      const divWidth = divs[0].clientWidth;
+      setWidth(Math.max(divWidth, minWidth));
+    }
+  }
+    handleResize(); // Call it once to get initial width
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
 
   let timer = 0;
@@ -44,6 +66,8 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
   const onDrag = (e) => {
       if (dragging) {
         const container = e.target.closest('.slider-frame');
+        setWidth(Math.max(container.offsetWidth, minWidth));
+        // container.offsetWidth = container.offsetWidth > 800 ? container.offsetWidth : 800;
         const deltaX = e.movementX / container.offsetWidth * 100;
         const deltaY = e.movementY / container.offsetHeight * 100;
         setPosition(prev => ({
@@ -91,7 +115,9 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
           position: 'absolute',
           // marginLeft: '5%',
           // marginTop: '4%',
-          left: `${position.x}%`,
+          left: `${position.x * width / 100}px`,
+          minHeight: `${15}%`,
+          // minWidth: `${15}%`,
           top: `${position.y}%`,
           filter: border ? 'drop-shadow(8px 8px 10px rgba(0,0,0,0.3))' : 'drop-shadow(0px 6px 5px rgba(0,0,0,0.8))',
           boxShadow: border ? '0 0 0 1px rgba(0,0,0,0.5)' : 'none', // Red outline
