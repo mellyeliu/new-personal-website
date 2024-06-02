@@ -196,7 +196,7 @@ const Portfolio = ({ data }) => {
                 <Tab tabFor="one"> All ⋆𐙚₊˚⊹♡ </Tab>
                 <Tab tabFor="two"> Code ‧&lt;₊˚#✩ /&gt;₊</Tab>
                 <Tab tabFor="three"> Design ‧&lt;₊˚🤍✩ /&gt;₊</Tab>
-                <Tab tabFor="four"> Text ‧₊˚🖇️✩ ₊</Tab>
+                {/* <Tab tabFor="four"> Text ‧₊˚🖇️✩ ₊</Tab> */}
                 {/* <Tab tabFor="one">&#40; All	&#41;</Tab>
                 <Tab tabFor="two">&#40; Projects	&#41;</Tab>
                 <Tab tabFor="three">&#40; Art	&#41;</Tab>
@@ -224,13 +224,13 @@ const Portfolio = ({ data }) => {
                   </Fade>
                 </div>
               </TabPanel>
-              <TabPanel tabId="four">
+              {/* <TabPanel tabId="four">
                 <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
                   <Fade duration={500} delay={100}>
                     {writing}
                   </Fade>
                 </div>
-              </TabPanel>
+              </TabPanel> */}
             </Tabs>
             <div style={{
               width: '100%', height: 50, borderTop: '0.5px solid black',
