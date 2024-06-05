@@ -68,7 +68,7 @@ const Portfolio = ({ data }) => {
               <div className="portfolio-item-meta" style={{ paddingBottom: 18, paddingLeft: 18, paddingRight: 18 }}>
                 <h5>&#40;{i + 1}&#41; {projects.title}; {projects.year}</h5>
                 <p>{projects.category}</p>
-                <p style={{ paddingTop: 8 }}>Made using {projects.languages}</p>
+                <p style={{ paddingTop: 8 }}>Made with {projects.languages} &lt;3</p>
               </div>
             </div>
           </a>) : (<><img alt={projects.title} draggable="false" src={projectImage} style={{ height: 200, width: '100%', transform: 'scale(0.9)' }} />
@@ -76,7 +76,7 @@ const Portfolio = ({ data }) => {
               <div className="portfolio-item-meta" style={{ paddingBottom: 18, paddingLeft: 18, paddingRight: 18 }}>
                 <h5>&#40;{i + 1}&#41; {projects.title}; {projects.year}</h5>
                 <p>{projects.category}</p>
-                <p style={{ paddingTop: 8 }}>Made using {projects.languages}</p>
+                <p style={{ paddingTop: 8 }}>Made with {projects.languages} &lt;3</p>
               </div>
             </div></>)}
         </div>
@@ -181,7 +181,6 @@ const Portfolio = ({ data }) => {
 
   return (
     <section id="portfolio">
-      {/* <marquee scrollamount="1">THIS IS A SPACE FOR CREATIVITY </marquee> */}
       <Fade duration={1000} delay={500}>
         <div className="row">
           <Fade top>
