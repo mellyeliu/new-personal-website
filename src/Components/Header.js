@@ -10,102 +10,85 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
-class Header extends Component {
-  state = {
-    isGridLayout: false,
-    isChildHovered: "",
-    openStates: { 0: [true, false, true, true] },
-  }
+const Header = (props) => {
+  const [isGridLayout, setIsGridLayout] = useState(false);
+  const [isChildHovered, setIsChildHovered] = useState("");
+  const [openStates, setOpenStates] = useState({ 0: [true, false, true, true] });
+  const [zIndex, setZIndex] = useState(1);
 
-  handleFolderOpen = (index, isOpen, key) => {
-    // Update the state of the specific folder at index
-    console.log(isOpen);
-    this.setState(prevState => {
-      const newOpenStates = { ...prevState.openStates };
-
-      // Update the desired element in the cloned array
+  const handleFolderOpen = (index, isOpen, key) => {
+    setOpenStates(prevOpenStates => {
+      const newOpenStates = { ...prevOpenStates };
       newOpenStates[key][index] = isOpen;
-
       return newOpenStates;
     });
   };
 
-
-  toggleButton = () => {
-    console.log('hehe')
-    this.setState(prevState => ({
-      isGridLayout: !prevState.isGridLayout
-    }));
-    console.log(this.state.isGridLayout);
+  const toggleButton = () => {
+    setIsGridLayout(prevIsGridLayout => !prevIsGridLayout);
   }
 
-  handleHoverChange = (hoverState) => {
-    this.setState({
-      isChildHovered: hoverState
-    })
+  const handleHoverChange = (hoverState) => {
+    setIsChildHovered(hoverState);
   };
 
-  folders = ['Games', 'Fandoms', 'Wikis', 'About Me'];
-  display_folders = ['games', 'fandoms', 'wikis', 'About Me'];
-  display_strings = ['( Gamemaking as playing god )', '( Collecting obsessions )', '( Can we build a collective truth ? )', '( Autofiction as always )'];
-  alignX = 0;
-  alignY = 30;
-  counter = 0
+  const folders = ['Games', 'Fandoms', 'Wikis', 'About Me'];
+  const display_folders = ['games', 'fandoms', 'wikis', 'About Me'];
+  const display_strings = ['( Gamemaking as playing god )', '( Collecting obsessions )', '( Can we build a collective truth ? )', '( Autofiction as always )'];
+  let alignX = 0;
+  let alignY = 30;
+  let counter = 0
 
-  // windowWidth = window.innerWidth;
-  // windowHeight = window.innerHeight;
-
-  render() {
-    // console.log(this.windowWidth);
-    // console.log(this.windowHeight);
-    if (this.props.data) {
-      this.counter = 0;
-      this.alignX = 0;
-      this.alignY = 25;
-      var art = this.props.data.photos.map(function (photo, i) {
+    if (props.data) {
+      counter = 0;
+      alignX = 0;
+      alignY = 25;
+      var art = props.data.photos.map(function (photo, i) {
         var imageSrc = 'images/' + photo.image;
         return <div key={photo.date} className="hover-container" >
           <img style={{ opacity: 0 }} id="headerpic" draggable="false" src={imageSrc}></img>
 
-          {this.display_folders.map((folder, ind) => {
-            return this.state.openStates && this.state.openStates[0][ind] || false ? (
+          {display_folders.map((folder, ind) => {
+            return openStates && openStates[0][ind] || false ? (
               FileData[folder].map((image, index) => {
                 if (!image.border) {
-                  this.alignY = (this.counter % 5 === 0) ? 5 : this.alignY + 16;
-                  this.alignX = (this.counter % 5 === 0) ? this.alignX + 10 : this.alignX;
-                  if (this.counter === 0) {
-                    this.alignX = 5;
+                  alignY = (counter % 5 === 0) ? 5 : alignY + 16;
+                  alignX = (counter % 5 === 0) ? alignX + 10 : alignX;
+                  if (counter === 0) {
+                    alignX = 5;
                   }
-                  this.counter++;
+                  counter++;
                 }
-                return (image.border && this.state.isGridLayout) ? <></> : (<DesktopIcon
+                return (image.border && isGridLayout) ? <></> : (<DesktopIcon
                   url={image.url}
+                  setZIndex={setZIndex}
+                  zIndex={zIndex}
                   border={image.border ? true : false}
                   hoverString={image.hoverString}
-                  onHoverChange={this.handleHoverChange}
+                  onHoverChange={handleHoverChange}
                   src={image.src} scale={image.scale}
-                  x={this.state.isGridLayout ? this.alignX : image.x}
-                  y={this.state.isGridLayout ? this.alignY : image.y}
-                  isGridLayout={this.state.isGridLayout}
+                  x={isGridLayout ? alignX : image.x}
+                  y={isGridLayout ? alignY : image.y}
+                  isGridLayout={isGridLayout}
                 ></DesktopIcon>)
 
               })
             ) : null
           })}
-          {this.folders.map((folder, index) => {
+          {folders.map((folder, index) => {
             return (
               <Folder src={'images/folder.png'}
-                isOpen={this.state.openStates[0][index]}
-                onOpen={(isOpen) => this.handleFolderOpen(index, isOpen, 0)}
-                hoverString={this.display_strings[index]}
-                onHoverChange={this.handleHoverChange}
+                isOpen={openStates[0][index]}
+                onOpen={(isOpen) => handleFolderOpen(index, isOpen, 0)}
+                hoverString={display_strings[index]}
+                onHoverChange={handleHoverChange}
                 caption={folder}
                 x={0}
                 y={30 + 100 * index}
                 scale={0.5} />
             )
           })}
-          {this.state.isChildHovered === '' ? <div className="bottom-left">{photo.place} </div> : <div id="header-hover" className="bottom-left">{this.state.isChildHovered} </div>}
+          {isChildHovered === '' ? <div className="bottom-left">{photo.place} </div> : <div id="header-hover" className="bottom-left">{isChildHovered} </div>}
         </div>
       }, this)
     }
@@ -115,8 +98,8 @@ class Header extends Component {
           <Fade duration={1000} delay={500}>
             <div className="banner" >
               <div className="container" style={{ zIndex: 1 }}>
-                <div onClick={this.toggleButton} className="top-left">{
-                  this.state.isGridLayout ? (
+                <div onClick={toggleButton} className="top-left">{
+                  isGridLayout ? (
                     <span id="play-button">&#40; Shuffle <i style={{ fontSize: 11 }} class="fa fa-random" aria-hidden="true"></i>&#41;</span>)
                     : (<span id="play-button">	&#40; Sort &nbsp;<i style={{ fontSize: 8 }} className="fas fa-play"></i> &#41;</span>)} </div>
               </div>
@@ -128,7 +111,7 @@ class Header extends Component {
           </Fade>
         </header></>
     );
-  }
+  
 }
 
 export default Header;
