@@ -115,9 +115,10 @@ const Header = (props) => {
               maxWidth: fullScreen ? '100%' : '1150px',
               textAlign: 'center',
               position: 'relative',
-              height: '100%'
+              height: '100%',
+              overflow: 'hidden',
             }}>
-              <div className="bottom-left-2" style={{display: 'none'}}> &#40; 🌐🌷 &#41; </div>
+              <div className="bottom-left-2" style={{top: fullScreen ? '20px' : '120px', display: 'none'}}> &#40; 🌐🌷 &#41; </div>
               <div onClick={() => {setFullScreen();handleFullScreenClick();}} className="bottom-right" style={{bottom: fullScreen ? '15px' : '70px'}}>
                 <span style={{ zIndex: 1000,  cursor: 'pointer'  }}>
                 &#40; F5 &#41;
