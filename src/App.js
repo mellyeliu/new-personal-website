@@ -46,7 +46,7 @@ const App = () => {
               {fullScreen && <NameTag/>}
               <Header data={resumeData.main} dest={'home'} />
               <Portfolio data={resumeData.portfolio} />
-              <Footer data={resumeData.main} />
+              {!fullScreen && <Footer data={resumeData.main} />}
             </div>
           </>
         )}
