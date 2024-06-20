@@ -181,7 +181,7 @@ const Portfolio = ({ data }) => {
 
   return (
     <section id="portfolio">
-        <div className="row" style={{zIndex: 1000}}>
+        <div className="row" style={{zIndex: 1000, background: 'white'}}>
           <Fade top>
             <div style={{ marginBottom: -15 }} className="tagline"></div>
           </Fade>
