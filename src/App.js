@@ -16,14 +16,16 @@ const App = () => {
 
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowHeight(window.innerHeight);
-        };
+  useEffect(() => {
+    // Set a timeout to delay the resize event
+    const timer = setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 500); // Delay of 500 milliseconds
 
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    // Clean up the timer when the component unmounts or the effect reruns
+    return () => clearTimeout(timer);
+  }, []); // Empty dependency array ensures this effect runs only once after initial render
+
 
   useEffect(() => {
     ReactGA.initialize('UA-110570651-1');
@@ -33,9 +35,13 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    // Briefly trigger a resize event
-    window.dispatchEvent(new Event('resize'));
-}, []);
+    const handleResize = () => {
+        setWindowHeight(window.innerHeight);
+    };
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const getResumeData = () => {
     $.ajax({
