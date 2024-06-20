@@ -32,6 +32,11 @@ const App = () => {
     getResumeData();
   }, []);
 
+  useEffect(() => {
+    // Briefly trigger a resize event
+    window.dispatchEvent(new Event('resize'));
+}, []);
+
   const getResumeData = () => {
     $.ajax({
       url: '/resumeData.json',
