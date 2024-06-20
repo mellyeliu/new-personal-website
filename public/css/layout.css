@@ -140,6 +140,24 @@ img#headerpic {
    line-height: 9px;
 }
 
+.bottom-right {
+   position: absolute;
+   /* bottom: 15px; */
+   right: 15px;
+   font-family: 'Cormorant Garamond';
+   font-weight: 400;
+   /* text-transform: uppercase; */
+   letter-spacing: 1.5px;
+   font-size: 16px;
+   color: black;
+   text-align: left;
+   padding-top: 10px;
+   font-weight: 700;
+   background: none;
+   line-height: 9px;
+   z-index: 1000;
+}
+
 .menu-hide {
    opacity: 0;
    visibility: hidden;
@@ -178,7 +196,7 @@ header:before {
 }
 
 header .banner {
-   transition: height 1s ease;
+   /* transition: height 1s ease;
    display: inline-block;
    margin: 0px auto;
    padding: 100px 0px 50px 0px;
@@ -186,7 +204,7 @@ header .banner {
    max-width: 1075px;
    text-align: center;
    position: relative;
-   height: inherit;
+   height: inherit; */
 }
 
 .folderText {
@@ -1263,10 +1281,13 @@ button.rwt__tab:first-child {
 
 .hover-container {
    position: relative;
-   display: inline-block;
+   display: block;
    background-image: url("../images/bg57.png");
    background-size: cover;
-   overflow: scroll;
+   overflow-x: scroll;
+   overflow-y: hidden;
+   height: 100%;
+   border: 0.5px solid black
 }
 
 .slider-frame {

@@ -5,8 +5,8 @@ const FileData = {
             "src": "images/neopetsicon.png",
             "url": "https://www.neopets.com/",
             "scale": 0.52,
-            "x": 1,
-            "y": 34
+            "x": 20,
+            "y": 30
         },
         {
             "hoverString": "https://jstris.jezevec10.com/",
@@ -70,7 +70,7 @@ const FileData = {
             "url": "https://ocias.com/works/loved/",
             "scale": 0.52,
             "x": 42,
-            "y": 12
+            "y": 22
         },
         {
             "hoverString": "Cause of Death",
@@ -101,7 +101,7 @@ const FileData = {
             "src": "images/darkroom.png",
             "url": "https://adarkroom.doublespeakgames.com/",
             "scale": 0.52,
-            "x": -10,
+            "x": 5,
             "y": 34
         },
         {
@@ -249,7 +249,7 @@ const FileData = {
         {
             "hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
             "src": "images/bio.png",
-            "scale": 0.5,
+            "scale": 0.53,
             "border": true,
             "x": 67,
             "y": 20
@@ -278,10 +278,10 @@ const FileData = {
         {
             "hoverString": "( Girlhood )",
             "src": "images/emojis.png",
-            "scale": 0.52,
+            "scale": 0.42,
             "border": true,
             "x": 52,
-            "y": 7
+            "y": 10
         },
     ],
     "Obsessions": [
