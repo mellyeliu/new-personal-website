@@ -1282,7 +1282,7 @@ button.rwt__tab:first-child {
 .hover-container {
    position: relative;
    display: block;
-   background-image: url("../images/bg57.png");
+   background-image: url("../images/bg-57.png");
    background-size: cover;
    overflow-x: scroll;
    overflow-y: hidden;
