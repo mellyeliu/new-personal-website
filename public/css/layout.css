@@ -188,9 +188,9 @@ img#headerpic {
 
 .bottom-left-2 {
    position: absolute;
-   top: 20px;
+   top: 15px;
    right: 15px;
-   font: 16px 'Cormorant Garamond';
+   font: 15px 'Cormorant Garamond';
    letter-spacing: 1.5px;
    text-align: left;
    width: auto;
