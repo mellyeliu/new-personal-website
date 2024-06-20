@@ -117,6 +117,7 @@ const Header = (props) => {
               position: 'relative',
               height: '100%'
             }}>
+              <div className="bottom-left-2" style={{display: 'none'}}> &#40; 🌐🌷 &#41; </div>
               <div onClick={() => {setFullScreen();handleFullScreenClick();}} className="bottom-right" style={{bottom: fullScreen ? '15px' : '70px'}}>
                 <span style={{ zIndex: 1000,  cursor: 'pointer'  }}>
                 &#40; F5 &#41;
