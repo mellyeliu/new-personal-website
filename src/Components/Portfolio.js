@@ -181,12 +181,11 @@ const Portfolio = ({ data }) => {
 
   return (
     <section id="portfolio">
-      <Fade duration={1000} delay={500}>
         <div className="row">
           <Fade top>
             <div style={{ marginBottom: -15 }} className="tagline"></div>
           </Fade>
-          <div className="twelve columns collapsed">
+          <div className="twelve columns collapsed" style={{    border: '0.5px solid black'}}>
             <Tabs
               defaultTab="one"
               onChange={(tabId) => { console.log(tabId) }}
@@ -237,7 +236,6 @@ const Portfolio = ({ data }) => {
             }}></div>
           </div>
         </div>
-      </Fade>
     </section>
   );
 }

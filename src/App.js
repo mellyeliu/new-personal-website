@@ -56,8 +56,8 @@ const App = () => {
               {!fullScreen && <Nav data={resumeData.main} title='Mellye.liu' subtitle='Code / Writing / Art' />}
               {fullScreen && <NameTag/>}
               <Header data={resumeData.main} dest={'home'} />
-              <div style={{ display: fullScreen ? 'none' : 'block' }}>
-                <Portfolio data={resumeData.portfolio} />
+              <div style={{ display: fullScreen ? 'none' : 'block', position: 'relative' }}>
+                <Portfolio style={{zIndex: 1000000, position: 'relative'}} data={resumeData.portfolio} />
                 <Footer data={resumeData.main} />
               </div>
             </div>
