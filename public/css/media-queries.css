@@ -173,13 +173,13 @@
       letter-spacing: 1.5px;
    }
 
-   #portfolio .row {
+   /* #portfolio .row {
       border: none;
    }
 
    .slider-frame {
       border: none;
-   }
+   } */
 
    header#home {
       min-height: 500px;

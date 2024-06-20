@@ -182,10 +182,11 @@ const Portfolio = ({ data }) => {
   return (
     <section id="portfolio">
         <div className="row">
+        <Fade >
           <Fade top>
             <div style={{ marginBottom: -15 }} className="tagline"></div>
           </Fade>
-          <div className="twelve columns collapsed" style={{    border: '0.5px solid black'}}>
+          <div className="twelve columns collapsed">
             <Tabs
               defaultTab="one"
               onChange={(tabId) => { console.log(tabId) }}
@@ -235,6 +236,7 @@ const Portfolio = ({ data }) => {
               backgroundImage: 'url(images/tabs.png)'
             }}></div>
           </div>
+          </Fade>
         </div>
     </section>
   );
