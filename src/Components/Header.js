@@ -117,9 +117,17 @@ const Header = (props) => {
               position: 'relative',
               height: '100%'
             }}>
-              <div onClick={() => {setFullScreen();handleFullScreenClick();}} className="bottom-right" style={{bottom: fullScreen ? '15px' : '70px', transform: 'rotate(45deg)'}}>
+              <div onClick={() => {setFullScreen();handleFullScreenClick();}} className="bottom-right" style={{bottom: fullScreen ? '15px' : '70px'}}>
                 <span style={{ zIndex: 1000,  cursor: 'pointer'  }}>
-                &#x2194;
+                &#40; F5 &#41;
+                {/* &#x2194; */}
+                </span>
+
+                </div>
+                <div className="bottom-leftt" style={{bottom: fullScreen ? '15px' : '70px'}}>
+                <span style={{ zIndex: 1000,  cursor: 'pointer'  }}>
+                &#40; ⋆𐙚₊˚⊹♡ &#41;
+                {/* &#x2194; */}
                 </span>
 
                 </div>

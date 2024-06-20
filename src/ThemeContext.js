@@ -14,7 +14,7 @@ export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState(themeSet[0]); // Start with 'light'
-    const [fullScreen, setFullScreen] = useState(false);
+    const [fullScreen, setFullScreen] = useState(window.innerWidth < 768);
 
     const cycleTheme = () => {
         const currentThemeIndex = themeSet.indexOf(theme);

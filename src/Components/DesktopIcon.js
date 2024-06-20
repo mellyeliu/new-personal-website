@@ -172,7 +172,7 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
           boxShadow: border ? '0 0 0 1px rgba(0,0,0,0.5)' : 'none', // Red outline
           userSelect: 'none',
           borderRadius: '20px',
-          transform: isHovered ? `scale(${scale + 0.14})` : `scale(${scale + 0.12})`,
+          transform: isHovered ? `scale(${scale + 0.04})` : `scale(${scale + 0.02})`,
           transition: 'transform 0.3s ease-in-out',
           transformOrigin: 'top left', // Adjust as needed
           display: 'block',
