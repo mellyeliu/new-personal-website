@@ -118,10 +118,11 @@ const Header = (props) => {
               height: '100%',
               overflow: 'hidden',
             }}>
-              <div className="bottom-left-2" style={{top: fullScreen ? '15px' : '120px', display: 'none'}}> &#40; 🌐🌷 &#41; </div>
+              <div className="
+              " style={{top: fullScreen ? '15px' : '120px', display: 'none'}}> &#40; 🌐🌷 &#41; </div>
               <div onClick={() => {setFullScreen();handleFullScreenClick();}} className="bottom-right" style={{bottom: fullScreen ? '15px' : '70px'}}>
                 <span style={{ zIndex: 1000,  cursor: 'pointer'  }}>
-                &#40; F5 &#41;
+                &#40; F11 &#41;
                 {/* &#x2194; */}
                 </span>
 
