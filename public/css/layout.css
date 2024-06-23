@@ -166,6 +166,13 @@ img#headerpic {
    background: none;
    line-height: 9px;
    z-index: 1000;
+   transition: .2s ease-in-out;
+}
+
+.bottom-right:hover {
+   transform: scale(1.1);
+   transition: .2s ease-in-out;
+
 }
 
 .bottom-leftt {

@@ -107,7 +107,7 @@ const FileData = {
         {
             "hoverString": "windows93",
             "src": "images/windows93.png",
-            "url": "https://www.windows93.com/",
+            "url": "https://www.windows93.net/",
             "scale": 0.52,
             "x": 30,
             "y": 60
@@ -148,16 +148,24 @@ const FileData = {
         },
         {
             "hoverString": "૮꒰ ˶• ༝ •˶꒱ა ♡",
-            "src": "images/fj.png",
+            "src": "images/lis.png",
             "url": "https://www.freejinger.org/",
             "scale": 0.5,
             "x": 35,
             "y": 48
         },
         {
+            "hoverString": "tyler x josh (21p)",
+            "src": "images/21p.png",
+            "url": "https://archiveofourown.org/works/8262935",
+            "scale": 0.5,
+            "x": 25,
+            "y": 38
+        },
+        {
             "hoverString": "everlark ♡",
             "src": "images/everlark.png",
-            "url": "https://archiveofourown.org/works/4249794/chapters/9617619",
+            "url": "https://archiveofourown.org/works/603428",
             "scale": 0.5,
             "x": 23,
             "y": 65

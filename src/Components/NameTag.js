@@ -19,7 +19,8 @@ const NameTag = () => {
       ]
 
     return (
-        <div style={{
+        <div
+            style={{
             width: '300px',
             height: '100px',
             backgroundColor: 'white',
