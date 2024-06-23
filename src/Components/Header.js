@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect, useRef } from 'react';
 import Fade from 'react-reveal/Fade';
 import Carousel from 'nuka-carousel';
 import Nav from './Nav'
@@ -18,6 +18,35 @@ const Header = (props) => {
   const [zIndex, setZIndex] = useState(1);
   const { fullScreen, setFullScreen } = useContext(ThemeContext);
   const [triggerResize, setTriggerResize] = useState(false);
+  const [isFoldersVisible, setIsFoldersVisible] = useState(true);
+  const parentRef = useRef(null);  // Reference to the parent element
+
+  // Function to check if the parent element is visible in the viewport
+  const isElementInViewport = (el) => {
+      const rect = el.getBoundingClientRect();
+      return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+  };
+
+  // Effect to add window scroll event listener
+  useEffect(() => {
+      const handleScroll = () => {
+          if (parentRef.current) {
+            setIsFoldersVisible(isElementInViewport(parentRef.current));
+          }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      // Clean up the event listener when the component unmounts
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      };
+  }, []);
 
   const handleFullScreenClick = () => {
     setTriggerResize(prevState => !prevState);
@@ -53,7 +82,7 @@ const Header = (props) => {
       alignY = 25;
       var art = props.data.photos.map(function (photo, i) {
         var imageSrc = 'images/' + photo.image;
-        return <div key={photo.date} className="hover-container" >
+        return <div key={photo.date} className="hover-container" ref={parentRef}>
           <img style={{ opacity: 0 }} id="headerpic" draggable="false" src={imageSrc}></img>
 
           {display_folders.map((folder, ind) => {
@@ -89,6 +118,7 @@ const Header = (props) => {
               <Folder src={'images/folder.png'}
                 isOpen={openStates[0][index]}
                 onOpen={(isOpen) => handleFolderOpen(index, isOpen, 0)}
+                isVisible={isFoldersVisible}
                 hoverString={display_strings[index]}
                 onHoverChange={handleHoverChange}
                 caption={folder}

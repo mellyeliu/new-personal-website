@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Folder = ({ src, scale, x, y, hoverString, onHoverChange, caption, isOpen, onOpen }) => {
+const Folder = ({ src, scale, x, y, hoverString, onHoverChange, caption, isOpen, onOpen, isVisible }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -65,7 +65,7 @@ const Folder = ({ src, scale, x, y, hoverString, onHoverChange, caption, isOpen,
         top: position.y,
         userSelect: 'none',
         zIndex: 100,
-        display: 'block',
+        display: isVisible ? 'block' : 'none',
         transform: `scale(${scale})`
       }}>
       <img
