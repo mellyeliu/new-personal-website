@@ -8,8 +8,7 @@ import FileData from '../Data/FileData'
 import '@animated-burgers/burger-squeeze/dist/styles.css'
 import { ThemeContext } from '../ThemeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
+import { isMobile } from 'react-device-detect';
 
 const Header = (props) => {
   const [isGridLayout, setIsGridLayout] = useState(false);

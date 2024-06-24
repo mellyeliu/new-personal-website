@@ -218,9 +218,9 @@ const stopTouchDrag = () => {
         onMouseMove={onDrag}
         onMouseUp={stopDrag}
         onMouseLeave={stopDrag}
-        onTouchStart={startTouchDrag}
-        onTouchMove={onTouchMove}
-        onTouchEnd={stopTouchDrag}
+        // onTouchStart={startTouchDrag}
+        // onTouchMove={onTouchMove}
+        // onTouchEnd={stopTouchDrag}
         onMouseEnter={onHover}
         ref={ref}
         draggable={false}
