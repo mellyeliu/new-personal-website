@@ -11,23 +11,26 @@ const NameTag = () => {
         'is reading about creation myths',
         'is watching a movie on 2x speed',
         'only eats one food (hotpot)',
+        'is giving stick n poke tattoos',
         'aims to create safe spaces',
         'is a shill for dimensional',
+        'collects tamagotchis',
         'is attached to her notes app',
-        'is reading fanfic about inanimate objects',
+        'is writing fanfic about inanimate objects',
         'is always misplacing their keys',
       ]
 
     return (
         <div
             style={{
-            width: '300px',
+            width: '310px',
             height: '100px',
             backgroundColor: 'white',
             border: '0.5px solid #111',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
+            textAlign: 'center',
             alignItems: 'center',
             padding: '10px',
             boxSizing: 'border-box',

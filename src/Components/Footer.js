@@ -10,6 +10,7 @@ const quotes = [
   "You treat me like I'm more than a pair of skin and bones / And that really made a difference in my story ",
   "But these things don't matter, because once you are Real you can't be ugly, except to people who don't understand.",
   "She's the monster in the fridge / She's chewing cotton wool",
+  "You are a woman with a man inside watching a woman. You are your own voyeur.",
   "Our brains are sick but that's okay",
   "A thousand dreams I'm holding heavy ",
   "The last refuge of the insomniac is a sense of superiority to the sleeping world",

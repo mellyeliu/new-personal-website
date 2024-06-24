@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { isMobile } from 'react-device-detect';
 
 const Folder = ({ src, scale, x, y, hoverString, onHoverChange, caption, isOpen, onOpen, isVisible }) => {
   const [position, setPosition] = useState({ x: x, y: y });
@@ -65,7 +66,7 @@ const Folder = ({ src, scale, x, y, hoverString, onHoverChange, caption, isOpen,
         top: position.y,
         userSelect: 'none',
         zIndex: 100,
-        display: isVisible ? 'block' : 'none',
+        display: (!isMobile || isVisible) ? 'block' : 'none',
         transform: `scale(${scale})`
       }}>
       <img
