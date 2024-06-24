@@ -28,7 +28,6 @@ body {
 
 .no-scroll {
    overflow-x: hidden !important;
-   height: 100%;
  }
 
 html {
