@@ -26,6 +26,11 @@ body {
    background: #fff;
 }
 
+.no-scroll {
+   overflow-x: hidden !important;
+   height: 100%;
+ }
+
 html {
    box-sizing: border-box;
 }
@@ -169,7 +174,7 @@ img#headerpic {
    transition: .2s ease-in-out;
 }
 
-.bottom-right:hover {
+.bottom-leftt:hover, .bottom-right:hover {
    transform: scale(1.1);
    transition: .2s ease-in-out;
 
@@ -191,6 +196,7 @@ img#headerpic {
    background: none;
    line-height: 9px;
    z-index: 1000;
+   transition: .2s ease-in-out;
 }
 
 .bottom-left-2 {

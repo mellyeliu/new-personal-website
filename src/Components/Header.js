@@ -19,6 +19,7 @@ const Header = (props) => {
   const { fullScreen, setFullScreen } = useContext(ThemeContext);
   const [triggerResize, setTriggerResize] = useState(false);
   const [isFoldersVisible, setIsFoldersVisible] = useState(true);
+  const [isFoldersOff, setisFoldersOff] = useState(false);
   const parentRef = useRef(null);  // Reference to the parent element
 
   // Function to check if the parent element is visible in the viewport
@@ -71,7 +72,7 @@ const Header = (props) => {
 
   const folders = ['Games', 'Fandoms', 'Wikis', 'About Me'];
   const display_folders = ['games', 'fandoms', 'wikis', 'About Me'];
-  const display_strings = ['( Gamemaking as playing god )', '( Collecting obsessions )', '( Can we build a collective truth ? )', '( Autofiction as always )'];
+  const display_strings = ['( Gamemaking as playing god )', '( Parallel universes of fictional worlds )', '( Can we build a collective truth ? )', '( Autofiction as therapy )'];
   let alignX = 0;
   let alignY = 30;
   let counter = 0
@@ -114,18 +115,19 @@ const Header = (props) => {
             ) : null
           })}
           {folders.map((folder, index) => {
-            return (
+            return !isFoldersOff ? (
               <Folder src={'images/folder.png'}
                 isOpen={openStates[0][index]}
                 onOpen={(isOpen) => handleFolderOpen(index, isOpen, 0)}
                 isVisible={isFoldersVisible}
                 hoverString={display_strings[index]}
+                key={index}
                 onHoverChange={handleHoverChange}
                 caption={folder}
                 x={0}
                 y={150 + 100 * index}
                 scale={0.5} />
-            )
+            ) : null
           })}
           {isChildHovered === '' ? <div className="bottom-left">{photo.place} </div> : <div id="header-hover" className="bottom-left">{isChildHovered} </div>}
         </div>
@@ -156,9 +158,9 @@ const Header = (props) => {
                 </span>
 
                 </div>
-                <div className="bottom-leftt" style={{bottom: fullScreen ? '15px' : '70px'}}>
+                <div onClick={() => {setisFoldersOff(!isFoldersOff)}} className="bottom-leftt" style={{bottom: fullScreen ? '15px' : '70px'}}>
                 <span style={{ zIndex: 1000,  cursor: 'pointer'  }}>
-                &#40; ⋆𐙚₊˚⊹♡ &#41;
+                &#40; Folders &#41;
                 {/* &#x2194; */}
                 </span>
 

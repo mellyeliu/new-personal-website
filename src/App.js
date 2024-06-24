@@ -13,6 +13,8 @@ import AsciiArtBackground from './Components/AsciiArtBackground';
 
 const App = () => {
   const [resumeData, setResumeData] = useState({});
+  const [isFoldersOff, setisFoldersOff] = useState(false);
+
 
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
@@ -66,7 +68,7 @@ const App = () => {
             <div className={`App ${theme === "dark" ? "" : ""}`} style={{overflow: fullScreen ? 'hidden' : 'scroll', height: fullScreen ? `${windowHeight}px` : null}}>
               {!fullScreen && <Nav data={resumeData.main} title='Mellye.liu' subtitle='Code / Writing / Art' />}
               {fullScreen && <NameTag/>}
-              <Header data={resumeData.main} dest={'home'} />
+              <Header data={resumeData.main} dest={'home'}/>
               <div style={{ display: fullScreen ? 'none' : 'block', position: 'relative' }}>
                 <Portfolio style={{zIndex: 1000000, position: 'relative'}} data={resumeData.portfolio} />
                 <Footer data={resumeData.main} />

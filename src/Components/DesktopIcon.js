@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { event } from 'react-ga';
 
+
 const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hoverString, border, zIndex, setZIndex, triggerResize }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
@@ -40,12 +41,12 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
   const [isClicked, setIsClicked] = useState(false);
 
   const handleResize = () => {
-    const divs = document.getElementsByClassName('hover-container');
-    if (divs.length > 0) {
-      const divWidth = divs[0].clientWidth;
-      setWidth(Math.max(divWidth, minWidth));
+      const divs = document.getElementsByClassName('hover-container');
+      if (divs.length > 0) {
+        const divWidth = divs[0].clientWidth;
+        setWidth(Math.max(divWidth, minWidth));
+      }
     }
-  }
 
   const handleClickOutside = (event) => {
     if (ref.current && !ref.current.contains(event.target)) {
@@ -85,10 +86,8 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
 
   useEffect(() => {
     setPosition({ x, y });
-
   }, [x, y, isGridLayout]);
 
-  // Function to start the drag
   const startDrag = (e) => {
     setDragging(true);
     setZIndex(zIndex + 1);
@@ -97,25 +96,19 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
     e.target.style.cursor = 'grabbing';
   };
 
-  // Function to drag the image
   const onDrag = (e) => {
-      if (dragging) {
-        const container = e.target.closest('.hover-container');
-        setWidth(Math.max(container.offsetWidth, minWidth));
-        // container.offsetWidth = container.offsetWidth > 800 ? container.offsetWidth : 800;
-        const deltaX = e.movementX / container.offsetWidth * 100;
-        const deltaY = e.movementY / container.offsetHeight * 100;
-        setPosition(prev => ({
-            x: prev.x + deltaX,
-            y: prev.y + deltaY
-        }));
-      // const newX = position.x + e.movementX;
-      // const newY = position.y + e.movementY;
-      // setPosition({ x: newX, y: newY });
+    if (dragging) {
+      const container = e.target.closest('.hover-container');
+      setWidth(Math.max(container.offsetWidth, minWidth));
+      const deltaX = e.movementX / container.offsetWidth * 100;
+      const deltaY = e.movementY / container.offsetHeight * 100;
+      setPosition(prev => ({
+          x: prev.x + deltaX,
+          y: prev.y + deltaY
+      }));
     }
   };
 
-  // Function to stop the drag
   const stopDrag = (e) => {
     setIsHovered(false);
     // e.target.style.zIndex = 'auto';
@@ -152,9 +145,52 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
     pointerEvents: 'none'
   };
 
-  console.log(zIndex);
+const startTouchDrag = (e) => {
+  if (e.touches.length > 0) {
+    const touch = e.touches[0];
+    // Store initial touch position
+    ref.current.initialTouchX = touch.clientX;
+    ref.current.initialTouchY = touch.clientY;
 
+    setDragging(true);
+    setZIndex(zIndex + 1);
+    e.target.style.zIndex = zIndex;
+    e.target.style.cursor = 'grabbing';
+  }
+};
 
+const onTouchMove = (e) => {
+  //e.preventDefault();
+  if (dragging && e.touches.length > 0) {
+    const touch = e.touches[0];
+    const container = e.target.closest('.hover-container');
+
+    // Calculate movement based on the difference from the initial touch
+    const deltaX = ((touch.clientX - ref.current.initialTouchX) / container.offsetWidth) * 100;
+    const deltaY = ((touch.clientY - ref.current.initialTouchY) / container.offsetHeight) * 100;
+
+    // Update initial touch positions for continuous movement
+    ref.current.initialTouchX = touch.clientX;
+    ref.current.initialTouchY = touch.clientY;
+    document.querySelector('.hover-container').classList.add('no-scroll');
+
+    setPosition(prev => ({
+        x: prev.x + deltaX,
+        y: prev.y + deltaY
+    }));
+  }
+};
+
+const stopTouchDrag = () => {
+  setDragging(false);
+  onHoverChange('');
+  document.querySelector('.hover-container').classList.remove('no-scroll');
+  // Reset initial touch positions
+  if (ref.current) {
+    ref.current.initialTouchX = 0;
+    ref.current.initialTouchY = 0;
+  }
+};
 
   return (
     <div style={imageContainerStyle}>
@@ -163,18 +199,17 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
         style={{
           cursor: 'grab',
           position: 'absolute',
-          // border: isClicked ? '2px solid #fff' : 'none',
           left: `${position.x * width / 100}px`,
-          minHeight: `${20}%`,
+          minHeight: '20%',
           zIndex: 1,
           top: `${position.y}%`,
           filter: border ? 'drop-shadow(8px 8px 10px rgba(0,0,0,0.3))' : 'drop-shadow(0px 6px 5px rgba(0,0,0,0.8))',
-          boxShadow: border ? '0 0 0 1px rgba(0,0,0,0.5)' : 'none', // Red outline
+          boxShadow: border ? '0 0 0 1px rgba(0,0,0,0.5)' : 'none',
           userSelect: 'none',
           borderRadius: '20px',
           transform: isHovered ? `scale(${scale + 0.04})` : `scale(${scale + 0.02})`,
           transition: 'transform 0.3s ease-in-out',
-          transformOrigin: 'top left', // Adjust as needed
+          transformOrigin: 'top left',
           display: 'block',
         }}
         className='draggableImage'
@@ -183,11 +218,13 @@ const DesktopIcon = ({ src, scale, url, x, y, isGridLayout, onHoverChange, hover
         onMouseMove={onDrag}
         onMouseUp={stopDrag}
         onMouseLeave={stopDrag}
-        ref={ref}
+        onTouchStart={startTouchDrag}
+        onTouchMove={onTouchMove}
+        onTouchEnd={stopTouchDrag}
         onMouseEnter={onHover}
-        draggable={false} // Prevent default browser drag behavior
+        ref={ref}
+        draggable={false}
       />
-      {/* <div style={overlayStyle}></div> */}
     </div>
   );
 };
