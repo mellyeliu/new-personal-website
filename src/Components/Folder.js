@@ -37,7 +37,7 @@ const Folder = ({ src, scale, x, y, hoverString, onHoverChange, caption, isOpen,
         top: position.y,
         userSelect: 'none',
         zIndex: 100,
-        display: (!isMobile || isVisible) ? 'block' : 'none',
+        display: 'block',
         transform: `scale(${scale})`
       }}>
       <img

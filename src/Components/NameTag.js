@@ -44,7 +44,7 @@ const NameTag = () => {
             {/* <ul id="nav" className="nav">
                 <li id="logo"> */}
                 {/* <marquee> */}
-                <div style={{ fontWeight: 700, letterSpacing: 0.5, fontFamily: "Cormorant Garamond", fontSize: 22 }} className='control'>{"mellyeliu   ໒꒰ྀིっ˕ -｡꒱ྀི১ ♡ "}</div>
+                <div style={{ fontWeight: 700, letterSpacing: 0.5, fontFamily: "Cormorant Garamond", fontSize: 22 }} className='control'>{"mellyeliu ໒ ꒰ྀིっ˕ -｡꒱ྀི১ ♡ "}</div>
                 <TypingToggleTextList wrapper={true} className='control'
                     textOptions={funFacts}
                     style={{ letterSpacing: 2, fontFamily: "Cormorant Garamond", fontWeight: 300, fontStyle: 'italic', fontSize: 14, paddingTop: 2, color: 'rgb(150,150,150)' }}></TypingToggleTextList>
