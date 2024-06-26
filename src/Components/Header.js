@@ -176,6 +176,7 @@ const Header = (props) => {
               position: "relative",
               height: "100%",
               overflow: "hidden",
+              clipPath: "inset(0 0 0 0)",
             }}
           >
             <div
