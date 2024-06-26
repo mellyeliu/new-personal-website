@@ -131,7 +131,7 @@ const Header = (props) => {
               : null;
           })}
           {folders.map((folder, index) => {
-            return !isFoldersOff ? (
+            return !isFoldersOff && !(!fullScreen && isMobile) ? (
               <Folder
                 src={"images/folder.png"}
                 isOpen={openStates[0][index]}
