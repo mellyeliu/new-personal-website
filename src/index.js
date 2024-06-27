@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
-import registerServiceWorker from "./registerServiceWorker";
+import { register } from "./registerServiceWorker";
 
 const routing = (
   <Router>
@@ -14,4 +14,4 @@ const routing = (
 );
 
 ReactDOM.render(routing, document.getElementById("root"));
-registerServiceWorker();
+register();
