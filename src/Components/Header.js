@@ -167,7 +167,7 @@ const Header = (props) => {
               margin: "0px auto",
               padding: fullScreen ? "0px" : "100px 0px 50px 0px",
               width: fullScreen ? "100%" : "90%",
-              maxWidth: fullScreen ? "100%" : "1150px",
+              maxWidth: fullScreen ? "100%" : "1200px",
               textAlign: "center",
               position: "relative",
               height: "100%",
