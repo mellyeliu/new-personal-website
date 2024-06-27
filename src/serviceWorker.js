@@ -9,6 +9,7 @@ const urlsToCache = [
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
+    // Unregister all service workers
     navigator.serviceWorker
       .getRegistrations()
       .then((registrations) => {
@@ -17,6 +18,7 @@ if ("serviceWorker" in navigator) {
         }
       })
       .then(() => {
+        // Clear all caches
         caches.keys().then((cacheNames) => {
           return Promise.all(
             cacheNames.map((cacheName) => {

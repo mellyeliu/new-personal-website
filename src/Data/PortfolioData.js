@@ -68,7 +68,7 @@ const PortfolioData = {
       {
         title: "Digital Nostalgia",
         category:
-          "Zine documenting my online childhood and the websites that made me.",
+          "Zine documenting my online childhood and the websites that made me. For SF Zine Fest.",
         languages: "Figma",
         image: "zine1.png",
         year: "2023",
@@ -78,7 +78,7 @@ const PortfolioData = {
       {
         title: "My Fanfic Became Sentient and Cannabalized Itself",
         category:
-          "Zine documenting my online childhood and the websites that made me.",
+          "Zine documenting my online childhood and the websites that made me. For SF Zine Fest.",
         languages: "Figma",
         image: "fanfic.png",
         year: "2023",
