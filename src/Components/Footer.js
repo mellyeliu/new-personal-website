@@ -8,7 +8,6 @@ const quotes = [
   "We took away your art because we thought it would reveal your souls",
   "So we spent what was left of our serotonin / To chew on our cheeks and stare at the moon ",
   "You treat me like I'm more than a pair of skin and bones / And that really made a difference in my story ",
-  "All the skeletons you hide / Show me yours, I’ll show you mine",
   "Books exist fully only in the act of being read; and its real home is inside the head of the reader... books are solitudes where we meet",
   "But these things don't matter, because once you are Real you can't be ugly, except to people who don't understand",
   "She's the monster in the fridge / She's chewing cotton wool",
@@ -16,17 +15,18 @@ const quotes = [
   "You are a woman with a man inside watching a woman. You are your own voyeur.",
   "Behind my eyelids are islands of violence / My mind shipwrecked, this is the only land my mind could find",
   "'It might be a whole secret country,' she continued, 'and you and I would be the rulers of it.'",
+  "I can make something good",
+  "This is how all our stories begin, in darkness with our eyes closed, and all our stories end the same way, too, with all of us uttering some last words",
   "'You look like a friend,' said Corduroy. 'I've always wanted a friend.'",
   "Stories are compasses and architecture; we navigate by them, we build sanctuaries and prisons out of them... To love is to put yourself in their story",
   "Our brains are sick but that's okay",
+  "As if happiness is an acquired taste, like coconut cordial or ceviche, to which you can eventually become accustomed, but despair is something surprising each time you encounter it",
   "So much for endings. Beginnings are always more fun. True connoisseurs are known to favor the stretch in between, since it's the hardest to do anything with",
   "You are not yourself, you are crowds of others, you are as leaky a vessel as was ever made",
   "I wanna fall inside your ghost / And fill up every hole inside my mind",
   "I am made and remade continually. Different people draw different words from me",
   "There’s a ghostly double of myself hovering just behind me, and sometimes, it feels like she’s more real than I am",
-  "All the world's a stage / And all the men and women merely Players",
-  "I'm looking for affection in all the wrong places / And we'll keep falling on each other to fill the empty spaces",
-  "I can make something good",
+  "All the world's a stage / And all the men and women merely players",
   "Are all things quantifiable, and all numbers fraught with poetic possibility?",
   "A thousand dreams I'm holding heavy",
   "Through the digital, the body in glitch finds its genesis",
@@ -67,7 +67,7 @@ class Footer extends Component {
                   className="control"
                   textOptions={quotes}
                   wrapper={true}
-                  speed={20}
+                  speed={35}
                   style={{
                     letterSpacing: 2,
                     fontFamily: "Cormorant Garamond",

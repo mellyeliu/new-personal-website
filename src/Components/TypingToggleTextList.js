@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const funFacts = [
+const factsAboutMyself = [
   "believes in digital intimacy",
   "unironically enjoys hyperpop",
   "is using tetris as therapy",
@@ -29,41 +29,77 @@ const funFacts = [
 
 const TypingToggleTextList = ({
   style,
-  wrapper,
-  textOptions = funFacts,
-  speed = 30,
+  wrapper = true,
+  textOptions = factsAboutMyself,
+  speed = 50,
+  autoplay = true,
   order = false,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState("");
+  const [currentFact, setCurrentFact] = useState("");
+  const [factIndex, setFactIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
+  const [reset, setReset] = useState(false);
 
   useEffect(() => {
-    let index = 0;
-    setDisplayedText(""); // Clear text before typing new text
+    let typingInterval;
 
-    const timer = setInterval(() => {
-      if (index < textOptions[currentIndex].length) {
-        setDisplayedText(
-          (prev) => prev + textOptions[currentIndex].charAt(index)
-        );
-        index += 1;
-      } else {
-        clearInterval(timer);
-      }
-    }, speed);
+    if (reset) {
+      setCurrentFact("");
+      setCharIndex(0);
+      setIsTyping(true);
+      setIsPaused(false);
+      setReset(false);
+      return;
+    }
 
-    return () => clearInterval(timer);
-  }, [textOptions, currentIndex, speed]);
+    if (isPaused) {
+      const pauseTimeout = setTimeout(() => {
+        setIsPaused(false);
+        setIsTyping(false);
+      }, 5000);
+      return () => clearTimeout(pauseTimeout);
+    }
 
-  const toggleText = () => {
+    if (isTyping) {
+      typingInterval = setInterval(() => {
+        if (charIndex < textOptions[factIndex].length) {
+          setCurrentFact((prev) => prev + textOptions[factIndex][charIndex]);
+          setCharIndex((prev) => prev + 1);
+        } else {
+          setIsTyping(false);
+          setIsPaused(true);
+        }
+      }, speed);
+    } else {
+      typingInterval = setInterval(() => {
+        if (charIndex >= 0) {
+          setCurrentFact((prev) => prev.slice(0, -1));
+          setCharIndex((prev) => prev - 1);
+        } else {
+          setReset(true);
+          order
+            ? setFactIndex((prev) => (prev + 1) % textOptions.length)
+            : setFactIndex(Math.floor(Math.random() * textOptions.length));
+          setIsTyping(true);
+        }
+      }, speed);
+    }
+
+    return () => clearInterval(typingInterval);
+  }, [charIndex, isTyping, isPaused, reset]);
+
+  const handleClick = () => {
+    setReset(true);
     order
-      ? setCurrentIndex((prev) => (prev + 1) % textOptions.length)
-      : setCurrentIndex(Math.floor(Math.random() * textOptions.length));
+      ? setFactIndex((prev) => (prev + 1) % textOptions.length)
+      : setFactIndex(Math.floor(Math.random() * textOptions.length));
   };
 
   return (
-    <span style={{ ...style, cursor: "pointer" }} onClick={toggleText}>
-      {wrapper ? "( " + displayedText + " [...]" + " )" : displayedText}
+    <span style={{ ...style, cursor: "pointer" }} onClick={handleClick}>
+      {wrapper === true ? "( " + currentFact + " [...]" + " )" : currentFact}
     </span>
   );
 };
