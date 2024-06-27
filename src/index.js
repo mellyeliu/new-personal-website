@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
-import { register } from "./registerServiceWorker";
+// import { register } from "./registerServiceWorker";
+import "./serviceWorker";
 
 const routing = (
   <Router>
@@ -14,4 +15,4 @@ const routing = (
 );
 
 ReactDOM.render(routing, document.getElementById("root"));
-register();
+//register();
