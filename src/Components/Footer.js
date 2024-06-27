@@ -12,6 +12,7 @@ const quotes = [
   "Books exist fully only in the act of being read; and its real home is inside the head of the reader... books are solitudes where we meet",
   "But these things don't matter, because once you are Real you can't be ugly, except to people who don't understand",
   "She's the monster in the fridge / She's chewing cotton wool",
+  "I brushed up on philosophy: To live is to exist within time. To remember is to negate time.",
   "You are a woman with a man inside watching a woman. You are your own voyeur.",
   "Behind my eyelids are islands of violence / My mind shipwrecked, this is the only land my mind could find",
   "'It might be a whole secret country,' she continued, 'and you and I would be the rulers of it.'",
@@ -34,7 +35,6 @@ const quotes = [
   "All the ways of tending to the world less easily validated than parenting... the writing and inventing and the activism",
   "But the old me is still me and maybe the real me / And I think she's pretty",
   "Radios playing a mash of songs about heartbreak and ruin, heartbreak and memory, heartbreak and hatred, how it’s the deeper intimacy",
-  "I brushed up on philosophy: To live is to exist within time. To remember is to negate time.",
   "We are survivors of each other. We have been shark to one another, but also lifeboat",
   "And always when the flash came Emily felt that life was a mysterious thing of persistent beauty.",
   "This is what I keep returning to: how people decide who is or is not an unreliable narrator",
@@ -67,6 +67,7 @@ class Footer extends Component {
                   className="control"
                   textOptions={quotes}
                   wrapper={true}
+                  speed={20}
                   style={{
                     letterSpacing: 2,
                     fontFamily: "Cormorant Garamond",

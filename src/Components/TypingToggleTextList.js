@@ -32,6 +32,7 @@ const TypingToggleTextList = ({
   wrapper,
   textOptions = funFacts,
   speed = 30,
+  order = false,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -55,7 +56,9 @@ const TypingToggleTextList = ({
   }, [textOptions, currentIndex, speed]);
 
   const toggleText = () => {
-    setCurrentIndex(Math.floor(Math.random() * textOptions.length));
+    order
+      ? setCurrentIndex((prev) => (prev + 1) % textOptions.length)
+      : setCurrentIndex(Math.floor(Math.random() * textOptions.length));
   };
 
   return (
