@@ -1380,12 +1380,3 @@ button.rwt__tab:first-child {
 .draggableImage {
   margin-top: 1%;
 }
-
-/* .draggableImage {
-   transition: box-shadow 0.3s ease-in-out;
- }
-
- .draggableImage:hover {
-   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
- }
- */
