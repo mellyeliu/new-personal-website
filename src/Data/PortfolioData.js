@@ -124,7 +124,7 @@ const PortfolioData = {
         title: "Object Anthropomorphism",
         category:
           "A beloved phone app and paperclip find love. Circumventing the ChatGPT censors again.",
-        languages: "Figma",
+        languages: "ChatGPT",
         image: "clippy.png",
         year: "2024",
         type: ["design"],
