@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const AsciiArtBackground = () => {
   // Generate bunnies with positions for 10 rows and 10 columns
@@ -54,7 +54,8 @@ const AsciiArtBackground = () => {
     const resetIfNeeded = () => {
       setBunnies((currentBunnies) =>
         currentBunnies.map((bunny) => {
-          if (bunny.position.left < -200) { // Assuming each bunny is no wider than 200px
+          if (bunny.position.left < -200) {
+            // Assuming each bunny is no wider than 200px
             return {
               ...bunny,
               position: {
@@ -78,21 +79,21 @@ const AsciiArtBackground = () => {
 
   // Inline styles for the container and individual bunnies
   const containerStyle = {
-    display: 'flex',
-    position: 'fixed',
+    display: "flex",
+    position: "fixed",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    overflow: 'hidden',
-    whiteSpace: 'pre',
+    overflow: "hidden",
+    whiteSpace: "pre",
     fontSize: 30,
-    fontFamily: 'monospace',
-    pointerEvents: 'none',
+    fontFamily: "monospace",
+    pointerEvents: "none",
   };
 
   const bunnyStyle = (position, opacity) => ({
-    position: 'absolute',
+    position: "absolute",
     width: 300,
     opacity: opacity,
     left: `${position.left}px`,
