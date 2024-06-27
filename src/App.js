@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import ReactGA from "react-ga";
-import $ from "jquery";
 import "./App.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -11,6 +10,7 @@ import { ThemeContext, ThemeProvider } from "./ThemeContext";
 import Fade from "react-reveal/Fade";
 import Nav from "./Components/Nav";
 import AsciiArtBackground from "./Components/AsciiArtBackground";
+import PortfolioData from "./Data/PortfolioData";
 
 const App = () => {
   const [resumeData, setResumeData] = useState({});
@@ -31,8 +31,6 @@ const App = () => {
   useEffect(() => {
     ReactGA.initialize("UA-110570651-1");
     ReactGA.pageview(window.location.pathname);
-
-    getResumeData();
   }, []);
 
   useEffect(() => {
@@ -43,21 +41,6 @@ const App = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const getResumeData = () => {
-    $.ajax({
-      url: "/resumeData.json",
-      dataType: "json",
-      cache: false,
-      success: function (data) {
-        setResumeData(data);
-      },
-      error: function (xhr, status, err) {
-        console.log(err);
-        alert(err);
-      },
-    });
-  };
 
   return (
     <ThemeProvider>
@@ -71,15 +54,9 @@ const App = () => {
                 height: fullScreen ? `${windowHeight}px` : null,
               }}
             >
-              {!fullScreen && (
-                <Nav
-                  data={resumeData.main}
-                  title="Mellye.liu"
-                  subtitle="Code / Writing / Art"
-                />
-              )}
+              {!fullScreen && <Nav />}
               {fullScreen && <NameTag />}
-              <Header data={resumeData.main} dest={"home"} />
+              <Header dest={"home"} />
               <div
                 style={{
                   display: fullScreen ? "none" : "block",
@@ -88,9 +65,9 @@ const App = () => {
               >
                 <Portfolio
                   style={{ zIndex: 1000000, position: "relative" }}
-                  data={resumeData.portfolio}
+                  data={PortfolioData.portfolio}
                 />
-                <Footer data={resumeData.main} />
+                <Footer data={PortfolioData.main} />
               </div>
             </div>
           </>

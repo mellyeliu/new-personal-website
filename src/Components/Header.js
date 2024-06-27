@@ -82,82 +82,78 @@ const Header = (props) => {
   let alignX = 0;
   let alignY = 30;
   let counter = 0;
+  const photoData = {
+    place: "( Internet gardening )",
+    image: "images/bg-57.png",
+  };
 
-  if (props.data) {
-    counter = 0;
-    alignX = 0;
-    alignY = 25;
-    var art = props.data.photos.map(function (photo, i) {
-      var imageSrc = "images/" + photo.image;
-      return (
-        <div key={photo.date} className="hover-container" ref={parentRef}>
-          <img
-            style={{ opacity: 0 }}
-            id="headerpic"
-            draggable="false"
-            src={imageSrc}
-          ></img>
+  const art = (
+    <div className="hover-container" ref={parentRef}>
+      <img
+        style={{ opacity: 0 }}
+        id="headerpic"
+        draggable="false"
+        src={photoData.src}
+      ></img>
 
-          {display_folders.map((folder, ind) => {
-            return (openStates && openStates[0][ind]) || false
-              ? FileData[folder].map((image, index) => {
-                  if (!image.border) {
-                    alignY = counter % 5 === 0 ? 10 : alignY + 16;
-                    alignX = counter % 5 === 0 ? alignX + 10 : alignX;
-                    if (counter === 0) {
-                      alignX = 5;
-                    }
-                    counter++;
-                  }
-                  return image.border && isGridLayout ? (
-                    <></>
-                  ) : (
-                    <DesktopIcon
-                      url={image.url}
-                      setZIndex={setZIndex}
-                      zIndex={zIndex}
-                      border={image.border ? true : false}
-                      hoverString={image.hoverString}
-                      onHoverChange={handleHoverChange}
-                      src={image.src}
-                      scale={image.scale}
-                      x={isGridLayout ? alignX : image.x}
-                      y={isGridLayout ? alignY : image.y}
-                      triggerResize={triggerResize}
-                      isGridLayout={isGridLayout}
-                    ></DesktopIcon>
-                  );
-                })
-              : null;
-          })}
-          {folders.map((folder, index) => {
-            return !isFoldersOff && !(!fullScreen && isMobile) ? (
-              <Folder
-                src={"images/folder.png"}
-                isOpen={openStates[0][index]}
-                onOpen={(isOpen) => handleFolderOpen(index, isOpen, 0)}
-                isVisible={isFoldersVisible}
-                hoverString={display_strings[index]}
-                key={index}
-                onHoverChange={handleHoverChange}
-                caption={folder}
-                x={0}
-                y={150 + 100 * index}
-                scale={0.5}
-              />
-            ) : null;
-          })}
-          {isChildHovered === "" ? (
-            <div className="bottom-left">{photo.place} </div>
-          ) : (
-            <div id="header-hover" className="bottom-left">
-              {isChildHovered}{" "}
-            </div>
-          )}
+      {display_folders.map((folder, ind) => {
+        return (openStates && openStates[0][ind]) || false
+          ? FileData[folder].map((image) => {
+              if (!image.border) {
+                alignY = counter % 5 === 0 ? 10 : alignY + 16;
+                alignX = counter % 5 === 0 ? alignX + 10 : alignX;
+                if (counter === 0) {
+                  alignX = 5;
+                }
+                counter++;
+              }
+              return image.border && isGridLayout ? (
+                <></>
+              ) : (
+                <DesktopIcon
+                  url={image.url}
+                  setZIndex={setZIndex}
+                  zIndex={zIndex}
+                  border={image.border ? true : false}
+                  hoverString={image.hoverString}
+                  onHoverChange={handleHoverChange}
+                  src={image.src}
+                  scale={image.scale}
+                  x={isGridLayout ? alignX : image.x}
+                  y={isGridLayout ? alignY : image.y}
+                  triggerResize={triggerResize}
+                  isGridLayout={isGridLayout}
+                ></DesktopIcon>
+              );
+            })
+          : null;
+      })}
+      {folders.map((folder, index) => {
+        return !isFoldersOff && !(!fullScreen && isMobile) ? (
+          <Folder
+            src={"images/folder.png"}
+            isOpen={openStates[0][index]}
+            onOpen={(isOpen) => handleFolderOpen(index, isOpen, 0)}
+            isVisible={isFoldersVisible}
+            hoverString={display_strings[index]}
+            key={index}
+            onHoverChange={handleHoverChange}
+            caption={folder}
+            x={0}
+            y={150 + 100 * index}
+            scale={0.5}
+          />
+        ) : null;
+      })}
+      {isChildHovered === "" ? (
+        <div className="bottom-left">{photoData.place} </div>
+      ) : (
+        <div id="header-hover" className="bottom-left">
+          {isChildHovered}{" "}
         </div>
-      );
-    }, this);
-  }
+      )}
+    </div>
+  );
 
   return (
     <>

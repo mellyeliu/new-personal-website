@@ -1,13 +1,9 @@
-import React, { Component, useState, useEffect } from "react";
-import Nav from "./Nav";
+import React, { useState, useEffect } from "react";
 import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
-// import 'react-web-tabs/dist/react-web-tabs.css';
 import Fade from "react-reveal/Fade";
-import Carousel from "nuka-carousel";
+import PortfolioData from "../Data/PortfolioData";
 
-const Portfolio = ({ data }) => {
-  const [hovered, setHovered] = useState(false);
-  const [currentImageURL, setCurrentImageURL] = useState("");
+const Portfolio = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,24 +13,6 @@ const Portfolio = ({ data }) => {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const onEnter = ({ projectImage }) => {
-    setHovered(true);
-    setCurrentImageURL(projectImage);
-  };
-  const onExit = () => {
-    setHovered(false);
-  };
-
-  const openPopupWindow = (url) => {
-    // const windowFeatures = `width=${popupWidth},height=${popupHeight},left=${left},top=${top}`;
-    const features = `width=400,height=250,resizable=no,scrollbars=no,left=200,top=300`;
-
-    // Open the popup
-    if (url) {
-      window.open(url, "popupWindow", features);
-    }
-  };
 
   const getProjects = (projects, category) => {
     const filteredProjects =
@@ -105,9 +83,9 @@ const Portfolio = ({ data }) => {
           style={{ padding: "0 15px" }}
           className="two columns portfolio-item"
         >
-          <div className="item-wrap hvr-grow">
+          <div className="hvr-grow">
             {projects.url !== "" ? (
-              <a target="_blank" href={projects.url} rel="noreferrer">
+              <a target="_blank" href={projects.url} rel="noopener noreferrer">
                 {project}
               </a>
             ) : (
@@ -119,11 +97,9 @@ const Portfolio = ({ data }) => {
     });
   };
 
-  if (data) {
-    var projects = getProjects(data.projects, "all");
-    var code = getProjects(data.projects, "code");
-    var design = getProjects(data.projects, "design");
-  }
+  var projects = getProjects(PortfolioData.portfolio.projects, "all");
+  var code = getProjects(PortfolioData.portfolio.projects, "code");
+  var design = getProjects(PortfolioData.portfolio.projects, "design");
 
   return (
     <section id="portfolio">
