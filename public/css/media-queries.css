@@ -202,6 +202,10 @@
     top: 0px !important;
   }
 
+  .bottom-left-2 {
+    display: block !important;
+  }
+
   #play-button,
   .bottom-leftt:hover,
   .bottom-right:hover {

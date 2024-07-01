@@ -22,6 +22,18 @@ const DesktopIcon = ({
   const [width, setWidth] = useState(minWidth);
   const ref = useRef(null);
 
+  const [mobileWidth, setMobileWidth] = useState(window.screen.width);
+
+  useEffect(() => {
+    const handleResize = () => setMobileWidth(window.screen.width);
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     handleResize(); // Call it once to get initial width
 
@@ -173,20 +185,16 @@ const DesktopIcon = ({
   };
 
   const onTouchMove = (e) => {
-    //e.preventDefault();
     if (dragging && e.touches.length > 0) {
       const touch = e.touches[0];
       const container = e.target.closest(".hover-container");
 
-      // Calculate movement based on the difference from the initial touch
       const deltaX =
-        ((touch.clientX - ref.current.initialTouchX) / container.offsetWidth) *
-        100;
+        ((touch.clientX - ref.current.initialTouchX) / mobileWidth) * 50;
       const deltaY =
         ((touch.clientY - ref.current.initialTouchY) / container.offsetHeight) *
         100;
 
-      // Update initial touch positions for continuous movement
       ref.current.initialTouchX = touch.clientX;
       ref.current.initialTouchY = touch.clientY;
       document.querySelector(".hover-container").classList.add("no-scroll");
@@ -242,9 +250,9 @@ const DesktopIcon = ({
         onMouseMove={onDrag}
         onMouseUp={stopDrag}
         onMouseLeave={stopDrag}
-        // onTouchStart={startTouchDrag}
-        // onTouchMove={onTouchMove}
-        // onTouchEnd={stopTouchDrag}
+        onTouchStart={startTouchDrag}
+        onTouchMove={onTouchMove}
+        onTouchEnd={stopTouchDrag}
         onMouseEnter={onHover}
         ref={ref}
         draggable={false}

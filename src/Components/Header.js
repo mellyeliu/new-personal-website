@@ -23,6 +23,58 @@ const Header = (props) => {
   const [isFoldersOff, setisFoldersOff] = useState(false);
   const parentRef = useRef(null); // Reference to the parent element
 
+  useEffect(() => {
+    let startX = 0;
+    let startY = 0;
+
+    const handleTouchStart = (e) => {
+      const touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+    };
+
+    const handleTouchMove = (e) => {
+      const touch = e.touches[0];
+      const diffX = touch.clientX - startX;
+      const diffY = touch.clientY - startY;
+
+      if (Math.abs(diffY) > Math.abs(diffX)) {
+        e.preventDefault();
+      }
+    };
+
+    const preventVerticalScroll = (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+      }
+    };
+
+    if (fullScreen) {
+      document.addEventListener("wheel", preventVerticalScroll, {
+        passive: false,
+      });
+      document.addEventListener("touchstart", handleTouchStart, {
+        passive: false,
+      });
+      document.addEventListener("touchmove", handleTouchMove, {
+        passive: false,
+      });
+    }
+
+    // Clean up the event listeners on component unmount
+    return () => {
+      document.removeEventListener("wheel", preventVerticalScroll, {
+        passive: false,
+      });
+      document.removeEventListener("touchstart", handleTouchStart, {
+        passive: false,
+      });
+      document.removeEventListener("touchmove", handleTouchMove, {
+        passive: false,
+      });
+    };
+  }, [fullScreen]);
+
   // Function to check if the parent element is visible in the viewport
   const isElementInViewport = (el) => {
     const rect = el.getBoundingClientRect();

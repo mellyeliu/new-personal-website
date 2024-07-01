@@ -1,38 +1,12 @@
 import React, { useState, useEffect } from "react";
-
-const factsAboutMyself = [
-  "believes in digital intimacy",
-  "unironically enjoys hyperpop",
-  "is using tetris as therapy",
-  "is organizing her goodreads bookshelves",
-  "psychoanalyzes to feel safe",
-  "is deep in a wikipedia rabbit hole",
-  "has gone permanently nocturnal",
-  "is outfit repeating",
-  "is reading about creation myths",
-  "is chilling on figma with friends",
-  "is watching a movie on 2x speed",
-  "only eats one food (hotpot)",
-  "is doodling in ms paint",
-  "is dissociating at indie concerts",
-  "is trauma dumping to strangers",
-  "is adding sichuan peppercorn to everything",
-  "is giving stick n poke tattoos",
-  "is raving about 2cb",
-  "aims to create safe spaces",
-  "is a shill for dimensional",
-  "collects tamagotchis",
-  "is attached to her notes app",
-  "is writing fanfic about inanimate objects",
-  "is always misplacing their keys",
-];
+import { selfFacts } from "../Data/QuotesData";
 
 const TypingToggleTextList = ({
   style,
   wrapper = true,
-  textOptions = factsAboutMyself,
+  textOptions = selfFacts,
   speed = 50,
-  autoplay = true,
+  autoplaySpeed = 10000,
   order = false,
 }) => {
   const [currentFact, setCurrentFact] = useState("");
@@ -58,7 +32,7 @@ const TypingToggleTextList = ({
       const pauseTimeout = setTimeout(() => {
         setIsPaused(false);
         setIsTyping(false);
-      }, 5000);
+      }, autoplaySpeed);
       return () => clearTimeout(pauseTimeout);
     }
 
