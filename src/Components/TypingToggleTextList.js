@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { selfFacts } from "../Data/QuotesData";
+import { ThemeContext } from "../ThemeContext";
 
 const TypingToggleTextList = ({
   style,
@@ -15,6 +16,15 @@ const TypingToggleTextList = ({
   const [isTyping, setIsTyping] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
   const [reset, setReset] = useState(false);
+  const { cursorString, setCursorString } = useContext(ThemeContext);
+
+  const handleHoverChange = () => {
+    if (cursorString === "") {
+      setCursorString("click for more!");
+    } else {
+      setCursorString("");
+    }
+  };
 
   useEffect(() => {
     let typingInterval;
@@ -72,7 +82,12 @@ const TypingToggleTextList = ({
   };
 
   return (
-    <span style={{ ...style, cursor: "pointer" }} onClick={handleClick}>
+    <span
+      style={{ ...style, cursor: "pointer" }}
+      onClick={handleClick}
+      onMouseEnter={handleHoverChange}
+      onMouseLeave={handleHoverChange}
+    >
       {wrapper === true ? "( " + currentFact + " [...]" + " )" : currentFact}
     </span>
   );

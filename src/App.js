@@ -11,10 +11,14 @@ import Fade from "react-reveal/Fade";
 import Nav from "./Components/Nav";
 import AsciiArtBackground from "./Components/AsciiArtBackground";
 import PortfolioData from "./Data/PortfolioData";
+import TextCursor from "./Components/TextCursor";
+import { isMobile } from "react-device-detect";
 
 const App = () => {
   const [resumeData, setResumeData] = useState({});
   const [isFoldersOff, setisFoldersOff] = useState(false);
+  //const [showCursor, setShowCursor] = useState("");
+  const { cursorString, setCursorString } = useContext(ThemeContext);
 
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
@@ -47,6 +51,7 @@ const App = () => {
       <ThemeContext.Consumer>
         {({ theme, fullScreen }) => (
           <>
+            {!isMobile && <TextCursor />}
             <div
               className={`App ${theme === "dark" ? "" : ""}`}
               style={{
@@ -55,8 +60,12 @@ const App = () => {
               }}
             >
               {!fullScreen && <Nav />}
-              {fullScreen && <NameTag />}
-              <Header dest={"home"} />
+              {!isFoldersOff && fullScreen && <NameTag />}
+              <Header
+                dest={"home"}
+                isFoldersOff={isFoldersOff}
+                setisFoldersOff={setisFoldersOff}
+              />
               <div
                 style={{
                   display: fullScreen ? "none" : "block",

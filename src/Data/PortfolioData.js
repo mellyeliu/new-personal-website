@@ -44,7 +44,7 @@ const PortfolioData = {
         image: "pweb2.png",
         year: "2024",
         type: ["code"],
-        url: "",
+        url: "https://github.com/mellyeliu/new-personal-website/",
       },
       {
         title: "Ascii Storybook",
@@ -108,7 +108,7 @@ const PortfolioData = {
         image: "inform.png",
         year: "2023",
         type: ["code"],
-        url: "",
+        url: "https://github.com/mellyeliu/dreamland/blob/main/dreamland.inform/Source/story.ni",
       },
       {
         title: "M0MENTS",

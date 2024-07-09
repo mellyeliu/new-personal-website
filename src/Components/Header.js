@@ -18,9 +18,9 @@ const Header = (props) => {
   });
   const [zIndex, setZIndex] = useState(1);
   const { fullScreen, setFullScreen } = useContext(ThemeContext);
+  const { cursorString, setCursorString } = useContext(ThemeContext);
   const [triggerResize, setTriggerResize] = useState(false);
   const [isFoldersVisible, setIsFoldersVisible] = useState(true);
-  const [isFoldersOff, setisFoldersOff] = useState(false);
   const parentRef = useRef(null); // Reference to the parent element
 
   useEffect(() => {
@@ -123,6 +123,39 @@ const Header = (props) => {
     setIsChildHovered(hoverState);
   };
 
+  const handleFolderHoverChange = (hoverState) => {
+    setIsChildHovered(hoverState);
+    if (hoverState === "") {
+      setCursorString("");
+    } else {
+      setCursorString("open/close folders");
+    }
+  };
+
+  const handleMenuHoverChange = () => {
+    if (cursorString !== "") {
+      setCursorString("");
+    } else {
+      setCursorString("show/hide menus");
+    }
+  };
+
+  const handleSortHoverChange = () => {
+    if (cursorString === "") {
+      setCursorString("sort/shuffle icons");
+    } else {
+      setCursorString("");
+    }
+  };
+
+  const handleFullscreenHoverChange = () => {
+    if (cursorString === "") {
+      setCursorString("fullscreen!");
+    } else {
+      setCursorString("");
+    }
+  };
+
   const folders = ["Games", "Fandoms", "Wikis", "About Me"];
   const display_folders = ["games", "fandoms", "wikis", "About Me"];
   const display_strings = [
@@ -166,6 +199,7 @@ const Header = (props) => {
                   url={image.url}
                   setZIndex={setZIndex}
                   zIndex={zIndex}
+                  setShowCursor={setCursorString}
                   border={image.border ? true : false}
                   hoverString={image.hoverString}
                   onHoverChange={handleHoverChange}
@@ -181,7 +215,7 @@ const Header = (props) => {
           : null;
       })}
       {folders.map((folder, index) => {
-        return !isFoldersOff && !(!fullScreen && isMobile) ? (
+        return !props.isFoldersOff && !(!fullScreen && isMobile) ? (
           <Folder
             src={"images/folder.png"}
             isOpen={openStates[0][index]}
@@ -189,7 +223,7 @@ const Header = (props) => {
             isVisible={isFoldersVisible}
             hoverString={display_strings[index]}
             key={index}
-            onHoverChange={handleHoverChange}
+            onHoverChange={handleFolderHoverChange}
             caption={folder}
             x={0}
             y={150 + 100 * index}
@@ -242,27 +276,44 @@ const Header = (props) => {
               className="bottom-right"
               style={{ bottom: fullScreen ? "15px" : "70px" }}
             >
-              <span style={{ zIndex: 1000, cursor: "pointer" }}>
+              <span
+                style={{ zIndex: 1000, cursor: "pointer" }}
+                onMouseEnter={handleFullscreenHoverChange}
+                onMouseLeave={handleFullscreenHoverChange}
+              >
                 &#40; F11 &#41;
                 {/* &#x2194; */}
               </span>
             </div>
             <div
               onClick={() => {
-                setisFoldersOff(!isFoldersOff);
+                props.setisFoldersOff(!props.isFoldersOff);
               }}
               className="bottom-leftt"
               style={{ bottom: fullScreen ? "15px" : "70px" }}
             >
-              <span style={{ zIndex: 1000, cursor: "pointer" }}>
-                &#40; Folders &#41;
+              <span
+                style={{ zIndex: 1000, cursor: "pointer" }}
+                onMouseEnter={handleMenuHoverChange}
+                onMouseLeave={handleMenuHoverChange}
+              >
+                &#40; Menus &#41;
                 {/* &#x2194; */}
               </span>
             </div>
             <div className="container" style={{ zIndex: 1 }}>
-              <div onClick={toggleButton} className="top-left">
+              <div
+                onClick={toggleButton}
+                className="top-left"
+                // onMouseEnter={handleSortHoverChange}
+                // onMouseLeave={handleSortHoverChange}
+              >
                 {isGridLayout ? (
-                  <span id="play-button">
+                  <span
+                    id="play-button"
+                    onMouseEnter={handleSortHoverChange}
+                    onMouseLeave={handleSortHoverChange}
+                  >
                     &#40; Shuffle{" "}
                     <i
                       style={{ fontSize: 11 }}
@@ -272,7 +323,11 @@ const Header = (props) => {
                     &#41;
                   </span>
                 ) : (
-                  <span id="play-button">
+                  <span
+                    id="play-button"
+                    onMouseEnter={handleSortHoverChange}
+                    onMouseLeave={handleSortHoverChange}
+                  >
                     {" "}
                     &#40; Sort &nbsp;
                     <i style={{ fontSize: 8 }} className="fas fa-play"></i>{" "}

@@ -23,13 +23,10 @@ const Folder = ({
 
   const onHover = () => {
     setIsHovered(true);
-    console.log(hoverString);
     onHoverChange(hoverString);
-    // hoverText.style.display = 'none';
   };
 
-  // Function to stop the drag
-  const stopHover = (e) => {
+  const stopHover = () => {
     setIsHovered(false);
     onHoverChange("");
     setDragging(false);
@@ -74,7 +71,6 @@ const Folder = ({
           {caption}
         </div>
       )}{" "}
-      {/* Render caption if it is provided */}
     </div>
   );
 };

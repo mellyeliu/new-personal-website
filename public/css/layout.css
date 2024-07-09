@@ -1246,6 +1246,7 @@ button.rwt__tab:first-child {
   border: 0;
   /* font-family: inherit; */
   font-size: 17px;
+  cursor: pointer;
   font-family: "Cormorant Garamond";
   font-style: italic;
   font-weight: 400;

@@ -1,10 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
 import Fade from "react-reveal/Fade";
 import PortfolioData from "../Data/PortfolioData";
+import { ThemeContext } from "../ThemeContext";
 
 const Portfolio = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { cursorString, setCursorString } = useContext(ThemeContext);
+
+  const handleHoverChange = () => {
+    if (cursorString !== "") {
+      setCursorString("");
+    } else {
+      setCursorString("browse by tag!");
+    }
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -85,7 +95,13 @@ const Portfolio = () => {
         >
           <div className="hvr-grow">
             {projects.url !== "" ? (
-              <a target="_blank" href={projects.url} rel="noopener noreferrer">
+              <a
+                // onMouseEnter={handleHoverChange}
+                // onMouseLeave={handleHoverChange}
+                target="_blank"
+                href={projects.url}
+                rel="noopener noreferrer"
+              >
                 {project}
               </a>
             ) : (
@@ -117,7 +133,10 @@ const Portfolio = () => {
               console.log(tabId);
             }}
           >
-            <TabList>
+            <TabList
+              onMouseEnter={handleHoverChange}
+              onMouseLeave={handleHoverChange}
+            >
               <Tab tabFor="one"> All ⋆𐙚₊˚⊹♡ </Tab>
               <Tab tabFor="two"> Code ‧&lt;₊˚#✩ /&gt;₊</Tab>
               <Tab tabFor="three"> Design ‧&lt;₊˚🤍✩ /&gt;₊</Tab>

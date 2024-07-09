@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { event } from "react-ga";
+import TextCursor from "./TextCursor";
 
 const DesktopIcon = ({
   src,
@@ -13,6 +14,7 @@ const DesktopIcon = ({
   border,
   zIndex,
   setZIndex,
+  setShowCursor,
   triggerResize,
 }) => {
   const [position, setPosition] = useState({ x: x, y: y });
@@ -28,14 +30,13 @@ const DesktopIcon = ({
     const handleResize = () => setMobileWidth(window.screen.width);
     window.addEventListener("resize", handleResize);
 
-    // Cleanup listener on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   useEffect(() => {
-    handleResize(); // Call it once to get initial width
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
@@ -49,7 +50,7 @@ const DesktopIcon = ({
   }, [triggerResize]);
 
   useEffect(() => {
-    handleResize(); // Call it once to get initial width
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
@@ -80,10 +81,8 @@ const DesktopIcon = ({
   useEffect(() => {
     handleClickOutside(event);
 
-    // Attach the listeners on component mount
     document.addEventListener("mousedown", handleClickOutside);
 
-    // Detach the listeners on component unmount
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -100,7 +99,6 @@ const DesktopIcon = ({
           x + 20
         },top=${y + 200}`;
 
-        // Open the popup
         if (url) {
           window.open(url, "popupWindow", features);
         }
@@ -115,6 +113,7 @@ const DesktopIcon = ({
 
   const startDrag = (e) => {
     setDragging(true);
+    setIsHovered(true);
     setZIndex(zIndex + 1);
     setIsClicked(true);
     e.target.style.zIndex = zIndex;
@@ -136,7 +135,6 @@ const DesktopIcon = ({
 
   const stopDrag = (e) => {
     setIsHovered(false);
-    // e.target.style.zIndex = 'auto';
     onHoverChange("");
     setDragging(false);
     e.target.style.cursor = "grab";
@@ -146,9 +144,19 @@ const DesktopIcon = ({
   // Function to stop the drag
   const onHover = () => {
     setIsHovered(true);
-    console.log(hoverString);
+    if (!border) {
+      setShowCursor("double click me!");
+    }
     onHoverChange(hoverString);
     // hoverText.style.display = 'none';
+  };
+
+  const stopHover = (e) => {
+    setIsHovered(false);
+    setShowCursor("");
+    onHoverChange("");
+    setDragging(false);
+    e.target.style.cursor = "grab";
   };
 
   const imageContainerStyle = {
@@ -249,7 +257,7 @@ const DesktopIcon = ({
         }}
         onMouseMove={onDrag}
         onMouseUp={stopDrag}
-        onMouseLeave={stopDrag}
+        onMouseLeave={stopHover}
         onTouchStart={startTouchDrag}
         onTouchMove={onTouchMove}
         onTouchEnd={stopTouchDrag}

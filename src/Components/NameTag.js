@@ -5,7 +5,7 @@ const NameTag = () => {
   return (
     <div
       style={{
-        width: "310px",
+        width: "320px",
         height: "100px",
         backgroundColor: "white",
         border: "0.5px solid #111",
