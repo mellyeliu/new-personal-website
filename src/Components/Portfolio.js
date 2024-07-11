@@ -3,26 +3,30 @@ import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
 import Fade from "react-reveal/Fade";
 import PortfolioData from "../Data/PortfolioData";
 import { ThemeContext } from "../ThemeContext";
+import { Screen } from "../App";
+import { isMobile } from "react-device-detect";
 
-const Portfolio = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const { cursorString, setCursorString } = useContext(ThemeContext);
+const Portfolio = ({ setDesktopScreen }) => {
+  const [isVisible, setIsVisible] = useState(true);
+  const { fullScreen, cursorString, setCursorString } =
+    useContext(ThemeContext);
 
-  const handleHoverChange = () => {
-    if (cursorString !== "") {
-      setCursorString("");
-    } else {
-      setCursorString("browse by tag!");
-    }
+  const handleHoverChange = (text) => {
+    // setCursorString(text);
+    // if (cursorString !== "") {
+    //   setCursorString("");
+    // } else {
+    //   setCursorString(text);
+    // }
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 500); // 0.5 seconds delay
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsVisible(true);
+  //   }, 500); // 0.5 seconds delay
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   const getProjects = (projects, category) => {
     const filteredProjects =
@@ -41,7 +45,7 @@ const Portfolio = () => {
             src={projectImage}
             style={{
               height: 200,
-              width: "100%",
+              // width: "100%",
               transform: "scale(0.9)",
             }}
           />
@@ -96,7 +100,8 @@ const Portfolio = () => {
           <div className="hvr-grow">
             {projects.url !== "" ? (
               <a
-                // onMouseEnter={handleHoverChange}
+                //
+
                 // onMouseLeave={handleHoverChange}
                 target="_blank"
                 href={projects.url}
@@ -121,22 +126,48 @@ const Portfolio = () => {
     <section id="portfolio">
       <div
         className={`row fade-in ${isVisible ? "visible" : ""}`}
-        style={{ zIndex: 1000, background: "white" }}
+        style={{
+          zIndex: 1000,
+          background: "white",
+          height: "100%",
+          width: fullScreen ? "100%" : "90%",
+          maxWidth: fullScreen ? "100%" : 1200,
+        }}
       >
         <Fade top>
           <div style={{ marginBottom: -15 }} className="tagline"></div>
         </Fade>
-        <div className="twelve columns collapsed">
+        <div className="twelve columns collapsed" style={{ height: "100%" }}>
           <Tabs
             defaultTab="one"
             onChange={(tabId) => {
               console.log(tabId);
             }}
           >
-            <TabList
-              onMouseEnter={handleHoverChange}
-              onMouseLeave={handleHoverChange}
-            >
+            <TabList>
+              <div style={{ height: 5 }}></div>
+              {/* {isMobile && (
+                <div
+                  onMouseEnter={handleHoverChange("back to home!")}
+                  onMouseLeave={handleHoverChange("")}
+                  onClick={() => {
+                    setDesktopScreen(Screen.HOME);
+                  }}
+                  style={{
+                    display: "inline",
+                    borderRadius: "50%",
+                    // border: "0.5px solid black",
+                    color: "black",
+                    cursor: "pointer",
+                    fontSize: 16,
+                    height: 10,
+                    width: 10,
+                    marginRight: 30,
+                  }}
+                >
+                  &#40; ‹ &#41;
+                </div>
+              )} */}
               <Tab tabFor="one"> All ⋆𐙚₊˚⊹♡ </Tab>
               <Tab tabFor="two"> Code ‧&lt;₊˚#✩ /&gt;₊</Tab>
               <Tab tabFor="three"> Design ‧&lt;₊˚🤍✩ /&gt;₊</Tab>
@@ -151,6 +182,7 @@ const Portfolio = () => {
               <div
                 id="portfolio-wrapper"
                 className="bgrid-thirds s-bgrid-thirds cf"
+                style={{ padding: isMobile ? "10px" : "0px 80px" }}
               >
                 <Fade duration={500} delay={100}>
                   {projects}
@@ -161,6 +193,7 @@ const Portfolio = () => {
               <div
                 id="portfolio-wrapper"
                 className="bgrid-thirds s-bgrid-thirds cf"
+                style={{ padding: isMobile ? "10px" : "0px 80px" }}
               >
                 <Fade duration={500} delay={100}>
                   {code}
@@ -171,6 +204,7 @@ const Portfolio = () => {
               <div
                 id="portfolio-wrapper"
                 className="bgrid-thirds s-bgrid-thirds cf"
+                style={{ padding: isMobile ? "10px" : "0px 80px" }}
               >
                 <Fade duration={500} delay={100}>
                   {design}
@@ -185,14 +219,16 @@ const Portfolio = () => {
                 </div>
               </TabPanel> */}
           </Tabs>
-          <div
+          {/* <div
             style={{
               width: "100%",
-              height: 50,
+              height: 40,
               borderTop: "0.5px solid black",
+              position: "absolute",
+              bottom: 0,
               backgroundImage: "url(images/tabs.png)",
             }}
-          ></div>
+          ></div> */}
         </div>
       </div>
     </section>

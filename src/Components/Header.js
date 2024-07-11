@@ -9,15 +9,16 @@ import "@animated-burgers/burger-squeeze/dist/styles.css";
 import { ThemeContext } from "../ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { isMobile } from "react-device-detect";
+import { Screen } from "../App";
 
 const Header = (props) => {
+  const { fullScreen, setFullScreen } = useContext(ThemeContext);
   const [isGridLayout, setIsGridLayout] = useState(false);
   const [isChildHovered, setIsChildHovered] = useState("");
   const [openStates, setOpenStates] = useState({
-    0: [true, false, true, true],
+    0: !isMobile ? [true, true, true, true] : [true, false, true, true],
   });
   const [zIndex, setZIndex] = useState(1);
-  const { fullScreen, setFullScreen } = useContext(ThemeContext);
   const { cursorString, setCursorString } = useContext(ThemeContext);
   const [triggerResize, setTriggerResize] = useState(false);
   const [isFoldersVisible, setIsFoldersVisible] = useState(true);
@@ -89,6 +90,7 @@ const Header = (props) => {
 
   // Effect to add window scroll event listener
   useEffect(() => {
+    setTriggerResize((prevState) => !prevState);
     const handleScroll = () => {
       if (parentRef.current) {
         setIsFoldersVisible(isElementInViewport(parentRef.current));
@@ -101,7 +103,7 @@ const Header = (props) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [props.desktopScreen]);
 
   const handleFullScreenClick = () => {
     setTriggerResize((prevState) => !prevState);
@@ -270,18 +272,24 @@ const Header = (props) => {
             </div>
             <div
               onClick={() => {
-                setFullScreen();
+                setCursorString("");
+                props.setDesktopScreen(Screen.PORTFOLIO);
+                // setFullScreen();
                 handleFullScreenClick();
               }}
               className="bottom-right"
-              style={{ bottom: fullScreen ? "15px" : "70px" }}
+              style={{ bottom: fullScreen ? "20px" : "70px" }}
             >
               <span
-                style={{ zIndex: 1000, cursor: "pointer" }}
+                style={{
+                  zIndex: 1000,
+                  cursor: "pointer",
+                  display: isMobile ? "block" : "none",
+                }}
                 onMouseEnter={handleFullscreenHoverChange}
                 onMouseLeave={handleFullscreenHoverChange}
               >
-                &#40; F11 &#41;
+                &#40; Projects &#41;
                 {/* &#x2194; */}
               </span>
             </div>
@@ -290,10 +298,14 @@ const Header = (props) => {
                 props.setisFoldersOff(!props.isFoldersOff);
               }}
               className="bottom-leftt"
-              style={{ bottom: fullScreen ? "15px" : "70px" }}
+              style={{ bottom: fullScreen ? "20px" : "70px" }}
             >
               <span
-                style={{ zIndex: 1000, cursor: "pointer" }}
+                style={{
+                  zIndex: 1000,
+                  cursor: "pointer",
+                  display: isMobile ? "block" : "none",
+                }}
                 onMouseEnter={handleMenuHoverChange}
                 onMouseLeave={handleMenuHoverChange}
               >

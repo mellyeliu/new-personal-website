@@ -61,7 +61,6 @@
   #portfolio .row {
     width: 96%;
     margin: 0 auto;
-    border: 0.5px solid #111111;
   }
 }
 
@@ -166,8 +165,8 @@
   #portfolio .row {
     border-left: none;
     border-right: none;
-    border-top: 0.5px solid black;
-    border-bottom: 0.5px solid black;
+    /* border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black; */
   }
 
   .slider-frame {
@@ -200,6 +199,10 @@
   #logo {
     padding: 16px 20px 28px 20px !important;
     top: 0px !important;
+  }
+
+  a {
+    color: inherit;
   }
 
   .bottom-left-2 {
@@ -238,9 +241,9 @@
     display: none;
   }
 
-  .rwt__tab[aria-controls="three"] {
+  /* .rwt__tab[aria-controls="three"] {
     display: none;
-  }
+  } */
 
   /* Header Styles
    -------------------------------------------------------------------- */
@@ -454,6 +457,10 @@
   #nav-wrap ul#nav {
     width: auto;
     float: none;
+  }
+
+  a {
+    color: inherit;
   }
 
   /* header styles

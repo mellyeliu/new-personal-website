@@ -13,10 +13,17 @@ import AsciiArtBackground from "./Components/AsciiArtBackground";
 import PortfolioData from "./Data/PortfolioData";
 import TextCursor from "./Components/TextCursor";
 import { isMobile } from "react-device-detect";
+import StartBar from "./Components/StartBar";
+
+export const Screen = {
+  HOME: "HOME",
+  PORTFOLIO: "PORTFOLIO",
+};
 
 const App = () => {
   const [resumeData, setResumeData] = useState({});
   const [isFoldersOff, setisFoldersOff] = useState(false);
+  const [desktopScreen, setDesktopScreen] = useState(Screen.HOME);
   //const [showCursor, setShowCursor] = useState("");
   const { cursorString, setCursorString } = useContext(ThemeContext);
 
@@ -59,13 +66,32 @@ const App = () => {
                 height: fullScreen ? `${windowHeight}px` : null,
               }}
             >
-              {!fullScreen && <Nav />}
-              {!isFoldersOff && fullScreen && <NameTag />}
-              <Header
-                dest={"home"}
-                isFoldersOff={isFoldersOff}
-                setisFoldersOff={setisFoldersOff}
-              />
+              {/* <Nav /> */}
+              {/* {!fullScreen && <Nav />} */}
+              {!isFoldersOff && fullScreen && desktopScreen === Screen.HOME && (
+                <NameTag />
+              )}
+              {desktopScreen === Screen.HOME ? (
+                <Header
+                  dest={"home"}
+                  isFoldersOff={isFoldersOff}
+                  setisFoldersOff={setisFoldersOff}
+                  setDesktopScreen={setDesktopScreen}
+                  desktopScreen={desktopScreen}
+                />
+              ) : (
+                <Portfolio
+                  style={{ zIndex: 1000000, position: "relative" }}
+                  data={PortfolioData.portfolio}
+                  setDesktopScreen={setDesktopScreen}
+                />
+              )}
+              {(!isMobile || desktopScreen === Screen.PORTFOLIO) && (
+                <StartBar
+                  setDesktopScreen={setDesktopScreen}
+                  desktopScreen={desktopScreen}
+                />
+              )}
               <div
                 style={{
                   display: fullScreen ? "none" : "block",

@@ -123,6 +123,10 @@ video {
   background: transparent;
 }
 
+a {
+  color: inherit; /* Inherit color from parent */
+}
+
 /* body {
    cursor: url('../images/glitchcursorb.png'), auto;
 }
@@ -952,7 +956,6 @@ input[type="checkbox"] {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  border: 0.5px solid #111111;
 }
 
 .fade-in {

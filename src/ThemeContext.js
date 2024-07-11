@@ -16,14 +16,13 @@ export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(themeSet[0]); // Start with 'light'
-  const [fullScreen, setFullScreen] = useState(window.innerWidth < 768);
+  const [fullScreen, setFullScreen] = useState(true || window.innerWidth < 768);
   const [cursorString, setCursorString] = useState("");
 
   const cycleTheme = () => {
     const currentThemeIndex = themeSet.indexOf(theme);
     const nextThemeIndex = (currentThemeIndex + 1) % themeSet.length;
     setTheme(themeSet[nextThemeIndex]);
-    console.log(theme);
   };
 
   const toggleFullScreen = () => {

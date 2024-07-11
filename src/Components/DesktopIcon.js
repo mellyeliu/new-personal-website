@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { event } from "react-ga";
 import TextCursor from "./TextCursor";
+import { isMobile } from "react-device-detect";
 
 const DesktopIcon = ({
   src,
@@ -224,6 +225,13 @@ const DesktopIcon = ({
       ref.current.initialTouchY = 0;
     }
   };
+  const transformString = border
+    ? isHovered
+      ? `scale(${scale + 0.04}) !important`
+      : `scale(${scale + 0.02}) !important`
+    : isHovered
+    ? `scale(${scale + 0.04})`
+    : `scale(${scale + 0.02})`;
 
   return (
     <div style={imageContainerStyle}>
@@ -242,12 +250,10 @@ const DesktopIcon = ({
           boxShadow: border ? "0 0 0 1px rgba(0,0,0,0.5)" : "none",
           userSelect: "none",
           borderRadius: "20px",
-          transform: isHovered
-            ? `scale(${scale + 0.04})`
-            : `scale(${scale + 0.02})`,
+          transform: transformString,
           transition: "transform 0.3s ease-in-out",
           transformOrigin: "top left",
-          display: "block",
+          display: isMobile && hoverString === "( Socials )" ? "none" : "block",
         }}
         className="draggableImage"
         onMouseDown={startDrag}

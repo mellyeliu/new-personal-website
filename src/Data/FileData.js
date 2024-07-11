@@ -257,9 +257,9 @@ const FileData = {
     {
       hoverString: "૮꒰ ˶• ༝ •˶꒱ა ♡",
       src: "images/bio.png",
-      scale: 0.53,
+      scale: 0.83,
       border: true,
-      x: 67,
+      x: 63,
       y: 20,
     },
     {
@@ -290,6 +290,14 @@ const FileData = {
       border: true,
       x: 52,
       y: 10,
+    },
+    {
+      hoverString: "( Socials )",
+      src: "images/socials.png",
+      scale: 0.42,
+      border: true,
+      x: 8,
+      y: 20,
     },
   ],
   Obsessions: [],
