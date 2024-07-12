@@ -43,7 +43,7 @@ const NameTag = () => {
         className="control"
         // textOptions={funFacts}
         style={{
-          letterSpacing: 2,
+          letterSpacing: 1.5,
           fontFamily: "Cormorant Garamond",
           fontWeight: 300,
           fontStyle: "italic",

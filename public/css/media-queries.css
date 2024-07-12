@@ -201,6 +201,14 @@
     top: 0px !important;
   }
 
+  #mobile-only {
+    display: block !important;
+  }
+
+  #desktop-only {
+    display: none !important;
+  }
+
   a {
     color: inherit;
   }
@@ -457,6 +465,14 @@
   #nav-wrap ul#nav {
     width: auto;
     float: none;
+  }
+
+  #mobile-only {
+    display: block !important;
+  }
+
+  #desktop-only {
+    display: none !important;
   }
 
   a {

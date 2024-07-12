@@ -284,8 +284,8 @@ const Header = (props) => {
                 style={{
                   zIndex: 1000,
                   cursor: "pointer",
-                  display: isMobile ? "block" : "none",
                 }}
+                id="mobile-only"
                 onMouseEnter={handleFullscreenHoverChange}
                 onMouseLeave={handleFullscreenHoverChange}
               >
@@ -304,8 +304,8 @@ const Header = (props) => {
                 style={{
                   zIndex: 1000,
                   cursor: "pointer",
-                  display: isMobile ? "block" : "none",
                 }}
+                id="mobile-only"
                 onMouseEnter={handleMenuHoverChange}
                 onMouseLeave={handleMenuHoverChange}
               >

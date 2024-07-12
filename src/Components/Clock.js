@@ -18,7 +18,7 @@ const Clock = () => {
 
   return (
     <div style={containerStyle}>
-      <div style={elementStyle}> &nbsp; &nbsp; {formatTime(currentTime)}</div>
+      <div style={elementStyle}> &nbsp; | &nbsp; {formatTime(currentTime)}</div>
     </div>
   );
 };
@@ -41,7 +41,7 @@ const elementStyle = {
   position: "absolute",
   right: 0,
   lineHeight: "20px",
-  top: -18,
+  top: -17,
   height: 15,
 };
 

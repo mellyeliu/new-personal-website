@@ -2,27 +2,22 @@ const PortfolioData = {
   main: {
     social: [
       {
-        name: "facebook",
+        name: "vsco // mellyeliu",
         url: "https://vsco.co/mellyeliu",
         className: "fas fa-camera",
       },
       {
-        name: "linkedin",
-        url: "https://www.linkedin.com/in/mellyeliu",
-        className: "fab fa-linkedin-in",
-      },
-      {
-        name: "github",
+        name: "reading.supply // mellyeliu",
         url: "https://reading.supply/@mellyeliu",
         className: "fas fa-edit",
       },
       {
-        name: "instagram",
-        url: "https://instagram.com/mellye.liu",
-        className: "fab fa-b fa-instagram",
+        name: "dimensional // mellyeliu",
+        url: "https://www.dimensional.me/mellyeliu",
+        className: "fas fa-edit",
       },
       {
-        name: "linktree",
+        name: "linktree // mellyeliu",
         url: "https://linktr.ee/mellye.liu",
         className: "fas fa-link",
       },

@@ -9,7 +9,6 @@ import Portfolio from "./Components/Portfolio";
 import { ThemeContext, ThemeProvider } from "./ThemeContext";
 import Fade from "react-reveal/Fade";
 import Nav from "./Components/Nav";
-import AsciiArtBackground from "./Components/AsciiArtBackground";
 import PortfolioData from "./Data/PortfolioData";
 import TextCursor from "./Components/TextCursor";
 import { isMobile } from "react-device-detect";

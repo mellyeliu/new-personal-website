@@ -1,6 +1,8 @@
 import React from "react";
 import PortfolioData from "../Data/PortfolioData";
 import Clock from "./Clock";
+import TypingToggleTextList from "./TypingToggleTextList";
+import { quotes } from "../Data/QuotesData";
 
 const StartBar = ({ setDesktopScreen, desktopScreen }) => {
   const tabStyle = {
@@ -36,7 +38,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
     <div
       style={{
         position: "absolute",
-        zIndex: 110000000000000,
+        zIndex: 110000000,
         background: "#dadada",
         height: 33,
         width: "100%",
@@ -64,8 +66,34 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
       >
         {desktopScreen === "PORTFOLIO" && "𐙚"} Projects{" "}
       </div>
+      <div
+        style={{
+          textAlign: "right",
+          position: "absolute",
+          right: "125px",
+          maxWidth: "50%",
+        }}
+        id="desktop-only"
+      >
+        <TypingToggleTextList
+          className="control"
+          textOptions={quotes}
+          wrapper={false}
+          autoplay={false}
+          speed={35}
+          autoplaySpeed={50000}
+          style={{
+            // letterSpacing: 2,
+            marginBottom: 5,
+            fontFamily: "Cormorant Garamond",
+            fontWeight: 300,
+            fontStyle: "italic",
+            fontSize: 14,
+            color: "black",
+          }}
+        ></TypingToggleTextList>{" "}
+      </div>
       <Clock />
-
       {/* <ul
         style={{ color: "black !important", float: "right" }}
         className="social-links"

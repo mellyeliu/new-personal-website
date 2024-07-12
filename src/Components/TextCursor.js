@@ -22,7 +22,7 @@ const CustomCursor = () => {
       style={{
         position: "fixed",
         pointerEvents: "none",
-        zIndex: 10000000000000,
+        zIndex: 1000000000000000,
         fontSize: "16px",
         color: "black",
         fontStyle: "italic",

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { event } from "react-ga";
 import TextCursor from "./TextCursor";
 import { isMobile } from "react-device-detect";
+import PortfolioData from "../Data/PortfolioData";
 
 const DesktopIcon = ({
   src,
@@ -26,6 +27,16 @@ const DesktopIcon = ({
   const ref = useRef(null);
 
   const [mobileWidth, setMobileWidth] = useState(window.screen.width);
+
+  const [imageSize, setImageSize] = useState({ width: "auto", height: "auto" });
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImageSize({ width: img.width + "px", height: img.height + "px" });
+    };
+    img.src = src;
+  }, [src]);
 
   useEffect(() => {
     const handleResize = () => setMobileWidth(window.screen.width);
@@ -227,16 +238,24 @@ const DesktopIcon = ({
   };
   const transformString = border
     ? isHovered
-      ? `scale(${scale + 0.04}) !important`
-      : `scale(${scale + 0.02}) !important`
+      ? `scale(${scale + 0.04})`
+      : `scale(${scale + 0.02})`
     : isHovered
     ? `scale(${scale + 0.04})`
     : `scale(${scale + 0.02})`;
 
+  const hoverText = `find me at: 
+
+ig // mellye.liu
+vsco // mellyeliu
+reading.supply // mellyeliu
+goodreads // mellyeliu
+spotify // mellye.liu
+dimensional // mellyeliu`;
+
   return (
     <div style={imageContainerStyle}>
-      <img
-        src={src}
+      <div
         style={{
           cursor: "grab",
           position: "absolute",
@@ -250,10 +269,14 @@ const DesktopIcon = ({
           boxShadow: border ? "0 0 0 1px rgba(0,0,0,0.5)" : "none",
           userSelect: "none",
           borderRadius: "20px",
-          transform: transformString,
+          transform: `scale(0.5)`,
           transition: "transform 0.3s ease-in-out",
           transformOrigin: "top left",
           display: isMobile && hoverString === "( Socials )" ? "none" : "block",
+          backgroundImage: `url(${src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          ...imageSize,
         }}
         className="draggableImage"
         onMouseDown={startDrag}
@@ -269,8 +292,53 @@ const DesktopIcon = ({
         onTouchEnd={stopTouchDrag}
         onMouseEnter={onHover}
         ref={ref}
-        draggable={false}
-      />
+      >
+        {hoverString === "( Socials )" && (
+          <div
+            style={{
+              justifyContent: "left",
+              whiteSpace: "pre-wrap",
+              alignItems: "left",
+              color: "black",
+              fontSize: "18px",
+              textAlign: "left",
+              lineHeight: "1.1",
+              padding: "170px 20px",
+              fontFamily: "Arimo",
+              zIndex: 1000000,
+              pointerEvents: "none",
+            }}
+          >
+            find me at:
+            <br />
+            <br />
+            {PortfolioData.main.social.map((item, index) => (
+              <>
+                <a
+                  key={index}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    textDecoration: "none",
+                    pointerEvents: "auto",
+                    color: "black", // Adjust color as needed
+                  }}
+                  onMouseOver={(e) =>
+                    (e.currentTarget.style.textDecoration = "underline")
+                  }
+                  onMouseOut={(e) =>
+                    (e.currentTarget.style.textDecoration = "none")
+                  }
+                >
+                  {item.name}
+                </a>
+                <div />
+              </>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
