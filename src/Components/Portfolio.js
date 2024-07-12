@@ -8,25 +8,141 @@ import { isMobile } from "react-device-detect";
 
 const Portfolio = ({ setDesktopScreen }) => {
   const [isVisible, setIsVisible] = useState(true);
+  const [favourite, setFavourite] = useState("✩");
+
+  // Step 3: Function to toggle the state
+  const handleFavourite = () => {
+    setFavourite(favourite === "✩" ? "✮" : "✩");
+  };
+  // const [activeTab, setActiveTab] = useState("tab1");
   const { fullScreen, cursorString, setCursorString } =
     useContext(ThemeContext);
 
-  const handleHoverChange = (text) => {
-    // setCursorString(text);
-    // if (cursorString !== "") {
-    //   setCursorString("");
-    // } else {
-    //   setCursorString(text);
-    // }
+  const urlBar = (tab, tabProjects) => {
+    return (
+      <>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexWrap: "nowrap",
+            borderBottom: "0.5px solid black",
+            height: 60,
+            justifyContent: "center",
+            position: "absolute",
+            top: 50,
+            backgroundColor: "white",
+            borderTop: "0.5px solid black",
+            zIndex: 100,
+            left: 0,
+          }}
+        >
+          <div style={{ padding: 18 }}>
+            <svg
+              width="20"
+              height="20"
+              onClick={() => {
+                if (isMobile) {
+                  window.location.reload();
+                }
+                setDesktopScreen(Screen.HOME);
+              }}
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              style={{ cursor: "pointer" }}
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.528 6.236h-12.884v1h21.883z"
+                transform="scale(-1, 1) translate(-24, 0)"
+              />
+            </svg>
+            <span style={{ width: 15 }}>&nbsp;&nbsp;&nbsp;</span>
+            <svg
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              style={{ fill: "#bbb" }}
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-12.884v1h21.883z"
+                transform="translate(-4, 0)"
+              />
+            </svg>
+            <span style={{ width: 15 }}> &nbsp; &nbsp; &nbsp; &nbsp;</span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              style={{ cursor: "pointer" }}
+            >
+              <path d="M7 9h-7v-7h1v5.2c1.853-4.237 6.083-7.2 11-7.2 6.623 0 12 5.377 12 12s-5.377 12-12 12c-6.286 0-11.45-4.844-11.959-11h1.004c.506 5.603 5.221 10 10.955 10 6.071 0 11-4.929 11-11s-4.929-11-11-11c-4.66 0-8.647 2.904-10.249 7h5.249v1z" />
+            </svg>
+          </div>
+          <div
+            style={{
+              flexGrow: 1,
+              border: "0.5px solid black",
+              letterSpacing: 2,
+              margin: "15px 20px 15px 5px",
+              height: 30,
+              float: "right",
+              color: "black",
+              fontStyle: "italic",
+              paddingLeft: 20,
+              borderRadius: 20,
+              position: "relative",
+            }}
+          >
+            {" "}
+            <input
+              type="text"
+              style={{
+                border: "none",
+                background: "none",
+                padding: "0",
+                margin: "0",
+                outline: "none",
+                color: "inherit",
+                font: "inherit",
+                cursor: "text",
+                width: "100%",
+              }}
+              defaultValue={`C://Users/mellyeliu/Projects/${tab}`}
+            />
+            <div
+              onClick={handleFavourite}
+              style={{
+                position: "absolute",
+                top: "50%",
+                right: "10px",
+                transform: "translateY(-50%)",
+                cursor: "pointer",
+                fontStyle: "normal",
+                fontSize: "1.2em",
+              }}
+            >
+              {favourite}
+            </div>
+          </div>
+        </div>
+        <div
+          id="portfolio-wrapper"
+          className="bgrid-thirds s-bgrid-thirds cf"
+          style={{ padding: isMobile ? "70px 10px 100px" : "50px 80px" }}
+        >
+          <Fade duration={500} delay={100}>
+            {tabProjects}
+          </Fade>
+        </div>
+      </>
+    );
   };
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsVisible(true);
-  //   }, 500); // 0.5 seconds delay
-
-  //   return () => clearTimeout(timer);
-  // }, []);
 
   const getProjects = (projects, category) => {
     const filteredProjects =
@@ -127,9 +243,8 @@ const Portfolio = ({ setDesktopScreen }) => {
       <div
         className={`row fade-in custom-scrollbar ${isVisible ? "visible" : ""}`}
         style={{
-          zIndex: 1000,
-          background: "white",
           height: "100%",
+          backgroundColor: "white",
           width: fullScreen ? "100%" : "90%",
           maxWidth: fullScreen ? "100%" : 1200,
         }}
@@ -138,75 +253,27 @@ const Portfolio = ({ setDesktopScreen }) => {
           <div style={{ marginBottom: -15 }} className="tagline"></div>
         </Fade>
         <div className="twelve columns collapsed" style={{ height: "100%" }}>
-          <Tabs
-            defaultTab="one"
-            onChange={(tabId) => {
-              console.log(tabId);
-            }}
-          >
+          <Tabs defaultTab="one">
             <TabList>
               <div style={{ height: 5 }}></div>
-              <Tab tabFor="one"> All ⋆𐙚₊˚⊹♡ </Tab>
-              <Tab tabFor="two"> Code ‧&lt;₊˚#✩ /&gt;₊</Tab>
-              <Tab tabFor="three"> Design ‧&lt;₊˚🤍✩ /&gt;₊</Tab>
-              {/* <Tab tabFor="four"> Text ‧₊˚🖇️✩ ₊</Tab> */}
-              {/* <Tab tabFor="one">&#40; All	&#41;</Tab>
-                <Tab tabFor="two">&#40; Projects	&#41;</Tab>
-                <Tab tabFor="three">&#40; Art	&#41;</Tab>
-                <Tab tabFor="four">&#40; Writing	&#41;</Tab> */}
+              <Tab style={{ zIndex: 100000 }} tabFor="one">
+                {" "}
+                All ⋆𐙚₊˚⊹♡{" "}
+              </Tab>
+              <Tab style={{ zIndex: 100000 }} tabFor="two">
+                {" "}
+                Code ‧&lt;₊˚#✩ /&gt;₊
+              </Tab>
+              <Tab style={{ zIndex: 100000 }} tabFor="three">
+                {" "}
+                Design ‧&lt;₊˚🤍✩ /&gt;₊
+              </Tab>
               <span className="browsero">○ ○ ○</span>
             </TabList>
-            <TabPanel tabId="one">
-              <div
-                id="portfolio-wrapper"
-                className="bgrid-thirds s-bgrid-thirds cf custom-scrollbar"
-                style={{ padding: isMobile ? "30px 10px 100px" : "0px 80px" }}
-              >
-                <Fade duration={500} delay={100}>
-                  {projects}
-                </Fade>
-              </div>
-            </TabPanel>
-            <TabPanel tabId="two">
-              <div
-                id="portfolio-wrapper"
-                className="bgrid-thirds s-bgrid-thirds cf"
-                style={{ padding: isMobile ? "10px" : "0px 80px" }}
-              >
-                <Fade duration={500} delay={100}>
-                  {code}
-                </Fade>
-              </div>
-            </TabPanel>
-            <TabPanel tabId="three">
-              <div
-                id="portfolio-wrapper"
-                className="bgrid-thirds s-bgrid-thirds cf"
-                style={{ padding: isMobile ? "10px" : "0px 80px" }}
-              >
-                <Fade duration={500} delay={100}>
-                  {design}
-                </Fade>
-              </div>
-            </TabPanel>
-            {/* <TabPanel tabId="four">
-                <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                  <Fade duration={500} delay={100}>
-                    {writing}
-                  </Fade>
-                </div>
-              </TabPanel> */}
+            <TabPanel tabId="one">{urlBar("All", projects)}</TabPanel>
+            <TabPanel tabId="two">{urlBar("Code", code)}</TabPanel>
+            <TabPanel tabId="three">{urlBar("Design", design)}</TabPanel>
           </Tabs>
-          {/* <div
-            style={{
-              width: "100%",
-              height: 40,
-              borderTop: "0.5px solid black",
-              position: "absolute",
-              bottom: 0,
-              backgroundImage: "url(images/tabs.png)",
-            }}
-          ></div> */}
         </div>
       </div>
     </section>
