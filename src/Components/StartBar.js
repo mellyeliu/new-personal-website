@@ -3,6 +3,7 @@ import PortfolioData from "../Data/PortfolioData";
 import Clock from "./Clock";
 import TypingToggleTextList from "./TypingToggleTextList";
 import { quotes } from "../Data/QuotesData";
+import { isMobile } from "react-device-detect";
 
 const StartBar = ({ setDesktopScreen, desktopScreen }) => {
   const tabStyle = {
@@ -50,6 +51,10 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
     >
       <div
         onClick={() => {
+          if (isMobile) {
+            console.log("reloading");
+            window.location.reload();
+          }
           setDesktopScreen("HOME");
         }}
         style={tabStyle}

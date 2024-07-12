@@ -125,7 +125,7 @@ const Portfolio = ({ setDesktopScreen }) => {
   return (
     <section id="portfolio">
       <div
-        className={`row fade-in ${isVisible ? "visible" : ""}`}
+        className={`row fade-in custom-scrollbar ${isVisible ? "visible" : ""}`}
         style={{
           zIndex: 1000,
           background: "white",
@@ -146,28 +146,6 @@ const Portfolio = ({ setDesktopScreen }) => {
           >
             <TabList>
               <div style={{ height: 5 }}></div>
-              {/* {isMobile && (
-                <div
-                  onMouseEnter={handleHoverChange("back to home!")}
-                  onMouseLeave={handleHoverChange("")}
-                  onClick={() => {
-                    setDesktopScreen(Screen.HOME);
-                  }}
-                  style={{
-                    display: "inline",
-                    borderRadius: "50%",
-                    // border: "0.5px solid black",
-                    color: "black",
-                    cursor: "pointer",
-                    fontSize: 16,
-                    height: 10,
-                    width: 10,
-                    marginRight: 30,
-                  }}
-                >
-                  &#40; ‹ &#41;
-                </div>
-              )} */}
               <Tab tabFor="one"> All ⋆𐙚₊˚⊹♡ </Tab>
               <Tab tabFor="two"> Code ‧&lt;₊˚#✩ /&gt;₊</Tab>
               <Tab tabFor="three"> Design ‧&lt;₊˚🤍✩ /&gt;₊</Tab>
@@ -181,8 +159,8 @@ const Portfolio = ({ setDesktopScreen }) => {
             <TabPanel tabId="one">
               <div
                 id="portfolio-wrapper"
-                className="bgrid-thirds s-bgrid-thirds cf"
-                style={{ padding: isMobile ? "10px" : "0px 80px" }}
+                className="bgrid-thirds s-bgrid-thirds cf custom-scrollbar"
+                style={{ padding: isMobile ? "30px 10px 100px" : "0px 80px" }}
               >
                 <Fade duration={500} delay={100}>
                   {projects}

@@ -306,8 +306,6 @@ const Header = (props) => {
                   cursor: "pointer",
                 }}
                 id="mobile-only"
-                onMouseEnter={handleMenuHoverChange}
-                onMouseLeave={handleMenuHoverChange}
               >
                 &#40; Menus &#41;
                 {/* &#x2194; */}

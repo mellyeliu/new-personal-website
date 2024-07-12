@@ -305,6 +305,7 @@ dimensional // mellyeliu`;
               lineHeight: "1.1",
               padding: "170px 20px",
               fontFamily: "Arimo",
+              fontWeight: 500,
               zIndex: 1000000,
               pointerEvents: "none",
             }}
