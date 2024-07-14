@@ -1,48 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import PortfolioData from "../Data/PortfolioData";
+import { ThemeContext } from "../ThemeContext";
 import Clock from "./Clock";
 import TypingToggleTextList from "./TypingToggleTextList";
 import { quotes } from "../Data/QuotesData";
 import { isMobile } from "react-device-detect";
 
 const StartBar = ({ setDesktopScreen, desktopScreen }) => {
+  const { cursorString, setCursorString } = useContext(ThemeContext);
+
   const tabStyle = {
     padding: "0px 10px",
-    marginLeft: 10,
-    // margin: 5,
-    // border: "0.5px solid black",
-    // borderRadius: 5,
+    marginLeft: 3,
     color: "black",
     fontWeight: "500",
     fontStyle: "italic",
-    // background: "#e4e4e4",
     cursor: "pointer",
   };
-
-  var networks = PortfolioData.main.social.map(function (network) {
-    return (
-      <a href={network.url} key={network.name}>
-        <li
-          style={{
-            color: "#222222",
-            padding: "2px 10px",
-          }}
-          className="hvr-grow-big"
-        >
-          <i className={network.className}></i>
-        </li>
-      </a>
-    );
-  });
 
   return (
     <div
       style={{
         position: "absolute",
         zIndex: 110000000,
-        background: "#dadada",
-        height: 33,
+        background: "rgb(241 241 241)",
+        height: 40,
         width: "100%",
+        padding: "5px 20px",
         display: "flex",
         letterSpacing: 1,
         bottom: 0,
@@ -50,23 +34,52 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
       }}
     >
       <div
+        style={{
+          ...tabStyle,
+          cursor: "default",
+          marginLeft: "20px !important",
+        }}
+      >
+        Start &nbsp; &nbsp;›
+      </div>
+      <div
         onClick={() => {
           if (isMobile) {
             console.log("reloading");
             window.location.reload();
           }
           setDesktopScreen("HOME");
+          setCursorString("");
         }}
-        style={tabStyle}
-        className="hvr-grow"
+        onMouseEnter={() => {
+          setCursorString("home page!");
+        }}
+        onMouseLeave={() => {
+          setCursorString("");
+        }}
+        style={{
+          ...tabStyle,
+          background: desktopScreen === "HOME" && "rgb(215 215 215)",
+        }}
+        className="hvr-shade"
       >
         {desktopScreen === "HOME" && "𐙚"} Home{" "}
       </div>
       <div
-        style={tabStyle}
-        className="hvr-grow"
+        style={{
+          ...tabStyle,
+          background: desktopScreen === "PORTFOLIO" && "rgb(215 215 215)",
+        }}
+        className="hvr-shade"
+        onMouseEnter={() => {
+          setCursorString("see projects!");
+        }}
+        onMouseLeave={() => {
+          setCursorString("");
+        }}
         onClick={() => {
           setDesktopScreen("PORTFOLIO");
+          setCursorString("");
         }}
       >
         {desktopScreen === "PORTFOLIO" && "𐙚"} Projects{" "}
@@ -76,7 +89,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           textAlign: "right",
           position: "absolute",
           right: "125px",
-          maxWidth: "50%",
+          maxWidth: "65%",
         }}
         id="desktop-only"
       >
@@ -88,7 +101,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           speed={35}
           autoplaySpeed={50000}
           style={{
-            // letterSpacing: 2,
+            letterSpacing: 0.5,
             marginBottom: 5,
             fontFamily: "Cormorant Garamond",
             fontWeight: 300,

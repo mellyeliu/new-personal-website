@@ -26,7 +26,7 @@ const PortfolioData = {
       {
         place: "( Internet gardening )",
         date: "02·17·2020",
-        image: "bg-57.png",
+        image: "bgfinal.png",
       },
     ],
   },

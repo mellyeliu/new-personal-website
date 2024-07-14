@@ -41,7 +41,7 @@ const elementStyle = {
   position: "absolute",
   right: 0,
   lineHeight: "20px",
-  top: -17,
+  top: -14,
   height: 15,
 };
 

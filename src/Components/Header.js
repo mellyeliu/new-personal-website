@@ -171,7 +171,7 @@ const Header = (props) => {
   let counter = 0;
   const photoData = {
     place: "( Internet gardening )",
-    image: "images/bg-57.png",
+    image: "images/bgfinal.png",
   };
 
   const art = (
@@ -216,8 +216,26 @@ const Header = (props) => {
             })
           : null;
       })}
+      {!props.isFoldersOff && (
+        <Folder
+          src={"images/folder.png"}
+          isOpen={false}
+          onOpen={() => {
+            props.setDesktopScreen(Screen.PORTFOLIO);
+            setCursorString("");
+          }}
+          isVisible={isFoldersVisible}
+          onHoverChange={() => {
+            setCursorString("see projects!");
+          }}
+          caption={"Projects*"}
+          x={0}
+          y={150}
+          scale={0.5}
+        />
+      )}
       {folders.map((folder, index) => {
-        return !props.isFoldersOff && !(!fullScreen && isMobile) ? (
+        return !props.isFoldersOff ? (
           <Folder
             src={"images/folder.png"}
             isOpen={openStates[0][index]}
@@ -228,7 +246,7 @@ const Header = (props) => {
             onHoverChange={handleFolderHoverChange}
             caption={folder}
             x={0}
-            y={150 + 100 * index}
+            y={150 + 90 * (index + 1)}
             scale={0.5}
           />
         ) : null;

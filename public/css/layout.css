@@ -1287,6 +1287,10 @@ button.rwt__tab:first-child {
   transform: scale(1.03) !important;
 }
 
+.hvr-shade:hover {
+  background: rgb(223, 223, 223) !important;
+}
+
 .rwt__tab[aria-selected="true"] {
   position: relative;
   /* padding: 10px 0px; */
@@ -1329,7 +1333,7 @@ button.rwt__tab:first-child {
 .hover-container {
   position: relative;
   display: block;
-  background-image: url("../images/bg-57.png");
+  background-image: url("../images/bgfinal.png");
   background-size: cover;
   overflow-x: scroll;
   overflow-y: hidden;

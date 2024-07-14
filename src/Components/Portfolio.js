@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
 import Fade from "react-reveal/Fade";
 import PortfolioData from "../Data/PortfolioData";
@@ -9,6 +9,14 @@ import { isMobile } from "react-device-detect";
 const Portfolio = ({ setDesktopScreen }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [favourite, setFavourite] = useState("✩");
+  const [activeTab, setActiveTab] = useState("one");
+  const tabTwoRef = useRef(null);
+
+  const handleInputChange = (event) => {
+    if (event.target.value === "YES" && tabTwoRef.current) {
+      setActiveTab("two"); // Switch to the desired tab ID
+    }
+  };
 
   // Step 3: Function to toggle the state
   const handleFavourite = () => {
@@ -102,6 +110,7 @@ const Portfolio = ({ setDesktopScreen }) => {
             {" "}
             <input
               type="text"
+              onChange={handleInputChange}
               style={{
                 border: "none",
                 background: "none",
@@ -237,7 +246,6 @@ const Portfolio = ({ setDesktopScreen }) => {
   var projects = getProjects(PortfolioData.portfolio.projects, "all");
   var code = getProjects(PortfolioData.portfolio.projects, "code");
   var design = getProjects(PortfolioData.portfolio.projects, "design");
-
   return (
     <section id="portfolio">
       <div
@@ -253,14 +261,23 @@ const Portfolio = ({ setDesktopScreen }) => {
           <div style={{ marginBottom: -15 }} className="tagline"></div>
         </Fade>
         <div className="twelve columns collapsed" style={{ height: "100%" }}>
-          <Tabs defaultTab="one">
+          <Tabs
+            defaultTab={"one"}
+            // activeTab={activeTab}
+            // onChange={(tabId) => setActiveTab(tabId)}
+          >
             <TabList>
               <div style={{ height: 5 }}></div>
               <Tab style={{ zIndex: 100000 }} tabFor="one">
                 {" "}
                 All ⋆𐙚₊˚⊹♡{" "}
               </Tab>
-              <Tab style={{ zIndex: 100000 }} tabFor="two">
+              <Tab
+                selected={activeTab === "two"}
+                ref={tabTwoRef}
+                style={{ zIndex: 100000 }}
+                tabFor="two"
+              >
                 {" "}
                 Code ‧&lt;₊˚#✩ /&gt;₊
               </Tab>

@@ -107,12 +107,12 @@ const DesktopIcon = ({
 
     timer = setTimeout(() => {
       if (clickCount === 1) {
-        const features = `width=400,height=250,resizable=no,scrollbars=no,left=${
-          x + 20
-        },top=${y + 200}`;
+        // const features = `width=400,height=250,resizable=no,scrollbars=no,left=${
+        //   x + 20
+        // },top=${y + 200}`;
 
         if (url) {
-          window.open(url, "popupWindow", features);
+          window.open(url, "popupWindow");
         }
       }
       setClickCount(0);
@@ -268,11 +268,11 @@ dimensional // mellyeliu`;
             : "drop-shadow(0px 6px 5px rgba(0,0,0,0.8))",
           boxShadow: border ? "0 0 0 1px rgba(0,0,0,0.5)" : "none",
           userSelect: "none",
-          borderRadius: "20px",
+          borderRadius: border ? "20px" : "0",
           transform: `scale(0.5)`,
           transition: "transform 0.3s ease-in-out",
           transformOrigin: "top left",
-          display: isMobile && hoverString === "( Socials )" ? "none" : "block",
+          // display: isMobile && hoverString === "( Socials )" ? "none" : "block",
           backgroundImage: `url(${src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -303,7 +303,7 @@ dimensional // mellyeliu`;
               fontSize: "18px",
               textAlign: "left",
               lineHeight: "1.1",
-              padding: "170px 20px",
+              padding: "150px 20px",
               fontFamily: "Arimo",
               fontWeight: 500,
               zIndex: 1000000,
@@ -321,15 +321,15 @@ dimensional // mellyeliu`;
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    textDecoration: "none",
+                    textDecoration: "underline",
                     pointerEvents: "auto",
-                    color: "black", // Adjust color as needed
+                    color: "blue", // Adjust color as needed
                   }}
                   onMouseOver={(e) =>
-                    (e.currentTarget.style.textDecoration = "underline")
+                    (e.currentTarget.style.letterSpacing = "1px")
                   }
                   onMouseOut={(e) =>
-                    (e.currentTarget.style.textDecoration = "none")
+                    (e.currentTarget.style.letterSpacing = "0px")
                   }
                 >
                   {item.name}
