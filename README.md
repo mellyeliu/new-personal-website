@@ -1,3 +1,5 @@
+Welcome to my portfolio! [Visit the site here.](https://mellyeliu.online)
 
+![image](https://github.com/user-attachments/assets/78e4705d-de73-45dd-b79a-89eb56e5bedc)
 
-<img width="1509" alt="image" src="https://github.com/mellyeliu/new-personal-website/assets/64865235/006444c3-fd8c-4fcc-b3d9-829f76043502">
+![image](https://github.com/user-attachments/assets/51d6b406-c7a4-4518-9fc6-5bee62104cdb)

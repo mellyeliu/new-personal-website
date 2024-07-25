@@ -130,6 +130,24 @@ const DesktopIcon = ({
     setIsClicked(true);
     e.target.style.zIndex = zIndex;
     e.target.style.cursor = "grabbing";
+    // Attach these to document to ensure drag continues even if mouse moves fast
+    document.addEventListener("mousemove", onDrag);
+    document.addEventListener("mouseup", stopDrag);
+  };
+
+  const stopDrag = (e) => {
+    setIsHovered(false);
+    onHoverChange("");
+    setDragging(false);
+    // Reset cursor style on the draggable element, if needed
+    // You might need to store a reference to the draggable element or find it again
+    const draggableElement = document.querySelector(".draggableImage");
+    if (draggableElement) {
+      draggableElement.style.cursor = "grab";
+    }
+    // Remove event listeners from document
+    document.removeEventListener("mousemove", onDrag);
+    document.removeEventListener("mouseup", stopDrag);
   };
 
   const onDrag = (e) => {
@@ -145,13 +163,13 @@ const DesktopIcon = ({
     }
   };
 
-  const stopDrag = (e) => {
-    setIsHovered(false);
-    onHoverChange("");
-    setDragging(false);
-    e.target.style.cursor = "grab";
-    // hoverText.style.display = 'block';
-  };
+  // const stopDrag = (e) => {
+  //   setIsHovered(false);
+  //   onHoverChange("");
+  //   setDragging(false);
+  //   e.target.style.cursor = "grab";
+  //   // hoverText.style.display = 'block';
+  // };
 
   // Function to stop the drag
   const onHover = () => {
@@ -164,10 +182,10 @@ const DesktopIcon = ({
   };
 
   const stopHover = (e) => {
-    setIsHovered(false);
+    // setIsHovered(false);
     setShowCursor("");
     onHoverChange("");
-    setDragging(false);
+    // setDragging(false);
     e.target.style.cursor = "grab";
   };
 

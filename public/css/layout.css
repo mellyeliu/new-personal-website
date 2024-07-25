@@ -1289,6 +1289,8 @@ button.rwt__tab:first-child {
 
 .hvr-shade:hover {
   background: rgb(223, 223, 223) !important;
+  font-weight: 500 !important;
+  /* letter-spacing: 2px !important; */
 }
 
 .rwt__tab[aria-selected="true"] {

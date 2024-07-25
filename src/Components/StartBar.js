@@ -5,13 +5,13 @@ import Clock from "./Clock";
 import TypingToggleTextList from "./TypingToggleTextList";
 import { quotes } from "../Data/QuotesData";
 import { isMobile } from "react-device-detect";
+import StartButton from "./StartButton";
 
 const StartBar = ({ setDesktopScreen, desktopScreen }) => {
   const { cursorString, setCursorString } = useContext(ThemeContext);
 
   const tabStyle = {
-    padding: "0px 10px",
-    marginLeft: 3,
+    padding: "5px 10px",
     color: "black",
     fontWeight: "500",
     fontStyle: "italic",
@@ -26,14 +26,15 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
         background: "rgb(241 241 241)",
         height: 40,
         width: "100%",
-        padding: "5px 20px",
+        padding: "0px",
         display: "flex",
         letterSpacing: 1,
         bottom: 0,
         border: "0.5px solid black",
       }}
     >
-      <div
+      <StartButton />
+      {/* <div
         style={{
           ...tabStyle,
           cursor: "default",
@@ -41,7 +42,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
         }}
       >
         Start &nbsp; &nbsp;›
-      </div>
+      </div> */}
       <div
         onClick={() => {
           if (isMobile) {
@@ -58,8 +59,12 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           setCursorString("");
         }}
         style={{
-          ...tabStyle,
-          background: desktopScreen === "HOME" && "rgb(215 215 215)",
+          padding: "5px 10px 5px 20px",
+          color: "black",
+          fontWeight: "500",
+          fontStyle: "italic",
+          cursor: "pointer",
+          // background: desktopScreen === "HOME" && "rgb(215 215 215)",
         }}
         className="hvr-shade"
       >
@@ -68,7 +73,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
       <div
         style={{
           ...tabStyle,
-          background: desktopScreen === "PORTFOLIO" && "rgb(215 215 215)",
+          // background: desktopScreen === "PORTFOLIO" && "rgb(215 215 215)",
         }}
         className="hvr-shade"
         onMouseEnter={() => {
@@ -89,7 +94,9 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           textAlign: "right",
           position: "absolute",
           right: "125px",
-          maxWidth: "65%",
+          height: 40,
+          paddingTop: 5,
+          maxWidth: "60%",
         }}
         id="desktop-only"
       >

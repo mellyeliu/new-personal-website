@@ -18,7 +18,10 @@ const Clock = () => {
 
   return (
     <div style={containerStyle}>
-      <div style={elementStyle}> &nbsp; | &nbsp; {formatTime(currentTime)}</div>
+      <div style={elementStyle}>
+        {" "}
+        &nbsp; &nbsp; {formatTime(currentTime)}&nbsp;&nbsp;&nbsp;
+      </div>
     </div>
   );
 };
@@ -29,6 +32,7 @@ const containerStyle = {
   alignItems: "center",
   padding: "10px",
   color: "black",
+  cursor: "default",
   lineHeight: 0,
   top: 10,
   height: 10,
@@ -36,13 +40,15 @@ const containerStyle = {
 };
 
 const elementStyle = {
-  margin: "10px", // optional
-  padding: "10px",
+  // margin: "10px", // optional
+  // padding: "10px",
   position: "absolute",
   right: 0,
-  lineHeight: "20px",
-  top: -14,
-  height: 15,
+  bottom: 0,
+  lineHeight: "40px",
+  // top: -14,
+  // height: 15,
+  borderLeft: "0.5px solid black",
 };
 
 export default Clock;

@@ -47,12 +47,12 @@ const PortfolioData = {
         languages: "React, Python, NLTK, DALL-E",
         image: "ascii.png",
         year: "2024",
-        url: "https://text2ascii.netlify.app/",
+        url: "https://ascii-storybook.netlify.app/",
         type: ["code"],
         collaborators: [
           {
             name: "Madeleine Lee",
-            url: "https://instagram.com/madlee.me",
+            url: "http://madlee.me/",
           },
           {
             name: "Christina Huang",
@@ -91,7 +91,7 @@ const PortfolioData = {
         collaborators: [
           {
             name: "Madeleine Lee",
-            url: "https://instagram.com/madlee.me",
+            url: "http://madlee.me/",
           },
         ],
       },
@@ -127,7 +127,7 @@ const PortfolioData = {
         collaborators: [
           {
             name: "Amanda Yeh",
-            url: "https://www.instagram.com/amandayehh/",
+            url: "https://amandayeh.com/",
           },
         ],
       },
@@ -195,7 +195,7 @@ const PortfolioData = {
         collaborators: [
           {
             name: "Madeleine Lee",
-            url: "https://www.instagram.com/madlee.me/",
+            url: "http://madlee.me/",
           },
         ],
       },
@@ -289,85 +289,6 @@ const PortfolioData = {
         type: ["code"],
         year: "2006",
         url: "https://web.archive.org/web/20070209174817/https://tamaplace.zoomshare.com/",
-      },
-    ],
-    writing: [
-      {
-        title:
-          "there is a safe space on the internet i want to create with you",
-        category: "Everything I love about the internet, in one list",
-        languages: "Reading Supply",
-        image: "readingsupply.png",
-        url: "https://reading.supply/post/84e5f9b9-ecdb-413e-ac66-04bc1ba69fa7",
-      },
-      {
-        title: "Souvenirs",
-        category: "Your resume of romantic failures.",
-        languages: "Reading Supply",
-        image: "readingsupply.png",
-        url: "https://reading.supply/post/73947d0b-423b-431d-ab63-efbd1f1740ce",
-      },
-      {
-        title: "sex ideology",
-        category:
-          "Reflections on consent as a spectrum, kink, and the cult of sex positivity",
-        languages: "Reading Supply",
-        image: "readingsupply.png",
-        url: "https://reading.supply/@mellyeliu/s-ex-ideology-ySNb53",
-      },
-      {
-        title: "Girl and her Notes App",
-        category:
-          "ChatGPT generated smut about a girl falling in love with her notes app. (Collab with Amanda)",
-        languages: "Ao3",
-        image: "fanfic2.png",
-        url: "https://archiveofourown.org/works/53351767",
-      },
-      {
-        title: "the romance delusion",
-        category: "2cb is one hell of a drug.",
-        languages: "Reading Supply",
-        image: "readingsupply.png",
-        url: "https://reading.supply/post/73947d0b-423b-431d-ab63-efbd1f1740ce",
-      },
-      {
-        title: "Short Circuit",
-        category:
-          "Clippy the Office Assistant finds love. Circumventing the ChatGPT censors again. (Collab with Amanda)",
-        languages: "Ao3",
-        image: "fanfic1.png",
-        url: "https://archiveofourown.org/works/51323875",
-      },
-      {
-        title: "on fiction and empathy",
-        category:
-          "A love letter to libraries, fictional worlds, and goodreads bookshelves.",
-        languages: "Medium",
-        image: "medium.png",
-        url: "https://mellyeliu.medium.com/on-fiction-and-empathy-900afdb1fa50",
-      },
-      {
-        title: "mythos of intimacy",
-        category: "Trauma bonding is one hell of a drug.",
-        languages: "Medium",
-        image: "medium.png",
-        url: "https://mellyeliu.medium.com/mythos-of-intimacy-ab15f608361b",
-      },
-      {
-        title: "creative vessels",
-        category: "Everything I have lived through was worth it for the art.",
-        languages: "Medium",
-        image: "medium.png",
-        url: "https://mellyeliu.medium.com/creative-vessels-77407d44cdf4",
-      },
-      {
-        title:
-          "in my mind, i pick flowers for my parents and gift them the bouquets —",
-        category:
-          "My love language is getting tattoos for you because I know you'll never approve.",
-        languages: "Medium",
-        image: "medium.png",
-        url: "https://mellyeliu.medium.com/in-my-mind-i-pick-flowers-for-my-parents-and-gift-them-the-bouquets-c44e42135bf1",
       },
     ],
   },

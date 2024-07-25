@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import Fade from "react-reveal/Fade";
 import Carousel from "nuka-carousel";
-import Nav from "./Nav";
 import DesktopIcon from "./DesktopIcon";
 import Folder from "./Folder";
 import FileData from "../Data/FileData";
@@ -16,7 +15,7 @@ const Header = (props) => {
   const [isGridLayout, setIsGridLayout] = useState(false);
   const [isChildHovered, setIsChildHovered] = useState("");
   const [openStates, setOpenStates] = useState({
-    0: !isMobile ? [true, true, true, true] : [true, false, true, true],
+    0: [true, false, true, true],
   });
   const [zIndex, setZIndex] = useState(1);
   const { cursorString, setCursorString } = useContext(ThemeContext);

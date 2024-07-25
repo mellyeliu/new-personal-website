@@ -7,8 +7,6 @@ import Footer from "./Components/Footer";
 import NameTag from "./Components/NameTag";
 import Portfolio from "./Components/Portfolio";
 import { ThemeContext, ThemeProvider } from "./ThemeContext";
-import Fade from "react-reveal/Fade";
-import Nav from "./Components/Nav";
 import PortfolioData from "./Data/PortfolioData";
 import TextCursor from "./Components/TextCursor";
 import { isMobile } from "react-device-detect";
@@ -65,8 +63,6 @@ const App = () => {
                 height: fullScreen ? `${windowHeight}px` : null,
               }}
             >
-              {/* <Nav /> */}
-              {/* {!fullScreen && <Nav />} */}
               {!isFoldersOff && fullScreen && desktopScreen === Screen.HOME && (
                 <NameTag />
               )}

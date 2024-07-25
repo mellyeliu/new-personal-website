@@ -586,11 +586,11 @@ p a:visited {
 
 /*  4. List  --------------------------------------------------------- */
 
-ul,
+/* ul,
 ol {
   margin-bottom: 24px;
   margin-top: 12px;
-}
+} */
 
 ul {
   list-style: none outside;
@@ -631,11 +631,6 @@ ul ol li,
 ol ol li,
 ol ul li {
   margin-bottom: 6px;
-}
-
-li {
-  line-height: 18px;
-  margin-bottom: 12px;
 }
 
 ul.large li {
