@@ -62,9 +62,12 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           padding: "5px 10px 5px 20px",
           color: "black",
           fontWeight: "500",
+          // textDecoration: "underline",
+          // textDecorationStyle: "dotted",
+          // textDecorationColor: "grey",
           fontStyle: "italic",
           cursor: "pointer",
-          // background: desktopScreen === "HOME" && "rgb(215 215 215)",
+          background: desktopScreen === "HOME" && "rgb(225 225 225)",
         }}
         className="hvr-shade"
       >
@@ -73,7 +76,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
       <div
         style={{
           ...tabStyle,
-          // background: desktopScreen === "PORTFOLIO" && "rgb(215 215 215)",
+          background: desktopScreen === "PORTFOLIO" && "rgb(225 225 225)",
         }}
         className="hvr-shade"
         onMouseEnter={() => {
@@ -105,7 +108,8 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           textOptions={quotes}
           wrapper={false}
           autoplay={false}
-          speed={35}
+          typing={true}
+          speed={30}
           autoplaySpeed={50000}
           style={{
             letterSpacing: 0.5,

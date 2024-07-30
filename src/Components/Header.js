@@ -217,7 +217,7 @@ const Header = (props) => {
       })}
       {!props.isFoldersOff && (
         <Folder
-          src={"images/folder.png"}
+          image={"images/safari.png"}
           isOpen={false}
           onOpen={() => {
             props.setDesktopScreen(Screen.PORTFOLIO);
@@ -229,7 +229,7 @@ const Header = (props) => {
           }}
           caption={"Projects*"}
           x={0}
-          y={150}
+          y={140}
           scale={0.5}
         />
       )}

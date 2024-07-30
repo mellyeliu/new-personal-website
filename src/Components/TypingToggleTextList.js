@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { selfFacts } from "../Data/QuotesData";
 import { ThemeContext } from "../ThemeContext";
+import { Fade } from "react-reveal";
 
 const TypingToggleTextList = ({
   style,
@@ -9,6 +10,7 @@ const TypingToggleTextList = ({
   speed = 50,
   autoplaySpeed = 10000,
   order = false,
+  typing = true,
 }) => {
   const [currentFact, setCurrentFact] = useState("");
   const [factIndex, setFactIndex] = useState(0);
@@ -17,6 +19,25 @@ const TypingToggleTextList = ({
   const [isPaused, setIsPaused] = useState(false);
   const [reset, setReset] = useState(false);
   const { cursorString, setCursorString } = useContext(ThemeContext);
+  const [isVisible, setIsVisible] = useState(false);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true); // Start fade-in
+      setShouldAnimate(true);
+    }, 300); // Short delay to trigger fade-in effect
+
+    return () => clearTimeout(timer); // Clean up the timer on component unmount or before the next effect
+  }, [factIndex]);
+
+  const styles =
+    typing === false
+      ? {
+          transition: shouldAnimate ? "opacity 1s ease-in-out" : "none",
+          opacity: isVisible ? 1 : 0,
+        }
+      : {};
 
   const handleHoverChange = () => {
     if (cursorString === "") {
@@ -75,6 +96,8 @@ const TypingToggleTextList = ({
   }, [charIndex, isTyping, isPaused, reset]);
 
   const handleClick = () => {
+    setIsVisible(false); // Start fade-out
+    setShouldAnimate(false); // Reset animation state
     setReset(true);
     order
       ? setFactIndex((prev) => (prev + 1) % textOptions.length)
@@ -83,12 +106,18 @@ const TypingToggleTextList = ({
 
   return (
     <span
-      style={{ ...style, cursor: "pointer" }}
+      style={{ ...style, cursor: "pointer", ...styles }}
       onClick={handleClick}
       onMouseEnter={handleHoverChange}
       onMouseLeave={handleHoverChange}
     >
-      {wrapper === true ? "( " + currentFact + " [...]" + " )" : currentFact}
+      {typing === false
+        ? wrapper === true
+          ? "( " + textOptions[factIndex] + " [...]" + " )"
+          : textOptions[factIndex]
+        : wrapper === true
+        ? "( " + currentFact + " [...]" + " )"
+        : currentFact}
     </span>
   );
 };

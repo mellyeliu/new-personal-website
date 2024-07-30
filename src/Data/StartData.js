@@ -118,6 +118,7 @@ export const startData = {
   // ],
   "☏ Contact": [
     ["Email", "mailto:mellye.liu@gmail.com"],
+    ["Github", "https://github.com/mellyeliu"],
     ["LinkedIn", "https://www.linkedin.com/in/mellyeliu/"],
     ["Instagram", "https://www.instagram.com/mellye.liu/"],
   ],

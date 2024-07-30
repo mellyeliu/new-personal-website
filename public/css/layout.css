@@ -1335,6 +1335,7 @@ button.rwt__tab:first-child {
 .hover-container {
   position: relative;
   display: block;
+  /* background: rgb(222, 222, 222); */
   background-image: url("../images/bgfinal.png");
   background-size: cover;
   overflow-x: scroll;

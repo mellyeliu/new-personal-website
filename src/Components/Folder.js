@@ -12,6 +12,7 @@ const Folder = ({
   isOpen,
   onOpen,
   isVisible,
+  image,
 }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
@@ -50,7 +51,13 @@ const Folder = ({
       }}
     >
       <img
-        src={isOpen ? "/images/folderNewOpen.png" : "/images/folder.png"}
+        src={
+          image
+            ? image
+            : isOpen
+            ? "/images/folderNewOpen.png"
+            : "/images/folder.png"
+        }
         onMouseLeave={stopHover}
         onMouseEnter={onHover}
         className="folder"
