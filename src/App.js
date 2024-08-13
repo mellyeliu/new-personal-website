@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import ReactGA from "react-ga";
 import "./App.css";
 import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 
 import NameTag from "./Components/NameTag";
 import Portfolio from "./Components/Portfolio";
@@ -18,23 +17,17 @@ export const Screen = {
 };
 
 const App = () => {
-  const [resumeData, setResumeData] = useState({});
   const [isFoldersOff, setisFoldersOff] = useState(false);
   const [desktopScreen, setDesktopScreen] = useState(Screen.HOME);
-  //const [showCursor, setShowCursor] = useState("");
-  const { cursorString, setCursorString } = useContext(ThemeContext);
-
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   useEffect(() => {
-    // Set a timeout to delay the resize event
     const timer = setTimeout(() => {
       window.dispatchEvent(new Event("resize"));
-    }, 500); // Delay of 500 milliseconds
+    }, 500);
 
-    // Clean up the timer when the component unmounts or the effect reruns
     return () => clearTimeout(timer);
-  }, []); // Empty dependency array ensures this effect runs only once after initial render
+  }, []);
 
   useEffect(() => {
     ReactGA.initialize("UA-110570651-1");
@@ -53,19 +46,17 @@ const App = () => {
   return (
     <ThemeProvider>
       <ThemeContext.Consumer>
-        {({ theme, fullScreen }) => (
+        {({ theme }) => (
           <>
             {!isMobile && <TextCursor />}
             <div
               className={`App ${theme === "dark" ? "" : ""}`}
               style={{
-                overflow: fullScreen ? "hidden" : "scroll",
-                height: fullScreen ? `${windowHeight}px` : null,
+                overflow: "hidden",
+                height: `${windowHeight}px`,
               }}
             >
-              {!isFoldersOff && fullScreen && desktopScreen === Screen.HOME && (
-                <NameTag />
-              )}
+              {!isFoldersOff && desktopScreen === Screen.HOME && <NameTag />}
               {desktopScreen === Screen.HOME ? (
                 <Header
                   dest={"home"}
@@ -87,18 +78,6 @@ const App = () => {
                   desktopScreen={desktopScreen}
                 />
               )}
-              <div
-                style={{
-                  display: fullScreen ? "none" : "block",
-                  position: "relative",
-                }}
-              >
-                <Portfolio
-                  style={{ zIndex: 1000000, position: "relative" }}
-                  data={PortfolioData.portfolio}
-                />
-                <Footer data={PortfolioData.main} />
-              </div>
             </div>
           </>
         )}

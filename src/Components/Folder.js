@@ -31,7 +31,6 @@ const Folder = ({
     setIsHovered(false);
     onHoverChange("");
     setDragging(false);
-    // hoverText.style.display = 'block';
   };
 
   return (

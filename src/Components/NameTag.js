@@ -1,5 +1,5 @@
 import React from "react";
-import TypingToggleTextList from "./TypingToggleTextList";
+import TypingToggleTextList from "./TextList";
 
 const NameTag = () => {
   return (

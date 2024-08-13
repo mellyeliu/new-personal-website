@@ -1223,7 +1223,11 @@ div .banner-text h3 {
 
 button.rwt__tab:first-child {
   margin: 10 25px 0 10px !important;
-  border-left: 0.5px solid #111111;
+  border-left: 0.5px solid #111111 !important;
+}
+
+button#one-tab {
+  border-left: 0.5px solid #111111 !important;
 }
 
 .rwt__tab[aria-selected="true"] .browserx {

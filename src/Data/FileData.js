@@ -25,6 +25,14 @@ const FileData = {
       y: 30,
     },
     {
+      hoverString: "Town of Salem",
+      src: "images/salem.png",
+      url: "https://blankmediagames.com/",
+      scale: 0.52,
+      x: 75,
+      y: 60,
+    },
+    {
       hoverString: "( Kingdom of Loathing )",
       src: "images/kol.png",
       url: "https://www.kingdomofloathing.com/",
@@ -247,7 +255,7 @@ const FileData = {
     {
       hoverString: "( Edit Wars )",
       src: "images/wiki.png",
-      url: "https://en.wikipedia.org/wiki/Wikipedia:Edit_wars",
+      url: "https://en.wikipedia.org/wiki/User:TheUnmissingPiece",
       scale: 0.52,
       x: 58,
       y: 65,

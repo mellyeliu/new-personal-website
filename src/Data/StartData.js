@@ -23,6 +23,10 @@ export const startData = {
       "https://www.goodreads.com/review/list/25037566-melissa?shelf=young-adult",
     ],
     [
+      "Moral foundations",
+      "https://en.wikipedia.org/wiki/Moral_foundations_theory",
+    ],
+    [
       "Intellectualization as defense",
       "https://en.wikipedia.org/wiki/Intellectualization",
     ],
@@ -36,6 +40,12 @@ export const startData = {
     [
       "Epileptic Trees",
       "https://tvtropes.org/pmwiki/pmwiki.php/Main/EpilepticTrees",
+    ],
+    ["English monarches", "https://en.wikipedia.org/wiki/Anne_Boleyn"],
+    ["Korean monarches", "https://en.wikipedia.org/wiki/Crown_Prince_Sado"],
+    [
+      "Existing in and out of labels",
+      "https://en.wikipedia.org/wiki/Sexual_identity",
     ],
     ["40L sprint progression", "https://www.youtube.com/watch?v=8uZmKLffjsI"],
     [
@@ -55,7 +65,7 @@ export const startData = {
   "✧ Recs": [
     [
       "The Handmaiden",
-      "https://www.goodreads.com/book/show/30516678-the-handmaiden",
+      "https://tvtropes.org/pmwiki/pmwiki.php/Film/TheHandmaiden",
     ],
     [
       "So Sad Today",
@@ -63,29 +73,33 @@ export const startData = {
     ],
     [
       "Grotesque (Natsuo Kirino)",
-      "https://www.goodreads.com/book/show/46070.Grotesque",
+      "https://www.goodreads.com/book/show/25366.Grotesque",
     ],
     [
       "Glitch Feminism",
       "https://www.goodreads.com/book/show/53076661-glitch-feminism",
     ],
     [
+      "Girlhood (Melissa Febos)",
+      "https://www.goodreads.com/book/show/53138199-girlhood",
+    ],
+    [
       "Series of Unfortunate Events",
-      "https://www.goodreads.com/series/52106-a-series-of-unfortunate-events",
+      "https://www.goodreads.com/book/show/78411.The_Bad_Beginning",
     ],
     [
       "The Robber Bride",
-      "https://www.goodreads.com/book/show/17691.The_Robber_Bride",
+      "https://www.goodreads.com/book/show/17650.The_Robber_Bride",
     ],
     [
       "Bliss Montage",
-      "https://www.goodreads.com/book/show/59511621-bliss-montage",
+      "https://www.goodreads.com/book/show/60243188-bliss-montage",
     ],
     ["Cat's Eye", "https://www.goodreads.com/book/show/51019.Cat_s_Eye"],
-    ["Mr. Robot", "https://www.goodreads.com/book/show/28109970-mr-robot"],
+    ["Mr. Robot", "https://tvtropes.org/pmwiki/pmwiki.php/Series/MrRobot"],
     [
       "In the Dream House",
-      "https://www.goodreads.com/book/show/43306559-in-the-dream-house",
+      "https://www.goodreads.com/book/show/43317482-in-the-dream-house",
     ],
     [
       "Her Body and Other Parties",
@@ -96,8 +110,12 @@ export const startData = {
       "https://www.goodreads.com/book/show/658552.Emily_of_New_Moon",
     ],
     [
+      "Ella Enchanted",
+      "https://www.goodreads.com/book/show/24337.Ella_Enchanted",
+    ],
+    [
       "The Velveteen Rabbit",
-      "https://www.goodreads.com/book/show/144972.The_Velveteen_Rabbit",
+      "https://www.goodreads.com/book/show/144974.The_Velveteen_Rabbit",
     ],
     [
       "Anything by edy (ao3)",
@@ -109,13 +127,29 @@ export const startData = {
     ],
     [
       "Anything by Carmen Machado",
-      "https://www.goodreads.com/author/show/5666092.Carmen_Maria_Machado",
+      "https://www.goodreads.com/author/show/6860265.Carmen_Maria_Machado",
     ],
   ],
-  // "☏ Believes in": [
-  //   ["Dismantling power hierarchies", ""],
-  //   ["Gluttony as a form of resistance", ""],
-  // ],
+  "♡ Beliefs": [
+    [
+      "Dismantling power hierarchies",
+      "https://en.wikipedia.org/wiki/The_personal_is_political",
+    ],
+    [
+      "All forms of intimacy",
+      "https://en.wikipedia.org/wiki/Colour_wheel_theory_of_love",
+    ],
+    ["Gender neutrality", "https://en.wikipedia.org/wiki/Gender_neutrality"],
+    [
+      "Vulnerability as resistance",
+      "https://64.media.tumblr.com/cefd317a46d9dcff2ed286f2a493ddfe/7ff1e0aa9ed33979-f4/s1280x1920/cf2af4766ccacd4451ec27a7ae9721187e91c920.jpg",
+    ],
+    ["Self-ownership", "https://en.wikipedia.org/wiki/Self-ownership"],
+    [
+      "Dissociation as escape",
+      "https://en.wikipedia.org/wiki/Maladaptive_daydreaming",
+    ],
+  ],
   "☏ Contact": [
     ["Email", "mailto:mellye.liu@gmail.com"],
     ["Github", "https://github.com/mellyeliu"],

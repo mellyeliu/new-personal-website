@@ -56,8 +56,6 @@ const Portfolio = ({ setDesktopScreen }) => {
                 setDesktopScreen(Screen.HOME);
               }}
               xmlns="http://www.w3.org/2000/svg"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
               style={{ cursor: "pointer" }}
             >
               <path
@@ -70,8 +68,6 @@ const Portfolio = ({ setDesktopScreen }) => {
               width="20"
               height="20"
               xmlns="http://www.w3.org/2000/svg"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
               style={{ fill: "#bbb" }}
             >
               <path

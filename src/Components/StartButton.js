@@ -72,16 +72,36 @@ const StartButton = () => {
     color: "black",
   };
 
+  const styles = {
+    container: {
+      display: "flex",
+      alignItems: "flex-start",
+    },
+    verticalBlock: {
+      background: "linear-gradient(to top, grey, #ddd)",
+      padding: "1px",
+      textAlign: "center",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRight: "0.5px solid black",
+    },
+    verticalText: {
+      color: "white",
+      writingMode: "vertical-rl",
+      transform: "rotate(180deg)",
+      // fontFamily: "Arial, sans-serif",
+      fontSize: "16px",
+      fontStyle: "italic",
+      alignItems: "center",
+      textAlign: "center",
+      justifyContent: "center",
+      marginTop: "80px",
+      // verticalAlign: "center",
+    },
+  };
+
   return (
-    <div
-      style={{ position: "relative", display: "inline-block" }}
-      // onMouseEnter={() => {
-      //   showDropDown(true);
-      // }}
-      // onMouseLeave={() => {
-      //   showDropDown(false);
-      // }}
-    >
+    <div style={{ position: "relative", display: "inline-block" }}>
       <div
         ref={buttonRef}
         onClick={toggleDropdown}
@@ -97,9 +117,7 @@ const StartButton = () => {
         }}
       >
         Start &nbsp; &nbsp;
-        {/* <span style={{ fontStyle: "normal" }}>|</span> */}
       </div>
-      {/* <button onClick={toggleDropdown}>Start</button> */}
       {isDropdownVisible && (
         <div
           ref={dropdownRef}
@@ -115,12 +133,14 @@ const StartButton = () => {
             borderRight: "0.5px solid black",
             borderBottom: "0.5px solid black",
             textAlign: "center",
-            // transform: "translateY(-100%)", // Move the dropdown upwards
             backgroundColor: "#f9f9f9",
             minWidth: "120px",
             zIndex: 1,
           }}
         >
+          <div style={styles.verticalBlock}>
+            <span style={styles.verticalText}>@mellye.liu</span>
+          </div>
           <div className="options" style={{ flex: 1 }}>
             {Object.keys(startData).map((option, index) => (
               <a
@@ -133,7 +153,6 @@ const StartButton = () => {
                 onClick={() => handleOptionClick(option)}
               >
                 {option}
-                {/* <span style={{ textAlign: "right" }}>&rsaquo;</span> */}
               </a>
             ))}
           </div>
@@ -142,12 +161,10 @@ const StartButton = () => {
               className="side-panel"
               style={{
                 position: "absolute",
-                left: 119,
+                left: 128,
                 bottom: 50,
                 width: "200px",
                 height: "auto",
-                // maxHeight: "400px",
-                // overflowY: "scroll",
                 backgroundColor: "#fff",
                 border: "0.5px solid black",
                 zIndex: 2,
@@ -173,7 +190,6 @@ const StartButton = () => {
                         padding: "2px 10px",
                       }}
                     >
-                      {/* <a style={{ color: "black" }} href={subOption[1]}> */}
                       {subOption[0]}
                     </li>
                   </a>

@@ -107,10 +107,6 @@ const DesktopIcon = ({
 
     timer = setTimeout(() => {
       if (clickCount === 1) {
-        // const features = `width=400,height=250,resizable=no,scrollbars=no,left=${
-        //   x + 20
-        // },top=${y + 200}`;
-
         if (url) {
           window.open(url, "popupWindow");
         }
@@ -139,8 +135,7 @@ const DesktopIcon = ({
     setIsHovered(false);
     onHoverChange("");
     setDragging(false);
-    // Reset cursor style on the draggable element, if needed
-    // You might need to store a reference to the draggable element or find it again
+
     const draggableElement = document.querySelector(".draggableImage");
     if (draggableElement) {
       draggableElement.style.cursor = "grab";
@@ -163,14 +158,6 @@ const DesktopIcon = ({
     }
   };
 
-  // const stopDrag = (e) => {
-  //   setIsHovered(false);
-  //   onHoverChange("");
-  //   setDragging(false);
-  //   e.target.style.cursor = "grab";
-  //   // hoverText.style.display = 'block';
-  // };
-
   // Function to stop the drag
   const onHover = () => {
     setIsHovered(true);
@@ -182,10 +169,8 @@ const DesktopIcon = ({
   };
 
   const stopHover = (e) => {
-    // setIsHovered(false);
     setShowCursor("");
     onHoverChange("");
-    // setDragging(false);
     e.target.style.cursor = "grab";
   };
 
@@ -194,18 +179,6 @@ const DesktopIcon = ({
     height: "auto",
     textAlign: "center",
     overflow: "hidden",
-  };
-
-  const overlayStyle = {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    background: "rgba(255, 255, 255, 0.5)", // Semi-transparent white overlay
-    opacity: isClicked ? "1" : "0", // Show overlay when active
-    transition: "opacity 0.3s",
-    pointerEvents: "none",
   };
 
   const startTouchDrag = (e) => {
@@ -254,22 +227,6 @@ const DesktopIcon = ({
       ref.current.initialTouchY = 0;
     }
   };
-  const transformString = border
-    ? isHovered
-      ? `scale(${scale + 0.04})`
-      : `scale(${scale + 0.02})`
-    : isHovered
-    ? `scale(${scale + 0.04})`
-    : `scale(${scale + 0.02})`;
-
-  const hoverText = `find me at: 
-
-ig // mellye.liu
-vsco // mellyeliu
-reading.supply // mellyeliu
-goodreads // mellyeliu
-spotify // mellye.liu
-dimensional // mellyeliu`;
 
   return (
     <div style={imageContainerStyle}>

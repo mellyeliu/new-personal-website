@@ -26,6 +26,7 @@ const CustomCursor = () => {
         fontSize: "16px",
         color: "black",
         fontStyle: "italic",
+        display: "none",
         left: `${position.x}px`,
         textShadow:
           "1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff",

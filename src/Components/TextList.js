@@ -3,7 +3,7 @@ import { selfFacts } from "../Data/QuotesData";
 import { ThemeContext } from "../ThemeContext";
 import { Fade } from "react-reveal";
 
-const TypingToggleTextList = ({
+const TextList = ({
   style,
   wrapper = true,
   textOptions = selfFacts,
@@ -26,7 +26,7 @@ const TypingToggleTextList = ({
     const timer = setTimeout(() => {
       setIsVisible(true); // Start fade-in
       setShouldAnimate(true);
-    }, 300); // Short delay to trigger fade-in effect
+    }, 150); // Short delay to trigger fade-in effect
 
     return () => clearTimeout(timer); // Clean up the timer on component unmount or before the next effect
   }, [factIndex]);
@@ -122,4 +122,4 @@ const TypingToggleTextList = ({
   );
 };
 
-export default TypingToggleTextList;
+export default TextList;

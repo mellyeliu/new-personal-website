@@ -227,7 +227,7 @@ const Header = (props) => {
           onHoverChange={() => {
             setCursorString("see projects!");
           }}
-          caption={"Projects*"}
+          caption={"Projects"}
           x={0}
           y={140}
           scale={0.5}
@@ -263,7 +263,7 @@ const Header = (props) => {
   return (
     <>
       <header id="home">
-        <Fade duration={1000} delay={500}>
+        <Fade duration={500} delay={200}>
           <div
             className="banner"
             style={{
@@ -363,11 +363,7 @@ const Header = (props) => {
                 )}{" "}
               </div>
             </div>
-            {/* <Carousel wrapAround={true} transitionMode='fade' dragging={false} swiping={false}
-                defaultControlsConfig={{ pagingDotsStyle: { display: 'none' },
-                 prevButtonStyle: { display: 'none' }, nextButtonStyle: { display: 'none' } }} pauseOnHover={true} autoplayInterval={3000} enableKeyboardControls={false}> */}
             {art}
-            {/* </Carousel> */}
           </div>
         </Fade>
       </header>

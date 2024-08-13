@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PortfolioData from "../Data/PortfolioData";
 import { ThemeContext } from "../ThemeContext";
 import Clock from "./Clock";
-import TypingToggleTextList from "./TypingToggleTextList";
+import TypingToggleTextList from "./TextList";
 import { quotes } from "../Data/QuotesData";
 import { isMobile } from "react-device-detect";
 import StartButton from "./StartButton";
@@ -108,7 +108,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           textOptions={quotes}
           wrapper={false}
           autoplay={false}
-          typing={true}
+          typing={false}
           speed={30}
           autoplaySpeed={50000}
           style={{
