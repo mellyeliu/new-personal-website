@@ -112,11 +112,11 @@ const StartButton = () => {
           height: 40,
           paddingTop: "5px",
           marginLeft: "20px !important",
-          fontWeight: isDropdownVisible ? 700 : 500,
+          fontWeight: 500,
           background: isDropdownVisible ? "#ddd" : "none",
         }}
       >
-        Start &nbsp; &nbsp;
+        <span style={{ fontWeight: 500 }}>✧</span> Start &nbsp; &nbsp;
       </div>
       {isDropdownVisible && (
         <div

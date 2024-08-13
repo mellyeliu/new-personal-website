@@ -575,8 +575,14 @@ a:visited {
 }
 
 a:hover,
+a.hvr-line,
 a:focus {
   color: #313131;
+}
+
+a.hvr-line:hover {
+  text-decoration: underline !important;
+  /* letter-spacing: 2px !important; */
 }
 
 p a,

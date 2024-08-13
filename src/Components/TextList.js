@@ -11,6 +11,7 @@ const TextList = ({
   autoplaySpeed = 10000,
   order = false,
   typing = true,
+  links = [],
 }) => {
   const [currentFact, setCurrentFact] = useState("");
   const [factIndex, setFactIndex] = useState(0);
@@ -95,13 +96,15 @@ const TextList = ({
     return () => clearInterval(typingInterval);
   }, [charIndex, isTyping, isPaused, reset]);
 
-  const handleClick = () => {
-    setIsVisible(false); // Start fade-out
-    setShouldAnimate(false); // Reset animation state
-    setReset(true);
-    order
-      ? setFactIndex((prev) => (prev + 1) % textOptions.length)
-      : setFactIndex(Math.floor(Math.random() * textOptions.length));
+  const handleClick = (event) => {
+    if (event.target.tagName !== "A") {
+      setIsVisible(false); // Start fade-out
+      setShouldAnimate(false); // Reset animation state
+      setReset(true);
+      order
+        ? setFactIndex((prev) => (prev + 1) % textOptions.length)
+        : setFactIndex(Math.floor(Math.random() * textOptions.length));
+    }
   };
 
   return (
@@ -110,6 +113,7 @@ const TextList = ({
       onClick={handleClick}
       onMouseEnter={handleHoverChange}
       onMouseLeave={handleHoverChange}
+      className="hvr-line"
     >
       {typing === false
         ? wrapper === true
@@ -118,6 +122,17 @@ const TextList = ({
         : wrapper === true
         ? "( " + currentFact + " [...]" + " )"
         : currentFact}
+      &nbsp;
+      {links.length > 0 && (
+        <a
+          className="hvr-line"
+          href={links[factIndex]}
+          target="_blank"
+          rel="noreferrer"
+        >
+          [*]
+        </a>
+      )}
     </span>
   );
 };

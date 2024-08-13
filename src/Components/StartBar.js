@@ -10,10 +10,13 @@ import StartButton from "./StartButton";
 const StartBar = ({ setDesktopScreen, desktopScreen }) => {
   const { cursorString, setCursorString } = useContext(ThemeContext);
 
+  const newQuotes = quotes.map((item) => item[0]);
+  const linkQuotes = quotes.map((item) => item[1]);
+
   const tabStyle = {
     padding: "5px 10px",
     color: "black",
-    fontWeight: "500",
+    // fontWeight: "500",
     fontStyle: "italic",
     cursor: "pointer",
   };
@@ -71,7 +74,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
         }}
         className="hvr-shade"
       >
-        {desktopScreen === "HOME" && "𐙚"} Home{" "}
+        {desktopScreen === "𐙚 HOME" && "𐙚"} 𐙚 Home{" "}
       </div>
       <div
         style={{
@@ -90,7 +93,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           setCursorString("");
         }}
       >
-        {desktopScreen === "PORTFOLIO" && "𐙚"} Projects{" "}
+        ッ <span style={{ fontWeight: 500 }}>Projects </span>
       </div>
       <div
         style={{
@@ -105,12 +108,13 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
       >
         <TypingToggleTextList
           className="control"
-          textOptions={quotes}
+          textOptions={newQuotes}
           wrapper={false}
           autoplay={false}
           typing={false}
           speed={30}
           autoplaySpeed={50000}
+          links={linkQuotes}
           style={{
             letterSpacing: 0.5,
             marginBottom: 5,

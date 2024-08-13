@@ -1293,7 +1293,12 @@ button#one-tab {
 
 .hvr-shade:hover {
   background: rgb(223, 223, 223) !important;
-  font-weight: 500 !important;
+  /* letter-spacing: 2px !important; */
+}
+
+.hvr-line:hover {
+  text-decoration: "underline" !important;
+  color: "blue";
   /* letter-spacing: 2px !important; */
 }
 
