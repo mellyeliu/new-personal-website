@@ -52,6 +52,10 @@ const TextList = ({
     let typingInterval;
 
     if (reset) {
+      if (typing) {
+        setIsVisible(false); // Start fade-out
+        setShouldAnimate(false);
+      }
       setCurrentFact("");
       setCharIndex(0);
       setIsTyping(true);

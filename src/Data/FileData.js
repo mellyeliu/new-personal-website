@@ -2,7 +2,7 @@ const FileData = {
   games: [
     {
       hoverString: "www.neopets.com",
-      src: "images/neopetsicon.png",
+      src: "images/icons/neopetsicon.png",
       url: "https://www.neopets.com/",
       scale: 0.52,
       x: 20,
@@ -11,14 +11,14 @@ const FileData = {
     {
       hoverString: "https://jstris.jezevec10.com/",
       url: "https://jstris.jezevec10.com/u/magicunicorn",
-      src: "images/tetris2.png",
+      src: "images/icons/tetris2.png",
       scale: 0.52,
       x: 20,
       y: 20,
     },
     {
       hoverString: "The Company of Myself",
-      src: "images/com.png",
+      src: "images/icons/com.png",
       url: "https://www.newgrounds.com/portal/view/518729",
       scale: 0.52,
       x: 40,
@@ -26,7 +26,7 @@ const FileData = {
     },
     {
       hoverString: "Town of Salem",
-      src: "images/salem.png",
+      src: "images/icons/salem.png",
       url: "https://blankmediagames.com/",
       scale: 0.52,
       x: 75,
@@ -34,7 +34,7 @@ const FileData = {
     },
     {
       hoverString: "( Kingdom of Loathing )",
-      src: "images/kol.png",
+      src: "images/icons/kol.png",
       url: "https://www.kingdomofloathing.com/",
       scale: 0.52,
       x: 31,
@@ -42,7 +42,7 @@ const FileData = {
     },
     {
       hoverString: "( Spider and Web )",
-      src: "images/spiderweb.png",
+      src: "images/icons/spiderweb.png",
       url: "https://eblong.com/zarf/zweb/tangle/",
       scale: 0.52,
       x: 18,
@@ -50,7 +50,7 @@ const FileData = {
     },
     {
       hoverString: "Club Penguin",
-      src: "images/cp.png",
+      src: "images/icons/cp.png",
       url: "https://www.cplegacy.com/",
       scale: 0.52,
       x: 50,
@@ -58,7 +58,7 @@ const FileData = {
     },
     {
       hoverString: "Shift",
-      src: "images/shift.png",
+      src: "images/icons/shift.png",
       url: "https://armorgames.com/play/751/shift",
       scale: 0.52,
       x: 7,
@@ -66,7 +66,7 @@ const FileData = {
     },
     {
       hoverString: "Fantage",
-      src: "images/fantage.png",
+      src: "images/icons/fantage.png",
       url: "https://en.wikipedia.org/wiki/Fantage",
       scale: 0.52,
       x: 60,
@@ -74,7 +74,7 @@ const FileData = {
     },
     {
       hoverString: "Loved",
-      src: "images/loved.png",
+      src: "images/icons/loved.png",
       url: "https://ocias.com/works/loved/",
       scale: 0.52,
       x: 42,
@@ -82,7 +82,7 @@ const FileData = {
     },
     {
       hoverString: "Cause of Death",
-      src: "images/cod.png",
+      src: "images/icons/cod.png",
       url: "https://tvtropes.org/pmwiki/pmwiki.php/VisualNovel/CauseOfDeath",
       scale: 0.52,
       x: 39,
@@ -90,7 +90,7 @@ const FileData = {
     },
     {
       hoverString: "( Dreaming Mary )",
-      src: "images/dreamingmary.png",
+      src: "images/icons/dreamingmary.png",
       url: "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/DreamingMary",
       scale: 0.52,
       x: 10,
@@ -98,7 +98,7 @@ const FileData = {
     },
     {
       hoverString: "( Okami )",
-      src: "images/okami.png",
+      src: "images/icons/okami.png",
       url: "https://en.wikipedia.org/wiki/%C5%8Ckami",
       scale: 0.52,
       x: 17,
@@ -106,7 +106,7 @@ const FileData = {
     },
     {
       hoverString: "( a dark room )",
-      src: "images/darkroom.png",
+      src: "images/icons/darkroom.png",
       url: "https://adarkroom.doublespeakgames.com/",
       scale: 0.52,
       x: 5,
@@ -114,7 +114,7 @@ const FileData = {
     },
     {
       hoverString: "windows93",
-      src: "images/windows93.png",
+      src: "images/icons/windows93.png",
       url: "https://www.windows93.net/",
       scale: 0.52,
       x: 30,
@@ -124,7 +124,7 @@ const FileData = {
   fandoms: [
     {
       hoverString: "TRShady",
-      src: "images/trshady.png",
+      src: "images/icons/trshady.png",
       url: "http://forum.trshady.com/",
       scale: 0.52,
       x: 30,
@@ -132,7 +132,7 @@ const FileData = {
     },
     {
       hoverString: "goodreads",
-      src: "images/goodreads.png",
+      src: "images/icons/goodreads.png",
       url: "https://www.goodreads.com/mellyeliu",
       scale: 0.52,
       x: 30,
@@ -140,7 +140,7 @@ const FileData = {
     },
     {
       hoverString: "Life is Strange",
-      src: "images/lis.png",
+      src: "images/icons/lis.png",
       url: "https://archiveofourown.org/works/4577451",
       scale: 0.5,
       x: 75,
@@ -148,7 +148,7 @@ const FileData = {
     },
     {
       hoverString: "www.tvtropes.org",
-      src: "images/tvtropes.png",
+      src: "images/icons/tvtropes.png",
       url: "https://www.tvtropes.org/",
       scale: 0.52,
       x: 25,
@@ -156,7 +156,7 @@ const FileData = {
     },
     {
       hoverString: "Deism, Reincarnation, and Creation Myths",
-      src: "images/deism.png",
+      src: "images/icons/deism.png",
       url: "https://en.wikipedia.org/wiki/Pandeism",
       scale: 0.52,
       x: 76,
@@ -164,7 +164,7 @@ const FileData = {
     },
     {
       hoverString: "૮꒰ ˶• ༝ •˶꒱ა ♡",
-      src: "images/fj.png",
+      src: "images/icons/fj.png",
       url: "https://www.freejinger.org/",
       scale: 0.5,
       x: 35,
@@ -172,7 +172,7 @@ const FileData = {
     },
     {
       hoverString: "tyler x josh (21p)",
-      src: "images/21p.png",
+      src: "images/icons/21p.png",
       url: "https://archiveofourown.org/works/8262935",
       scale: 0.5,
       x: 25,
@@ -180,7 +180,7 @@ const FileData = {
     },
     {
       hoverString: "everlark ♡",
-      src: "images/everlark.png",
+      src: "images/icons/everlark.png",
       url: "https://archiveofourown.org/works/603428",
       scale: 0.5,
       x: 23,
@@ -188,7 +188,7 @@ const FileData = {
     },
     {
       hoverString: "azula x mai (atla) ♡",
-      src: "images/maizula.png",
+      src: "images/icons/maizula.png",
       url: "https://archiveofourown.org/works/4249794/chapters/9617619",
       scale: 0.5,
       x: 42,
@@ -196,7 +196,7 @@ const FileData = {
     },
     {
       hoverString: "joseon-era kdramas",
-      src: "images/kdrama.png",
+      src: "images/icons/kdrama.png",
       url: "https://archiveofourown.org/works/4249794/chapters/9617619",
       scale: 0.5,
       x: 50,
@@ -206,7 +206,7 @@ const FileData = {
   wikis: [
     {
       hoverString: "are.na",
-      src: "images/arena.png",
+      src: "images/icons/arena.png",
       url: "https://www.are.na/",
       scale: 0.52,
       x: 45,
@@ -214,7 +214,7 @@ const FileData = {
     },
     {
       hoverString: "( TCRF )",
-      src: "images/tcrf.png",
+      src: "images/icons/tcrf.png",
       url: "https://tcrf.net/The_Cutting_Room_Floor",
       scale: 0.52,
       x: 40,
@@ -222,7 +222,7 @@ const FileData = {
     },
     {
       hoverString: "( daily deviation dream )",
-      src: "images/deviantart.png",
+      src: "images/icons/deviantart.png",
       url: "https://www.deviantart.com/",
       scale: 0.52,
       x: 71,
@@ -230,7 +230,7 @@ const FileData = {
     },
     {
       hoverString: "( MSCHF )",
-      src: "images/mschf.png",
+      src: "images/icons/mschf.png",
       url: "https://www.mschf.com/",
       scale: 0.52,
       x: 37,
@@ -238,7 +238,7 @@ const FileData = {
     },
     {
       hoverString: "Rational Wiki",
-      src: "images/rational.png",
+      src: "images/icons/rational.png",
       url: "https://rationalwiki.org/wiki/Special:Random",
       scale: 0.52,
       x: 76,
@@ -246,7 +246,7 @@ const FileData = {
     },
     {
       hoverString: "( scp foundation )",
-      src: "images/scp.png",
+      src: "images/icons/scp.png",
       url: "https://scp-wiki.wikidot.com/",
       scale: 0.52,
       x: 50,
@@ -254,7 +254,7 @@ const FileData = {
     },
     {
       hoverString: "( Edit Wars )",
-      src: "images/wiki.png",
+      src: "images/icons/wiki.png",
       url: "https://en.wikipedia.org/wiki/User:TheUnmissingPiece",
       scale: 0.52,
       x: 58,
@@ -264,7 +264,7 @@ const FileData = {
   "About Me": [
     {
       hoverString: "૮꒰ ˶• ༝ •˶꒱ა ♡",
-      src: "images/bio.png",
+      src: "images/windows/bio.png",
       scale: 0.83,
       border: true,
       x: 68,
@@ -296,7 +296,7 @@ const FileData = {
     },
     {
       hoverString: "( Girlhood )",
-      src: "images/emojis.png",
+      src: "images/windows/emojis.png",
       scale: 0.42,
       border: true,
       x: 58,
@@ -304,7 +304,7 @@ const FileData = {
     },
     {
       hoverString: "( Socials )",
-      src: "images/socials.png",
+      src: "images/windows/socials.png",
       scale: 0.42,
       border: true,
       x: 8,
@@ -312,7 +312,7 @@ const FileData = {
     },
     {
       hoverString: "( 🌐🤍🎀🫧 )",
-      src: "images/internet.png",
+      src: "images/windows/internet.png",
       scale: 0.5,
       border: true,
       x: 17,

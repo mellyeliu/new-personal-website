@@ -37,19 +37,9 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
       }}
     >
       <StartButton />
-      {/* <div
-        style={{
-          ...tabStyle,
-          cursor: "default",
-          marginLeft: "20px !important",
-        }}
-      >
-        Start &nbsp; &nbsp;›
-      </div> */}
       <div
         onClick={() => {
           if (isMobile) {
-            console.log("reloading");
             window.location.reload();
           }
           setDesktopScreen("HOME");
@@ -65,9 +55,6 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           padding: "5px 10px 5px 20px",
           color: "black",
           fontWeight: "500",
-          // textDecoration: "underline",
-          // textDecorationStyle: "dotted",
-          // textDecorationColor: "grey",
           fontStyle: "italic",
           cursor: "pointer",
           background: desktopScreen === "HOME" && "rgb(225 225 225)",
@@ -102,7 +89,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           right: "125px",
           height: 40,
           paddingTop: 5,
-          maxWidth: "60%",
+          maxWidth: "50%",
         }}
         id="desktop-only"
       >
@@ -116,7 +103,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           autoplaySpeed={50000}
           links={linkQuotes}
           style={{
-            letterSpacing: 0.5,
+            letterSpacing: 0.4,
             marginBottom: 5,
             fontFamily: "Cormorant Garamond",
             fontWeight: 300,
@@ -127,12 +114,6 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
         ></TypingToggleTextList>{" "}
       </div>
       <Clock />
-      {/* <ul
-        style={{ color: "black !important", float: "right" }}
-        className="social-links"
-      >
-        {networks}
-      </ul> */}
     </div>
   );
 };

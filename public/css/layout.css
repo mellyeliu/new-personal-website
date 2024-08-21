@@ -49,6 +49,11 @@ div {
   font-family: "Cormorant Garamond";
 }
 
+.react-draggable {
+  width: min-content;
+  height: min-content;
+}
+
 .themedark {
   background-color: #212121 !important;
   color: white !important;

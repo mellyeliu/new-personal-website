@@ -96,6 +96,38 @@ const PortfolioData = {
         ],
       },
       {
+        title: "BOY♡GAME",
+        category:
+          "Analog dating sim to date boys and matchmake friends. A reskin of the 80s game HEARTTHROB.",
+        languages: "Canva AI (lol), Figma",
+        image: "boygame.png",
+        year: "2024",
+        type: ["design"],
+        url: "",
+        collaborators: [
+          {
+            name: "Amanda Yeh",
+            url: "https://amandayeh.com/",
+          },
+        ],
+      },
+      {
+        title: "On Healing [Untitled]",
+        category:
+          "Meditations on trauma, abuse, and silver lining friendships. Work in progress!",
+        languages: "React?",
+        image: "healinggame.png",
+        year: "2024",
+        type: ["design"],
+        url: "https://healing-game.netlify.app/",
+        collaborators: [
+          {
+            name: "Carolyn Wang",
+            url: "https://carolynwang.substack.com/",
+          },
+        ],
+      },
+      {
         title: "Dreamland",
         category:
           "Interactive fiction documenting dream journal escapism. Work in progress!",
@@ -109,7 +141,7 @@ const PortfolioData = {
         title: "M0MENTS",
         category:
           "You play as an engineer trying not to get laid off. Created in the height of the tech layoffs",
-        languages: "Twine, HTML/CSS",
+        languages: "ChatGPT, Twine, HTML/CSS",
         image: "moments.png",
         year: "2023",
         type: ["code"],
@@ -234,7 +266,7 @@ const PortfolioData = {
         collaborators: [
           {
             name: "Carolyn Wang",
-            url: "https://www.instagram.com/caroaesth/",
+            url: "https://carolynwang.substack.com/",
           },
         ],
       },

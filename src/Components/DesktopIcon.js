@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { event } from "react-ga";
-import TextCursor from "./TextCursor";
-import { isMobile } from "react-device-detect";
 import PortfolioData from "../Data/PortfolioData";
 
 const DesktopIcon = ({

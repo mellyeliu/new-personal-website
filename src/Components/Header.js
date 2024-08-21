@@ -215,6 +215,7 @@ const Header = (props) => {
             })
           : null;
       })}
+      <div style={{ position: "absolute", left: 920 }}>.</div>
       {!props.isFoldersOff && (
         <Folder
           image={"images/safari.png"}

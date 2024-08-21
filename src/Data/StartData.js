@@ -107,7 +107,7 @@ export const startData = {
     ],
     [
       "Emily of New Moon",
-      "https://www.goodreads.com/book/show/658552.Emily_of_New_Moon",
+      "https://www.goodreads.com/book/show/3562.Emily_of_New_Moon",
     ],
     [
       "Ella Enchanted",
