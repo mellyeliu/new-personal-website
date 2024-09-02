@@ -3,12 +3,13 @@ import Fade from "react-reveal/Fade";
 import Carousel from "nuka-carousel";
 import DesktopIcon from "./DesktopIcon";
 import Folder from "./Folder";
-import FileData from "../Data/FileData";
+import FileData, { windowData } from "../Data/FileData";
 import "@animated-burgers/burger-squeeze/dist/styles.css";
 import { ThemeContext } from "../ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { isMobile } from "react-device-detect";
 import { Screen } from "../App";
+import Popup from "./Popup";
 
 const Header = (props) => {
   const { fullScreen, setFullScreen } = useContext(ThemeContext);
@@ -195,6 +196,23 @@ const Header = (props) => {
               }
               return image.border && isGridLayout ? (
                 <></>
+              ) : image.border ? (
+                <Popup
+                  url={image.url}
+                  setZIndex={setZIndex}
+                  zIndex={zIndex}
+                  setShowCursor={setCursorString}
+                  border={true}
+                  hoverString={image.hoverString}
+                  onHoverChange={handleHoverChange}
+                  src={image.src}
+                  scale={image.scale}
+                  x={isGridLayout ? alignX : image.x}
+                  y={isGridLayout ? alignY : image.y}
+                  triggerResize={triggerResize}
+                  isGridLayout={isGridLayout}
+                  content={windowData[image.hoverString]}
+                ></Popup>
               ) : (
                 <DesktopIcon
                   url={image.url}

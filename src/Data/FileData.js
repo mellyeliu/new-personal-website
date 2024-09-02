@@ -1,3 +1,25 @@
+import React from "react";
+import PortfolioData from "./PortfolioData";
+
+function CustomLink({ text, href, color = "blue" }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        textDecoration: "underline",
+        pointerEvents: "auto",
+        color: "#b87cbf", // color,
+      }}
+      onMouseOver={(e) => (e.currentTarget.style.letterSpacing = "1px")}
+      onMouseOut={(e) => (e.currentTarget.style.letterSpacing = "0px")}
+    >
+      {text}
+    </a>
+  );
+}
+
 const FileData = {
   games: [
     {
@@ -320,6 +342,148 @@ const FileData = {
     },
   ],
   Obsessions: [],
+};
+
+const socials = (
+  <div
+    style={{
+      justifyContent: "left",
+      whiteSpace: "pre-wrap",
+      alignItems: "left",
+      color: "black",
+      fontSize: "18px",
+      textAlign: "left",
+      lineHeight: "1.1",
+      padding: "150px 20px",
+      fontFamily: "Arimo",
+      fontWeight: 500,
+      zIndex: 1000000,
+      pointerEvents: "none",
+    }}
+  >
+    find me at:
+    <br />
+    <br />
+    {PortfolioData.main.social.map((item, index) => (
+      <>
+        <CustomLink href={item.url} text={item.name} />
+        <div />
+      </>
+    ))}
+  </div>
+);
+
+const site = (
+  <div
+    style={{
+      justifyContent: "center",
+      whiteSpace: "pre-wrap",
+      alignItems: "center",
+      color: "black",
+      fontSize: "20px",
+      textAlign: "center",
+      // fontStyle: "italic",
+      lineHeight: "1.1",
+      padding: "170px 50px",
+      fontFamily: "Arimo",
+      fontWeight: 500,
+      zIndex: 1000000,
+      pointerEvents: "none",
+    }}
+  >
+    welcome to my safe space on the internet ᡣ • . • 𐭩 ♡
+    <br />
+    &#40; identity map 🌟 site assemblage 🌐 portfolio 📎 &#41;
+    <br />
+    <br />
+    ૮꒰ ˶• ༝ •˶꒱ა ♡
+    <br />
+    <br />
+    this website is{" "}
+    <CustomLink
+      text="open source"
+      href="https://github.com/mellyeliu/mellyeliu.online"
+    />
+    , made with <CustomLink text="react" href="https://react.dev/" />, and
+    inspired by{" "}
+    <CustomLink
+      text="everything before me"
+      href="https://www.are.na/vaiva-staugaityte/websites-that-look-like-operating-systems"
+    />
+  </div>
+);
+
+const emojis = (
+  <div
+    style={{
+      justifyContent: "center",
+      whiteSpace: "pre-wrap",
+      alignItems: "center",
+      color: "black",
+      fontSize: "48px",
+      textAlign: "center",
+      lineHeight: "1.1",
+      padding: "150px 20px",
+      fontFamily: "Arimo",
+      fontWeight: 500,
+      zIndex: 1000000,
+      pointerEvents: "none",
+    }}
+  >
+    🎀💿🧸💫
+  </div>
+);
+
+const bio = (
+  <div
+    style={{
+      justifyContent: "left",
+      whiteSpace: "pre-wrap",
+      alignItems: "left",
+      color: "black",
+      fontSize: "20px",
+
+      textAlign: "left",
+      lineHeight: "1.15",
+      padding: "165px 25px",
+      fontFamily: "Arimo",
+      fontWeight: 500,
+      zIndex: 1000000,
+      pointerEvents: "none",
+    }}
+  >
+    <div style={{ textAlign: "center" }}>
+      ₊˚ . ⋅☁︎‧₊˚ ☾. ⋅<br />
+    </div>
+    <br />
+    Melissa is a software engineer and internet artist. Interests include:
+    messaging systems, creation myths, fandom as landscaping fictional worlds,
+    the medium of games, safe spaces, creative intimacy, pseudoscientific
+    personality tests, relational psychology, rotting in bed [...] They still
+    believe in the goodness of the internet and its potential for connection and
+    creativity.
+    <br />
+    <br />
+    In the day they work on core components, cross-platform integration, and{" "}
+    <CustomLink
+      color="black"
+      text="open source tooling"
+      href="https://github.com/facebook/stylex"
+    />{" "}
+    for React, the library where they fell in love with coding, and at night
+    they use it on random side quests. Previously, they worked on the{" "}
+    <CustomLink text="website" color="black" href="https://messenger.com" />{" "}
+    that first taught them how to talk to people. She still beta tests it every
+    day with her friends. The rest of her life is just content fodder for her
+    work.
+  </div>
+);
+
+export const windowData = {
+  "( Socials )": socials,
+  "૮꒰ ˶• ༝ •˶꒱ა ♡": bio,
+  "( 🌐🤍🎀🫧 )": site,
+  "( Girlhood )": emojis,
 };
 
 export default FileData;
