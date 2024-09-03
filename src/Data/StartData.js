@@ -30,12 +30,14 @@ export const startData = {
       "Intellectualization as defense",
       "https://en.wikipedia.org/wiki/Intellectualization",
     ],
-    ["Dream journals", "http://example.com/dream-journals"],
     [
       "Unreliable narrators",
       "https://tvtropes.org/pmwiki/pmwiki.php/Main/UnreliableNarrator",
     ],
-    ["Biphasic sleep schedules", "http://example.com/biphasic-sleep-schedules"],
+    [
+      "Biphasic sleep schedules",
+      "https://en.wikipedia.org/wiki/Polyphasic_sleep",
+    ],
     ["Reading about suffering", "https://en.wikipedia.org/wiki/Pit_of_despair"],
     [
       "Epileptic Trees",
@@ -69,7 +71,7 @@ export const startData = {
     ],
     [
       "So Sad Today",
-      "https://www.goodreads.com/book/show/25663607-so-sad-today",
+      "https://www.goodreads.com/book/show/25904473-so-sad-today",
     ],
     [
       "Grotesque (Natsuo Kirino)",
@@ -77,7 +79,7 @@ export const startData = {
     ],
     [
       "Glitch Feminism",
-      "https://www.goodreads.com/book/show/53076661-glitch-feminism",
+      "https://www.goodreads.com/book/show/52411999-glitch-feminism",
     ],
     [
       "Girlhood (Melissa Febos)",

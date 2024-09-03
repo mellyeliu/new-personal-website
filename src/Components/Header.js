@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { isMobile } from "react-device-detect";
 import { Screen } from "../App";
 import Popup from "./Popup";
+import Pet from "./Pet";
 
 const Header = (props) => {
   const { fullScreen, setFullScreen } = useContext(ThemeContext);
@@ -233,10 +234,12 @@ const Header = (props) => {
             })
           : null;
       })}
-      <div style={{ position: "absolute", left: 920 }}>.</div>
+      {!isGridLayout && (
+        <div style={{ position: "absolute", left: 920 }}>.</div>
+      )}
       {!props.isFoldersOff && (
         <Folder
-          image={"images/safari.png"}
+          image={"images/menu/safari.png"}
           isOpen={false}
           onOpen={() => {
             props.setDesktopScreen(Screen.PORTFOLIO);
@@ -348,6 +351,7 @@ const Header = (props) => {
               </span>
             </div>
             <div className="container" style={{ zIndex: 1 }}>
+              {/* <Pet /> */}
               <div
                 onClick={toggleButton}
                 className="top-left"

@@ -1,10 +1,11 @@
 import React from "react";
 import TypingToggleTextList from "./TextList";
+import { isMobile } from "react-device-detect";
 
 const styles = {
   container: {
-    width: "320px",
-    height: "100px",
+    width: isMobile ? "300px" : "340px",
+    height: isMobile ? "100px" : "110px",
     backgroundColor: "white",
     border: "0.5px solid #111",
     display: "flex",
@@ -25,7 +26,7 @@ const styles = {
     fontWeight: 700,
     letterSpacing: 0.4,
     fontFamily: "Cormorant Garamond",
-    fontSize: 22,
+    fontSize: isMobile ? 22 : 24,
   },
   funFacts: {
     letterSpacing: 1.3,

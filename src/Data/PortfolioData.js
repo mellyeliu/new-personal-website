@@ -8,7 +8,7 @@ const PortfolioData = {
       },
       {
         name: "reading.supply // mellyeliu",
-        url: "https://reading.supply/@mellyeliu",
+        url: "https://reading.supply/@mellyeliuhttps://reading.supply/@mellyeliu",
         className: "fas fa-edit",
       },
       {
@@ -68,7 +68,7 @@ const PortfolioData = {
         image: "zine1.png",
         year: "2023",
         type: ["design"],
-        url: "https://www.figma.com/file/1qagskAUweTYTwJoFeKcfz/digital-nostalgia?type=design&node-id=0%3A1&mode=design&t=fvxbxOiKfiui2muN-1",
+        url: "https://www.figma.com/proto/QMYDZfrpN2PUJP21R62Sb6/digital-nostalgia?page-id=0%3A1&node-id=201-2&node-type=CANVAS&viewport=617%2C1021%2C0.07&t=6nK9lL1zcp8bszWy-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=201%3A2&share=1",
       },
       {
         title: "My Fanfic Became Sentient and Cannabalized Itself",
@@ -78,7 +78,7 @@ const PortfolioData = {
         image: "fanfic.png",
         year: "2023",
         type: ["design"],
-        url: "https://www.figma.com/file/1qagskAUweTYTwJoFeKcfz/digital-nostalgia?type=design&node-id=0%3A1&mode=design&t=fvxbxOiKfiui2muN-1",
+        url: "https://www.figma.com/proto/QMYDZfrpN2PUJP21R62Sb6/digital-nostalgia?node-id=201-3023&t=7x2gIbOEt1n5qwZx-1&scaling=scale-down&content-scaling=fixed",
       },
       {
         title: "CYBERHUG COLLABORATIONS",
@@ -103,7 +103,7 @@ const PortfolioData = {
         image: "boygame.png",
         year: "2024",
         type: ["design"],
-        url: "",
+        url: "https://www.figma.com/proto/7QemW22jZhpVvq8FENwX4f/BOY%E2%99%A1GAME",
         collaborators: [
           {
             name: "Amanda Yeh",
@@ -118,7 +118,7 @@ const PortfolioData = {
         languages: "React?",
         image: "healinggame.png",
         year: "2024",
-        type: ["design"],
+        type: ["code", "design"],
         url: "https://healing-game.netlify.app/",
         collaborators: [
           {

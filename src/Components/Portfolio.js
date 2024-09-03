@@ -5,6 +5,7 @@ import PortfolioData from "../Data/PortfolioData";
 import { ThemeContext } from "../ThemeContext";
 import { Screen } from "../App";
 import { isMobile } from "react-device-detect";
+import BrowserIcons from "./BrowserIcons";
 
 const Portfolio = ({ setDesktopScreen }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -275,7 +276,8 @@ const Portfolio = ({ setDesktopScreen }) => {
                 {" "}
                 Design ‧&lt;₊˚🤍✩ /&gt;₊
               </Tab>
-              <span className="browsero">○ ○ ○</span>
+              <BrowserIcons setDesktopScreen={setDesktopScreen} />
+              {/* <span className="browsero">○ ○ ○</span> */}
             </TabList>
             <TabPanel tabId="one">{urlBar("All", projects)}</TabPanel>
             <TabPanel tabId="two">{urlBar("Code", code)}</TabPanel>

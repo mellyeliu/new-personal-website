@@ -1,7 +1,7 @@
 import React from "react";
 import PortfolioData from "./PortfolioData";
 
-function CustomLink({ text, href, color = "blue" }) {
+function CustomLink({ text, href, color = "#b87cbf" }) {
   return (
     <a
       href={href}
@@ -10,13 +10,40 @@ function CustomLink({ text, href, color = "blue" }) {
       style={{
         textDecoration: "underline",
         pointerEvents: "auto",
-        color: "#b87cbf", // color,
+        color,
       }}
       onMouseOver={(e) => (e.currentTarget.style.letterSpacing = "1px")}
       onMouseOut={(e) => (e.currentTarget.style.letterSpacing = "0px")}
     >
       {text}
     </a>
+  );
+}
+
+function ContentBlock({
+  content,
+  textAlign = "left",
+  padding = "150px 20px",
+  fontSize = "20px",
+}) {
+  return (
+    <div
+      style={{
+        whiteSpace: "pre-wrap",
+        color: "#222",
+        fontSize,
+        textAlign,
+        lineHeight: "1.1",
+        padding,
+        letterSpacing: -0.1,
+        fontFamily: "Helvetica",
+        // fontWeight: 500,
+        zIndex: 1000000,
+        pointerEvents: "none",
+      }}
+    >
+      {content}
+    </div>
   );
 }
 
@@ -344,53 +371,22 @@ const FileData = {
   Obsessions: [],
 };
 
-const socials = (
-  <div
-    style={{
-      justifyContent: "left",
-      whiteSpace: "pre-wrap",
-      alignItems: "left",
-      color: "black",
-      fontSize: "18px",
-      textAlign: "left",
-      lineHeight: "1.1",
-      padding: "150px 20px",
-      fontFamily: "Arimo",
-      fontWeight: 500,
-      zIndex: 1000000,
-      pointerEvents: "none",
-    }}
-  >
+const socialsContent = (
+  <>
     find me at:
     <br />
     <br />
     {PortfolioData.main.social.map((item, index) => (
-      <>
+      <React.Fragment key={index}>
         <CustomLink href={item.url} text={item.name} />
         <div />
-      </>
+      </React.Fragment>
     ))}
-  </div>
+  </>
 );
 
-const site = (
-  <div
-    style={{
-      justifyContent: "center",
-      whiteSpace: "pre-wrap",
-      alignItems: "center",
-      color: "black",
-      fontSize: "20px",
-      textAlign: "center",
-      // fontStyle: "italic",
-      lineHeight: "1.1",
-      padding: "170px 50px",
-      fontFamily: "Arimo",
-      fontWeight: 500,
-      zIndex: 1000000,
-      pointerEvents: "none",
-    }}
-  >
+const siteContent = (
+  <>
     welcome to my safe space on the internet ᡣ • . • 𐭩 ♡
     <br />
     &#40; identity map 🌟 site assemblage 🌐 portfolio 📎 &#41;
@@ -410,48 +406,11 @@ const site = (
       text="everything before me"
       href="https://www.are.na/vaiva-staugaityte/websites-that-look-like-operating-systems"
     />
-  </div>
+  </>
 );
 
-const emojis = (
-  <div
-    style={{
-      justifyContent: "center",
-      whiteSpace: "pre-wrap",
-      alignItems: "center",
-      color: "black",
-      fontSize: "48px",
-      textAlign: "center",
-      lineHeight: "1.1",
-      padding: "150px 20px",
-      fontFamily: "Arimo",
-      fontWeight: 500,
-      zIndex: 1000000,
-      pointerEvents: "none",
-    }}
-  >
-    🎀💿🧸💫
-  </div>
-);
-
-const bio = (
-  <div
-    style={{
-      justifyContent: "left",
-      whiteSpace: "pre-wrap",
-      alignItems: "left",
-      color: "black",
-      fontSize: "20px",
-
-      textAlign: "left",
-      lineHeight: "1.15",
-      padding: "165px 25px",
-      fontFamily: "Arimo",
-      fontWeight: 500,
-      zIndex: 1000000,
-      pointerEvents: "none",
-    }}
-  >
+const bioContent = (
+  <>
     <div style={{ textAlign: "center" }}>
       ₊˚ . ⋅☁︎‧₊˚ ☾. ⋅<br />
     </div>
@@ -466,24 +425,34 @@ const bio = (
     <br />
     In the day they work on core components, cross-platform integration, and{" "}
     <CustomLink
-      color="black"
       text="open source tooling"
       href="https://github.com/facebook/stylex"
     />{" "}
     for React, the library where they fell in love with coding, and at night
     they use it on random side quests. Previously, they worked on the{" "}
-    <CustomLink text="website" color="black" href="https://messenger.com" />{" "}
-    that first taught them how to talk to people. She still beta tests it every
-    day with her friends. The rest of her life is just content fodder for her
-    work.
-  </div>
+    <CustomLink text="website" href="https://messenger.com" /> that first taught
+    them how to talk to people. She still beta tests it every day with her
+    friends. The rest of her life is just content fodder for her work.
+  </>
 );
 
+const emojisContent = <>🎀💿🧸💫</>;
+
 export const windowData = {
-  "( Socials )": socials,
-  "૮꒰ ˶• ༝ •˶꒱ა ♡": bio,
-  "( 🌐🤍🎀🫧 )": site,
-  "( Girlhood )": emojis,
+  "( Socials )": <ContentBlock content={socialsContent} />,
+  "૮꒰ ˶• ༝ •˶꒱ა ♡": (
+    <ContentBlock content={bioContent} padding="165px 25px" />
+  ),
+  "( 🌐🤍🎀🫧 )": (
+    <ContentBlock
+      content={siteContent}
+      textAlign="center"
+      padding="170px 50px"
+    />
+  ),
+  "( Girlhood )": (
+    <ContentBlock content={emojisContent} textAlign="center" fontSize="48px" />
+  ),
 };
 
 export default FileData;

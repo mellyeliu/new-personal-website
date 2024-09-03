@@ -32,6 +32,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
         padding: "0px",
         display: "flex",
         letterSpacing: 1,
+        overflow: "hidden",
         bottom: 0,
         border: "0.5px solid black",
       }}

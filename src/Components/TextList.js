@@ -113,7 +113,11 @@ const TextList = ({
 
   return (
     <span
-      style={{ ...style, cursor: "pointer", ...styles }}
+      style={{
+        ...style,
+        cursor: "pointer",
+        ...styles,
+      }}
       onClick={handleClick}
       onMouseEnter={handleHoverChange}
       onMouseLeave={handleHoverChange}

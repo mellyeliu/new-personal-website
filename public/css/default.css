@@ -127,26 +127,9 @@ a {
   color: inherit; /* Inherit color from parent */
 }
 
-/* body {
-   cursor: url('../images/glitchcursorb.png'), auto;
-}
-
-img:hover,
-span:hover,
-a:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover {
-   cursor: url('../images/glitchpointer.png'), auto !important;
-}
-
-.draggableImage:hover {
-   cursor: url('../images/glitchgrabb.png'), auto !important;
-} */
-
 ::selection {
   /* background-color: #ecdbff; */
-  text-shadow: 2px 2px 6px rgb(40, 40, 40);
+  text-shadow: 2px 2px 6px #b87cbf;
 }
 
 /* img {
@@ -313,6 +296,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* @font-face {
+  font-family: "Helvetica";
+  src: url("/public/css/fonts/Helvetica.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
 
 /* ------------------------------------------------------------------ */
 /* c. Default and Basic Styles
