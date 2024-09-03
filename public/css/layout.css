@@ -150,7 +150,7 @@ img#headerpic {
   font-weight: 400;
   /* text-transform: uppercase; */
   letter-spacing: 1.5px;
-  font-size: 16px;
+  font-size: 17px;
   text-align: left;
   padding-top: 10px;
   /* writing-mode: vertical-lr;
@@ -1253,8 +1253,8 @@ button#one-tab {
 .browsero {
   right: 20px;
   position: absolute;
-  color: #2e2e2e;
-  top: 10px;
+  color: #424242;
+  top: 15px;
   font-size: 25px;
   z-index: 1000;
 }
@@ -1394,7 +1394,7 @@ button#one-tab {
   position: absolute;
   top: 15px;
   right: 15px;
-  font: 16px "Cormorant Garamond";
+  font: 17px "Cormorant Garamond";
   /* font-family: montserrat; */
   /* text-transform: uppercase; */
   letter-spacing: 1.5px;

@@ -8,7 +8,7 @@ const PortfolioData = {
       },
       {
         name: "reading.supply // mellyeliu",
-        url: "https://reading.supply/@mellyeliuhttps://reading.supply/@mellyeliu",
+        url: "https://reading.supply/@mellyeliu",
         className: "fas fa-edit",
       },
       {

@@ -49,7 +49,7 @@ const SplitTextByWidth = ({ text, maxWidth, backgroundColor, style }) => {
   }, [text, maxWidth]);
 
   return (
-    <div ref={containerRef} style={{ lineHeight: "5px", textAlign: "center" }}>
+    <div ref={containerRef} style={{ lineHeight: "1px", textAlign: "center" }}>
       {lines.map((line, index) => (
         <>
           {" "}

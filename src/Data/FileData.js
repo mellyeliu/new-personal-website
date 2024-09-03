@@ -1,7 +1,7 @@
 import React from "react";
 import PortfolioData from "./PortfolioData";
 
-function CustomLink({ text, href, color = "#b87cbf" }) {
+function CustomLink({ text, href, color = "#bf75bf" }) {
   return (
     <a
       href={href}
@@ -75,6 +75,15 @@ const FileData = {
       x: 40,
       y: 30,
       iconText: "company of myself.png",
+    },
+    {
+      hoverString: "You Find Yourself In A Room",
+      src: "images/icons/YFYIAR.png",
+      url: "https://www.newgrounds.com/portal/view/556644",
+      scale: 0.52,
+      x: 54,
+      y: 46,
+      iconText: "yfyiar.png",
     },
     {
       hoverString: "Town of Salem",
@@ -279,6 +288,15 @@ const FileData = {
       iconText: "are.na.png",
     },
     {
+      hoverString: "esoteric.codes",
+      src: "images/icons/esoteric.png",
+      url: "https://www.newgrounds.com/portal/view/518729",
+      scale: 0.52,
+      x: 51,
+      y: 34,
+      iconText: "esoteric codes.png",
+    },
+    {
       hoverString: "( TCRF )",
       src: "images/icons/tcrf.png",
       url: "https://tcrf.net/The_Cutting_Room_Floor",
@@ -349,7 +367,7 @@ const FileData = {
       url: "https://vsco.co/mellyeliu/gallery",
       x: 80,
       y: 42,
-      iconText: "me.png",
+      iconText: "meeee.png",
     },
     {
       hoverString: "૮꒰ ˶• ༝ •˶꒱ა ♡",
@@ -444,12 +462,17 @@ const bioContent = (
     Melissa is a software engineer and internet artist. Interests include:
     messaging systems, creation myths, fandom as landscaping fictional worlds,
     the medium of games, safe spaces, creative intimacy, pseudoscientific
-    personality tests, relational psychology, rotting in bed [...] They still
+    personality tests, relational psychology, bed rotting [...] They still
     believe in the goodness of the internet and its potential for connection and
     creativity.
     <br />
     <br />
-    In the day they work on core components, cross-platform integration, and{" "}
+    In the day they work on core components,{" "}
+    <CustomLink
+      text="cross-platform integration"
+      href="https://github.com/facebook/react-strict-dom"
+    />
+    , and{" "}
     <CustomLink
       text="open source tooling"
       href="https://github.com/facebook/stylex"
