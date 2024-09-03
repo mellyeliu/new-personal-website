@@ -83,7 +83,7 @@ export const quotes = [
     "https://www.goodreads.com/book/show/231850.Corduroy",
   ],
   [
-    "Stories are compasses and architecture; we navigate by them, we build sanctuaries and prisons out of them... To love is to put yourself in their story",
+    "Stories are compasses and architecture; we navigate by them, we build sanctuaries and prisons out of them. To love is to put yourself in their story",
     "https://www.goodreads.com/quotes/810174-stories-are-compasses-and-architecture-we-navigate-by-them-we",
   ],
   [

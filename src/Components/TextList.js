@@ -24,6 +24,19 @@ const TextList = ({
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
+    // Ensure charIndex is reset to start typing the new fact from the beginning
+    setCharIndex(0);
+    setIsTyping(true);
+    // Reset visibility and animation states if needed
+    setIsVisible(false);
+    setShouldAnimate(false);
+    // Reset currentFact to start displaying the new fact
+    setCurrentFact("");
+
+    // This effect runs every time factIndex changes, ensuring textOptions[factIndex] accesses the updated factIndex
+  }, [factIndex]);
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true); // Start fade-in
       setShouldAnimate(true);

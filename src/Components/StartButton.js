@@ -85,6 +85,7 @@ const StartButton = () => {
       alignItems: "center",
       justifyContent: "center",
       borderRight: "0.5px solid black",
+      cursor: "default",
     },
     verticalText: {
       color: "white",
@@ -162,7 +163,7 @@ const StartButton = () => {
               className="side-panel"
               style={{
                 position: "absolute",
-                left: 128,
+                left: 142,
                 bottom: 50,
                 width: "200px",
                 height: "auto",

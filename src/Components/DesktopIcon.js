@@ -83,17 +83,17 @@ const DesktopIcon = ({
     position: "relative",
     bottom: 0,
     fontFamily: "Arimo",
-    fontSize: "15px",
+    fontSize: isMobile ? 14 : 14.5,
     lineHeight: "16px",
     filter: "drop-shadow(0px 3px 3px rgba(0,0,0,0.3))",
     letterSpacing: "0.5px",
-    top: 95,
-    // borderRadius: "2px",
+    top: isMobile ? 75 : 95,
+    borderRadius: "2px",
     padding: "2px",
-    marginLeft: "auto",
-    marginRight: "auto",
+    marginLeft: "3px",
+    // marginRight: "auto",
     display: "inline-block",
-    backgroundColor: dragging || isClicked ? "#bf99bd" : "transparent",
+    backgroundColor: dragging || isClicked ? "#3443eb" : "transparent",
   };
 
   const handleResize = () => {
@@ -145,7 +145,8 @@ const DesktopIcon = ({
     setIsHovered(true);
     setZIndex(zIndex + 1);
     setIsClicked(true);
-    e.target.style.zIndex = zIndex;
+    e.target.style.zIndex = zIndex + 1;
+    ref.current.style.zIndex = zIndex + 1;
     e.target.style.cursor = "grabbing";
     // Attach these to document to ensure drag continues even if mouse moves fast
     document.addEventListener("mousemove", onDrag);
@@ -211,7 +212,8 @@ const DesktopIcon = ({
 
       setDragging(true);
       setZIndex(zIndex + 1);
-      e.target.style.zIndex = zIndex;
+      e.target.style.zIndex = zIndex + 1;
+      ref.current.style.zIndex = zIndex + 1;
       e.target.style.cursor = "grabbing";
     }
   };
@@ -262,12 +264,18 @@ const DesktopIcon = ({
             display: "block",
             zIndex: 1,
             top: `${position.y}%`,
+            border: dragging || isClicked ? "1px solid white" : "none",
+            borderRadius: "5px",
             // maxWidth: "100px",
-            maxWidth: isMobile ? "80px" : "90px",
-            maxHeight: isMobile ? "75px" : "80px",
+            // maxWidth: "6%",
+            // maxHeight: "9%",
+            // minWidth: "70px",
+            // minHeight: "70px",
+            maxWidth: isMobile ? "70px" : "90px",
+            maxHeight: isMobile ? "65px" : "90px",
             width: "auto",
             height: "auto",
-            filter: "drop-shadow(0px 6px 5px rgba(0,0,0,0.7))",
+            filter: "drop-shadow(0px 6px 5px rgba(0,0,0,0.5))",
             boxShadow: border ? "0 0 0 1px rgba(0,0,0,0.5)" : "none",
             userSelect: "none",
           }}
@@ -315,7 +323,7 @@ const DesktopIcon = ({
         >
           <SplitTextByWidth
             text={iconText}
-            maxWidth={80}
+            maxWidth={isMobile ? 75 : 80}
             backgroundColor={"red"}
             style={iconTextStyle}
           />

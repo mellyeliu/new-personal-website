@@ -106,12 +106,12 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           autoplaySpeed={50000}
           links={linkQuotes}
           style={{
-            letterSpacing: 0.4,
+            letterSpacing: 0,
             marginBottom: 5,
             fontFamily: "Cormorant Garamond",
             fontWeight: 300,
             fontStyle: "italic",
-            fontSize: 16,
+            fontSize: 15,
             color: "black",
           }}
         ></TypingToggleTextList>{" "}

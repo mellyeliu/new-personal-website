@@ -43,7 +43,7 @@ const NameTag = () => {
   return (
     <div style={styles.container}>
       <div style={styles.title} className="control">
-        {"mellyeliu ໒ ꒰ྀིっ˕ -｡꒱ྀི১ ♡ "}
+        {"mellye.liu ໒ ꒰ྀིっ˕ -｡꒱ྀི১ ♡ "}
       </div>
       <TypingToggleTextList
         wrapper={true}
