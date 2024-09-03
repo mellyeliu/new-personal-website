@@ -66,7 +66,7 @@ const Folder = ({
         <div
           className="folderText"
           style={{
-            fontSize: 28,
+            fontSize: 30,
             color: "black",
             fontFamily: "Cormorant Garamond",
             fontStyle: "italic",

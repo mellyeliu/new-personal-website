@@ -56,6 +56,7 @@ const FileData = {
       scale: 0.52,
       x: 20,
       y: 30,
+      iconText: "neopets.png",
     },
     {
       hoverString: "https://jstris.jezevec10.com/",
@@ -64,6 +65,7 @@ const FileData = {
       scale: 0.52,
       x: 20,
       y: 20,
+      iconText: "tetris.png",
     },
     {
       hoverString: "The Company of Myself",
@@ -72,6 +74,7 @@ const FileData = {
       scale: 0.52,
       x: 40,
       y: 30,
+      iconText: "company of myself.png",
     },
     {
       hoverString: "Town of Salem",
@@ -80,6 +83,7 @@ const FileData = {
       scale: 0.52,
       x: 75,
       y: 60,
+      iconText: "salem.png",
     },
     {
       hoverString: "( Kingdom of Loathing )",
@@ -88,6 +92,7 @@ const FileData = {
       scale: 0.52,
       x: 31,
       y: 25,
+      iconText: "koloathing.png",
     },
     {
       hoverString: "( Spider and Web )",
@@ -96,6 +101,7 @@ const FileData = {
       scale: 0.52,
       x: 18,
       y: 9,
+      iconText: "spider and web.png",
     },
     {
       hoverString: "Club Penguin",
@@ -104,6 +110,7 @@ const FileData = {
       scale: 0.52,
       x: 50,
       y: 40,
+      iconText: "club penguin.png",
     },
     {
       hoverString: "Shift",
@@ -112,6 +119,7 @@ const FileData = {
       scale: 0.52,
       x: 7,
       y: 13,
+      iconText: "shift.png",
     },
     {
       hoverString: "Fantage",
@@ -120,6 +128,7 @@ const FileData = {
       scale: 0.52,
       x: 60,
       y: 60,
+      iconText: "fantage.png",
     },
     {
       hoverString: "Loved",
@@ -128,6 +137,7 @@ const FileData = {
       scale: 0.52,
       x: 42,
       y: 22,
+      iconText: "loved.png",
     },
     {
       hoverString: "Cause of Death",
@@ -136,6 +146,7 @@ const FileData = {
       scale: 0.52,
       x: 39,
       y: 65,
+      iconText: "cause of death.png",
     },
     {
       hoverString: "( Dreaming Mary )",
@@ -144,6 +155,7 @@ const FileData = {
       scale: 0.52,
       x: 10,
       y: 19,
+      iconText: "dreaming mary.png",
     },
     {
       hoverString: "( Okami )",
@@ -152,6 +164,7 @@ const FileData = {
       scale: 0.52,
       x: 17,
       y: 35,
+      iconText: "okami.png",
     },
     {
       hoverString: "( a dark room )",
@@ -160,6 +173,7 @@ const FileData = {
       scale: 0.52,
       x: 5,
       y: 34,
+      iconText: "a dark room.png",
     },
     {
       hoverString: "windows93",
@@ -168,6 +182,7 @@ const FileData = {
       scale: 0.52,
       x: 30,
       y: 60,
+      iconText: "windows93.png",
     },
   ],
   fandoms: [
@@ -178,6 +193,7 @@ const FileData = {
       scale: 0.52,
       x: 30,
       y: 60,
+      iconText: "trshady.png",
     },
     {
       hoverString: "goodreads",
@@ -186,6 +202,7 @@ const FileData = {
       scale: 0.52,
       x: 30,
       y: 60,
+      iconText: "goodreads.png",
     },
     {
       hoverString: "Life is Strange",
@@ -194,6 +211,7 @@ const FileData = {
       scale: 0.5,
       x: 75,
       y: 25,
+      iconText: "life is strange.webloc",
     },
     {
       hoverString: "www.tvtropes.org",
@@ -202,6 +220,7 @@ const FileData = {
       scale: 0.52,
       x: 25,
       y: 27,
+      iconText: "tvtropes.png",
     },
     {
       hoverString: "Deism, Reincarnation, and Creation Myths",
@@ -210,14 +229,7 @@ const FileData = {
       scale: 0.52,
       x: 76,
       y: 17,
-    },
-    {
-      hoverString: "૮꒰ ˶• ༝ •˶꒱ა ♡",
-      src: "images/icons/fj.png",
-      url: "https://www.freejinger.org/",
-      scale: 0.5,
-      x: 35,
-      y: 48,
+      iconText: "deism.webloc",
     },
     {
       hoverString: "tyler x josh (21p)",
@@ -226,6 +238,7 @@ const FileData = {
       scale: 0.5,
       x: 25,
       y: 38,
+      iconText: "21p.png",
     },
     {
       hoverString: "everlark ♡",
@@ -234,6 +247,7 @@ const FileData = {
       scale: 0.5,
       x: 23,
       y: 65,
+      iconText: "dark everlark.webloc",
     },
     {
       hoverString: "azula x mai (atla) ♡",
@@ -242,6 +256,7 @@ const FileData = {
       scale: 0.5,
       x: 42,
       y: 48,
+      iconText: "tymaizula.webloc",
     },
     {
       hoverString: "joseon-era kdramas",
@@ -250,6 +265,7 @@ const FileData = {
       scale: 0.5,
       x: 50,
       y: 45,
+      iconText: "dae jang geum.webloc",
     },
   ],
   wikis: [
@@ -260,6 +276,7 @@ const FileData = {
       scale: 0.52,
       x: 45,
       y: 53,
+      iconText: "are.na.png",
     },
     {
       hoverString: "( TCRF )",
@@ -268,6 +285,7 @@ const FileData = {
       scale: 0.52,
       x: 40,
       y: 59,
+      iconText: "tcrf.png",
     },
     {
       hoverString: "( daily deviation dream )",
@@ -276,6 +294,7 @@ const FileData = {
       scale: 0.52,
       x: 71,
       y: 72,
+      iconText: "deviantart.png",
     },
     {
       hoverString: "( MSCHF )",
@@ -284,6 +303,7 @@ const FileData = {
       scale: 0.52,
       x: 37,
       y: 32,
+      iconText: "mschf.png",
     },
     {
       hoverString: "Rational Wiki",
@@ -292,6 +312,7 @@ const FileData = {
       scale: 0.52,
       x: 76,
       y: 68,
+      iconText: "rational wiki.png",
     },
     {
       hoverString: "( scp foundation )",
@@ -300,6 +321,7 @@ const FileData = {
       scale: 0.52,
       x: 50,
       y: 72,
+      iconText: "scp.png",
     },
     {
       hoverString: "( Edit Wars )",
@@ -308,6 +330,7 @@ const FileData = {
       scale: 0.52,
       x: 58,
       y: 65,
+      iconText: "wiki.jpeg",
     },
   ],
   "About Me": [
@@ -326,6 +349,7 @@ const FileData = {
       url: "https://vsco.co/mellyeliu/gallery",
       x: 80,
       y: 42,
+      iconText: "me.png",
     },
     {
       hoverString: "૮꒰ ˶• ༝ •˶꒱ა ♡",
@@ -334,6 +358,7 @@ const FileData = {
       url: "https://vsco.co/mellyeliu/gallery",
       x: 83,
       y: 26,
+      iconText: "meme.png",
     },
     {
       hoverString: "૮꒰ ˶• ༝ •˶꒱ა ♡",
@@ -342,6 +367,7 @@ const FileData = {
       url: "https://vsco.co/mellyeliu/gallery",
       x: 57,
       y: 35,
+      iconText: "mememe.png",
     },
     {
       hoverString: "( Girlhood )",

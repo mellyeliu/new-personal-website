@@ -189,7 +189,7 @@ const Header = (props) => {
           ? FileData[folder].map((image) => {
               if (!image.border) {
                 alignY = counter % 5 === 0 ? 10 : alignY + 16;
-                alignX = counter % 5 === 0 ? alignX + 10 : alignX;
+                alignX = counter % 5 === 0 ? alignX + 11 : alignX;
                 if (counter === 0) {
                   alignX = 5;
                 }
@@ -229,6 +229,7 @@ const Header = (props) => {
                   y={isGridLayout ? alignY : image.y}
                   triggerResize={triggerResize}
                   isGridLayout={isGridLayout}
+                  iconText={image.iconText}
                 ></DesktopIcon>
               );
             })

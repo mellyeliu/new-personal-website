@@ -1263,7 +1263,7 @@ button#one-tab {
   background: transparent;
   border: 0;
   /* font-family: inherit; */
-  font-size: 17px;
+  font-size: 18px;
   cursor: pointer;
   font-family: "Cormorant Garamond";
   color: #0d0d0d !important;
@@ -1280,7 +1280,7 @@ button#one-tab {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 10px 0px;
-  height: 40px;
+  height: 50px;
   bottom: 0px;
   /* bottom: -1px; */
 

@@ -20,7 +20,7 @@ const Clock = () => {
     position: "absolute",
     right: 0,
     bottom: 0,
-    lineHeight: "40px",
+    lineHeight: "50px",
     borderLeft: "0.5px solid black",
   };
 

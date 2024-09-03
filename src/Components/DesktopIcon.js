@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { event } from "react-ga";
 import PortfolioData from "../Data/PortfolioData";
+import SplitTextByWidth from "./SplitTextByWidth";
+import { isMobile } from "react-device-detect";
 
 const DesktopIcon = ({
   src,
@@ -16,6 +18,7 @@ const DesktopIcon = ({
   setZIndex,
   setShowCursor,
   triggerResize,
+  iconText,
 }) => {
   const [position, setPosition] = useState({ x: x, y: y });
   const [dragging, setDragging] = useState(false);
@@ -74,6 +77,25 @@ const DesktopIcon = ({
   const [clickCount, setClickCount] = useState(0);
   const [isClicked, setIsClicked] = useState(false);
 
+  const iconTextStyle = {
+    fontWeight: 600,
+    color: "white",
+    position: "relative",
+    bottom: 0,
+    fontFamily: "Arimo",
+    fontSize: "15px",
+    lineHeight: "16px",
+    filter: "drop-shadow(0px 3px 3px rgba(0,0,0,0.3))",
+    letterSpacing: "0.5px",
+    top: 95,
+    // borderRadius: "2px",
+    padding: "2px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    display: "inline-block",
+    backgroundColor: dragging || isClicked ? "#bf99bd" : "transparent",
+  };
+
   const handleResize = () => {
     const divs = document.getElementsByClassName("hover-container");
     if (divs.length > 0) {
@@ -83,6 +105,7 @@ const DesktopIcon = ({
   };
 
   const handleClickOutside = (event) => {
+    setIsClicked(false);
     if (ref.current && !ref.current.contains(event.target)) {
       setIsClicked(false);
     }
@@ -176,7 +199,7 @@ const DesktopIcon = ({
     width: "auto",
     height: "auto",
     textAlign: "center",
-    overflow: "hidden",
+    // overflow: "hidden",
   };
 
   const startTouchDrag = (e) => {
@@ -228,90 +251,76 @@ const DesktopIcon = ({
 
   return (
     <div style={imageContainerStyle}>
-      <div
-        style={{
-          cursor: "grab",
-          position: "absolute",
-          left: `${(position.x * width) / 100}px`,
-          minHeight: "20%",
-          zIndex: 1,
-          top: `${position.y}%`,
-          filter: border
-            ? "drop-shadow(8px 8px 10px rgba(0,0,0,0.3))"
-            : "drop-shadow(0px 6px 5px rgba(0,0,0,0.8))",
-          boxShadow: border ? "0 0 0 1px rgba(0,0,0,0.5)" : "none",
-          userSelect: "none",
-          borderRadius: border ? "20px" : "0",
-          transform: `scale(0.5)`,
-          transition: "transform 0.3s ease-in-out",
-          transformOrigin: "top left",
-          // display: isMobile && hoverString === "( Socials )" ? "none" : "block",
-          backgroundImage: `url(${src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          ...imageSize,
-        }}
-        className="draggableImage"
-        onMouseDown={startDrag}
-        onClick={(e) => {
-          handleClickOutside(e);
-          openPopupOnDoubleClick(e);
-        }}
-        onMouseMove={onDrag}
-        onMouseUp={stopDrag}
-        onMouseLeave={stopHover}
-        onTouchStart={startTouchDrag}
-        onTouchMove={onTouchMove}
-        onTouchEnd={stopTouchDrag}
-        onMouseEnter={onHover}
-        ref={ref}
-      >
-        {hoverString === "( Socials )" && (
-          <div
-            style={{
-              justifyContent: "left",
-              whiteSpace: "pre-wrap",
-              alignItems: "left",
-              color: "black",
-              fontSize: "18px",
-              textAlign: "left",
-              lineHeight: "1.1",
-              padding: "150px 20px",
-              fontFamily: "Arimo",
-              fontWeight: 500,
-              zIndex: 1000000,
-              pointerEvents: "none",
-            }}
-          >
-            find me at:
-            <br />
-            <br />
-            {PortfolioData.main.social.map((item, index) => (
-              <>
-                <a
-                  key={index}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    textDecoration: "underline",
-                    pointerEvents: "auto",
-                    color: "blue", // Adjust color as needed
-                  }}
-                  onMouseOver={(e) =>
-                    (e.currentTarget.style.letterSpacing = "1px")
-                  }
-                  onMouseOut={(e) =>
-                    (e.currentTarget.style.letterSpacing = "0px")
-                  }
-                >
-                  {item.name}
-                </a>
-                <div />
-              </>
-            ))}
-          </div>
-        )}
+      <div>
+        <img
+          src={src}
+          style={{
+            cursor: "grab",
+            position: "absolute",
+            left: `${(position.x * width) / 100}px`,
+            // minHeight: "20%",
+            display: "block",
+            zIndex: 1,
+            top: `${position.y}%`,
+            // maxWidth: "100px",
+            maxWidth: isMobile ? "80px" : "90px",
+            maxHeight: isMobile ? "75px" : "80px",
+            width: "auto",
+            height: "auto",
+            filter: "drop-shadow(0px 6px 5px rgba(0,0,0,0.7))",
+            boxShadow: border ? "0 0 0 1px rgba(0,0,0,0.5)" : "none",
+            userSelect: "none",
+          }}
+          // className="draggableImage"
+          onMouseDown={startDrag}
+          onClick={(e) => {
+            handleClickOutside(e);
+            openPopupOnDoubleClick(e);
+          }}
+          onMouseMove={onDrag}
+          onMouseUp={stopDrag}
+          onMouseLeave={stopHover}
+          onTouchStart={startTouchDrag}
+          onTouchMove={onTouchMove}
+          onTouchEnd={stopTouchDrag}
+          onMouseEnter={onHover}
+          ref={ref}
+          draggable={false}
+        />
+        <div
+          style={{
+            cursor: "grab",
+            position: "absolute",
+            left: `${(position.x * width) / 100}px`,
+            zIndex: 1,
+            top: `${position.y}%`,
+            filter: "drop-shadow(0px 6px 5px rgba(0,0,0,0.8))",
+            boxShadow: "none",
+
+            userSelect: "none",
+          }}
+          onMouseDown={startDrag}
+          onClick={(e) => {
+            handleClickOutside(e);
+            openPopupOnDoubleClick(e);
+          }}
+          onMouseMove={onDrag}
+          onMouseUp={stopDrag}
+          onMouseLeave={stopHover}
+          onTouchStart={startTouchDrag}
+          onTouchMove={onTouchMove}
+          onTouchEnd={stopTouchDrag}
+          onMouseEnter={onHover}
+          ref={ref}
+        >
+          <SplitTextByWidth
+            text={iconText}
+            maxWidth={80}
+            backgroundColor={"red"}
+            style={iconTextStyle}
+          />
+          {/* <span style={iconTextStyle}>{iconText}</span> */}
+        </div>
       </div>
     </div>
   );

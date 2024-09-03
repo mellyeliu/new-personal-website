@@ -72,7 +72,7 @@ const App = () => {
                   setDesktopScreen={setDesktopScreen}
                 />
               )}
-              {(!isMobile || desktopScreen === Screen.PORTFOLIO) && (
+              {!isMobile && (
                 <StartBar
                   setDesktopScreen={setDesktopScreen}
                   desktopScreen={desktopScreen}

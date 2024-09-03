@@ -4,7 +4,7 @@ import { isMobile } from "react-device-detect";
 
 const styles = {
   container: {
-    width: isMobile ? "300px" : "340px",
+    width: isMobile ? "300px" : "350px",
     height: isMobile ? "100px" : "110px",
     backgroundColor: "white",
     border: "0.5px solid #111",
@@ -26,15 +26,15 @@ const styles = {
     fontWeight: 700,
     letterSpacing: 0.4,
     fontFamily: "Cormorant Garamond",
-    fontSize: isMobile ? 22 : 24,
+    fontSize: isMobile ? 22 : 26,
   },
   funFacts: {
     letterSpacing: 1.3,
     fontFamily: "Cormorant Garamond",
     fontWeight: 300,
     fontStyle: "italic",
-    fontSize: 14,
-    paddingTop: 2,
+    fontSize: isMobile ? 14 : 14.5,
+    paddingTop: 4,
     color: "rgb(150,150,150)",
   },
 };

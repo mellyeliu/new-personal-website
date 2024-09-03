@@ -39,7 +39,7 @@ const Portfolio = ({ setDesktopScreen }) => {
             height: 60,
             justifyContent: "center",
             position: "absolute",
-            top: 50,
+            top: 60,
             backgroundColor: "white",
             borderTop: "0.5px solid black",
             zIndex: 100,

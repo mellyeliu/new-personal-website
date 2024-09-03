@@ -14,10 +14,11 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
   const linkQuotes = quotes.map((item) => item[1]);
 
   const tabStyle = {
-    padding: "5px 10px",
+    padding: "10px 10px",
     color: "black",
     // fontWeight: "500",
     fontStyle: "italic",
+    fontSize: 16,
     cursor: "pointer",
   };
 
@@ -27,11 +28,12 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
         position: "absolute",
         zIndex: 110000000,
         background: "rgb(241 241 241)",
-        height: 40,
+        height: 50,
         width: "100%",
         padding: "0px",
         display: "flex",
         letterSpacing: 1,
+        fontSize: 16,
         overflow: "hidden",
         bottom: 0,
         border: "0.5px solid black",
@@ -53,7 +55,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           setCursorString("");
         }}
         style={{
-          padding: "5px 10px 5px 20px",
+          padding: "10px 15px 5px 15px",
           color: "black",
           fontWeight: "500",
           fontStyle: "italic",
@@ -88,8 +90,8 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
           textAlign: "right",
           position: "absolute",
           right: "125px",
-          height: 40,
-          paddingTop: 5,
+          height: 50,
+          paddingTop: 10,
           maxWidth: "50%",
         }}
         id="desktop-only"
@@ -109,7 +111,7 @@ const StartBar = ({ setDesktopScreen, desktopScreen }) => {
             fontFamily: "Cormorant Garamond",
             fontWeight: 300,
             fontStyle: "italic",
-            fontSize: 14,
+            fontSize: 16,
             color: "black",
           }}
         ></TypingToggleTextList>{" "}

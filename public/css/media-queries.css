@@ -77,12 +77,12 @@
 
 @media only screen and (min-height: 800px) {
   .draggableImage {
-    transform: scale(0.58) !important;
+    transform: scale(0.6) !important;
     /* margin-top: 2.5%; */
   }
 
   .draggableImage:hover {
-    transform: scale(0.6) !important;
+    transform: scale(0.62) !important;
   }
 }
 
