@@ -102,7 +102,7 @@ const PortfolioData = {
         languages: "Canva AI (lol), Figma",
         image: "boygame.png",
         year: "2024",
-        type: ["design"],
+        type: ["design", "games"],
         url: "https://www.figma.com/proto/7QemW22jZhpVvq8FENwX4f/BOY%E2%99%A1GAME",
         collaborators: [
           {
@@ -118,7 +118,7 @@ const PortfolioData = {
         languages: "React?",
         image: "healinggame.png",
         year: "2024",
-        type: ["code", "design"],
+        type: ["code", "design", "games"],
         url: "https://healing-game.netlify.app/",
         collaborators: [
           {
@@ -134,7 +134,7 @@ const PortfolioData = {
         languages: "Inform7",
         image: "inform.png",
         year: "2023",
-        type: ["code"],
+        type: ["code", "games"],
         url: "https://github.com/mellyeliu/dreamland/blob/main/dreamland.inform/Source/story.ni",
       },
       {
@@ -144,7 +144,7 @@ const PortfolioData = {
         languages: "ChatGPT, Twine, HTML/CSS",
         image: "moments.png",
         year: "2023",
-        type: ["code"],
+        type: ["code", "games"],
         url: "https://m0ments.w3spaces.com/",
       },
       {

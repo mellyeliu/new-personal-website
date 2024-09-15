@@ -29,11 +29,11 @@ const styles = {
     fontSize: isMobile ? 22 : 26,
   },
   funFacts: {
-    letterSpacing: 1.3,
+    letterSpacing: 1,
     fontFamily: "Cormorant Garamond",
     fontWeight: 300,
     fontStyle: "italic",
-    fontSize: isMobile ? 14 : 14.5,
+    fontSize: isMobile ? 13.5 : 14.5,
     paddingTop: 4,
     color: "rgb(150,150,150)",
   },

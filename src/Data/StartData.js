@@ -1,10 +1,7 @@
 export const startData = {
-  "❀ Interests": [
+  "𖧷 Interests": [
     ["Theories of God", "https://en.wikipedia.org/wiki/Transtheism"],
-    [
-      "Parser-based interactive fiction",
-      "https://en.wikipedia.org/wiki/Inform",
-    ],
+    ["Parser-based interactive fiction", "https://eblong.com/zarf/if.html"],
     [
       "Autotheory and identity play",
       "https://en.wikipedia.org/wiki/Autotheory",
@@ -27,8 +24,8 @@ export const startData = {
       "https://en.wikipedia.org/wiki/Moral_foundations_theory",
     ],
     [
-      "Intellectualization as defense",
-      "https://en.wikipedia.org/wiki/Intellectualization",
+      "(Playing with) authorship",
+      "https://tvtropes.org/pmwiki/pmwiki.php/Main/DeathOfTheAuthor",
     ],
     [
       "Unreliable narrators",
@@ -64,7 +61,7 @@ export const startData = {
       "https://images.aeonmedia.co/user_image_upload/744/v2-smorgasbord-b8wpopb56r4y.jpg?width=3840&quality=75&format=auto",
     ],
   ],
-  "✧ Recs": [
+  "⚘ Recs": [
     [
       "The Handmaiden",
       "https://tvtropes.org/pmwiki/pmwiki.php/Film/TheHandmaiden",
@@ -132,7 +129,7 @@ export const startData = {
       "https://www.goodreads.com/author/show/6860265.Carmen_Maria_Machado",
     ],
   ],
-  "♡ Beliefs": [
+  "𖧧 Beliefs": [
     [
       "Dismantling power hierarchies",
       "https://en.wikipedia.org/wiki/The_personal_is_political",
@@ -148,11 +145,15 @@ export const startData = {
     ],
     ["Self-ownership", "https://en.wikipedia.org/wiki/Self-ownership"],
     [
-      "Dissociation as escape",
-      "https://en.wikipedia.org/wiki/Maladaptive_daydreaming",
+      "Necessity of fictional worlds",
+      "https://en.wikipedia.org/wiki/Gondal_(fictional_country)",
+    ],
+    [
+      "Safe spaces",
+      "https://en.wikipedia.org/wiki/Safe_space",
     ],
   ],
-  "☏ Contact": [
+  "✧ Contact": [
     ["Email", "mailto:mellye.liu@gmail.com"],
     ["Github", "https://github.com/mellyeliu"],
     ["LinkedIn", "https://www.linkedin.com/in/mellyeliu/"],

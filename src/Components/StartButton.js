@@ -150,6 +150,7 @@ const StartButton = () => {
                 className="hvr-shade"
                 style={{
                   ...buttonStyle,
+                  textAlign: "left",
                   background: selectedOption === option ? "#ddd" : "none",
                 }}
                 onClick={() => handleOptionClick(option)}
@@ -165,7 +166,7 @@ const StartButton = () => {
                 position: "absolute",
                 left: 142,
                 bottom: 50,
-                width: "200px",
+                width: "220px",
                 height: "auto",
                 backgroundColor: "#fff",
                 border: "0.5px solid black",

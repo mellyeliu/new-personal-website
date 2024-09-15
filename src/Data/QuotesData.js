@@ -13,7 +13,7 @@ export const selfFacts = [
   "only eats one food (hotpot)",
   "is doodling in ms paint",
   "is dissociating at indie concerts",
-  "is trauma dumping to strangers",
+  "is trauma dumping on strangers",
   "is adding 花椒 to everything",
   "is giving stick n poke tattoos",
   "is raving about 2cb",
