@@ -71,14 +71,14 @@ const PortfolioData = {
         url: "https://www.figma.com/proto/QMYDZfrpN2PUJP21R62Sb6/digital-nostalgia?page-id=0%3A1&node-id=201-2&node-type=CANVAS&viewport=617%2C1021%2C0.07&t=6nK9lL1zcp8bszWy-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=201%3A2&share=1",
       },
       {
-        title: "My Fanfic Became Sentient and Cannabalized Itself",
+        title: "Dreamland",
         category:
-          "Zine documenting my online childhood and the websites that made me. For SF Zine Fest.",
-        languages: "Figma",
-        image: "fanfic.png",
-        year: "2023",
-        type: ["design"],
-        url: "https://www.figma.com/proto/QMYDZfrpN2PUJP21R62Sb6/digital-nostalgia?node-id=201-3023&t=7x2gIbOEt1n5qwZx-1&scaling=scale-down&content-scaling=fixed",
+          "Interactive fiction documenting dream journal escapism. Play the (rough) demo!",
+        languages: "Inform7",
+        image: "inform.png",
+        year: "2023-",
+        type: ["code", "games"],
+        url: "https://dreamland-demo.netlify.app/play",
       },
       {
         title: "CYBERHUG COLLABORATIONS",
@@ -128,14 +128,14 @@ const PortfolioData = {
         ],
       },
       {
-        title: "Dreamland",
+        title: "My Fanfic Became Sentient and Cannabalized Itself",
         category:
-          "Interactive fiction documenting dream journal escapism. Work in progress!",
-        languages: "Inform7",
-        image: "inform.png",
+          "Zine documenting my online childhood and the websites that made me. For SF Zine Fest.",
+        languages: "Figma",
+        image: "fanfic.png",
         year: "2023",
-        type: ["code", "games"],
-        url: "https://github.com/mellyeliu/dreamland/blob/main/dreamland.inform/Source/story.ni",
+        type: ["design"],
+        url: "https://www.figma.com/proto/QMYDZfrpN2PUJP21R62Sb6/digital-nostalgia?node-id=201-3023&t=7x2gIbOEt1n5qwZx-1&scaling=scale-down&content-scaling=fixed",
       },
       {
         title: "M0MENTS",

@@ -241,6 +241,7 @@ const Portfolio = ({ setDesktopScreen }) => {
   var projects = getProjects(PortfolioData.portfolio.projects, "all");
   var code = getProjects(PortfolioData.portfolio.projects, "code");
   var design = getProjects(PortfolioData.portfolio.projects, "design");
+  var games = getProjects(PortfolioData.portfolio.projects, "games");
   return (
     <section id="portfolio">
       <div
@@ -276,12 +277,17 @@ const Portfolio = ({ setDesktopScreen }) => {
                 {" "}
                 Design ‧&lt;₊˚🤍✩ /&gt;₊
               </Tab>
+              <Tab style={{ zIndex: 100000 }} tabFor="four">
+                {" "}
+                Games ‧&lt;₊˚🤍✩ /&gt;₊
+              </Tab>
               <BrowserIcons setDesktopScreen={setDesktopScreen} />
               {/* <span className="browsero">○ ○ ○</span> */}
             </TabList>
             <TabPanel tabId="one">{urlBar("All", projects)}</TabPanel>
             <TabPanel tabId="two">{urlBar("Code", code)}</TabPanel>
             <TabPanel tabId="three">{urlBar("Design", design)}</TabPanel>
+            <TabPanel tabId="four">{urlBar("Games", games)}</TabPanel>
           </Tabs>
         </div>
       </div>

@@ -99,7 +99,7 @@ export const quotes = [
     "https://www.goodreads.com/book/show/43317482-in-the-dream-house",
   ],
   [
-    "As if happiness is an acquired taste, like coconut cordial or ceviche, to which you become accustomed, but despair is something surprising each time you encounter it",
+    "As if happiness is an acquired taste, to which you become accustomed, but despair is something surprising each time you encounter it",
     "https://www.goodreads.com/book/show/65112.The_End",
   ],
   [

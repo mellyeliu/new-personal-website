@@ -164,7 +164,7 @@ const StartButton = () => {
               className="side-panel"
               style={{
                 position: "absolute",
-                left: 142,
+                left: 144,
                 bottom: 50,
                 width: "220px",
                 height: "auto",

@@ -249,6 +249,10 @@
     display: none;
   }
 
+  .rwt__tab[aria-controls="four"] {
+    display: none;
+  }
+
   /* .rwt__tab[aria-controls="three"] {
     display: none;
   } */
