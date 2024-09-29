@@ -59,6 +59,10 @@ export const quotes = [
     "https://granta.com/los-angeles-ma/",
   ],
   [
+    "For many years, I have been moved by the blue at the far edge of what can be seen [...] Blue is the color of longing for the distances you never arrive in",
+    "https://www.goodreads.com/book/show/76479.A_Field_Guide_to_Getting_Lost",
+  ],
+  [
     "You are a woman with a man inside watching a woman. You are your own voyeur.",
     "https://www.goodreads.com/book/show/17650.The_Robber_Bride",
   ],

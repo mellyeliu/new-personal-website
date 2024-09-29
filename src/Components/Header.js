@@ -159,8 +159,8 @@ const Header = (props) => {
     }
   };
 
-  const folders = ["Games", "Fandoms", "Wikis", "About Me"];
-  const display_folders = ["games", "fandoms", "wikis", "About Me"];
+  const folders = ["Games", "Fandoms", "Tools", "About Me"];
+  const display_folders = ["games", "fandoms", "tools", "About Me"];
   const display_strings = [
     "( Gamemaking as playing god )",
     "( Parallel universes of fictional worlds )",

@@ -1351,6 +1351,11 @@ button#one-tab {
   width: 0;
 }
 
+.special-links {
+  color: inherit !important;
+  text-decoration: underline;
+}
+
 .hover-container {
   position: relative;
   display: block;

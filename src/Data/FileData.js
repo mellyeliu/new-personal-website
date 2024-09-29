@@ -193,6 +193,24 @@ const FileData = {
       y: 60,
       iconText: "windows93.png",
     },
+    {
+      hoverString: "The Wiki Game",
+      src: "images/icons/wikigame.png",
+      url: "https://www.wikigame.com/",
+      scale: 0.52,
+      x: 28,
+      y: 57,
+      iconText: "wikigame.png",
+    },
+    {
+      hoverString: "E.B.O.N.Y.",
+      src: "images/icons/ebony.png",
+      url: "https://ebonyriddle.com/",
+      scale: 0.52,
+      x: 28,
+      y: 57,
+      iconText: "ebony.png",
+    },
   ],
   fandoms: [
     {
@@ -277,7 +295,7 @@ const FileData = {
       iconText: "dae jang geum.webloc",
     },
   ],
-  wikis: [
+  tools: [
     {
       hoverString: "are.na",
       src: "images/icons/arena.png",
@@ -286,6 +304,24 @@ const FileData = {
       x: 45,
       y: 53,
       iconText: "are.na.png",
+    },
+    {
+      hoverString: "z library",
+      src: "images/icons/zlib.png",
+      url: "https://reddit.com/zlib",
+      scale: 0.52,
+      x: 35,
+      y: 53,
+      iconText: "z-lib.png",
+    },
+    {
+      hoverString: "ms paint",
+      src: "images/icons/paint.png",
+      url: "https://jspaint.app/",
+      scale: 0.52,
+      x: 35,
+      y: 53,
+      iconText: "ms paint.png",
     },
     {
       hoverString: "esoteric.codes",
@@ -461,7 +497,7 @@ const bioContent = (
     <br />
     Melissa is a software engineer and internet artist. Interests include:
     messaging systems, creation myths, fandom as landscaping fictional worlds,
-    the medium of games, safe spaces, creative intimacy, pseudoscientific
+    video game as art form, safe spaces, creative intimacy, pseudoscientific
     personality tests, relational psychology, bed rotting [...] They still
     believe in the goodness of the internet and its potential for connection and
     creativity.

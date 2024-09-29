@@ -6,12 +6,14 @@ import { ThemeContext } from "../ThemeContext";
 import { Screen } from "../App";
 import { isMobile } from "react-device-detect";
 import BrowserIcons from "./BrowserIcons";
+import ReactHtmlParser from "react-html-parser";
 
 const Portfolio = ({ setDesktopScreen }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [favourite, setFavourite] = useState("✩");
   const [activeTab, setActiveTab] = useState("one");
   const tabTwoRef = useRef(null);
+  const [backHover, setBackHover] = useState(0);
 
   const handleInputChange = (event) => {
     if (event.target.value === "YES" && tabTwoRef.current) {
@@ -46,10 +48,38 @@ const Portfolio = ({ setDesktopScreen }) => {
             left: 0,
           }}
         >
+          {backHover === 1 && (
+            <div
+              style={{
+                position: "absolute",
+                top: "15px",
+                left: "12px",
+                width: "30px",
+                height: "30px",
+                borderRadius: "50%",
+                backgroundColor: "#eee",
+                zIndex: -100,
+              }}
+            />
+          )}
+          {backHover === 3 && (
+            <div
+              style={{
+                position: "absolute",
+                top: "15px",
+                left: "98px",
+                width: "30px",
+                height: "30px",
+                borderRadius: "50%",
+                backgroundColor: "#eee",
+                zIndex: -100,
+              }}
+            />
+          )}
           <div style={{ padding: 18 }}>
             <svg
-              width="20"
-              height="20"
+              width="25"
+              height="30"
               onClick={() => {
                 if (isMobile) {
                   window.location.reload();
@@ -57,42 +87,73 @@ const Portfolio = ({ setDesktopScreen }) => {
                 setDesktopScreen(Screen.HOME);
               }}
               xmlns="http://www.w3.org/2000/svg"
-              style={{ cursor: "pointer" }}
+              style={{
+                cursor: "pointer",
+                transition: "background-color 0.3s ease",
+              }}
+              onMouseEnter={() => setBackHover(1)}
+              onMouseLeave={() => setBackHover(0)}
             >
+              {/* Circle as background */}
+              {/* <circle
+                cx="10"
+                cy="10"
+                r="12"
+                fill={backHover ? "lightgrey" : "transparent"} // Grey circle on hover
+              /> */}
+
+              {/* Arrow path */}
               <path
                 d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.528 6.236h-12.884v1h21.883z"
-                transform="scale(-1, 1) translate(-24, 0)"
+                transform="scale(-1, 1) translate(-24, 0)" // Horizontal reflection of the SVG
+                fill="black" // Ensures the arrow stays black
               />
             </svg>
+
             <span style={{ width: 15 }}>&nbsp;&nbsp;&nbsp;</span>
             <svg
-              width="20"
-              height="20"
+              width="30"
+              height="30"
               xmlns="http://www.w3.org/2000/svg"
               style={{ fill: "#bbb" }}
+              onMouseEnter={() => setBackHover(2)}
+              onMouseLeave={() => setBackHover(0)}
             >
               <path
                 d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-12.884v1h21.883z"
                 transform="translate(-4, 0)"
               />
             </svg>
-            <span style={{ width: 15 }}> &nbsp; &nbsp; &nbsp; &nbsp;</span>
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              style={{ cursor: "pointer" }}
+            <span style={{ width: 10 }}> &nbsp; &nbsp; &nbsp;</span>
+            <div
+              style={{
+                height: 30,
+                top: 19,
+                position: "absolute",
+                width: 20,
+                display: "inline-block",
+                marginRight: 10,
+              }}
             >
-              <path d="M7 9h-7v-7h1v5.2c1.853-4.237 6.083-7.2 11-7.2 6.623 0 12 5.377 12 12s-5.377 12-12 12c-6.286 0-11.45-4.844-11.959-11h1.004c.506 5.603 5.221 10 10.955 10 6.071 0 11-4.929 11-11s-4.929-11-11-11c-4.66 0-8.647 2.904-10.249 7h5.249v1z" />
-            </svg>
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ cursor: "pointer" }}
+                onMouseEnter={() => setBackHover(3)}
+                onMouseLeave={() => setBackHover(0)}
+              >
+                <path d="M7 9h-7v-7h1v5.2c1.853-4.237 6.083-7.2 11-7.2 6.623 0 12 5.377 12 12s-5.377 12-12 12c-6.286 0-11.45-4.844-11.959-11h1.004c.506 5.603 5.221 10 10.955 10 6.071 0 11-4.929 11-11s-4.929-11-11-11c-4.66 0-8.647 2.904-10.249 7h5.249v1z" />
+              </svg>
+            </div>
           </div>
           <div
             style={{
               flexGrow: 1,
               border: "0.5px solid black",
               letterSpacing: 2,
-              margin: "15px 20px 15px 5px",
+              margin: "15px 20px 15px 25px",
               height: 30,
               float: "right",
               color: "black",
@@ -181,8 +242,8 @@ const Portfolio = ({ setDesktopScreen }) => {
               <h5>
                 &#40;{i + 1}&#41; {projects.title}; {projects.year}
               </h5>
-              <p>
-                {projects.category}{" "}
+              <p className="collab">
+                {ReactHtmlParser(projects.category)}{" "}
                 {projects.collaborators && "Collaborators: "}
                 {projects.collaborators && projects.collaborators.length > 0
                   ? projects.collaborators
@@ -194,8 +255,8 @@ const Portfolio = ({ setDesktopScreen }) => {
                           rel="noreferrer"
                           className="collab"
                           style={{
-                            display: "inline", // Ensures the link is displayed inline
-                            color: "inherit", // Keeps the text color the same as its parent
+                            display: "inline",
+                            color: "inherit",
                           }}
                         >
                           {collaborator.name}

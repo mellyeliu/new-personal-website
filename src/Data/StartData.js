@@ -61,7 +61,7 @@ export const startData = {
       "https://images.aeonmedia.co/user_image_upload/744/v2-smorgasbord-b8wpopb56r4y.jpg?width=3840&quality=75&format=auto",
     ],
   ],
-  "⚘ Recs": [
+  "⚘ Faves": [
     [
       "The Handmaiden",
       "https://tvtropes.org/pmwiki/pmwiki.php/Film/TheHandmaiden",
@@ -148,10 +148,7 @@ export const startData = {
       "Necessity of fictional worlds",
       "https://en.wikipedia.org/wiki/Gondal_(fictional_country)",
     ],
-    [
-      "Safe spaces",
-      "https://en.wikipedia.org/wiki/Safe_space",
-    ],
+    ["Safe spaces", "https://en.wikipedia.org/wiki/Safe_space"],
   ],
   "✧ Contact": [
     ["Email", "mailto:mellye.liu@gmail.com"],

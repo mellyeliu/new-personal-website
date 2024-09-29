@@ -150,7 +150,7 @@ const PortfolioData = {
       {
         title: "Object Anthropomorphism",
         category:
-          "A beloved phone app and paperclip find love. Circumventing the ChatGPT censors again.",
+          "A <a  class='special-links' href='https://archiveofourown.org/works/53351767'>beloved phone app</a> and <a class='special-links' href='https://archiveofourown.org/works/51323875'>paperclip</a> find love. Circumventing the ChatGPT censors again.",
         languages: "ChatGPT",
         image: "clippy.png",
         year: "2024",
