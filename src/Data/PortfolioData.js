@@ -165,12 +165,13 @@ const PortfolioData = {
       },
       {
         title: "Serif",
-        category: "Tiktok meets Goodreads. Work in progress.",
+        category:
+          "Tiktok meets Goodreads. View the <a class='special-links' href='https://www.serif.app/publishers'>website</a> and <a class='special-links' href='https://www.figma.com/proto/xYi0d8tK6IHz2Zbi8xLY1Z/Serif-App?node-id=470-12601&t=8LfqUkmjph4QIGnv-1&starting-point-node-id=470%3A12601&scaling=scale-down&content-scaling=fixed'>mocks</a> here.",
         languages: "Framer, Figma",
         image: "serif.png",
         year: "2024",
         type: ["code"],
-        url: "https://www.serif.app/publishers",
+        url: "https://www.figma.com/proto/xYi0d8tK6IHz2Zbi8xLY1Z/Serif-App?node-id=470-12601&t=8LfqUkmjph4QIGnv-1&starting-point-node-id=470%3A12601&scaling=scale-down&content-scaling=fixed",
         collaborators: [
           {
             name: "Madeleine Lee",
