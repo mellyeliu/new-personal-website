@@ -193,6 +193,22 @@ const PortfolioData = {
         url: "https://messenger.com",
       },
       {
+        title: "Parasocial Relationships",
+        category:
+          "Visual conversation on parasocial relationships, internet crushes, and loneliness.",
+        languages: "Figma",
+        image: "parasocial.png",
+        year: "2024",
+        type: ["design"],
+        url: "https://www.figma.com/design/e2UOBTAXopSigUwJToke4c/parasocial-relationships",
+        collaborators: [
+          {
+            name: "Connie Liu",
+            url: "https://connie.surf/",
+          },
+        ],
+      },
+      {
         title: "( DISSOCIATION )",
         category: "Visual conversation on dissociation.",
         languages: "Figma",

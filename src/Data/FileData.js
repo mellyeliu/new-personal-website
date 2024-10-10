@@ -469,7 +469,7 @@ const siteContent = (
   <>
     welcome to my safe space on the internet ᡣ • . • 𐭩 ♡
     <br />
-    &#40; identity map 🌟 site assemblage 🌐 portfolio 📎 &#41;
+    &#40; web portrait 🌟 site assemblage 🌐 portfolio 📎 &#41;
     <br />
     <br />
     ૮꒰ ˶• ༝ •˶꒱ა ♡
